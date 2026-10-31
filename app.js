@@ -34,22 +34,40 @@ function filteredRecipes(){
 }
 
 function searchBox(){
-  return `<div class="search"><input id="searchInput" value="${esc(state.search)}" placeholder="Rechercher une recette ou un ingrédient…"></div>`;
+  return `<div class="search"><input id="searchInput" value="${esc(state.search)}" placeholder="Rechercher une recette ou un ingrédient…" aria-label="Rechercher"></div>`;
 }
 function bindSearch(){
   const el=document.getElementById("searchInput");
   if(el) el.addEventListener("input", e=>{state.search=e.target.value; renderListOnly();});
 }
+function fallbackMedia(r, detail=false){
+  return `<div class="fallback-icon" aria-hidden="true">${esc(categoryEmoji(r.categorie))}</div>`;
+}
 
 function renderHome(){
   state.selected=null;
+  const favCount=favorites().size;
   main.innerHTML = `
+    <section class="hero">
+      <div class="hero-kicker">Cuisine IG bas & protéines</div>
+      <h2>Des recettes simples, gourmandes et adaptées à tes objectifs.</h2>
+      <p>Retrouve rapidement tes pains, cakes, plats, desserts et toutes les recettes de ta bibliothèque.</p>
+      <div class="hero-stats">
+        <span class="hero-stat">${DB.recipes.length} recettes</span>
+        <span class="hero-stat">${DB.categories.length} catégories</span>
+        <span class="hero-stat">${favCount} favori${favCount>1?"s":""}</span>
+      </div>
+    </section>
     ${searchBox()}
-    <div class="section-head"><div><h2>Catégories</h2><p>${DB.recipes.length} recettes dans ${DB.categories.length} catégories</p></div></div>
+    <div class="quick-actions">
+      <button class="quick-card" id="allRecipesBtn"><span class="quick-icon">▤</span><span><strong>Toutes les recettes</strong><small>Parcourir la bibliothèque</small></span></button>
+      <button class="quick-card" id="favoritesBtn"><span class="quick-icon">♡</span><span><strong>Mes favoris</strong><small>${favCount} recette${favCount>1?"s":""}</small></span></button>
+    </div>
+    <div class="section-head"><div><h2>Catégories</h2><p>Choisis un univers de recettes</p></div></div>
     <div class="category-grid">
       ${DB.categories.map(c=>`
         <button class="category-card" data-category="${esc(c.nom)}">
-          <div><div class="icon">${esc(c.icone)}</div><strong>${esc(c.nom)}</strong><p>${esc(c.description)}</p></div>
+          <div><div class="icon-wrap">${esc(c.icone)}</div><strong>${esc(c.nom)}</strong><p>${esc(c.description)}</p></div>
           <div class="count">${c.nb} recette${c.nb>1?"s":""}</div>
         </button>`).join("")}
     </div>`;
@@ -57,6 +75,8 @@ function renderHome(){
   document.getElementById("searchInput").addEventListener("keydown", e=>{
     if(e.key==="Enter" && e.target.value.trim()){ state.view="recipes"; state.search=e.target.value; updateNav(); render(); }
   });
+  document.getElementById("allRecipesBtn").addEventListener("click",()=>{state.view="recipes";updateNav();render();});
+  document.getElementById("favoritesBtn").addEventListener("click",()=>{state.view="favorites";updateNav();render();});
   document.querySelectorAll("[data-category]").forEach(b=>b.addEventListener("click",()=>{
     state.category=b.dataset.category; state.view="recipes"; updateNav(); render();
   }));
@@ -69,8 +89,8 @@ function renderRecipeList(viewTitle="Recettes"){
   main.innerHTML=`
     ${searchBox()}
     <div class="filters">
-      <select id="categoryFilter"><option value="">Toutes les catégories</option>${DB.categories.map(c=>`<option ${state.category===c.nom?"selected":""}>${esc(c.nom)}</option>`).join("")}</select>
-      <select id="igFilter"><option value="">Tous les profils IG</option>${igs.map(x=>`<option ${state.ig===x?"selected":""}>${esc(x)}</option>`).join("")}</select>
+      <select id="categoryFilter" aria-label="Catégorie"><option value="">Toutes les catégories</option>${DB.categories.map(c=>`<option ${state.category===c.nom?"selected":""}>${esc(c.nom)}</option>`).join("")}</select>
+      <select id="igFilter" aria-label="Profil IG"><option value="">Tous les profils IG</option>${igs.map(x=>`<option ${state.ig===x?"selected":""}>${esc(x)}</option>`).join("")}</select>
     </div>
     <div class="section-head"><div><h2>${esc(viewTitle)}</h2><p id="resultCount">${rows.length} recette${rows.length>1?"s":""}</p></div></div>
     <div id="recipeGrid" class="recipe-grid"></div>`;
@@ -90,9 +110,10 @@ async function renderListOnly(){
   const cards = await Promise.all(rows.map(async r=>{
     const photo=await getPhoto(r.id);
     return `<button class="recipe-card" data-recipe="${esc(r.id)}">
-      <div class="recipe-media">${photo?`<img src="${photo}" alt="">`:`<span>${categoryEmoji(r.categorie)}</span>`}</div>
+      <div class="recipe-media">${photo?`<img src="${photo}" alt="${esc(r.nom)}">`:fallbackMedia(r)}</div>
       <div class="recipe-body"><h3>${esc(r.nom)}</h3>
-        <div class="badges"><span class="badge ig">${esc(r.profil_ig)}</span>${r.proteinee==="Oui"?`<span class="badge protein">Protéinée</span>`:""}</div>
+        ${r.reperes?`<div class="recipe-sub">${esc(r.reperes)}</div>`:""}
+        <div class="badges"><span class="badge ig">${esc(r.profil_ig || "IG non précisé")}</span>${r.proteinee==="Oui"?`<span class="badge protein">Protéinée</span>`:""}</div>
       </div>
     </button>`;
   }));
@@ -118,17 +139,17 @@ async function renderDetail(){
   main.innerHTML=`
     <button class="detail-back" id="backBtn">← Retour aux recettes</button>
     <section class="detail-hero">
-      <div class="detail-media">${photo?`<img src="${photo}" alt="${esc(r.nom)}">`:`<span>${categoryEmoji(r.categorie)}</span>`}</div>
+      <div class="detail-media">${photo?`<img src="${photo}" alt="${esc(r.nom)}">`:fallbackMedia(r,true)}</div>
       <div class="detail-content">
         <h2>${esc(r.nom)}</h2>
-        <div class="badges"><span class="badge">${esc(r.categorie)}</span><span class="badge ig">${esc(r.profil_ig)}</span>${r.proteinee==="Oui"?`<span class="badge protein">Protéinée</span>`:""}</div>
+        <div class="badges"><span class="badge">${esc(r.categorie)}</span><span class="badge ig">${esc(r.profil_ig || "IG non précisé")}</span>${r.proteinee==="Oui"?`<span class="badge protein">Protéinée</span>`:""}</div>
         <div class="actions">
           <button class="primary-btn" id="photoBtn">${photo?"Changer ma photo":"Ajouter ma photo"}</button>
           <button class="ghost-btn" id="favBtn">${fav?"♥ Retirer des favoris":"♡ Ajouter aux favoris"}</button>
         </div>
         <div class="meta">
           <div><span>Repères</span><strong>${esc(r.reperes || "Non précisé")}</strong></div>
-          <div><span>Profil IG</span><strong>${esc(r.profil_ig)}</strong></div>
+          <div><span>Profil IG</span><strong>${esc(r.profil_ig || "Non précisé")}</strong></div>
         </div>
       </div>
     </section>

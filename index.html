@@ -3,37 +3,41 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#0f7a4a">
-  <meta name="description" content="Bibliothèque personnelle de recettes IG bas et protéinées.">
+  <meta name="theme-color" content="#2f6d4f">
+  <meta name="description" content="Bibliothèque de recettes IG bas et protéinées.">
   <link rel="manifest" href="./manifest.json">
-  <link rel="icon" href="./icons/icon-192.png">
-  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="icon" href="./icon-192.png">
+  <link rel="apple-touch-icon" href="./icon-192.png">
   <link rel="stylesheet" href="./styles.css">
   <title>Recettes IG bas & protéinées</title>
 </head>
 <body>
   <div id="app">
     <header class="topbar">
-      <div>
-        <div class="eyebrow">Ma bibliothèque</div>
-        <h1>Recettes IG bas & protéinées</h1>
+      <div class="brand-wrap">
+        <div class="brand-mark" aria-hidden="true">IG</div>
+        <div>
+          <div class="eyebrow">Ma bibliothèque cuisine</div>
+          <h1>Recettes IG bas & protéinées</h1>
+        </div>
       </div>
-      <button id="installBtn" class="ghost-btn hidden">Installer</button>
+      <button id="installBtn" class="ghost-btn install-btn hidden">Installer</button>
     </header>
 
     <main id="main"></main>
 
     <nav class="bottom-nav" aria-label="Navigation">
-      <button class="nav-btn active" data-view="home"><span>⌂</span><small>Accueil</small></button>
-      <button class="nav-btn" data-view="recipes"><span>▤</span><small>Recettes</small></button>
-      <button class="nav-btn" data-view="favorites"><span>♡</span><small>Favoris</small></button>
+      <button class="nav-btn active" data-view="home"><span aria-hidden="true">⌂</span><small>Accueil</small></button>
+      <button class="nav-btn" data-view="recipes"><span aria-hidden="true">▤</span><small>Recettes</small></button>
+      <button class="nav-btn" data-view="favorites"><span aria-hidden="true">♡</span><small>Favoris</small></button>
     </nav>
   </div>
 
   <dialog id="photoDialog">
     <form method="dialog" class="dialog-card">
+      <div class="dialog-kicker">Photo personnelle</div>
       <h3>Photo de la recette</h3>
-      <p>Tu peux choisir une photo existante ou prendre une photo avec ton téléphone.</p>
+      <p>Choisis une photo de ta galerie ou prends directement ton plat en photo.</p>
       <input id="photoInput" type="file" accept="image/*" capture="environment">
       <div class="dialog-actions">
         <button value="cancel" class="ghost-btn">Annuler</button>
