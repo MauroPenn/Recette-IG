@@ -86,6 +86,10 @@ function bindSearch(){
   if(el) el.addEventListener("input", e=>{state.search=e.target.value; renderListOnly();});
 }
 function fallbackMedia(r, detail=false){
+  const catPhoto = categoryImage(r.categorie);
+  if(catPhoto){
+    return `<img src="${catPhoto}" alt="Illustration ${esc(r.categorie)}" loading="lazy">`;
+  }
   return `<div class="fallback-icon" aria-hidden="true">${esc(categoryEmoji(r.categorie))}</div>`;
 }
 
