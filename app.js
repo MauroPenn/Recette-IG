@@ -1,5 +1,5 @@
 let DB = { recipes: [], categories: [] };
-let state = { view:"home", category:"", ig:"", search:"", selected:null };
+let state = { view:"hub", category:"", ig:"", search:"", selected:null };
 let deferredPrompt = null;
 let currentPhotoRecipeId = null;
 const main = document.getElementById("main");
@@ -7,6 +7,11 @@ const installBtn = document.getElementById("installBtn");
 const photoDialog = document.getElementById("photoDialog");
 const photoInput = document.getElementById("photoInput");
 const removePhotoBtn = document.getElementById("removePhotoBtn");
+const bottomNav = document.getElementById("bottomNav");
+const brandHome = document.getElementById("brandHome");
+const brandMark = document.getElementById("brandMark");
+const brandEyebrow = document.getElementById("brandEyebrow");
+const brandTitle = document.getElementById("brandTitle");
 
 const esc = (s="") => String(s ?? "").replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const categoryEmoji = name => (DB.categories.find(c=>c.nom===name)?.icone || "🍽️");
@@ -58,6 +63,84 @@ function bindSearch(){
 }
 function fallbackMedia(r, detail=false){
   return `<div class="fallback-icon" aria-hidden="true">${esc(categoryEmoji(r.categorie))}</div>`;
+}
+
+
+function renderHub(){
+  state.selected=null; state.category=""; state.ig=""; state.search="";
+  main.innerHTML = `
+    <section class="hub-intro">
+      <div class="hub-kicker">Une seule appli, trois univers</div>
+      <h2>Ma bibliothèque personnelle</h2>
+      <p>Choisis l’univers que tu veux consulter. La cuisine est déjà disponible ; la musculation et les étirements viendront ensuite.</p>
+    </section>
+    <div class="universe-grid">
+      <button class="universe-card universe-cuisine" data-universe="cuisine">
+        <div class="universe-photo cuisine-photo"><img src="./cat-plats-sales.webp" alt="Cuisine artisanale" loading="eager"></div>
+        <div class="universe-overlay"></div>
+        <div class="universe-content">
+          <div class="universe-badge available">Disponible</div>
+          <div class="universe-icon">🍽️</div>
+          <h3>Cuisine</h3>
+          <p>125 recettes IG bas & protéinées, catégories, favoris et photos personnelles.</p>
+          <span class="universe-cta">Ouvrir la cuisine →</span>
+        </div>
+      </button>
+      <button class="universe-card universe-muscu" data-universe="muscu">
+        <div class="universe-placeholder muscu-bg"><span>🏋️</span></div>
+        <div class="universe-overlay"></div>
+        <div class="universe-content">
+          <div class="universe-badge soon">Bientôt</div>
+          <div class="universe-icon">🏋️</div>
+          <h3>Musculation</h3>
+          <p>Exercices par groupe musculaire, fiches, vidéos et programmes.</p>
+          <span class="universe-cta muted">En préparation</span>
+        </div>
+      </button>
+      <button class="universe-card universe-stretch" data-universe="stretch">
+        <div class="universe-placeholder stretch-bg"><span>🧘</span></div>
+        <div class="universe-overlay"></div>
+        <div class="universe-content">
+          <div class="universe-badge soon">Bientôt</div>
+          <div class="universe-icon">🧘</div>
+          <h3>Étirements</h3>
+          <p>Mobilité, étirements par zone et routines courtes à suivre facilement.</p>
+          <span class="universe-cta muted">En préparation</span>
+        </div>
+      </button>
+    </div>
+  `;
+  document.querySelectorAll("[data-universe]").forEach(btn=>btn.addEventListener("click",()=>{
+    const u=btn.dataset.universe;
+    if(u==="cuisine"){ state.view="home"; updateShell(); render(); return; }
+    renderComingSoon(u);
+  }));
+}
+
+function renderComingSoon(universe){
+  const muscu=universe==="muscu";
+  const title=muscu?"Musculation":"Étirements";
+  const icon=muscu?"🏋️":"🧘";
+  const text=muscu?"Ta bibliothèque d’exercices et tes programmes seront intégrés ici.":"Tes fiches d’étirements, mobilité et routines seront intégrées ici.";
+  main.innerHTML=`
+    <section class="coming-card">
+      <div class="coming-icon">${icon}</div>
+      <div class="hub-kicker">Prochain univers</div>
+      <h2>${title}</h2>
+      <p>${text}</p>
+      <button class="primary-btn" id="backUniverses">← Revenir aux univers</button>
+    </section>`;
+  document.getElementById("backUniverses").addEventListener("click",()=>{state.view="hub";updateShell();render();});
+}
+
+function updateShell(){
+  const onHub=state.view==="hub";
+  bottomNav.classList.toggle("hidden",onHub);
+  if(onHub){
+    brandMark.textContent="MB"; brandEyebrow.textContent="Ma bibliothèque"; brandTitle.textContent="Mes univers";
+  } else {
+    brandMark.textContent="IG"; brandEyebrow.textContent="Ma bibliothèque cuisine"; brandTitle.textContent="Recettes IG bas & protéinées";
+  }
 }
 
 function renderHome(){
@@ -188,7 +271,9 @@ function updateNav(){
   document.querySelectorAll(".nav-btn").forEach(b=>b.classList.toggle("active",b.dataset.view===state.view));
 }
 function render(){
+  updateShell();
   updateNav();
+  if(state.view==="hub") return renderHub();
   if(state.selected) return renderDetail();
   if(state.view==="home") return renderHome();
   if(state.view==="favorites") return renderRecipeList("Mes favoris");
@@ -197,6 +282,8 @@ function render(){
 document.querySelectorAll(".nav-btn").forEach(b=>b.addEventListener("click",()=>{
   state.view=b.dataset.view; state.selected=null; state.category=""; state.ig=""; state.search=""; render();
 }));
+brandHome.addEventListener("click",()=>{state.view="hub";state.selected=null;render();});
+brandHome.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();state.view="hub";state.selected=null;render();}});
 
 photoInput.addEventListener("change", async e=>{
   const file=e.target.files?.[0];

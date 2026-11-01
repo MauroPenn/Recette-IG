@@ -1,7 +1,7 @@
 {
-  "name": "Recettes IG bas & protéinées",
-  "short_name": "Recettes IG",
-  "description": "Bibliothèque de recettes IG bas et protéinées",
+  "name": "Ma Bibliothèque - Cuisine, Musculation & Étirements",
+  "short_name": "Ma Bibliothèque",
+  "description": "Bibliothèque personnelle : recettes IG bas, musculation et étirements",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
@@ -9,7 +9,15 @@
   "theme_color": "#2f6d4f",
   "lang": "fr",
   "icons": [
-    {"src":"./icon-192.png","sizes":"192x192","type":"image/png"},
-    {"src":"./icon-512.png","sizes":"512x512","type":"image/png"}
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
   ]
 }

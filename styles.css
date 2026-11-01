@@ -80,7 +80,7 @@ main{padding:16px}
 .badge.ig{background:#e8efff;color:#2459be}
 .badge.protein{background:#e4f2e7;color:#236f43}
 .empty{grid-column:1/-1;background:var(--card);border:1px dashed #d8cec1;border-radius:18px;padding:28px;text-align:center;color:var(--muted)}
-.bottom-nav{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:min(980px,100%);display:grid;grid-template-columns:repeat(3,1fr);gap:5px;background:rgba(255,253,249,.96);backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:8px max(10px,env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left));z-index:30}
+.bottom-nav{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:min(980px,100%);display:grid;grid-template-columns:repeat(4,1fr);gap:5px;background:rgba(255,253,249,.96);backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:8px max(10px,env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left));z-index:30}
 .nav-btn{border:0;background:transparent;color:#667168;padding:6px 8px;border-radius:14px;display:flex;flex-direction:column;align-items:center;gap:2px}
 .nav-btn span{font-size:1.32rem;line-height:1}
 .nav-btn small{font-size:.69rem}
@@ -129,4 +129,41 @@ dialog::backdrop{background:rgba(31,42,35,.42);backdrop-filter:blur(2px)}
   h1{font-size:1.52rem}
   .hero{padding:28px 26px}
   .hero h2{font-size:1.9rem}
+}
+
+
+/* V4 - Accueil multi-univers */
+.brand-wrap{cursor:pointer}
+.hub-intro{padding:10px 4px 18px;text-align:center;max-width:720px;margin:0 auto}
+.hub-kicker{font-size:.76rem;text-transform:uppercase;letter-spacing:.11em;font-weight:900;color:var(--green);margin-bottom:5px}
+.hub-intro h2{font-size:1.75rem;line-height:1.12;margin:0 0 9px;color:var(--green-dark)}
+.hub-intro p{margin:0;color:var(--muted);line-height:1.52}
+.universe-grid{display:grid;grid-template-columns:1fr;gap:16px;max-width:980px;margin:0 auto}
+.universe-card{position:relative;min-height:245px;border:0;border-radius:26px;overflow:hidden;padding:0;text-align:left;box-shadow:var(--shadow-strong);background:#27372e;color:white;isolation:isolate}
+.universe-photo,.universe-placeholder{position:absolute;inset:0}
+.universe-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.universe-placeholder{display:grid;place-items:center;overflow:hidden}
+.universe-placeholder span{font-size:5.2rem;filter:drop-shadow(0 12px 25px rgba(0,0,0,.18));transform:rotate(-3deg)}
+.muscu-bg{background:radial-gradient(circle at 75% 30%,rgba(255,255,255,.22),transparent 28%),linear-gradient(135deg,#22362f,#557466 60%,#8a9c91)}
+.stretch-bg{background:radial-gradient(circle at 24% 30%,rgba(255,255,255,.32),transparent 24%),linear-gradient(135deg,#776b78,#b99e91 58%,#d9c8ad)}
+.universe-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,32,25,.9) 0%,rgba(20,32,25,.64) 48%,rgba(20,32,25,.18) 100%);z-index:1}
+.universe-content{position:relative;z-index:2;padding:22px;max-width:72%;display:flex;flex-direction:column;align-items:flex-start;min-height:245px}
+.universe-content h3{font-size:1.65rem;margin:5px 0 5px;color:white}
+.universe-content p{margin:0;color:rgba(255,255,255,.84);line-height:1.4;font-size:.9rem}
+.universe-icon{font-size:1.55rem;margin-top:auto}
+.universe-badge{border-radius:999px;padding:6px 9px;font-size:.69rem;font-weight:900;text-transform:uppercase;letter-spacing:.04em}
+.universe-badge.available{background:#dff3e5;color:#205d3b}
+.universe-badge.soon{background:rgba(255,255,255,.17);color:white;border:1px solid rgba(255,255,255,.2)}
+.universe-cta{margin-top:10px;font-weight:900;font-size:.82rem;color:white}
+.universe-cta.muted{opacity:.68}
+.coming-card{max-width:660px;margin:8vh auto 0;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:34px 24px;text-align:center;box-shadow:var(--shadow-strong)}
+.coming-icon{font-size:4.2rem;margin-bottom:10px}
+.coming-card h2{font-size:1.8rem;color:var(--green-dark);margin:4px 0 10px}
+.coming-card p{color:var(--muted);line-height:1.5;max-width:480px;margin:0 auto 20px}
+@media (min-width:760px){
+  .universe-grid{grid-template-columns:repeat(3,1fr)}
+  .universe-card{min-height:390px}
+  .universe-content{min-height:390px;max-width:100%;justify-content:flex-end;background:linear-gradient(to top,rgba(20,32,25,.88),rgba(20,32,25,.12) 70%);padding:22px}
+  .universe-overlay{background:linear-gradient(to top,rgba(20,32,25,.5),transparent 64%)}
+  .universe-icon{margin-top:auto}
 }

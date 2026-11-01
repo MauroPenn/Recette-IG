@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#2f6d4f">
-  <meta name="description" content="Bibliothèque de recettes IG bas et protéinées.">
+  <meta name="description" content="Ma bibliothèque personnelle : cuisine IG bas, musculation et étirements.">
   <link rel="manifest" href="./manifest.json">
   <link rel="icon" href="./icon-192.png">
   <link rel="apple-touch-icon" href="./icon-192.png">
   <link rel="stylesheet" href="./styles.css">
-  <title>Recettes IG bas & protéinées</title>
+  <title>Ma Bibliothèque</title>
 </head>
 <body>
   <div id="app">
     <header class="topbar">
-      <div class="brand-wrap">
-        <div class="brand-mark" aria-hidden="true">IG</div>
+      <div class="brand-wrap" id="brandHome" role="button" tabindex="0" aria-label="Revenir aux univers">
+        <div class="brand-mark" id="brandMark" aria-hidden="true">MB</div>
         <div>
-          <div class="eyebrow">Ma bibliothèque cuisine</div>
-          <h1>Recettes IG bas & protéinées</h1>
+          <div class="eyebrow" id="brandEyebrow">Ma bibliothèque</div>
+          <h1 id="brandTitle">Mes univers</h1>
         </div>
       </div>
       <button id="installBtn" class="ghost-btn install-btn hidden">Installer</button>
@@ -26,7 +26,8 @@
 
     <main id="main"></main>
 
-    <nav class="bottom-nav" aria-label="Navigation">
+    <nav class="bottom-nav hidden" id="bottomNav" aria-label="Navigation cuisine">
+      <button class="nav-btn" data-view="hub"><span aria-hidden="true">◫</span><small>Univers</small></button>
       <button class="nav-btn active" data-view="home"><span aria-hidden="true">⌂</span><small>Accueil</small></button>
       <button class="nav-btn" data-view="recipes"><span aria-hidden="true">▤</span><small>Recettes</small></button>
       <button class="nav-btn" data-view="favorites"><span aria-hidden="true">♡</span><small>Favoris</small></button>
