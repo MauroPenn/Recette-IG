@@ -87,7 +87,7 @@ function renderHub(){
         </div>
       </button>
       <button class="universe-card universe-muscu" data-universe="muscu">
-        <div class="universe-placeholder muscu-bg"><span>🏋️</span></div>
+        <div class="universe-photo"><img src="./univers-musculation.webp" alt="Espace de musculation avec haltères et poids" loading="eager"></div>
         <div class="universe-overlay"></div>
         <div class="universe-content">
           <div class="universe-badge soon">Bientôt</div>
@@ -98,7 +98,7 @@ function renderHub(){
         </div>
       </button>
       <button class="universe-card universe-stretch" data-universe="stretch">
-        <div class="universe-placeholder stretch-bg"><span>🧘</span></div>
+        <div class="universe-photo"><img src="./univers-etirements.webp" alt="Espace zen pour étirements et mobilité" loading="eager"></div>
         <div class="universe-overlay"></div>
         <div class="universe-content">
           <div class="universe-badge soon">Bientôt</div>
