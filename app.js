@@ -22,7 +22,8 @@ const categoryImageMap = {
   "Pâtes": "./cat-pates.webp",
   "Salades": "./cat-salades.webp",
   "Soupes": "./cat-soupes.webp",
-  "Mijotés": "./cat-mijotes.webp"
+  "Mijoteuse": "./cat-mijoteuse.webp",
+  "Mijotés": "./cat-mijoteuse.webp"
 };
 const categoryImage = name => categoryImageMap[name] || "";
 const favorites = () => new Set(JSON.parse(localStorage.getItem("recipeFavorites") || "[]"));
