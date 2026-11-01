@@ -31,6 +31,10 @@ const categoryImageMap = {
   "Mijotés": "./cat-mijoteuse.webp"
 };
 const categoryImage = name => categoryImageMap[name] || "";
+const recipeImageMap = {
+  "R058": "./recette-r058-veloute-pois-chiches-courgette-poireau-cumin.webp"
+};
+const officialRecipeImage = id => recipeImageMap[id] || "";
 const favorites = () => new Set(JSON.parse(localStorage.getItem("recipeFavorites") || "[]"));
 const setFavorites = set => localStorage.setItem("recipeFavorites", JSON.stringify([...set]));
 const isFavorite = id => favorites().has(id);
@@ -207,7 +211,8 @@ async function renderListOnly(){
   if(count) count.textContent=`${rows.length} recette${rows.length>1?"s":""}`;
   if(!rows.length){grid.innerHTML=`<div class="empty">Aucune recette trouvée.</div>`;return;}
   const cards = await Promise.all(rows.map(async r=>{
-    const photo=await getPhoto(r.id);
+    const localPhoto=await getPhoto(r.id);
+    const photo=localPhoto || officialRecipeImage(r.id);
     return `<button class="recipe-card" data-recipe="${esc(r.id)}">
       <div class="recipe-media">${photo?`<img src="${photo}" alt="${esc(r.nom)}">`:fallbackMedia(r)}</div>
       <div class="recipe-body"><h3>${esc(r.nom)}</h3>
@@ -233,7 +238,8 @@ function linesToList(text, ordered=false){
 async function renderDetail(){
   const r=DB.recipes.find(x=>x.id===state.selected);
   if(!r) return render();
-  const photo=await getPhoto(r.id);
+  const localPhoto=await getPhoto(r.id);
+  const photo=localPhoto || officialRecipeImage(r.id);
   const fav=isFavorite(r.id);
   main.innerHTML=`
     <button class="detail-back" id="backBtn">← Retour aux recettes</button>
@@ -243,7 +249,7 @@ async function renderDetail(){
         <h2>${esc(r.nom)}</h2>
         <div class="badges"><span class="badge">${esc(r.categorie)}</span><span class="badge ig">${esc(r.profil_ig || "IG non précisé")}</span>${r.proteinee==="Oui"?`<span class="badge protein">Protéinée</span>`:""}</div>
         <div class="actions">
-          <button class="primary-btn" id="photoBtn">${photo?"Changer ma photo":"Ajouter ma photo"}</button>
+          <button class="primary-btn" id="photoBtn">${localPhoto?"Changer ma photo":"Ajouter ma photo"}</button>
           <button class="ghost-btn" id="favBtn">${fav?"♥ Retirer des favoris":"♡ Ajouter aux favoris"}</button>
         </div>
         <div class="meta">
@@ -261,7 +267,7 @@ async function renderDetail(){
   document.getElementById("favBtn").addEventListener("click",()=>toggleFavorite(r.id));
   document.getElementById("photoBtn").addEventListener("click",()=>{
     currentPhotoRecipeId=r.id;
-    removePhotoBtn.classList.toggle("hidden",!photo);
+    removePhotoBtn.classList.toggle("hidden",!localPhoto);
     photoInput.value="";
     photoDialog.showModal();
   });
