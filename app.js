@@ -42,7 +42,9 @@ const recipeImageMap = {
   "R107": "./recette-r107-salade-crevettes-avocat-mangue.webp",
   "R108": "./recette-r108-salade-quinoa-legumes-rotis-pois-chiches.webp",
   "R109": "./recette-r109-salade-boeuf-grille-avocat.webp",
-  "R110": "./recette-r110-salade-riz-basmati-thon-oeufs.webp"
+  "R110": "./recette-r110-salade-riz-basmati-thon-oeufs.webp",
+  "R089": "./recette-r089-lasagnes-volaille-legumes.webp",
+  "R090": "./recette-r090-lasagnes-blanches-volaille-legumes.webp"
 };
 const officialRecipeImage = id => recipeImageMap[id] || "";
 const favorites = () => new Set(JSON.parse(localStorage.getItem("recipeFavorites") || "[]"));
