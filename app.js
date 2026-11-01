@@ -32,7 +32,17 @@ const categoryImageMap = {
 };
 const categoryImage = name => categoryImageMap[name] || "";
 const recipeImageMap = {
-  "R058": "./recette-r058-veloute-pois-chiches-courgette-poireau-cumin.webp"
+  "R058": "./recette-r058-veloute-pois-chiches-courgette-poireau-cumin.webp",
+  "R101": "./recette-r101-salade-poulet-avocat-oeufs.webp",
+  "R102": "./recette-r102-salade-pommes-terre-thon-oeufs.webp",
+  "R103": "./recette-r103-salade-cabillaud-avocat-oeufs.webp",
+  "R104": "./recette-r104-salade-poulet-croustillant.webp",
+  "R105": "./recette-r105-salade-mediterraneenne-pois-chiches.webp",
+  "R106": "./recette-r106-salade-pates-poulet-mozzarella.webp",
+  "R107": "./recette-r107-salade-crevettes-avocat-mangue.webp",
+  "R108": "./recette-r108-salade-quinoa-legumes-rotis-pois-chiches.webp",
+  "R109": "./recette-r109-salade-boeuf-grille-avocat.webp",
+  "R110": "./recette-r110-salade-riz-basmati-thon-oeufs.webp"
 };
 const officialRecipeImage = id => recipeImageMap[id] || "";
 const favorites = () => new Set(JSON.parse(localStorage.getItem("recipeFavorites") || "[]"));
