@@ -44,7 +44,15 @@ const recipeImageMap = {
   "R109": "./recette-r109-salade-boeuf-grille-avocat.webp",
   "R110": "./recette-r110-salade-riz-basmati-thon-oeufs.webp",
   "R089": "./recette-r089-lasagnes-volaille-legumes.webp",
-  "R090": "./recette-r090-lasagnes-blanches-volaille-legumes.webp"
+  "R090": "./recette-r090-lasagnes-blanches-volaille-legumes.webp",
+  "R126": "./recette-r126-pates-poulet-courgettes-tomates.webp",
+  "R127": "./recette-r127-pates-pesto-tomates-parmesan.webp",
+  "R128": "./recette-r128-pates-cremeuses-poulet-champignons-epinards.webp",
+  "R129": "./recette-r129-pates-poulet-epinards-tomates.webp",
+  "R130": "./recette-r130-pates-thon-courgette-poivron-olives.webp",
+  "R131": "./recette-r131-pates-brocoli-burrata-tomates.webp",
+  "R132": "./recette-r132-pates-lentilles-corail-basilic.webp",
+  "R133": "./recette-r133-pates-lentilles-corail-tomates-confites-basilic.webp"
 };
 const officialRecipeImage = id => recipeImageMap[id] || "";
 const favorites = () => new Set(JSON.parse(localStorage.getItem("recipeFavorites") || "[]"));
@@ -98,7 +106,7 @@ function renderHub(){
           <div class="universe-badge available">Disponible</div>
           <div class="universe-icon">🍽️</div>
           <h3>Cuisine</h3>
-          <p>125 recettes IG bas & protéinées, catégories, favoris et photos personnelles.</p>
+          <p>${DB.recipes.length} recettes IG bas & protéinées, catégories, favoris et photos personnelles.</p>
           <span class="universe-cta">Ouvrir la cuisine →</span>
         </div>
       </button>
