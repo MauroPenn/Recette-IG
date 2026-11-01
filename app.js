@@ -10,6 +10,21 @@ const removePhotoBtn = document.getElementById("removePhotoBtn");
 
 const esc = (s="") => String(s ?? "").replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const categoryEmoji = name => (DB.categories.find(c=>c.nom===name)?.icone || "🍽️");
+const categoryImageMap = {
+  "Cakes & desserts": "./cat-cakes-desserts.webp",
+  "Cakes salés & terrines": "./cat-cakes-sales-terrines.webp",
+  "Pancakes & gaufres": "./cat-pancakes-gaufres.webp",
+  "Pains, pizzas & bruschettas": "./cat-pains-pizzas-bruschettas.webp",
+  "Quiches & tartes": "./cat-quiches-tartes.webp",
+  "Pâtes à tartiner": "./cat-pates-a-tartiner.webp",
+  "Plats salés": "./cat-plats-sales.webp",
+  "Recettes de la mer": "./cat-recettes-mer.webp",
+  "Pâtes": "./cat-pates.webp",
+  "Salades": "./cat-salades.webp",
+  "Soupes": "./cat-soupes.webp",
+  "Mijotés": "./cat-mijotes.webp"
+};
+const categoryImage = name => categoryImageMap[name] || "";
 const favorites = () => new Set(JSON.parse(localStorage.getItem("recipeFavorites") || "[]"));
 const setFavorites = set => localStorage.setItem("recipeFavorites", JSON.stringify([...set]));
 const isFavorite = id => favorites().has(id);
@@ -66,9 +81,9 @@ function renderHome(){
     <div class="section-head"><div><h2>Catégories</h2><p>Choisis un univers de recettes</p></div></div>
     <div class="category-grid">
       ${DB.categories.map(c=>`
-        <button class="category-card" data-category="${esc(c.nom)}">
-          <div><div class="icon-wrap">${esc(c.icone)}</div><strong>${esc(c.nom)}</strong><p>${esc(c.description)}</p></div>
-          <div class="count">${c.nb} recette${c.nb>1?"s":""}</div>
+        <button class="category-card ${categoryImage(c.nom)?"has-photo":""}" data-category="${esc(c.nom)}">
+          ${categoryImage(c.nom)?`<div class="category-photo"><img src="${categoryImage(c.nom)}" alt="${esc(c.nom)}" loading="lazy"></div>`:`<div class="category-fallback"><div class="icon-wrap">${esc(c.icone)}</div></div>`}
+          <div class="category-content"><strong>${esc(c.nom)}</strong><p>${esc(c.description)}</p><div class="count">${c.nb} recette${c.nb>1?"s":""}</div></div>
         </button>`).join("")}
     </div>`;
   bindSearch();
