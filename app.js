@@ -108,6 +108,11 @@ const recipeImageMap = {
   "R006": "./recette-r006-cake-poulet-courgette-parmesan.png",
   "R008": "./recette-r008-cake-legumes-du-soleil.png",
   "R009": "./recette-r009-cake-thon-courgette-skyr-sans-farine.png",
+  "R081": "./recette-r081-terrine-poulet-legumes.png",
+  "R082": "./recette-r082-clafoutis-tomates-courgettes-fromage.png",
+  "R083": "./recette-r083-terrine-champignons-poireaux-emmental.png",
+  "R084": "./recette-r084-gateau-pommes-terre-courgettes-chevre.png",
+  "R085": "./recette-r085-gateau-pommes-terre-chou-fleur-chevre.png",
 };
 const officialRecipeImage = id => recipeImageMap[id] || "";
 const favorites = () => new Set(JSON.parse(localStorage.getItem("recipeFavorites") || "[]"));
