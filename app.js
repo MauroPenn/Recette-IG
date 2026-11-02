@@ -113,6 +113,11 @@ const recipeImageMap = {
   "R083": "./recette-r083-terrine-champignons-poireaux-emmental.png",
   "R084": "./recette-r084-gateau-pommes-terre-courgettes-chevre.png",
   "R085": "./recette-r085-gateau-pommes-terre-chou-fleur-chevre.png",
+  "R026": "./recette-r026-wok-poulet-pousses-soja.png",
+  "R059": "./recette-r059-poulet-pommes-terre-brocoli.png",
+  "R060": "./recette-r060-saumon-riz-legumes.png",
+  "R061": "./recette-r061-poulet-cremeux-champignons-pates.png",
+  "R062": "./recette-r062-boeuf-pommes-terre-carottes-mijotes.png",
 };
 const officialRecipeImage = id => recipeImageMap[id] || "";
 const favorites = () => new Set(JSON.parse(localStorage.getItem("recipeFavorites") || "[]"));
