@@ -74,7 +74,7 @@ const recipeImageMap = {
   "R073": "./recette-r073-calamars-orge-legumes-rotis.webp",
   "R074": "./recette-r074-risotto-mer-citron-safran-calamars.webp",
   "R078": "./recette-r078-crevettes-courgettes-quinoa.webp",
-  "R079": "./recette-r079-crevettes-pois-chiches-legumes.webp"
+  "R079": "./recette-r079-crevettes-pois-chiches-legumes.webp",
   "R011": "./recette-r011-flan-proteine-myrtille-citron.png",
   "R030": "./recette-r030-gateau-fromage-blanc.png",
   "R037": "./recette-r037-clafoutis-leger-pommes.png",
