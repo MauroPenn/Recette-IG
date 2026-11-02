@@ -145,6 +145,11 @@ const recipeImageMap = {
   "R016": "./recette-r016-pain-pomme-terre-skyr-v2.png",
   "R018": "./recette-r018-pate-pizza-ig-bas-v2.png",
   "R027": "./recette-r027-pain-sarrasin-pois-chiches-graines-v2.png",
+  "R028": "./recette-r028-pain-sarrasin-v2.png",
+  "R032": "./recette-r032-pizza-express-proteinee-v2.png",
+  "R033": "./recette-r033-petits-pains-pois-chiches-v2.png",
+  "R034": "./recette-r034-pain-lentilles-corail-v2.png",
+  "R044": "./recette-r044-bruschetta-tomate-basilic-v2.png",
 };
 const officialRecipeImage = id => recipeImageMap[id] || "";
 const favorites = () => new Set(JSON.parse(localStorage.getItem("recipeFavorites") || "[]"));
