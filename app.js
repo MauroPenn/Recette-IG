@@ -32,6 +32,9 @@ const categoryImageMap = {
 };
 const categoryImage = name => categoryImageMap[name] || "";
 const recipeImageMap = {
+  "R002": "./recette-r002-cake-chocolat-poire-pepites.png",
+  "R005": "./recette-r005-cake-marbre-proteine-avoine-amande-lupin.png",
+  "R007": "./recette-r007-cake-proteine-myrtilles-chocolat.png",
   "R014": "./recette-r014-gaufres-ig-bas-proteinees.png",
   "R017": "./recette-r017-pancakes-proteines-ig-bas.png",
   "R001": "./recette-r001-appareil-a-quiche-proteine-ig-bas.png",
