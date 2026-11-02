@@ -167,3 +167,50 @@ dialog::backdrop{background:rgba(31,42,35,.42);backdrop-filter:blur(2px)}
   .universe-overlay{background:linear-gradient(to top,rgba(20,32,25,.5),transparent 64%)}
   .universe-icon{margin-top:auto}
 }
+
+/* V5 - Univers Musculation */
+body.muscu-mode{background:#07131c;color:#fff}
+body.muscu-mode .topbar{background:rgba(5,16,24,.94);border-bottom-color:#1d303c;color:#fff}
+body.muscu-mode .brand-mark{background:linear-gradient(145deg,#ff8a00,#f05a00);box-shadow:0 8px 22px rgba(255,116,0,.25);font-size:1.15rem}
+body.muscu-mode .eyebrow{color:#ff8a00}
+body.muscu-mode main{padding-top:12px}
+.muscu-page{min-height:calc(100vh - 105px);background:linear-gradient(180deg,#07131c,#091822 55%,#061019);border-radius:24px;padding:16px;color:#fff;box-shadow:0 16px 46px rgba(0,0,0,.22)}
+.muscu-entry-page{padding:0;overflow:hidden}
+.muscu-entry-hero{min-height:72vh;position:relative;border-radius:24px;overflow:hidden;background:#06121a}
+.muscu-entry-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.muscu-entry-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,14,20,.16),rgba(5,14,20,.28) 35%,rgba(5,14,20,.94) 92%)}
+.muscu-entry-content{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;text-align:center;padding:30px 22px 38px}
+.muscu-entry-icon{font-size:2rem;filter:drop-shadow(0 5px 12px rgba(0,0,0,.35))}
+.muscu-entry-content h2{font-size:2.5rem;margin:9px 0 8px;color:#fff;letter-spacing:-.03em}
+.muscu-entry-content p{font-size:1.04rem;line-height:1.4;color:#ecf3f7;max-width:340px;margin:8px 0 22px}
+.muscu-orange-line{width:70px;height:4px;border-radius:99px;background:#ff7900;margin:2px auto 4px}
+.muscu-primary{border:0;border-radius:999px;background:linear-gradient(180deg,#ff8a00,#f26500);color:#fff;font-weight:900;padding:13px 30px;box-shadow:0 10px 25px rgba(255,109,0,.24)}
+.muscu-primary.wide{width:100%;margin-top:16px}
+.muscu-back{border:0;background:transparent;color:#fff;font-weight:800;padding:4px 0 14px}
+.muscu-head{display:flex;align-items:center;gap:12px;margin:0 0 18px}
+.muscu-head-icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:#172a35;color:#ff7900;font-size:1.55rem;border:1px solid #2e414c}
+.muscu-head h2{font-size:1.6rem;margin:0;color:#fff}
+.muscu-head p{margin:2px 0 0;color:#b9c7cf;font-size:.86rem}
+.muscu-menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.muscu-menu-card{position:relative;min-height:180px;border:1px solid #3a4b56;background:linear-gradient(145deg,#10212b,#091721);border-radius:20px;padding:18px;text-align:left;color:#fff;box-shadow:0 12px 28px rgba(0,0,0,.22);display:flex;flex-direction:column;align-items:flex-start}
+.muscu-menu-card:active,.muscu-list-row:active{transform:scale(.985)}
+.muscu-card-icon{font-size:2rem;color:#ff7900;margin-bottom:auto}
+.muscu-menu-card strong{font-size:1.25rem;margin-top:18px}
+.muscu-menu-card small{color:#aebcc4;line-height:1.3;margin-top:4px}
+.muscu-arrow{margin-left:auto;color:#ff7900;font-size:2rem;line-height:1}
+.muscu-menu-card .muscu-arrow{position:absolute;right:14px;bottom:16px}
+.muscu-list{display:flex;flex-direction:column;gap:9px}
+.muscu-list-row{width:100%;border:1px solid #324652;background:linear-gradient(90deg,#11242e,#0b1922);border-radius:17px;color:#fff;padding:11px 13px;display:flex;align-items:center;gap:12px;text-align:left}
+.muscu-list-row strong{font-size:1rem}
+.muscu-row-icon{width:48px;height:48px;border-radius:13px;background:#182e3a;display:grid;place-items:center;font-size:1.45rem;flex:0 0 auto}
+.sport-row .muscu-row-icon{background:#17281f}
+.muscu-note{margin-top:16px;border:1px solid #2b3e48;background:#0e1e27;border-radius:16px;padding:14px;color:#aebdc5;font-size:.84rem;line-height:1.45}
+.muscu-placeholder-card{border:1px solid #334854;background:linear-gradient(145deg,#10232d,#0b1821);border-radius:20px;padding:22px;color:#fff}
+.muscu-placeholder-card strong{font-size:1.05rem}
+.muscu-placeholder-card p{color:#aebdc5;line-height:1.48;margin:8px 0 0}
+.muscu-tabs{display:grid;grid-template-columns:repeat(3,1fr);background:#10212b;border-radius:999px;padding:4px;margin:0 0 16px;border:1px solid #263a45}
+.muscu-tabs button{border:0;background:transparent;color:#c5d0d6;border-radius:999px;padding:9px;font-weight:800}
+.muscu-tabs button.active{background:linear-gradient(180deg,#ff8a00,#f26500);color:#fff}
+.history-empty{text-align:center;padding:34px 22px}
+@media(max-width:430px){.muscu-menu-card{min-height:158px;padding:15px}.muscu-menu-card strong{font-size:1.1rem}.muscu-entry-content h2{font-size:2.2rem}}
+@media(min-width:700px){.muscu-page{padding:24px}.muscu-menu-grid{grid-template-columns:repeat(4,1fr)}.muscu-menu-card{min-height:220px}}
