@@ -52,7 +52,13 @@ const recipeImageMap = {
   "R130": "./recette-r130-pates-thon-courgette-poivron-olives.webp",
   "R131": "./recette-r131-pates-brocoli-burrata-tomates.webp",
   "R132": "./recette-r132-pates-lentilles-corail-basilic.webp",
-  "R133": "./recette-r133-pates-lentilles-corail-tomates-confites-basilic.webp"
+  "R133": "./recette-r133-pates-lentilles-corail-tomates-confites-basilic.webp",
+  "R071": "./recette-r071-bowl-calamars-romaine.webp",
+  "R072": "./recette-r072-tacos-calamars-romaine.webp",
+  "R073": "./recette-r073-calamars-orge-legumes-rotis.webp",
+  "R074": "./recette-r074-risotto-mer-citron-safran-calamars.webp",
+  "R078": "./recette-r078-crevettes-courgettes-quinoa.webp",
+  "R079": "./recette-r079-crevettes-pois-chiches-legumes.webp"
 };
 const officialRecipeImage = id => recipeImageMap[id] || "";
 const favorites = () => new Set(JSON.parse(localStorage.getItem("recipeFavorites") || "[]"));
