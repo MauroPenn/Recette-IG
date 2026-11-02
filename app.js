@@ -91,6 +91,11 @@ const recipeImageMap = {
   "R098": "./recette-r098-cake-proteine-pomme-coco.png",
   "R099": "./recette-r099-cake-proteine-citron-amande.png",
   "R100": "./recette-r100-cake-proteine-banane-cacao-noisette.png",
+  "R003": "./recette-r003-cake-courgette-poivron-feta.png",
+  "R004": "./recette-r004-cake-jambon-epinards-chevre.png",
+  "R006": "./recette-r006-cake-poulet-courgette-parmesan.png",
+  "R008": "./recette-r008-cake-legumes-du-soleil.png",
+  "R009": "./recette-r009-cake-thon-courgette-skyr-sans-farine.png",
 };
 const officialRecipeImage = id => recipeImageMap[id] || "";
 const favorites = () => new Set(JSON.parse(localStorage.getItem("recipeFavorites") || "[]"));
