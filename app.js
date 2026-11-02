@@ -155,6 +155,11 @@ const recipeImageMap = {
   "R047": "./recette-r047-bruschetta-ricotta-miel.png",
   "R048": "./recette-r048-bruschetta-champignons-ail.png",
   "R049": "./recette-r049-bruschetta-poivron-roti.png",
+  "R050": "./recette-r050-bruschetta-saumon-fromage-frais.png",
+  "R051": "./recette-r051-bruschetta-avocat-citron-vert.png",
+  "R052": "./recette-r052-bruschetta-thon-olives.png",
+  "R053": "./recette-r053-bruschetta-chevre-figues.png",
+  "R054": "./recette-r054-bruschetta-pesto-tomates-sechees.png",
 };
 const officialRecipeImage = id => recipeImageMap[id] || "";
 const favorites = () => new Set(JSON.parse(localStorage.getItem("recipeFavorites") || "[]"));
