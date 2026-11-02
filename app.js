@@ -118,6 +118,11 @@ const recipeImageMap = {
   "R060": "./recette-r060-saumon-riz-legumes.png",
   "R061": "./recette-r061-poulet-cremeux-champignons-pates.png",
   "R062": "./recette-r062-boeuf-pommes-terre-carottes-mijotes.png",
+  "R063": "./recette-r063-saucisses-pommes-terre-poivrons.png",
+  "R064": "./recette-r064-poulet-riz-legumes.png",
+  "R065": "./recette-r065-crevettes-riz-brocoli.png",
+  "R066": "./recette-r066-poulet-tex-mex-haricots-mais.png",
+  "R067": "./recette-r067-gnocchis-poulet-tomates.png",
 };
 const officialRecipeImage = id => recipeImageMap[id] || "";
 const favorites = () => new Set(JSON.parse(localStorage.getItem("recipeFavorites") || "[]"));
