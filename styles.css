@@ -312,3 +312,12 @@ body.muscu-mode .brand-mark{font-family:Arial,sans-serif;font-weight:900;font-si
 .sport-row[data-sport="Course à pied"]::before{background-image:url('./sport-course.webp')}
 .sport-row[data-sport="Stand Up Paddle"]::before{background-image:url('./sport-paddle.webp')}
 @media(min-width:700px){.muscu-menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.muscu-menu-card{min-height:260px}}
+
+
+/* V5.6 — correction ciblée page Autre sport uniquement */
+.muscu-other-list .sport-row::before{content:none!important;display:none!important}
+.muscu-other-list .sport-row{min-height:86px;padding:0 18px 0 0;gap:22px;overflow:hidden}
+.muscu-other-list .sport-thumb{width:180px;height:84px;flex:0 0 180px;border-radius:17px 0 0 17px;overflow:hidden;background:#132b36}
+.muscu-other-list .sport-thumb img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.muscu-other-list .sport-row strong{padding-left:0;font-size:1.08rem}
+@media(max-width:620px){.muscu-other-list .sport-row{gap:14px}.muscu-other-list .sport-thumb{width:118px;flex-basis:118px;height:76px}}

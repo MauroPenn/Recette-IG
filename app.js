@@ -336,14 +336,18 @@ function renderMuscuSessions(){
 }
 function renderMuscuOther(){
   const sports=[
-    ["Vélo","🚴","./sport-velo.webp"],["Vélo d’appartement","🚲","./sport-velo-appartement.webp"],["Marche","🚶","./sport-marche.webp"],["Course à pied","🏃","./sport-course.webp"],["Stand Up Paddle","🏄","./sport-paddle.webp"]
+    ["Vélo","./sport-velo.webp"],
+    ["Vélo d’appartement","./sport-velo-appartement.webp"],
+    ["Marche","./sport-marche.webp"],
+    ["Course à pied","./sport-course.webp"],
+    ["Stand Up Paddle","./sport-paddle.webp"]
   ];
   main.innerHTML=`
     <section class="muscu-page">
       ${muscuBackButton()}
       <div class="muscu-head"><div class="muscu-head-icon icon-sport">●</div><div><h2>Autre sport</h2><p>Enregistrer une activité manuellement</p></div></div>
-      <div class="muscu-list">
-        ${sports.map(([name,icon,img])=>`<button class="muscu-list-row sport-row" data-sport="${name}"><span class="muscu-row-thumb wide"><img src="${img}" alt=""></span><span class="sport-icon">${icon}</span><strong>${name}</strong><span class="muscu-arrow">›</span></button>`).join("")}
+      <div class="muscu-list muscu-other-list">
+        ${sports.map(([name,img])=>`<button class="muscu-list-row sport-row" data-sport="${name}"><span class="muscu-row-thumb sport-thumb"><img src="${img}" alt="${name}"></span><strong>${name}</strong><span class="muscu-arrow">›</span></button>`).join("")}
       </div>
       <button class="muscu-primary wide" type="button">＋ Enregistrer une activité</button>
     </section>`;
