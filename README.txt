@@ -1,10 +1,7 @@
-Pack photos – catégorie Quiches & tartes
-
-Contenu :
-R001 -> recette-r001-appareil-a-quiche-proteine-ig-bas.png
-R013 -> recette-r013-gaufres-au-thon.png
-R021 -> recette-r021-quiche-proteinee-legumes-sans-pate.png
-R022 -> recette-r022-quiche-proteinee-legumes-thon-sans-pate.png
-R023 -> recette-r023-quiche-proteinee-poulet-epinards-skyr-sans-pate.png
-R029 -> recette-r029-pate-brisee-farine-pois-chiches.png
-R031 -> recette-r031-pancakes-courgettes-parmesan.png
+Lot 3 - Catégorie Mijoteuse
+Contenu : 4 dernières images de la catégorie.
+Fichiers images :
+- recette-r122-roti-porc-legumes-v2.png
+- recette-r123-boeuf-mijote-thym-v2.png
+- recette-r124-poulet-pommes-terre-cremeux-v2.png
+- recette-r125-poulet-miel-barbecue-oignons-v2.png
