@@ -32,6 +32,16 @@ const categoryImageMap = {
 };
 const categoryImage = name => categoryImageMap[name] || "";
 const recipeImageMap = {
+  "R002": "./recette-r002-cake-chocolat-poire-pepites.png",
+  "R005": "./recette-r005-cake-marbre-proteine-avoine-amande-lupin.png",
+  "R007": "./recette-r007-cake-proteine-myrtilles-chocolat.png",
+  "R011": "./recette-r011-flan-proteine-myrtille-citron.png",
+  "R030": "./recette-r030-gateau-fromage-blanc.png",
+  "R037": "./recette-r037-clafoutis-leger-pommes.png",
+  "R075": "./recette-r075-cake-proteine-ananas-coco-vanille.png",
+  "R076": "./recette-r076-tiramisu-proteine-cafe-chia.png",
+  "R077": "./recette-r077-tiramisu-proteine-poire-chocolat-chia.png",
+  "R091": "./recette-r091-cake-proteine-banane-chocolat.png",
   "R014": "./recette-r014-gaufres-ig-bas-proteinees.png",
   "R017": "./recette-r017-pancakes-proteines-ig-bas.png",
   "R001": "./recette-r001-appareil-a-quiche-proteine-ig-bas.png",
@@ -72,16 +82,6 @@ const recipeImageMap = {
   "R074": "./recette-r074-risotto-mer-citron-safran-calamars.webp",
   "R078": "./recette-r078-crevettes-courgettes-quinoa.webp",
   "R079": "./recette-r079-crevettes-pois-chiches-legumes.webp"
-  "R002": "./recette-r002-cake-chocolat-poire-pepites.png",
-  "R005": "./recette-r005-cake-marbre-proteine-avoine-amande-lupin.png",
-  "R007": "./recette-r007-cake-proteine-myrtilles-chocolat.png",
-  "R011": "./recette-r011-flan-proteine-myrtille-citron.png",
-  "R030": "./recette-r030-gateau-fromage-blanc.png",
-  "R037": "./recette-r037-clafoutis-leger-pommes.png",
-  "R075": "./recette-r075-cake-proteine-ananas-coco-vanille.png",
-  "R076": "./recette-r076-tiramisu-proteine-cafe-chia.png",
-  "R077": "./recette-r077-tiramisu-proteine-poire-chocolat-chia.png",
-  "R091": "./recette-r091-cake-proteine-banane-chocolat.png",
 };
 const officialRecipeImage = id => recipeImageMap[id] || "";
 const favorites = () => new Set(JSON.parse(localStorage.getItem("recipeFavorites") || "[]"));
