@@ -160,6 +160,13 @@ const recipeImageMap = {
   "R052": "./recette-r052-bruschetta-thon-olives.png",
   "R053": "./recette-r053-bruschetta-chevre-figues.png",
   "R054": "./recette-r054-bruschetta-pesto-tomates-sechees.png",
+  "R055": "./recette-r055-bruschetta-burrata-pesto.png",
+  "R056": "./recette-r056-bruschetta-poulet-tomates-sechees.png",
+  "R057": "./recette-r057-bruschetta-crevettes-avocat.png",
+  "R086": "./recette-r086-pain-lentilles-corail.png",
+  "R087": "./recette-r087-pain-lentilles-avoine-lupin.png",
+  "R088": "./recette-r088-pain-nordique-graines.png",
+  "R111": "./recette-r111-pain-100-sarrasin.png",
 };
 const officialRecipeImage = id => recipeImageMap[id] || "";
 const favorites = () => new Set(JSON.parse(localStorage.getItem("recipeFavorites") || "[]"));
