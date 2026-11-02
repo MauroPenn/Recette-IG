@@ -78,6 +78,10 @@ const recipeImageMap = {
   "R011": "./recette-r011-flan-proteine-myrtille-citron.png",
   "R030": "./recette-r030-gateau-fromage-blanc.png",
   "R037": "./recette-r037-clafoutis-leger-pommes.png",
+  "R075": "./recette-r075-cake-proteine-ananas-coco-vanille.png",
+  "R076": "./recette-r076-tiramisu-proteine-cafe-chia.png",
+  "R077": "./recette-r077-tiramisu-proteine-poire-chocolat-chia.png",
+  "R091": "./recette-r091-cake-proteine-banane-chocolat.png",
 };
 const officialRecipeImage = id => recipeImageMap[id] || "";
 const favorites = () => new Set(JSON.parse(localStorage.getItem("recipeFavorites") || "[]"));
