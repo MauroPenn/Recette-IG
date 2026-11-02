@@ -32,6 +32,10 @@ const categoryImageMap = {
 };
 const categoryImage = name => categoryImageMap[name] || "";
 const recipeImageMap = {
+  "R019": "./recette-r019-choco-noisette-saine.png",
+  "R020": "./recette-r020-choco-noisette-ig-bas.png",
+  "R035": "./recette-r035-pate-amandes.png",
+  "R036": "./recette-r036-pate-cacahuetes.png",
   "R058": "./recette-r058-veloute-pois-chiches-courgette-poireau-cumin.webp",
   "R101": "./recette-r101-salade-poulet-avocat-oeufs.webp",
   "R102": "./recette-r102-salade-pommes-terre-thon-oeufs.webp",
