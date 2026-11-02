@@ -126,6 +126,11 @@ const recipeImageMap = {
   "R068": "./recette-r068-boulettes-boeuf-orzo-tomates.png",
   "R069": "./recette-r069-poulet-citron-orzo-epinards.png",
   "R070": "./recette-r070-boeuf-cremeux-champignons-pates.png",
+  "R112": "./recette-r112-boeuf-bourguignon-mijoteuse-v2.png",
+  "R113": "./recette-r113-poulet-cremeux-ail-v2.png",
+  "R114": "./recette-r114-porc-effiloche-sauce-barbecue-v2.png",
+  "R115": "./recette-r115-ragout-boeuf-legumes-pommes-terre-v2.png",
+  "R116": "./recette-r116-boulettes-boeuf-sauce-tomate-v2.png",
 };
 const officialRecipeImage = id => recipeImageMap[id] || "";
 const favorites = () => new Set(JSON.parse(localStorage.getItem("recipeFavorites") || "[]"));
