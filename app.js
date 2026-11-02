@@ -140,6 +140,11 @@ const recipeImageMap = {
   "R123": "./recette-r123-boeuf-mijote-thym-v2.png",
   "R124": "./recette-r124-poulet-barbecue-miel-v3.png",
   "R125": "./recette-r125-roti-porc-pommes-terre-v3.png",
+  "R012": "./recette-r012-fougasse-petit-epeautre-v2.png",
+  "R015": "./recette-r015-pain-complet-ig-bas-v2.png",
+  "R016": "./recette-r016-pain-pomme-terre-skyr-v2.png",
+  "R018": "./recette-r018-pate-pizza-ig-bas-v2.png",
+  "R027": "./recette-r027-pain-sarrasin-pois-chiches-graines-v2.png",
 };
 const officialRecipeImage = id => recipeImageMap[id] || "";
 const favorites = () => new Set(JSON.parse(localStorage.getItem("recipeFavorites") || "[]"));
