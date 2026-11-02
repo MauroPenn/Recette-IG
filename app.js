@@ -136,6 +136,10 @@ const recipeImageMap = {
   "R119": "./recette-r119-poulet-citron-herbes-v2.png",
   "R120": "./recette-r120-porc-champignons-oignons-v2.png",
   "R121": "./recette-r121-chili-boeuf-haricots-blancs-v2.png",
+  "R122": "./recette-r122-roti-porc-legumes-v2.png",
+  "R123": "./recette-r123-boeuf-mijote-thym-v2.png",
+  "R124": "./recette-r124-poulet-pommes-terre-cremeux-v2.png",
+  "R125": "./recette-r125-poulet-miel-barbecue-oignons-v2.png",
 };
 const officialRecipeImage = id => recipeImageMap[id] || "";
 const favorites = () => new Set(JSON.parse(localStorage.getItem("recipeFavorites") || "[]"));
