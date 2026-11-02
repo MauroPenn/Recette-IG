@@ -97,6 +97,12 @@ const recipeImageMap = {
   "R025": "./recette-r025-terrine-fraiche-thon-courgette.png",
   "R038": "./recette-r038-cake-epinards-feta.png",
   "R039": "./recette-r039-cake-poulet-curry.png",
+
+  "R040": "./recette-r040-cake-poivron-mozzarella.png",
+  "R041": "./recette-r041-cake-champignons-comte.png",
+  "R042": "./recette-r042-cake-carotte-chevre.png",
+  "R043": "./recette-r043-cake-thon-olives.png",
+  "R080": "./recette-r080-flan-courgettes-parmesan-skyr.png",
   "R003": "./recette-r003-cake-courgette-poivron-feta.png",
   "R004": "./recette-r004-cake-jambon-epinards-chevre.png",
   "R006": "./recette-r006-cake-poulet-courgette-parmesan.png",
