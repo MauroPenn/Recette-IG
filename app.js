@@ -285,15 +285,18 @@ function renderMuscuEntry(){
   document.getElementById("enterMuscu").addEventListener("click",()=>{state.view="muscu-menu";render();});
 }
 function renderMuscuMenu(){
+  const cards=[
+    ["muscu-exercises","./muscu-card-exercices.webp","🏋️","Exercices","Par groupe musculaire"],
+    ["muscu-sessions","./muscu-card-seances.webp","⏱️","Séances","Programmes avec chrono"],
+    ["muscu-other","./muscu-card-autre-sport.webp","🏃","Autre sport","Vélo, marche, course…"],
+    ["muscu-history","./muscu-card-historique.webp","📊","Historique","Semaine, mois, année"]
+  ];
   main.innerHTML=`
-    <section class="muscu-page">
+    <section class="muscu-page muscu-menu-page">
       ${muscuBackButton("hub","Univers")}
       <div class="muscu-head"><div class="muscu-head-icon">🏋️</div><div><h2>Musculation</h2><p>Choisissez une rubrique</p></div></div>
       <div class="muscu-menu-grid">
-        <button class="muscu-menu-card" data-muscu-view="muscu-exercises"><span class="muscu-card-icon">🏋️</span><strong>Exercices</strong><small>Par groupe musculaire</small><span class="muscu-arrow">›</span></button>
-        <button class="muscu-menu-card" data-muscu-view="muscu-sessions"><span class="muscu-card-icon">⏱️</span><strong>Séances</strong><small>Programmes avec chrono</small><span class="muscu-arrow">›</span></button>
-        <button class="muscu-menu-card" data-muscu-view="muscu-other"><span class="muscu-card-icon">🏃</span><strong>Autre sport</strong><small>Vélo, marche, course…</small><span class="muscu-arrow">›</span></button>
-        <button class="muscu-menu-card" data-muscu-view="muscu-history"><span class="muscu-card-icon">📊</span><strong>Historique</strong><small>Semaine, mois, année</small><span class="muscu-arrow">›</span></button>
+        ${cards.map(([view,img,icon,title,sub])=>`<button class="muscu-menu-card" data-muscu-view="${view}"><img src="${img}" alt="" class="muscu-menu-photo"><span class="muscu-menu-shade"></span><span class="muscu-card-icon">${icon}</span><span class="muscu-menu-text"><strong>${title}</strong><small>${sub}</small></span><span class="muscu-arrow">›</span></button>`).join("")}
       </div>
     </section>`;
   bindMuscuBack();
@@ -301,51 +304,68 @@ function renderMuscuMenu(){
 }
 function renderMuscuExercises(){
   const groups=[
-    ["Pectoraux","💪"],["Dos","🦅"],["Épaules","🏋️"],["Biceps","💪"],["Triceps","💪"],["Jambes","🦵"],["Abdominaux","🔥"]
+    ["Pectoraux","./muscle-pectoraux.webp"],["Dos","./muscle-dos.webp"],["Épaules","./muscle-epaules.webp"],["Biceps","./muscle-biceps.webp"],["Triceps","./muscle-triceps.webp"],["Jambes","./muscle-jambes.webp"],["Abdominaux","./muscle-abdos.webp"]
   ];
   main.innerHTML=`
     <section class="muscu-page">
       ${muscuBackButton()}
       <div class="muscu-head"><div class="muscu-head-icon">🏋️</div><div><h2>Exercices</h2><p>Choisissez un groupe musculaire</p></div></div>
-      <div class="muscu-list">
-        ${groups.map(([name,icon])=>`<button class="muscu-list-row" data-muscle="${name}"><span class="muscu-row-icon">${icon}</span><strong>${name}</strong><span class="muscu-arrow">›</span></button>`).join("")}
+      <div class="muscu-list muscu-exercise-list">
+        ${groups.map(([name,img])=>`<button class="muscu-list-row" data-muscle="${name}"><span class="muscu-row-thumb"><img src="${img}" alt="${name}"></span><strong>${name}</strong><span class="muscu-arrow">›</span></button>`).join("")}
       </div>
-      <div class="muscu-note">Les fiches détaillées et animations d’exercices seront ajoutées dans chaque groupe.</div>
     </section>`;
   bindMuscuBack();
 }
 function renderMuscuSessions(){
+  const sessions=[
+    ["Haut du corps","25 min","6 exercices","./session-haut-corps.webp"],
+    ["Bas du corps","28 min","6 exercices","./session-bas-corps.webp"],
+    ["Corps complet","35 min","8 exercices","./session-corps-complet.webp"],
+    ["Abdos & gainage","15 min","5 exercices","./session-abdos.webp"]
+  ];
   main.innerHTML=`
     <section class="muscu-page">
       ${muscuBackButton()}
-      <div class="muscu-head"><div class="muscu-head-icon">⏱️</div><div><h2>Séances</h2><p>Programmes avec chrono</p></div></div>
-      <div class="muscu-session-grid">
-        <div class="muscu-placeholder-card"><strong>Vos séances apparaîtront ici</strong><p>Nous construirons ensuite les séances avec exercices, temps d’effort, temps de repos et enchaînement automatique.</p></div>
+      <div class="muscu-head"><div class="muscu-head-icon">⏱️</div><div><h2>Séances</h2><p>Choisissez une séance</p></div></div>
+      <div class="muscu-list muscu-session-list">
+        ${sessions.map(([name,time,count,img])=>`<button class="muscu-list-row session-row"><span class="muscu-row-thumb wide"><img src="${img}" alt=""></span><span class="session-copy"><strong>${name}</strong><small>◷ ${time} &nbsp; | &nbsp; ${count}</small></span><span class="muscu-arrow">›</span></button>`).join("")}
       </div>
       <button class="muscu-primary wide" type="button">＋ Créer une séance</button>
     </section>`;
   bindMuscuBack();
 }
 function renderMuscuOther(){
-  const sports=[["Vélo","🚴"],["Vélo d’appartement","🚲"],["Marche","🚶"],["Course à pied","🏃"],["Stand Up Paddle","🏄"]];
+  const sports=[
+    ["Vélo","🚴","./sport-velo.webp"],["Vélo d’appartement","🚲","./sport-velo-appartement.webp"],["Marche","🚶","./sport-marche.webp"],["Course à pied","🏃","./sport-course.webp"],["Stand Up Paddle","🏄","./sport-paddle.webp"]
+  ];
   main.innerHTML=`
     <section class="muscu-page">
       ${muscuBackButton()}
       <div class="muscu-head"><div class="muscu-head-icon">🏃</div><div><h2>Autre sport</h2><p>Enregistrer une activité manuellement</p></div></div>
       <div class="muscu-list">
-        ${sports.map(([name,icon])=>`<button class="muscu-list-row sport-row" data-sport="${name}"><span class="muscu-row-icon">${icon}</span><strong>${name}</strong><span class="muscu-arrow">›</span></button>`).join("")}
+        ${sports.map(([name,icon,img])=>`<button class="muscu-list-row sport-row" data-sport="${name}"><span class="muscu-row-thumb wide"><img src="${img}" alt=""></span><span class="sport-icon">${icon}</span><strong>${name}</strong><span class="muscu-arrow">›</span></button>`).join("")}
       </div>
-      <div class="muscu-note">À l’étape suivante, chaque activité permettra de saisir au minimum la date, la durée et la distance en kilomètres.</div>
+      <button class="muscu-primary wide" type="button">＋ Enregistrer une activité</button>
     </section>`;
   bindMuscuBack();
 }
 function renderMuscuHistory(){
+  const items=[
+    ["🏋️","Séance – Haut du corps","25 min","Lun. 20 janv."],
+    ["🚴","Vélo","42 min · 14,6 km","Dim. 19 janv."],
+    ["🏃","Course à pied","28 min · 5,2 km","Ven. 17 janv."],
+    ["🏋️","Séance – Abdos & gainage","15 min","Mer. 15 janv."],
+    ["🚶","Marche","50 min · 4,8 km","Lun. 13 janv."]
+  ];
   main.innerHTML=`
     <section class="muscu-page">
       ${muscuBackButton()}
-      <div class="muscu-head"><div class="muscu-head-icon">📊</div><div><h2>Historique</h2><p>Retrouvez l’ensemble de vos activités</p></div></div>
+      <div class="muscu-head"><div class="muscu-head-icon">📊</div><div><h2>Historique</h2><p>Consultez l’ensemble de vos activités</p></div></div>
       <div class="muscu-tabs"><button class="active">Semaine</button><button>Mois</button><button>Année</button></div>
-      <div class="muscu-placeholder-card history-empty"><strong>Aucune activité enregistrée</strong><p>Les séances de musculation et les autres sports apparaîtront ici dès que nous activerons l’enregistrement.</p></div>
+      <div class="muscu-list history-list">
+        ${items.map(([icon,title,meta,date])=>`<button class="muscu-list-row history-row"><span class="history-icon">${icon}</span><span class="history-copy"><strong>${title}</strong><small>${date} · ${meta}</small></span><span class="muscu-arrow">›</span></button>`).join("")}
+      </div>
+      <div class="muscu-note">Ces lignes servent de prévisualisation. L’historique réel se remplira avec tes séances et tes autres sports enregistrés.</div>
     </section>`;
   bindMuscuBack();
 }
