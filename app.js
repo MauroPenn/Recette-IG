@@ -32,6 +32,8 @@ const categoryImageMap = {
 };
 const categoryImage = name => categoryImageMap[name] || "";
 const recipeImageMap = {
+  "R014": "./recette-r014-gaufres-ig-bas-proteinees.png",
+  "R017": "./recette-r017-pancakes-proteines-ig-bas.png",
   "R001": "./recette-r001-appareil-a-quiche-proteine-ig-bas.png",
   "R013": "./recette-r013-gaufres-au-thon.png",
   "R021": "./recette-r021-quiche-proteinee-legumes-sans-pate.png",
