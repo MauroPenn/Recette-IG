@@ -336,11 +336,11 @@ function renderMuscuSessions(){
 }
 function renderMuscuOther(){
   const sports=[
-    ["Vélo","./sport-velo.webp"],
-    ["Vélo d’appartement","./sport-velo-appartement.webp"],
-    ["Marche","./sport-marche.webp"],
-    ["Course à pied","./sport-course.webp"],
-    ["Stand Up Paddle","./sport-paddle.webp"]
+    ["Vélo","./sport-velo-v2.webp"],
+    ["Vélo d’appartement","./sport-velo-appartement-v2.webp"],
+    ["Marche","./sport-marche-v2.webp"],
+    ["Course à pied","./sport-course-v2.webp"],
+    ["Stand Up Paddle","./sport-paddle-v2.webp"]
   ];
   main.innerHTML=`
     <section class="muscu-page">
@@ -353,6 +353,7 @@ function renderMuscuOther(){
     </section>`;
   bindMuscuBack();
 }
+
 function renderMuscuHistory(){
   const items=[
     ["🏋️","Séance – Haut du corps","25 min","Lun. 20 janv."],

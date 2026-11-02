@@ -314,10 +314,12 @@ body.muscu-mode .brand-mark{font-family:Arial,sans-serif;font-weight:900;font-si
 @media(min-width:700px){.muscu-menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.muscu-menu-card{min-height:260px}}
 
 
-/* V5.6 — correction ciblée page Autre sport uniquement */
-.muscu-other-list .sport-row::before{content:none!important;display:none!important}
-.muscu-other-list .sport-row{min-height:86px;padding:0 18px 0 0;gap:22px;overflow:hidden}
-.muscu-other-list .sport-thumb{width:180px;height:84px;flex:0 0 180px;border-radius:17px 0 0 17px;overflow:hidden;background:#132b36}
-.muscu-other-list .sport-thumb img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
-.muscu-other-list .sport-row strong{padding-left:0;font-size:1.08rem}
-@media(max-width:620px){.muscu-other-list .sport-row{gap:14px}.muscu-other-list .sport-thumb{width:118px;flex-basis:118px;height:76px}}
+/* V5.7 — correction ciblée AUTRE SPORT : une seule image par ligne */
+.muscu-other-list .sport-row::before{content:none!important;display:none!important;background:none!important;}
+.muscu-other-list .sport-row{min-height:84px!important;height:84px!important;padding:0 18px 0 0!important;gap:20px!important;overflow:hidden!important;align-items:center!important;}
+.muscu-other-list .sport-thumb{display:block!important;width:150px!important;height:82px!important;flex:0 0 150px!important;margin:0!important;border-radius:17px 0 0 17px!important;overflow:hidden!important;background:#132b36!important;}
+.muscu-other-list .sport-thumb img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;margin:0!important;padding:0!important;}
+.muscu-other-list .sport-row strong{font-size:1.08rem!important;margin:0!important;padding:0!important;}
+.muscu-other-list .sport-row .muscu-arrow{margin-left:auto!important;}
+.muscu-other-list .sport-icon{display:none!important;}
+@media(max-width:620px){.muscu-other-list .sport-row{height:76px!important;min-height:76px!important;gap:14px!important}.muscu-other-list .sport-thumb{width:112px!important;height:74px!important;flex-basis:112px!important}.muscu-other-list .sport-row strong{font-size:.98rem!important}}
