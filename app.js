@@ -82,6 +82,11 @@ const recipeImageMap = {
   "R076": "./recette-r076-tiramisu-proteine-cafe-chia.png",
   "R077": "./recette-r077-tiramisu-proteine-poire-chocolat-chia.png",
   "R091": "./recette-r091-cake-proteine-banane-chocolat.png",
+  "R092": "./recette-r092-cake-proteine-pomme-cannelle.png",
+  "R093": "./recette-r093-cake-proteine-banane-coco.png",
+  "R094": "./recette-r094-cake-proteine-chocolat-compote.png",
+  "R095": "./recette-r095-cake-proteine-poire-amande.png",
+  "R096": "./recette-r096-cake-proteine-carotte-cannelle-noix.png",
 };
 const officialRecipeImage = id => recipeImageMap[id] || "";
 const favorites = () => new Set(JSON.parse(localStorage.getItem("recipeFavorites") || "[]"));
