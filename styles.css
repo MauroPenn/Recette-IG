@@ -280,3 +280,35 @@ body.muscu-mode .topbar{max-width:1040px;margin:0 auto;background:#06131c;border
   .muscu-row-thumb{width:72px;flex-basis:72px}
   .muscu-row-thumb.wide{width:90px;flex-basis:90px}
 }
+
+/* V5.5 — visuel réaliste, sans emojis */
+body.muscu-mode .brand-mark{font-family:Arial,sans-serif;font-weight:900;font-size:1rem;color:#fff;letter-spacing:.02em}
+.muscu-head-icon,.muscu-card-icon{font-size:0!important;position:relative;overflow:hidden}
+.muscu-head-icon::before,.muscu-card-icon::before{content:"";display:block;width:24px;height:24px;margin:auto;background-repeat:no-repeat;background-position:center;background-size:contain;filter:brightness(0) invert(1)}
+.icon-dumbbell::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M4 8v8M7 6v12M17 6v12M20 8v8M7 12h10'/%3E%3C/svg%3E")}
+.icon-session::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Crect x='5' y='4' width='14' height='16' rx='2'/%3E%3Cpath d='M9 4V2h6v2M8 9h8M8 13h8M8 17h5'/%3E%3C/svg%3E")}
+.icon-sport::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='14' cy='5' r='2'/%3E%3Cpath d='M10 22l2-7 3 2 2 5M8 11l4-3 3 2 3 1M5 18l4-5 3 2'/%3E%3C/svg%3E")}
+.icon-history::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Cpath d='M5 20V10M12 20V4M19 20V7'/%3E%3C/svg%3E")}
+.muscu-menu-photo,.muscu-row-thumb img{image-rendering:auto;filter:none!important;opacity:1!important}
+.muscu-menu-card{background:#0d1c26}
+.muscu-menu-photo{object-fit:cover;object-position:center;transform:scale(1.01)}
+.muscu-list-row{padding-left:0}
+.muscu-list-row strong{padding-left:16px}
+.muscu-row-icon,.sport-icon{display:none!important}
+.muscu-exercise-list .muscu-list-row{min-height:78px;background:linear-gradient(90deg,#112630,#0b1a23)}
+.muscu-exercise-list .muscu-list-row::before{content:"";display:block;width:108px;height:76px;flex:0 0 108px;background-size:cover;background-position:center;border-radius:16px 0 0 16px}
+.muscu-exercise-list .muscu-list-row[data-muscle="Pectoraux"]::before{background-image:url('./muscle-pectoraux.webp')}
+.muscu-exercise-list .muscu-list-row[data-muscle="Dos"]::before{background-image:url('./muscle-dos.webp')}
+.muscu-exercise-list .muscu-list-row[data-muscle="Épaules"]::before{background-image:url('./muscle-epaules.webp')}
+.muscu-exercise-list .muscu-list-row[data-muscle="Biceps"]::before{background-image:url('./muscle-biceps.webp')}
+.muscu-exercise-list .muscu-list-row[data-muscle="Triceps"]::before{background-image:url('./muscle-triceps.webp')}
+.muscu-exercise-list .muscu-list-row[data-muscle="Jambes"]::before{background-image:url('./muscle-jambes.webp')}
+.muscu-exercise-list .muscu-list-row[data-muscle="Abdominaux"]::before{background-image:url('./muscle-abdos.webp')}
+.sport-row{min-height:76px}
+.sport-row::before{content:"";display:block;width:118px;height:74px;flex:0 0 118px;background-size:cover;background-position:center;border-radius:16px 0 0 16px}
+.sport-row[data-sport="Vélo"]::before{background-image:url('./sport-velo.webp')}
+.sport-row[data-sport="Vélo d’appartement"]::before{background-image:url('./sport-velo-appartement.webp')}
+.sport-row[data-sport="Marche"]::before{background-image:url('./sport-marche.webp')}
+.sport-row[data-sport="Course à pied"]::before{background-image:url('./sport-course.webp')}
+.sport-row[data-sport="Stand Up Paddle"]::before{background-image:url('./sport-paddle.webp')}
+@media(min-width:700px){.muscu-menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.muscu-menu-card{min-height:260px}}

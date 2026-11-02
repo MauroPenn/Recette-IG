@@ -294,7 +294,7 @@ function renderMuscuMenu(){
   main.innerHTML=`
     <section class="muscu-page muscu-menu-page">
       ${muscuBackButton("hub","Univers")}
-      <div class="muscu-head"><div class="muscu-head-icon">🏋️</div><div><h2>Musculation</h2><p>Choisissez une rubrique</p></div></div>
+      <div class="muscu-head"><div class="muscu-head-icon icon-dumbbell">●</div><div><h2>Musculation</h2><p>Choisissez une rubrique</p></div></div>
       <div class="muscu-menu-grid">
         ${cards.map(([view,img,icon,title,sub])=>`<button class="muscu-menu-card" data-muscu-view="${view}"><img src="${img}" alt="" class="muscu-menu-photo"><span class="muscu-menu-shade"></span><span class="muscu-card-icon">${icon}</span><span class="muscu-menu-text"><strong>${title}</strong><small>${sub}</small></span><span class="muscu-arrow">›</span></button>`).join("")}
       </div>
@@ -309,7 +309,7 @@ function renderMuscuExercises(){
   main.innerHTML=`
     <section class="muscu-page">
       ${muscuBackButton()}
-      <div class="muscu-head"><div class="muscu-head-icon">🏋️</div><div><h2>Exercices</h2><p>Choisissez un groupe musculaire</p></div></div>
+      <div class="muscu-head"><div class="muscu-head-icon icon-dumbbell">●</div><div><h2>Exercices</h2><p>Choisissez un groupe musculaire</p></div></div>
       <div class="muscu-list muscu-exercise-list">
         ${groups.map(([name,img])=>`<button class="muscu-list-row" data-muscle="${name}"><span class="muscu-row-thumb"><img src="${img}" alt="${name}"></span><strong>${name}</strong><span class="muscu-arrow">›</span></button>`).join("")}
       </div>
@@ -326,7 +326,7 @@ function renderMuscuSessions(){
   main.innerHTML=`
     <section class="muscu-page">
       ${muscuBackButton()}
-      <div class="muscu-head"><div class="muscu-head-icon">⏱️</div><div><h2>Séances</h2><p>Choisissez une séance</p></div></div>
+      <div class="muscu-head"><div class="muscu-head-icon icon-session">●</div><div><h2>Séances</h2><p>Choisissez une séance</p></div></div>
       <div class="muscu-list muscu-session-list">
         ${sessions.map(([name,time,count,img])=>`<button class="muscu-list-row session-row"><span class="muscu-row-thumb wide"><img src="${img}" alt=""></span><span class="session-copy"><strong>${name}</strong><small>◷ ${time} &nbsp; | &nbsp; ${count}</small></span><span class="muscu-arrow">›</span></button>`).join("")}
       </div>
@@ -341,7 +341,7 @@ function renderMuscuOther(){
   main.innerHTML=`
     <section class="muscu-page">
       ${muscuBackButton()}
-      <div class="muscu-head"><div class="muscu-head-icon">🏃</div><div><h2>Autre sport</h2><p>Enregistrer une activité manuellement</p></div></div>
+      <div class="muscu-head"><div class="muscu-head-icon icon-sport">●</div><div><h2>Autre sport</h2><p>Enregistrer une activité manuellement</p></div></div>
       <div class="muscu-list">
         ${sports.map(([name,icon,img])=>`<button class="muscu-list-row sport-row" data-sport="${name}"><span class="muscu-row-thumb wide"><img src="${img}" alt=""></span><span class="sport-icon">${icon}</span><strong>${name}</strong><span class="muscu-arrow">›</span></button>`).join("")}
       </div>
@@ -360,7 +360,7 @@ function renderMuscuHistory(){
   main.innerHTML=`
     <section class="muscu-page">
       ${muscuBackButton()}
-      <div class="muscu-head"><div class="muscu-head-icon">📊</div><div><h2>Historique</h2><p>Consultez l’ensemble de vos activités</p></div></div>
+      <div class="muscu-head"><div class="muscu-head-icon icon-history">●</div><div><h2>Historique</h2><p>Consultez l’ensemble de vos activités</p></div></div>
       <div class="muscu-tabs"><button class="active">Semaine</button><button>Mois</button><button>Année</button></div>
       <div class="muscu-list history-list">
         ${items.map(([icon,title,meta,date])=>`<button class="muscu-list-row history-row"><span class="history-icon">${icon}</span><span class="history-copy"><strong>${title}</strong><small>${date} · ${meta}</small></span><span class="muscu-arrow">›</span></button>`).join("")}
@@ -394,7 +394,7 @@ function updateShell(){
   if(onHub){
     brandMark.textContent="MB"; brandEyebrow.textContent="Ma bibliothèque"; brandTitle.textContent="Mes univers";
   } else if(onMuscu){
-    brandMark.textContent="🏋️"; brandEyebrow.textContent="Ma bibliothèque"; brandTitle.textContent="Musculation";
+    brandMark.textContent="M"; brandEyebrow.textContent="Ma bibliothèque"; brandTitle.textContent="Musculation";
   } else {
     brandMark.textContent="IG"; brandEyebrow.textContent="Ma bibliothèque cuisine"; brandTitle.textContent="Recettes IG bas & protéinées";
   }
