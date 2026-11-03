@@ -211,7 +211,7 @@ function fallbackMedia(r, detail=false){
 function renderHub(){
   state.selected=null; state.category=""; state.ig=""; state.search="";
   main.innerHTML = `
-    <div class="universe-grid universe-grid-single">
+    <div class="universe-grid universe-grid-two">
       <button class="universe-card universe-cuisine" data-universe="cuisine">
         <div class="universe-photo cuisine-photo"><img src="./cat-plats-sales.webp" alt="Cuisine artisanale" loading="eager"></div>
         <div class="universe-overlay"></div>
@@ -223,19 +223,52 @@ function renderHub(){
           <span class="universe-cta">Ouvrir la cuisine →</span>
         </div>
       </button>
+      <button class="universe-card universe-muscu" data-universe="muscu">
+        <div class="universe-photo"><img src="./univers-musculation.webp" alt="Univers musculation" loading="eager"></div>
+        <div class="universe-overlay"></div>
+        <div class="universe-content">
+          <div class="universe-badge available">Disponible</div>
+          <div class="universe-icon muscu-icon">M</div>
+          <h3>Musculation</h3>
+          <p>Programmes, exercices et séances pour progresser et rester en forme.</p>
+          <span class="universe-cta">Ouvrir la musculation →</span>
+        </div>
+      </button>
     </div>`;
-  const cuisineBtn=document.querySelector('[data-universe="cuisine"]');
-  if(cuisineBtn) cuisineBtn.addEventListener("click",()=>{state.view="home";updateShell();render();});
+  document.querySelector('[data-universe="cuisine"]')?.addEventListener("click",()=>{state.view="home";render();});
+  document.querySelector('[data-universe="muscu"]')?.addEventListener("click",()=>{state.view="muscu-entry";render();});
+}
+
+function renderMuscuEntry(){
+  main.innerHTML = `
+    <section class="muscu-entry-clean" aria-label="Univers Musculation">
+      <img class="muscu-entry-bg" src="./univers-musculation.webp" alt="Salle de musculation avec haltères et banc">
+      <div class="muscu-entry-overlay"></div>
+      <div class="muscu-entry-copy">
+        <div class="muscu-entry-kicker">MUSCULATION</div>
+        <h2>Choisissez votre<br>univers d’entraînement</h2>
+        <p>Programmes, exercices et séances pour progresser et rester en forme.</p>
+        <button id="enterMuscu" class="muscu-enter-btn">Entrer <span>→</span></button>
+      </div>
+    </section>`;
+  document.getElementById("enterMuscu")?.addEventListener("click",()=>{
+    alert("La suite de l’univers Musculation sera ajoutée après validation de cet écran.");
+  });
 }
 
 
 function updateShell(){
   const onHub=state.view==="hub";
-  bottomNav.classList.toggle("hidden",onHub);
+  const onMuscu=state.view==="muscu-entry";
+  bottomNav.classList.toggle("hidden",onHub || onMuscu);
   if(onHub){
     brandMark.textContent="MB";
     brandEyebrow.textContent="Ma bibliothèque";
     brandTitle.textContent="Mes univers";
+  } else if(onMuscu){
+    brandMark.textContent="M";
+    brandEyebrow.textContent="Ma bibliothèque";
+    brandTitle.textContent="Musculation";
   } else {
     brandMark.textContent="IG";
     brandEyebrow.textContent="Ma bibliothèque cuisine";
@@ -377,6 +410,7 @@ function render(){
   updateShell();
   updateNav();
   if(state.view==="hub") return renderHub();
+  if(state.view==="muscu-entry") return renderMuscuEntry();
   if(state.selected) return renderDetail();
   if(state.view==="home") return renderHome();
   if(state.view==="favorites") return renderRecipeList("Mes favoris");

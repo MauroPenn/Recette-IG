@@ -170,3 +170,40 @@ dialog::backdrop{background:rgba(31,42,35,.42);backdrop-filter:blur(2px)}
 /* V5.15 — base propre Cuisine uniquement */
 .universe-grid-single{grid-template-columns:1fr;max-width:320px;margin:0 auto}
 @media (min-width:760px){.universe-grid-single{grid-template-columns:1fr;max-width:320px}.universe-grid-single .universe-card{min-height:390px}}
+
+
+/* V5.16 - ajout propre de l'écran d'entrée Musculation uniquement */
+.universe-grid-two{grid-template-columns:1fr;max-width:680px;margin:0 auto}
+.universe-muscu .muscu-icon{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:#ff7900;color:#fff;font-size:.9rem;font-weight:900}
+@media(min-width:760px){
+  .universe-grid-two{grid-template-columns:repeat(2,minmax(0,1fr));max-width:680px}
+  .universe-grid-two .universe-card{min-height:390px}
+}
+
+.muscu-entry-clean{
+  position:relative;
+  width:min(100%,980px);
+  height:clamp(360px,58vh,520px);
+  margin:18px auto 28px;
+  border-radius:28px;
+  overflow:hidden;
+  box-shadow:0 20px 55px rgba(31,42,35,.18);
+  background:#1b241f;
+}
+.muscu-entry-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 58%;display:block}
+.muscu-entry-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,22,18,.93) 0%,rgba(15,22,18,.78) 35%,rgba(15,22,18,.28) 65%,rgba(15,22,18,.06) 100%)}
+.muscu-entry-copy{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:clamp(28px,5vw,58px);max-width:560px;color:#fff}
+.muscu-entry-kicker{font-size:.82rem;letter-spacing:.12em;font-weight:900;margin-bottom:14px;color:#fff}
+.muscu-entry-copy h2{font-size:clamp(2rem,4vw,3.6rem);line-height:1.02;margin:0 0 18px;color:#fff;letter-spacing:-.03em}
+.muscu-entry-copy p{font-size:clamp(1rem,1.6vw,1.28rem);line-height:1.45;margin:0 0 26px;max-width:520px;color:rgba(255,255,255,.92)}
+.muscu-enter-btn{border:0;border-radius:999px;background:linear-gradient(180deg,#ff8d18,#ff6f00);color:#fff;font-weight:900;font-size:1.15rem;padding:14px 28px;min-width:160px;box-shadow:0 10px 28px rgba(255,111,0,.28);cursor:pointer}
+.muscu-enter-btn span{margin-left:8px}
+@media(max-width:640px){
+  .muscu-entry-clean{height:min(68vh,560px);min-height:430px;margin:10px auto 20px;border-radius:22px}
+  .muscu-entry-bg{object-position:60% center}
+  .muscu-entry-overlay{background:linear-gradient(180deg,rgba(10,17,13,.30) 0%,rgba(10,17,13,.38) 34%,rgba(10,17,13,.90) 78%,rgba(10,17,13,.96) 100%)}
+  .muscu-entry-copy{justify-content:flex-end;padding:24px 22px 28px;max-width:none}
+  .muscu-entry-copy h2{font-size:clamp(1.8rem,9vw,2.6rem);line-height:1.02;margin-bottom:12px}
+  .muscu-entry-copy p{font-size:.98rem;line-height:1.38;margin-bottom:18px;max-width:90%}
+  .muscu-enter-btn{font-size:1rem;padding:12px 24px;min-width:145px}
+}
