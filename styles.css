@@ -435,4 +435,241 @@ dialog::backdrop{background:rgba(31,42,35,.42);backdrop-filter:blur(2px)}
   .muscu-other-v4{padding:8px!important}
   .muscu-other-card-v4{border-radius:14px}
 }
-\n\n/* V5.22 — Historique, mobile-first */\n.muscu-history-v5{\n  box-sizing:border-box;\n  width:100%;\n  max-width:980px;\n  margin:0 auto 24px;\n  padding:18px;\n  border-radius:28px;\n  background:radial-gradient(circle at 82% 5%,rgba(255,121,0,.13),transparent 24%),linear-gradient(180deg,#0c1319 0%,#101318 66%,#17100b 100%);\n  color:#fff;\n  overflow:hidden;\n  box-shadow:0 18px 44px rgba(25,22,18,.18);\n}\n.muscu-history-back{margin-bottom:18px}\n.muscu-history-heading{display:flex;align-items:center;gap:14px;margin-bottom:20px}\n.muscu-history-icon{width:68px;height:68px;flex:0 0 68px;border-radius:20px;display:grid;place-items:center;background:linear-gradient(180deg,#ff941f,#ff7200);color:#fff;font-size:2.05rem;font-weight:900;box-shadow:0 8px 22px rgba(255,112,0,.22)}\n.muscu-history-kicker{font-size:.72rem;letter-spacing:.12em;font-weight:950;color:#ff8a00;margin-bottom:2px}\n.muscu-history-heading h2{margin:0;color:#fff;font-size:clamp(1.8rem,3.5vw,2.75rem);line-height:1.02}\n.muscu-history-heading p{margin:5px 0 0;color:rgba(255,255,255,.82);font-size:clamp(.9rem,1.5vw,1.06rem)}\n.muscu-history-tabs{display:grid;grid-template-columns:repeat(3,1fr);width:100%;max-width:100%;padding:5px;border:2px solid #ff7d00;border-radius:22px;background:#12181e;margin-bottom:22px;overflow:hidden}\n.muscu-history-tab{border:0;background:transparent;color:#f4f4f4;border-radius:17px;padding:14px 10px;font:inherit;font-weight:850;font-size:clamp(.95rem,1.7vw,1.12rem);cursor:pointer}\n.muscu-history-tab.active{background:linear-gradient(180deg,#ff941f,#ff7200);color:#fff;box-shadow:0 8px 20px rgba(255,112,0,.23)}\n.muscu-history-empty{box-sizing:border-box;min-height:360px;border:2px solid #ff7d00;border-radius:26px;padding:34px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 50% 38%,rgba(255,121,0,.12),transparent 30%),linear-gradient(180deg,#14191e,#0d1217);overflow:hidden}\n.muscu-history-empty-icon{width:112px;height:112px;border-radius:28px;border:3px solid #ff7d00;display:flex;align-items:flex-end;justify-content:center;gap:9px;padding:25px 22px;box-sizing:border-box;margin-bottom:24px;background:rgba(255,121,0,.08);box-shadow:0 0 28px rgba(255,121,0,.12)}\n.muscu-history-empty-icon span{display:block;width:13px;border:3px solid #ffd1a0;border-radius:7px 7px 3px 3px;background:transparent}\n.muscu-history-empty-icon span:nth-child(1){height:27px}.muscu-history-empty-icon span:nth-child(2){height:45px}.muscu-history-empty-icon span:nth-child(3){height:64px}\n.muscu-history-empty h3{margin:0 0 12px;color:#fff;font-size:clamp(1.4rem,3vw,2.15rem);line-height:1.1}\n.muscu-history-empty p{margin:0;max-width:670px;color:rgba(255,255,255,.78);font-size:clamp(.9rem,1.6vw,1.06rem);line-height:1.5}\n@media(max-width:680px){\n  body{overflow-x:hidden}\n  main{width:100%;max-width:100%;padding-left:10px!important;padding-right:10px!important;overflow-x:hidden}\n  .muscu-history-v5{width:100%!important;max-width:100%!important;margin:0!important;padding:10px!important;border-radius:20px}\n  .muscu-history-back{padding:9px 14px;margin-bottom:12px;border-radius:14px;font-size:.92rem}\n  .muscu-history-heading{gap:10px;margin-bottom:14px}\n  .muscu-history-icon{width:54px;height:54px;flex-basis:54px;border-radius:16px;font-size:1.55rem}\n  .muscu-history-kicker{font-size:.64rem}\n  .muscu-history-heading h2{font-size:1.5rem}\n  .muscu-history-heading p{font-size:.82rem;line-height:1.3}\n  .muscu-history-tabs{padding:4px;border-radius:18px;margin-bottom:14px}\n  .muscu-history-tab{padding:11px 4px;border-radius:14px;font-size:.92rem}\n  .muscu-history-empty{min-height:320px;border-radius:20px;padding:26px 16px}\n  .muscu-history-empty-icon{width:88px;height:88px;border-radius:22px;padding:20px 17px;gap:7px;margin-bottom:18px}\n  .muscu-history-empty-icon span{width:10px}.muscu-history-empty-icon span:nth-child(1){height:21px}.muscu-history-empty-icon span:nth-child(2){height:35px}.muscu-history-empty-icon span:nth-child(3){height:49px}\n  .muscu-history-empty h3{font-size:1.35rem}\n  .muscu-history-empty p{font-size:.88rem;line-height:1.42}\n}\n@media(max-width:390px){\n  .muscu-history-v5{padding:8px!important}\n  .muscu-history-tab{font-size:.84rem;padding:10px 2px}\n  .muscu-history-empty{min-height:290px;padding:22px 12px}\n}\n
+
+
+/* V5.23 — Historique reconstruit proprement, mobile-first */
+.muscu-history-v6{
+  box-sizing:border-box;
+  width:100%;
+  max-width:980px;
+  margin:0 auto 24px;
+  padding:18px;
+  border-radius:28px;
+  background:
+    radial-gradient(circle at 82% 4%,rgba(255,121,0,.13),transparent 24%),
+    linear-gradient(180deg,#0d141a 0%,#11151a 68%,#17100a 100%);
+  color:#fff;
+  overflow:hidden;
+  box-shadow:0 18px 44px rgba(25,22,18,.18);
+}
+.muscu-history-back-v6{
+  margin-bottom:18px;
+}
+.muscu-history-heading-v6{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:20px;
+}
+.muscu-history-icon-v6{
+  position:relative;
+  width:70px;
+  height:70px;
+  flex:0 0 70px;
+  border-radius:20px;
+  background:linear-gradient(180deg,#ff941f,#ff7200);
+  box-shadow:0 8px 22px rgba(255,112,0,.22);
+}
+.muscu-history-icon-v6 .cal-top{
+  position:absolute;
+  left:17px;
+  right:17px;
+  top:19px;
+  height:8px;
+  border:4px solid #fff;
+  border-bottom:0;
+  border-radius:6px 6px 0 0;
+}
+.muscu-history-icon-v6 .cal-grid{
+  position:absolute;
+  left:17px;
+  right:17px;
+  top:27px;
+  bottom:17px;
+  border:4px solid #fff;
+  border-radius:0 0 6px 6px;
+  background:
+    linear-gradient(#fff,#fff) 33% 0/4px 100% no-repeat,
+    linear-gradient(#fff,#fff) 66% 0/4px 100% no-repeat,
+    linear-gradient(#fff,#fff) 0 50%/100% 4px no-repeat;
+}
+.muscu-history-kicker-v6{
+  font-size:.72rem;
+  letter-spacing:.12em;
+  font-weight:950;
+  color:#ff8a00;
+  margin-bottom:2px;
+}
+.muscu-history-heading-v6 h2{
+  margin:0;
+  color:#fff;
+  font-size:clamp(1.85rem,3.5vw,2.75rem);
+  line-height:1.02;
+}
+.muscu-history-heading-v6 p{
+  margin:5px 0 0;
+  color:rgba(255,255,255,.82);
+  font-size:clamp(.9rem,1.5vw,1.06rem);
+}
+.muscu-history-tabs-v6{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  width:100%;
+  padding:5px;
+  border:2px solid #ff7d00;
+  border-radius:22px;
+  background:#12181e;
+  margin-bottom:22px;
+  overflow:hidden;
+}
+.muscu-history-tab-v6{
+  border:0;
+  background:transparent;
+  color:#f4f4f4;
+  border-radius:17px;
+  padding:14px 10px;
+  font:inherit;
+  font-weight:850;
+  font-size:clamp(.95rem,1.7vw,1.12rem);
+  cursor:pointer;
+}
+.muscu-history-tab-v6.active{
+  background:linear-gradient(180deg,#ff941f,#ff7200);
+  color:#fff;
+  box-shadow:0 8px 20px rgba(255,112,0,.23);
+}
+.muscu-history-empty-v6{
+  box-sizing:border-box;
+  min-height:360px;
+  border:2px solid #ff7d00;
+  border-radius:26px;
+  padding:34px 24px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:
+    radial-gradient(circle at 50% 38%,rgba(255,121,0,.12),transparent 30%),
+    linear-gradient(180deg,#14191e,#0d1217);
+  overflow:hidden;
+}
+.muscu-history-chart-v6{
+  width:112px;
+  height:112px;
+  border-radius:28px;
+  border:3px solid #ff7d00;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  gap:9px;
+  padding:25px 22px;
+  box-sizing:border-box;
+  margin-bottom:24px;
+  background:rgba(255,121,0,.08);
+  box-shadow:0 0 28px rgba(255,121,0,.12);
+}
+.muscu-history-chart-v6 span{
+  display:block;
+  width:13px;
+  border:3px solid #ffd1a0;
+  border-radius:7px 7px 3px 3px;
+}
+.muscu-history-chart-v6 span:nth-child(1){height:27px}
+.muscu-history-chart-v6 span:nth-child(2){height:45px}
+.muscu-history-chart-v6 span:nth-child(3){height:64px}
+.muscu-history-empty-v6 h3{
+  margin:0 0 12px;
+  color:#fff;
+  font-size:clamp(1.4rem,3vw,2.15rem);
+  line-height:1.1;
+}
+.muscu-history-empty-v6 p{
+  margin:0;
+  max-width:670px;
+  color:rgba(255,255,255,.78);
+  font-size:clamp(.9rem,1.6vw,1.06rem);
+  line-height:1.5;
+}
+
+@media(max-width:680px){
+  body{overflow-x:hidden}
+  main{
+    width:100%;
+    max-width:100%;
+    padding-left:10px!important;
+    padding-right:10px!important;
+    overflow-x:hidden;
+  }
+  .muscu-history-v6{
+    width:100%!important;
+    max-width:100%!important;
+    margin:0!important;
+    padding:10px!important;
+    border-radius:20px;
+  }
+  .muscu-history-back-v6{
+    padding:9px 14px;
+    margin-bottom:12px;
+    border-radius:14px;
+    font-size:.92rem;
+  }
+  .muscu-history-heading-v6{
+    gap:10px;
+    margin-bottom:14px;
+  }
+  .muscu-history-icon-v6{
+    width:54px;
+    height:54px;
+    flex-basis:54px;
+    border-radius:16px;
+  }
+  .muscu-history-icon-v6 .cal-top{
+    left:13px;right:13px;top:14px;height:7px;border-width:3px;
+  }
+  .muscu-history-icon-v6 .cal-grid{
+    left:13px;right:13px;top:21px;bottom:13px;border-width:3px;
+    background:
+      linear-gradient(#fff,#fff) 33% 0/3px 100% no-repeat,
+      linear-gradient(#fff,#fff) 66% 0/3px 100% no-repeat,
+      linear-gradient(#fff,#fff) 0 50%/100% 3px no-repeat;
+  }
+  .muscu-history-kicker-v6{font-size:.64rem}
+  .muscu-history-heading-v6 h2{font-size:1.5rem}
+  .muscu-history-heading-v6 p{font-size:.82rem;line-height:1.3}
+  .muscu-history-tabs-v6{
+    padding:4px;
+    border-radius:18px;
+    margin-bottom:14px;
+  }
+  .muscu-history-tab-v6{
+    padding:11px 4px;
+    border-radius:14px;
+    font-size:.92rem;
+  }
+  .muscu-history-empty-v6{
+    min-height:320px;
+    border-radius:20px;
+    padding:26px 16px;
+  }
+  .muscu-history-chart-v6{
+    width:88px;
+    height:88px;
+    border-radius:22px;
+    padding:20px 17px;
+    gap:7px;
+    margin-bottom:18px;
+  }
+  .muscu-history-chart-v6 span{width:10px}
+  .muscu-history-chart-v6 span:nth-child(1){height:21px}
+  .muscu-history-chart-v6 span:nth-child(2){height:35px}
+  .muscu-history-chart-v6 span:nth-child(3){height:49px}
+  .muscu-history-empty-v6 h3{font-size:1.35rem}
+  .muscu-history-empty-v6 p{font-size:.88rem;line-height:1.42}
+}
+
+@media(max-width:390px){
+  .muscu-history-v6{padding:8px!important}
+  .muscu-history-tab-v6{font-size:.84rem;padding:10px 2px}
+  .muscu-history-empty-v6{min-height:290px;padding:22px 12px}
+}
