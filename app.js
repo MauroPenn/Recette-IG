@@ -269,16 +269,16 @@ function bindMuscuBack(){
 }
 function renderMuscuEntry(){
   main.innerHTML=`
-    <section class="muscu-page muscu-entry-page">
-      <div class="muscu-entry-hero">
-        <img src="./univers-musculation.webp" alt="Salle de musculation avec haltères" class="muscu-entry-photo">
-        <div class="muscu-entry-shade"></div>
-        <div class="muscu-entry-content">
-          <div class="muscu-entry-symbol" aria-hidden="true">▰</div>
+    <section class="muscu-entry-page-v2">
+      <div class="muscu-entry-card-v2">
+        <img src="./univers-musculation.webp" alt="Salle de musculation avec haltères" class="muscu-entry-photo-v2">
+        <div class="muscu-entry-overlay-v2"></div>
+        <div class="muscu-entry-content-v2">
+          <div class="muscu-entry-icon-v2" aria-hidden="true">▰</div>
           <h2>Musculation</h2>
-          <div class="muscu-orange-line"></div>
+          <div class="muscu-entry-line-v2"></div>
           <p>Programmes, exercices et séances<br>pour progresser, se renforcer<br>et rester en forme.</p>
-          <button class="muscu-entry-cta" id="enterMuscu">Entrer <span>→</span></button>
+          <button class="muscu-entry-btn-v2" id="enterMuscu">Entrer <span>→</span></button>
         </div>
       </div>
     </section>`;
@@ -402,7 +402,7 @@ function updateShell(){
   const onMuscu=state.view.startsWith("muscu-");
   const onMuscuEntry=state.view==="muscu-entry";
   document.body.classList.toggle("muscu-mode",onMuscu);
-  document.body.classList.toggle("muscu-entry-mode",onMuscuEntry);
+  document.body.classList.toggle("muscu-entry-only",onMuscuEntry);
   bottomNav.classList.toggle("hidden",onHub || onMuscu);
   if(onHub){
     brandMark.textContent="MB"; brandEyebrow.textContent="Ma bibliothèque"; brandTitle.textContent="Mes univers";
