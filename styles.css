@@ -207,4 +207,115 @@ dialog::backdrop{background:rgba(31,42,35,.42);backdrop-filter:blur(2px)}
   .muscu-entry-copy p{font-size:.98rem;line-height:1.38;margin-bottom:18px;max-width:90%}
   .muscu-enter-btn{font-size:1rem;padding:12px 24px;min-width:145px}
 }
-\n\n/* V5.17 — écran rubriques Musculation, isolé et responsive */\n.muscu-menu-clean{max-width:960px;margin:0 auto;padding:10px 0 24px}\n.muscu-menu-back{border:0;background:transparent;color:var(--text);font-weight:850;padding:4px 0 14px}\n.muscu-menu-intro{display:flex;align-items:center;gap:14px;margin-bottom:18px}\n.muscu-menu-icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(145deg,#ff8b16,#ff6f00);color:#fff;font-weight:950;box-shadow:0 8px 20px rgba(255,111,0,.22);flex:0 0 auto}\n.muscu-menu-kicker{font-size:.72rem;letter-spacing:.11em;font-weight:900;color:#f07800;margin-bottom:3px}\n.muscu-menu-intro h2{font-size:1.55rem;margin:0 0 3px;color:var(--text)}\n.muscu-menu-intro p{margin:0;color:var(--muted);font-size:.9rem}\n.muscu-menu-clean-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}\n.muscu-menu-clean-card{display:block;width:100%;padding:0;border:0;background:transparent;border-radius:24px;overflow:hidden;box-shadow:0 14px 34px rgba(24,26,24,.13);aspect-ratio:718/304}\n.muscu-menu-clean-card img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:24px}\n.muscu-menu-clean-card:active{transform:scale(.99)}\n@media(max-width:680px){\n  .muscu-menu-clean{padding:4px 0 18px}\n  .muscu-menu-clean-grid{grid-template-columns:1fr;gap:12px}\n  .muscu-menu-clean-card{border-radius:20px;aspect-ratio:718/304}\n  .muscu-menu-clean-card img{border-radius:20px}\n  .muscu-menu-intro{margin-bottom:14px}\n  .muscu-menu-intro h2{font-size:1.3rem}\n  .muscu-menu-intro p{font-size:.82rem;line-height:1.35}\n}\n
+
+/* V5.18 — page rubriques Musculation reconstruite proprement, mobile-first */
+.muscu-menu-v2{
+  box-sizing:border-box;
+  width:100%;
+  max-width:980px;
+  margin:0 auto 24px;
+  padding:18px;
+  border-radius:28px;
+  background:
+    radial-gradient(circle at 82% 8%, rgba(255,121,0,.16), transparent 24%),
+    linear-gradient(180deg,#101b20 0%,#151b1d 58%,#21180f 100%);
+  color:#fff;
+  overflow:hidden;
+  box-shadow:0 18px 44px rgba(25,22,18,.18);
+}
+.muscu-menu-hero-v2{margin-bottom:18px}
+.muscu-back-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  border:0;
+  border-radius:16px;
+  padding:11px 18px;
+  margin:0 0 18px;
+  background:linear-gradient(180deg,#ff941f,#ff7200);
+  color:#fff;
+  font:inherit;
+  font-weight:900;
+  font-size:1rem;
+  box-shadow:0 8px 22px rgba(255,112,0,.24);
+  cursor:pointer;
+}
+.muscu-back-arrow{font-size:1.35rem;line-height:1}
+.muscu-menu-title-row{display:flex;align-items:flex-start;gap:14px}
+.muscu-menu-barbell{
+  flex:0 0 auto;
+  width:62px;
+  height:52px;
+  border-radius:16px;
+  display:grid;
+  place-items:center;
+  color:#ff8500;
+  background:rgba(255,133,0,.08);
+  border:1px solid rgba(255,133,0,.45);
+}
+.muscu-menu-kicker-v2{font-size:.76rem;letter-spacing:.12em;font-weight:950;color:#ff8a00;margin:1px 0 4px}
+.muscu-menu-title-row h2{margin:0 0 6px;color:#fff;font-size:clamp(1.55rem,3vw,2.35rem);line-height:1.08}
+.muscu-menu-title-row p{margin:0;color:rgba(255,255,255,.82);font-size:clamp(.88rem,1.4vw,1.02rem);line-height:1.42;max-width:650px}
+.muscu-menu-grid-v2{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+  width:100%;
+}
+.muscu-menu-card-v2{
+  box-sizing:border-box;
+  display:block;
+  width:100%;
+  min-width:0;
+  padding:0;
+  margin:0;
+  border:2px solid rgba(255,128,0,.95);
+  border-radius:24px;
+  overflow:hidden;
+  background:#0d1518;
+  aspect-ratio:718/304;
+  box-shadow:0 10px 26px rgba(0,0,0,.22),0 0 0 1px rgba(255,132,0,.08) inset;
+  cursor:pointer;
+}
+.muscu-menu-card-v2 img{
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:100%;
+  object-fit:cover;
+  object-position:center;
+  border:0;
+}
+.muscu-menu-card-v2:active{transform:scale(.992)}
+
+@media(max-width:680px){
+  main{overflow-x:hidden}
+  .muscu-menu-v2{
+    width:100%;
+    max-width:100%;
+    margin:0 auto 18px;
+    padding:12px;
+    border-radius:20px;
+  }
+  .muscu-menu-hero-v2{margin-bottom:12px}
+  .muscu-back-pill{padding:9px 14px;margin-bottom:14px;border-radius:14px;font-size:.92rem}
+  .muscu-menu-title-row{gap:10px;align-items:center}
+  .muscu-menu-barbell{width:50px;height:44px;border-radius:14px}
+  .muscu-menu-barbell svg{width:44px;height:22px}
+  .muscu-menu-kicker-v2{font-size:.66rem;margin-bottom:2px}
+  .muscu-menu-title-row h2{font-size:1.35rem;margin-bottom:4px}
+  .muscu-menu-title-row p{font-size:.82rem;line-height:1.3}
+  .muscu-menu-grid-v2{grid-template-columns:1fr;gap:10px}
+  .muscu-menu-card-v2{
+    width:100%;
+    max-width:100%;
+    border-radius:18px;
+    aspect-ratio:718/304;
+  }
+}
+
+@media(max-width:390px){
+  .muscu-menu-v2{padding:10px}
+  .muscu-menu-card-v2{border-radius:16px}
+  .muscu-menu-title-row p{font-size:.78rem}
+}

@@ -259,21 +259,33 @@ function renderMuscuEntry(){
 
 function renderMuscuMenu(){
   main.innerHTML = `
-    <section class="muscu-menu-clean" aria-label="Rubriques Musculation">
-      <button class="muscu-menu-back" id="muscuMenuBack">← Retour</button>
-      <div class="muscu-menu-intro">
-        <div class="muscu-menu-icon">M</div>
-        <div>
-          <div class="muscu-menu-kicker">MUSCULATION</div>
-          <h2>Choisissez une rubrique</h2>
-          <p>Programmes, exercices et suivis pour progresser et rester en forme.</p>
+    <section class="muscu-menu-v2" aria-label="Rubriques Musculation">
+      <div class="muscu-menu-hero-v2">
+        <button class="muscu-back-pill" id="muscuMenuBack" aria-label="Retour à l'écran précédent">
+          <span class="muscu-back-arrow">←</span><span>Retour</span>
+        </button>
+        <div class="muscu-menu-title-row">
+          <span class="muscu-menu-barbell" aria-hidden="true">
+            <svg viewBox="0 0 64 32" width="56" height="28" role="img">
+              <rect x="27" y="14" width="10" height="4" rx="2" fill="currentColor"/>
+              <rect x="18" y="8" width="6" height="16" rx="2" fill="currentColor"/>
+              <rect x="12" y="5" width="5" height="22" rx="2" fill="currentColor"/>
+              <rect x="40" y="8" width="6" height="16" rx="2" fill="currentColor"/>
+              <rect x="47" y="5" width="5" height="22" rx="2" fill="currentColor"/>
+            </svg>
+          </span>
+          <div>
+            <div class="muscu-menu-kicker-v2">MUSCULATION</div>
+            <h2>Choisissez une rubrique</h2>
+            <p>Programmes, exercices et suivis pour progresser et rester en forme.</p>
+          </div>
         </div>
       </div>
-      <div class="muscu-menu-clean-grid">
-        <button class="muscu-menu-clean-card" data-next="exercices"><img src="./muscu-menu-exercices.png" alt="Exercices — tous les exercices par groupes musculaires"></button>
-        <button class="muscu-menu-clean-card" data-next="seances"><img src="./muscu-menu-seances.png" alt="Séances — programmes et séances guidées avec chrono"></button>
-        <button class="muscu-menu-clean-card" data-next="autre-sport"><img src="./muscu-menu-autre-sport.png" alt="Autre sport — vélo, marche, course, vélo d’appartement, paddle"></button>
-        <button class="muscu-menu-clean-card" data-next="historique"><img src="./muscu-menu-historique.png" alt="Historique — suivis, statistiques et progression"></button>
+      <div class="muscu-menu-grid-v2">
+        <button class="muscu-menu-card-v2" data-next="exercices"><img src="./muscu-menu-exercices.png" alt="Exercices — tous les exercices par groupes musculaires"></button>
+        <button class="muscu-menu-card-v2" data-next="seances"><img src="./muscu-menu-seances.png" alt="Séances — programmes et séances guidées avec chrono"></button>
+        <button class="muscu-menu-card-v2" data-next="autre-sport"><img src="./muscu-menu-autre-sport.png" alt="Autre sport — vélo, marche, course, vélo d’appartement, paddle"></button>
+        <button class="muscu-menu-card-v2" data-next="historique"><img src="./muscu-menu-historique.png" alt="Historique — suivis, statistiques et progression"></button>
       </div>
     </section>`;
   document.getElementById("muscuMenuBack")?.addEventListener("click",()=>{state.view="muscu-entry";render();});
