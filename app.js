@@ -271,14 +271,14 @@ function renderMuscuEntry(){
   main.innerHTML=`
     <section class="muscu-page muscu-entry-page">
       <div class="muscu-entry-hero">
-        <img src="./univers-musculation.webp" alt="Musculation avec haltères" class="muscu-entry-photo">
+        <img src="./univers-musculation.webp" alt="Salle de musculation avec haltères" class="muscu-entry-photo">
         <div class="muscu-entry-shade"></div>
         <div class="muscu-entry-content">
-          <div class="muscu-entry-icon">🏋️</div>
+          <div class="muscu-entry-symbol" aria-hidden="true">▰</div>
           <h2>Musculation</h2>
           <div class="muscu-orange-line"></div>
-          <p>Choisissez votre univers d’entraînement</p>
-          <button class="muscu-primary" id="enterMuscu">Entrer →</button>
+          <p>Programmes, exercices et séances<br>pour progresser, se renforcer<br>et rester en forme.</p>
+          <button class="muscu-entry-cta" id="enterMuscu">Entrer <span>→</span></button>
         </div>
       </div>
     </section>`;
@@ -400,7 +400,9 @@ function renderComingSoon(universe){
 function updateShell(){
   const onHub=state.view==="hub";
   const onMuscu=state.view.startsWith("muscu-");
+  const onMuscuEntry=state.view==="muscu-entry";
   document.body.classList.toggle("muscu-mode",onMuscu);
+  document.body.classList.toggle("muscu-entry-mode",onMuscuEntry);
   bottomNav.classList.toggle("hidden",onHub || onMuscu);
   if(onHub){
     brandMark.textContent="MB"; brandEyebrow.textContent="Ma bibliothèque"; brandTitle.textContent="Mes univers";
