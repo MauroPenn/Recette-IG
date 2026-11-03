@@ -291,10 +291,45 @@ function renderMuscuMenu(){
   document.getElementById("muscuMenuBack")?.addEventListener("click",()=>{state.view="muscu-entry";render();});
   document.querySelectorAll("[data-next]").forEach(btn=>btn.addEventListener("click",()=>{
     const target=btn.dataset.next;
+    if(target==="exercices"){ state.view="muscu-exercises"; render(); return; }
     if(target==="seances"){ state.view="muscu-sessions"; render(); return; }
     if(target==="autre-sport"){ state.view="muscu-other"; render(); return; }
     if(target==="historique"){ state.view="muscu-history"; render(); return; }
     alert("Cette rubrique sera construite à l’étape suivante, après validation de cet écran.");
+  }));
+}
+
+function renderMuscuExercises(){
+  const groups=[
+    ["pectoraux","Pectoraux"],
+    ["dos","Dos"],
+    ["epaules","Épaules"],
+    ["biceps","Biceps"],
+    ["triceps","Triceps"],
+    ["jambes","Jambes"],
+    ["abdominaux","Abdominaux"]
+  ];
+  main.innerHTML = `
+    <section class="muscu-exercises-v5" aria-label="Exercices par groupe musculaire">
+      <button class="muscu-back-pill muscu-exercises-back" id="muscuExercisesBack" aria-label="Retour aux rubriques Musculation">
+        <span class="muscu-back-arrow">←</span><span>Retour</span>
+      </button>
+      <div class="muscu-exercises-heading">
+        <div class="muscu-exercises-icon" aria-hidden="true">▰</div>
+        <div>
+          <div class="muscu-exercises-kicker">MUSCULATION</div>
+          <h2>Exercices</h2>
+          <p>Choisissez un groupe musculaire</p>
+        </div>
+      </div>
+      <div class="muscu-exercises-list">
+        ${groups.map(([key,label])=>`<button class="muscu-exercise-group-card" data-muscle="${key}" aria-label="Ouvrir les exercices ${label}"><img src="./exercice-groupe-${key}.webp" alt="${label}"></button>`).join("")}
+      </div>
+    </section>`;
+  document.getElementById("muscuExercisesBack")?.addEventListener("click",()=>{state.view="muscu-menu";render();});
+  document.querySelectorAll("[data-muscle]").forEach(btn=>btn.addEventListener("click",()=>{
+    const label=btn.getAttribute("aria-label")?.replace("Ouvrir les exercices ","") || "ce groupe";
+    alert(`Les fiches ${label} seront ajoutées à l’étape suivante.`);
   }));
 }
 
@@ -387,7 +422,7 @@ function renderMuscuHistory(){
 
 function updateShell(){
   const onHub=state.view==="hub";
-  const onMuscu=state.view==="muscu-entry" || state.view==="muscu-menu" || state.view==="muscu-sessions" || state.view==="muscu-other" || state.view==="muscu-history";
+  const onMuscu=state.view==="muscu-entry" || state.view==="muscu-menu" || state.view==="muscu-exercises" || state.view==="muscu-sessions" || state.view==="muscu-other" || state.view==="muscu-history";
   bottomNav.classList.toggle("hidden",onHub || onMuscu);
   if(onHub){
     brandMark.textContent="MB";
@@ -540,6 +575,7 @@ function render(){
   if(state.view==="hub") return renderHub();
   if(state.view==="muscu-entry") return renderMuscuEntry();
   if(state.view==="muscu-menu") return renderMuscuMenu();
+  if(state.view==="muscu-exercises") return renderMuscuExercises();
   if(state.view==="muscu-sessions") return renderMuscuSessions();
   if(state.view==="muscu-other") return renderMuscuOther();
   if(state.view==="muscu-history") return renderMuscuHistory();
