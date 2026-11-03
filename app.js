@@ -290,14 +290,41 @@ function renderMuscuMenu(){
     </section>`;
   document.getElementById("muscuMenuBack")?.addEventListener("click",()=>{state.view="muscu-entry";render();});
   document.querySelectorAll("[data-next]").forEach(btn=>btn.addEventListener("click",()=>{
+    const target=btn.dataset.next;
+    if(target==="seances"){ state.view="muscu-sessions"; render(); return; }
     alert("Cette rubrique sera construite à l’étape suivante, après validation de cet écran.");
   }));
+}
+
+function renderMuscuSessions(){
+  main.innerHTML = `
+    <section class="muscu-sessions-v3" aria-label="Séances de musculation">
+      <button class="muscu-back-pill muscu-sessions-back" id="muscuSessionsBack" aria-label="Retour aux rubriques Musculation">
+        <span class="muscu-back-arrow">←</span><span>Retour</span>
+      </button>
+      <div class="muscu-sessions-heading">
+        <div class="muscu-sessions-icon" aria-hidden="true">▦</div>
+        <div>
+          <div class="muscu-sessions-kicker">MUSCULATION</div>
+          <h2>Séances</h2>
+          <p>Programmes d’entraînement complets</p>
+        </div>
+      </div>
+      <div class="muscu-sessions-list">
+        <button class="muscu-session-card-v3" data-session="haut"><img src="./seance-haut-corps-v2.png" alt="Haut du corps — 25 minutes, 6 exercices"></button>
+        <button class="muscu-session-card-v3" data-session="bas"><img src="./seance-bas-corps-v2.png" alt="Bas du corps — 28 minutes, 6 exercices"></button>
+        <button class="muscu-session-card-v3" data-session="complet"><img src="./seance-corps-complet-v2.png" alt="Corps complet — 35 minutes, 8 exercices"></button>
+        <button class="muscu-session-card-v3" data-session="abdos"><img src="./seance-abdos-gainage-v2.png" alt="Abdos et gainage — 15 minutes, 5 exercices"></button>
+      </div>
+      <button class="muscu-create-session-v3" type="button">＋ Créer une séance</button>
+    </section>`;
+  document.getElementById("muscuSessionsBack")?.addEventListener("click",()=>{state.view="muscu-menu";render();});
 }
 
 
 function updateShell(){
   const onHub=state.view==="hub";
-  const onMuscu=state.view==="muscu-entry" || state.view==="muscu-menu";
+  const onMuscu=state.view==="muscu-entry" || state.view==="muscu-menu" || state.view==="muscu-sessions";
   bottomNav.classList.toggle("hidden",onHub || onMuscu);
   if(onHub){
     brandMark.textContent="MB";
@@ -450,6 +477,7 @@ function render(){
   if(state.view==="hub") return renderHub();
   if(state.view==="muscu-entry") return renderMuscuEntry();
   if(state.view==="muscu-menu") return renderMuscuMenu();
+  if(state.view==="muscu-sessions") return renderMuscuSessions();
   if(state.selected) return renderDetail();
   if(state.view==="home") return renderHome();
   if(state.view==="favorites") return renderRecipeList("Mes favoris");
