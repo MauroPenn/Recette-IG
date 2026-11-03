@@ -339,31 +339,23 @@ function renderMuscuSessions(){
 }
 function renderMuscuOther(){
   const sports=[
-    ["Vélo","./sport-velo-v4.webp"],
-    ["Vélo d’appartement","./sport-velo-appartement-v4.webp"],
-    ["Marche","./sport-marche-v4.webp"],
-    ["Course à pied","./sport-course-v4.webp"],
-    ["Stand Up Paddle","./sport-paddle-v4.webp"]
+    ["Vélo","./sport-card-velo-v5.webp"],
+    ["Vélo d’appartement","./sport-card-velo-appartement-v5.webp"],
+    ["Marche","./sport-card-marche-v5.webp"],
+    ["Course à pied","./sport-card-course-v5.webp"],
+    ["Stand Up Paddle","./sport-card-paddle-v5.webp"]
   ];
   main.innerHTML=`
-    <section class="muscu-page other-sport-page">
+    <section class="muscu-page other-sport-tiles-page">
       ${muscuBackButton()}
-      <div class="other-sport-header">
-        <div class="other-sport-titlemark" aria-hidden="true"></div>
-        <div>
-          <h2>Autre sport</h2>
-          <p>Enregistrer une activité manuellement</p>
-        </div>
+      <div class="other-sport-tiles-header">
+        <div class="other-sport-tiles-titlemark" aria-hidden="true"></div>
+        <div><h2>Autre sport</h2><p>Enregistrer une activité manuellement</p></div>
       </div>
-      <div class="other-sport-list">
-        ${sports.map(([name,img])=>`
-          <button class="other-sport-card" data-sport="${name}">
-            <span class="other-sport-image"><img src="${img}" alt="${name}"></span>
-            <span class="other-sport-name">${name}</span>
-            <span class="other-sport-chevron" aria-hidden="true">›</span>
-          </button>`).join("")}
+      <div class="other-sport-card-grid">
+        ${sports.map(([name,img])=>`<button class="other-sport-card-tile" type="button" data-sport="${name}" aria-label="${name}"><img src="${img}" alt="${name}"></button>`).join("")}
       </div>
-      <button class="muscu-primary wide other-sport-add" type="button">＋ Enregistrer une activité</button>
+      <button class="muscu-primary wide other-sport-create-btn" type="button">＋ Enregistrer une activité</button>
     </section>`;
   bindMuscuBack();
 }

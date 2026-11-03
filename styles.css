@@ -436,3 +436,17 @@ body.muscu-mode .brand-mark{font-family:Arial,sans-serif;font-weight:900;font-si
 .session-card-tile:hover{filter:brightness(1.04);transform:translateY(-1px)}
 .sessions-create-btn{margin-top:18px}
 @media(max-width:680px){.sessions-card-grid{grid-template-columns:1fr}.session-card-tile{aspect-ratio:2.1/1}}
+
+/* V5.12 — page Autre sport uniquement, cartes indépendantes */
+.other-sport-tiles-page{max-width:960px;margin:0 auto}
+.other-sport-tiles-header{display:flex;align-items:center;gap:14px;margin:4px 0 20px}
+.other-sport-tiles-titlemark{width:58px;height:58px;border-radius:18px;border:1px solid #334a56;background:#102630;position:relative;flex:0 0 auto}
+.other-sport-tiles-titlemark::before{content:"";position:absolute;inset:13px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ff7900' stroke-width='2'%3E%3Ccircle cx='12' cy='5' r='2'/%3E%3Cpath d='M10 9l3 2 2 4M8 20l3-5M15 20l-2-5M9 12l-3 2'/%3E%3C/svg%3E") center/contain no-repeat}
+.other-sport-tiles-header h2{margin:0;color:#fff;font-size:1.85rem}
+.other-sport-tiles-header p{margin:3px 0 0;color:#c2ced5;font-size:.95rem}
+.other-sport-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.other-sport-card-tile{display:block;width:100%;padding:0;border:1px solid #5a7380;border-radius:26px;overflow:hidden;background:#0b1d27;box-shadow:0 15px 34px rgba(0,0,0,.22);cursor:pointer;aspect-ratio:2.77/1}
+.other-sport-card-tile img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.other-sport-card-tile:hover{filter:brightness(1.04);transform:translateY(-1px)}
+.other-sport-create-btn{margin-top:18px}
+@media(max-width:680px){.other-sport-card-grid{grid-template-columns:1fr}.other-sport-card-tile{aspect-ratio:2.77/1}}
