@@ -292,6 +292,7 @@ function renderMuscuMenu(){
   document.querySelectorAll("[data-next]").forEach(btn=>btn.addEventListener("click",()=>{
     const target=btn.dataset.next;
     if(target==="seances"){ state.view="muscu-sessions"; render(); return; }
+    if(target==="autre-sport"){ state.view="muscu-other"; render(); return; }
     alert("Cette rubrique sera construite à l’étape suivante, après validation de cet écran.");
   }));
 }
@@ -321,10 +322,30 @@ function renderMuscuSessions(){
   document.getElementById("muscuSessionsBack")?.addEventListener("click",()=>{state.view="muscu-menu";render();});
 }
 
+function renderMuscuOther(){
+  main.innerHTML = `
+    <section class="muscu-other-v4" aria-label="Autres sports">
+      <button class="muscu-back-pill muscu-other-back" id="muscuOtherBack" aria-label="Retour aux rubriques Musculation">
+        <span class="muscu-back-arrow">←</span><span>Retour</span>
+      </button>
+      <div class="muscu-other-list-v4">
+        <button class="muscu-other-card-v4" data-sport="marche"><img src="./sport-marche-v3.png" alt="Marche"></button>
+        <button class="muscu-other-card-v4" data-sport="course"><img src="./sport-course-v3.png" alt="Course à pied"></button>
+        <button class="muscu-other-card-v4" data-sport="velo"><img src="./sport-velo-v3.png" alt="Vélo"></button>
+        <button class="muscu-other-card-v4" data-sport="velo-app"><img src="./sport-velo-appartement-v3.png" alt="Vélo d’appartement"></button>
+        <button class="muscu-other-card-v4" data-sport="paddle"><img src="./sport-paddle-v3.png" alt="Stand Up Paddle"></button>
+      </div>
+    </section>`;
+  document.getElementById("muscuOtherBack")?.addEventListener("click",()=>{state.view="muscu-menu";render();});
+  document.querySelectorAll("[data-sport]").forEach(btn=>btn.addEventListener("click",()=>{
+    alert("L’enregistrement manuel de cette activité sera ajouté à l’étape suivante.");
+  }));
+}
+
 
 function updateShell(){
   const onHub=state.view==="hub";
-  const onMuscu=state.view==="muscu-entry" || state.view==="muscu-menu" || state.view==="muscu-sessions";
+  const onMuscu=state.view==="muscu-entry" || state.view==="muscu-menu" || state.view==="muscu-sessions" || state.view==="muscu-other";
   bottomNav.classList.toggle("hidden",onHub || onMuscu);
   if(onHub){
     brandMark.textContent="MB";
@@ -478,6 +499,7 @@ function render(){
   if(state.view==="muscu-entry") return renderMuscuEntry();
   if(state.view==="muscu-menu") return renderMuscuMenu();
   if(state.view==="muscu-sessions") return renderMuscuSessions();
+  if(state.view==="muscu-other") return renderMuscuOther();
   if(state.selected) return renderDetail();
   if(state.view==="home") return renderHome();
   if(state.view==="favorites") return renderRecipeList("Mes favoris");
