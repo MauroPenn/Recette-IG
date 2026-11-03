@@ -318,19 +318,22 @@ function renderMuscuExercises(){
 }
 function renderMuscuSessions(){
   const sessions=[
-    ["Haut du corps","25 min","6 exercices","./session-haut-corps.webp"],
-    ["Bas du corps","28 min","6 exercices","./session-bas-corps.webp"],
-    ["Corps complet","35 min","8 exercices","./session-corps-complet.webp"],
-    ["Abdos & gainage","15 min","5 exercices","./session-abdos.webp"]
+    ["Haut du corps","./session-card-haut-corps-v2.webp"],
+    ["Bas du corps","./session-card-bas-corps-v2.webp"],
+    ["Corps complet","./session-card-corps-complet-v2.webp"],
+    ["Abdos & gainage","./session-card-abdos-gainage-v2.webp"]
   ];
   main.innerHTML=`
-    <section class="muscu-page">
+    <section class="muscu-page sessions-page">
       ${muscuBackButton()}
-      <div class="muscu-head"><div class="muscu-head-icon icon-session">●</div><div><h2>Séances</h2><p>Choisissez une séance</p></div></div>
-      <div class="muscu-list muscu-session-list">
-        ${sessions.map(([name,time,count,img])=>`<button class="muscu-list-row session-row"><span class="muscu-row-thumb wide"><img src="${img}" alt=""></span><span class="session-copy"><strong>${name}</strong><small>◷ ${time} &nbsp; | &nbsp; ${count}</small></span><span class="muscu-arrow">›</span></button>`).join("")}
+      <div class="sessions-header">
+        <div class="sessions-titlemark" aria-hidden="true"></div>
+        <div><h2>Séances</h2><p>Programmes d’entraînement complets</p></div>
       </div>
-      <button class="muscu-primary wide" type="button">＋ Créer une séance</button>
+      <div class="sessions-card-grid">
+        ${sessions.map(([name,img])=>`<button class="session-card-tile" type="button" aria-label="${name}"><img src="${img}" alt="${name}"></button>`).join("")}
+      </div>
+      <button class="muscu-primary wide sessions-create-btn" type="button">＋ Créer une séance</button>
     </section>`;
   bindMuscuBack();
 }

@@ -422,3 +422,17 @@ body.muscu-mode .brand-mark{font-family:Arial,sans-serif;font-weight:900;font-si
   }
   .other-sport-name{font-size:1rem!important;}
 }
+
+/* V5.11 — page Séances uniquement, cartes indépendantes */
+.sessions-page{max-width:960px;margin:0 auto}
+.sessions-header{display:flex;align-items:center;gap:14px;margin:4px 0 20px}
+.sessions-titlemark{width:58px;height:58px;border-radius:18px;border:1px solid #334a56;background:#102630;position:relative;flex:0 0 auto}
+.sessions-titlemark::before{content:"";position:absolute;inset:13px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ff7900' stroke-width='2'%3E%3Crect x='5' y='4' width='14' height='16' rx='2'/%3E%3Cpath d='M9 4V2h6v2M8 9h8M8 13h8M8 17h5'/%3E%3C/svg%3E") center/contain no-repeat}
+.sessions-header h2{margin:0;color:#fff;font-size:1.85rem}
+.sessions-header p{margin:3px 0 0;color:#c2ced5;font-size:.95rem}
+.sessions-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.session-card-tile{display:block;width:100%;padding:0;border:1px solid #5a7380;border-radius:26px;overflow:hidden;background:#0b1d27;box-shadow:0 15px 34px rgba(0,0,0,.22);cursor:pointer;aspect-ratio:2.1/1}
+.session-card-tile img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.session-card-tile:hover{filter:brightness(1.04);transform:translateY(-1px)}
+.sessions-create-btn{margin-top:18px}
+@media(max-width:680px){.sessions-card-grid{grid-template-columns:1fr}.session-card-tile{aspect-ratio:2.1/1}}
