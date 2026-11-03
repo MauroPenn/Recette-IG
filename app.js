@@ -211,12 +211,7 @@ function fallbackMedia(r, detail=false){
 function renderHub(){
   state.selected=null; state.category=""; state.ig=""; state.search="";
   main.innerHTML = `
-    <section class="hub-intro">
-      <div class="hub-kicker">Une seule appli, trois univers</div>
-      <h2>Ma bibliothèque personnelle</h2>
-      <p>Choisis l’univers que tu veux consulter. La cuisine est déjà disponible ; la musculation et les étirements viendront ensuite.</p>
-    </section>
-    <div class="universe-grid">
+    <div class="universe-grid universe-grid-single">
       <button class="universe-card universe-cuisine" data-universe="cuisine">
         <div class="universe-photo cuisine-photo"><img src="./cat-plats-sales.webp" alt="Cuisine artisanale" loading="eager"></div>
         <div class="universe-overlay"></div>
@@ -228,190 +223,26 @@ function renderHub(){
           <span class="universe-cta">Ouvrir la cuisine →</span>
         </div>
       </button>
-      <button class="universe-card universe-muscu" data-universe="muscu">
-        <div class="universe-photo"><img src="./univers-musculation.webp" alt="Espace de musculation avec haltères et poids" loading="eager"></div>
-        <div class="universe-overlay"></div>
-        <div class="universe-content">
-          <div class="universe-badge available">Disponible</div>
-          <div class="universe-icon">🏋️</div>
-          <h3>Musculation</h3>
-          <p>Exercices, séances guidées, autres sports et historique.</p>
-          <span class="universe-cta">Ouvrir la musculation →</span>
-        </div>
-      </button>
-      <button class="universe-card universe-stretch" data-universe="stretch">
-        <div class="universe-photo"><img src="./univers-etirements.webp" alt="Espace zen pour étirements et mobilité" loading="eager"></div>
-        <div class="universe-overlay"></div>
-        <div class="universe-content">
-          <div class="universe-badge soon">Bientôt</div>
-          <div class="universe-icon">🧘</div>
-          <h3>Étirements</h3>
-          <p>Mobilité, étirements par zone et routines courtes à suivre facilement.</p>
-          <span class="universe-cta muted">En préparation</span>
-        </div>
-      </button>
-    </div>
-  `;
-  document.querySelectorAll("[data-universe]").forEach(btn=>btn.addEventListener("click",()=>{
-    const u=btn.dataset.universe;
-    if(u==="cuisine"){ state.view="home"; updateShell(); render(); return; }
-    if(u==="muscu"){ state.view="muscu-entry"; updateShell(); render(); return; }
-    renderComingSoon(u);
-  }));
+    </div>`;
+  const cuisineBtn=document.querySelector('[data-universe="cuisine"]');
+  if(cuisineBtn) cuisineBtn.addEventListener("click",()=>{state.view="home";updateShell();render();});
 }
 
-
-function muscuBackButton(target="muscu-menu", label="Retour"){
-  return `<button class="muscu-back" data-muscu-back="${target}">← ${label}</button>`;
-}
-function bindMuscuBack(){
-  document.querySelectorAll("[data-muscu-back]").forEach(b=>b.addEventListener("click",()=>{state.view=b.dataset.muscuBack;render();}));
-}
-function renderMuscuEntry(){
-  main.innerHTML=`
-    <section class="muscu-entry-page-v2">
-      <div class="muscu-entry-card-v2">
-        <img src="./univers-musculation.webp" alt="Salle de musculation avec haltères" class="muscu-entry-photo-v2">
-        <div class="muscu-entry-overlay-v2"></div>
-        <div class="muscu-entry-content-v2">
-          <div class="muscu-entry-icon-v2" aria-hidden="true">▰</div>
-          <h2>Musculation</h2>
-          <div class="muscu-entry-line-v2"></div>
-          <p>Programmes, exercices et séances<br>pour progresser, se renforcer<br>et rester en forme.</p>
-          <button class="muscu-entry-btn-v2" id="enterMuscu">Entrer <span>→</span></button>
-        </div>
-      </div>
-    </section>`;
-  document.getElementById("enterMuscu").addEventListener("click",()=>{state.view="muscu-menu";render();});
-}
-function renderMuscuMenu(){
-  const cards=[
-    ["muscu-exercises","./muscu-card-exercices.webp","🏋️","Exercices","Par groupe musculaire"],
-    ["muscu-sessions","./muscu-card-seances.webp","⏱️","Séances","Programmes avec chrono"],
-    ["muscu-other","./muscu-card-autre-sport.webp","🏃","Autre sport","Vélo, marche, course…"],
-    ["muscu-history","./muscu-card-historique.webp","📊","Historique","Semaine, mois, année"]
-  ];
-  main.innerHTML=`
-    <section class="muscu-page muscu-menu-page">
-      ${muscuBackButton("hub","Univers")}
-      <div class="muscu-head"><div class="muscu-head-icon icon-dumbbell">●</div><div><h2>Musculation</h2><p>Choisissez une rubrique</p></div></div>
-      <div class="muscu-menu-grid">
-        ${cards.map(([view,img,icon,title,sub])=>`<button class="muscu-menu-card" data-muscu-view="${view}"><img src="${img}" alt="" class="muscu-menu-photo"><span class="muscu-menu-shade"></span><span class="muscu-card-icon">${icon}</span><span class="muscu-menu-text"><strong>${title}</strong><small>${sub}</small></span><span class="muscu-arrow">›</span></button>`).join("")}
-      </div>
-    </section>`;
-  bindMuscuBack();
-  document.querySelectorAll("[data-muscu-view]").forEach(b=>b.addEventListener("click",()=>{state.view=b.dataset.muscuView;render();}));
-}
-function renderMuscuExercises(){
-  const groups=[
-    ["Pectoraux","./muscle-pectoraux.webp"],["Dos","./muscle-dos.webp"],["Épaules","./muscle-epaules.webp"],["Biceps","./muscle-biceps.webp"],["Triceps","./muscle-triceps.webp"],["Jambes","./muscle-jambes.webp"],["Abdominaux","./muscle-abdos.webp"]
-  ];
-  main.innerHTML=`
-    <section class="muscu-page">
-      ${muscuBackButton()}
-      <div class="muscu-head"><div class="muscu-head-icon icon-dumbbell">●</div><div><h2>Exercices</h2><p>Choisissez un groupe musculaire</p></div></div>
-      <div class="muscu-list muscu-exercise-list">
-        ${groups.map(([name,img])=>`<button class="muscu-list-row" data-muscle="${name}"><span class="muscu-row-thumb"><img src="${img}" alt="${name}"></span><strong>${name}</strong><span class="muscu-arrow">›</span></button>`).join("")}
-      </div>
-    </section>`;
-  bindMuscuBack();
-}
-function renderMuscuSessions(){
-  const sessions=[
-    ["Haut du corps","./session-card-haut-corps-v2.webp"],
-    ["Bas du corps","./session-card-bas-corps-v2.webp"],
-    ["Corps complet","./session-card-corps-complet-v2.webp"],
-    ["Abdos & gainage","./session-card-abdos-gainage-v2.webp"]
-  ];
-  main.innerHTML=`
-    <section class="muscu-page sessions-page">
-      ${muscuBackButton()}
-      <div class="sessions-header">
-        <div class="sessions-titlemark" aria-hidden="true"></div>
-        <div><h2>Séances</h2><p>Programmes d’entraînement complets</p></div>
-      </div>
-      <div class="sessions-card-grid">
-        ${sessions.map(([name,img])=>`<button class="session-card-tile" type="button" aria-label="${name}"><img src="${img}" alt="${name}"></button>`).join("")}
-      </div>
-      <button class="muscu-primary wide sessions-create-btn" type="button">＋ Créer une séance</button>
-    </section>`;
-  bindMuscuBack();
-}
-function renderMuscuOther(){
-  const sports=[
-    ["Vélo","./sport-card-velo-v5.webp"],
-    ["Vélo d’appartement","./sport-card-velo-appartement-v5.webp"],
-    ["Marche","./sport-card-marche-v5.webp"],
-    ["Course à pied","./sport-card-course-v5.webp"],
-    ["Stand Up Paddle","./sport-card-paddle-v5.webp"]
-  ];
-  main.innerHTML=`
-    <section class="muscu-page other-sport-tiles-page">
-      ${muscuBackButton()}
-      <div class="other-sport-tiles-header">
-        <div class="other-sport-tiles-titlemark" aria-hidden="true"></div>
-        <div><h2>Autre sport</h2><p>Enregistrer une activité manuellement</p></div>
-      </div>
-      <div class="other-sport-card-grid">
-        ${sports.map(([name,img])=>`<button class="other-sport-card-tile" type="button" data-sport="${name}" aria-label="${name}"><img src="${img}" alt="${name}"></button>`).join("")}
-      </div>
-      <button class="muscu-primary wide other-sport-create-btn" type="button">＋ Enregistrer une activité</button>
-    </section>`;
-  bindMuscuBack();
-}
-
-function renderMuscuHistory(){
-  const items=[
-    ["🏋️","Séance – Haut du corps","25 min","Lun. 20 janv."],
-    ["🚴","Vélo","42 min · 14,6 km","Dim. 19 janv."],
-    ["🏃","Course à pied","28 min · 5,2 km","Ven. 17 janv."],
-    ["🏋️","Séance – Abdos & gainage","15 min","Mer. 15 janv."],
-    ["🚶","Marche","50 min · 4,8 km","Lun. 13 janv."]
-  ];
-  main.innerHTML=`
-    <section class="muscu-page">
-      ${muscuBackButton()}
-      <div class="muscu-head"><div class="muscu-head-icon icon-history">●</div><div><h2>Historique</h2><p>Consultez l’ensemble de vos activités</p></div></div>
-      <div class="muscu-tabs"><button class="active">Semaine</button><button>Mois</button><button>Année</button></div>
-      <div class="muscu-list history-list">
-        ${items.map(([icon,title,meta,date])=>`<button class="muscu-list-row history-row"><span class="history-icon">${icon}</span><span class="history-copy"><strong>${title}</strong><small>${date} · ${meta}</small></span><span class="muscu-arrow">›</span></button>`).join("")}
-      </div>
-      <div class="muscu-note">Ces lignes servent de prévisualisation. L’historique réel se remplira avec tes séances et tes autres sports enregistrés.</div>
-    </section>`;
-  bindMuscuBack();
-}
-
-function renderComingSoon(universe){
-  const muscu=universe==="muscu";
-  const title=muscu?"Musculation":"Étirements";
-  const icon=muscu?"🏋️":"🧘";
-  const text=muscu?"Ta bibliothèque d’exercices et tes programmes seront intégrés ici.":"Tes fiches d’étirements, mobilité et routines seront intégrées ici.";
-  main.innerHTML=`
-    <section class="coming-card">
-      <div class="coming-icon">${icon}</div>
-      <div class="hub-kicker">Prochain univers</div>
-      <h2>${title}</h2>
-      <p>${text}</p>
-      <button class="primary-btn" id="backUniverses">← Revenir aux univers</button>
-    </section>`;
-  document.getElementById("backUniverses").addEventListener("click",()=>{state.view="hub";updateShell();render();});
-}
 
 function updateShell(){
   const onHub=state.view==="hub";
-  const onMuscu=state.view.startsWith("muscu-");
-  const onMuscuEntry=state.view==="muscu-entry";
-  document.body.classList.toggle("muscu-mode",onMuscu);
-  document.body.classList.toggle("muscu-entry-only",onMuscuEntry);
-  bottomNav.classList.toggle("hidden",onHub || onMuscu);
+  bottomNav.classList.toggle("hidden",onHub);
   if(onHub){
-    brandMark.textContent="MB"; brandEyebrow.textContent="Ma bibliothèque"; brandTitle.textContent="Mes univers";
-  } else if(onMuscu){
-    brandMark.textContent="M"; brandEyebrow.textContent="Ma bibliothèque"; brandTitle.textContent="Musculation";
+    brandMark.textContent="MB";
+    brandEyebrow.textContent="Ma bibliothèque";
+    brandTitle.textContent="Mes univers";
   } else {
-    brandMark.textContent="IG"; brandEyebrow.textContent="Ma bibliothèque cuisine"; brandTitle.textContent="Recettes IG bas & protéinées";
+    brandMark.textContent="IG";
+    brandEyebrow.textContent="Ma bibliothèque cuisine";
+    brandTitle.textContent="Recettes IG bas & protéinées";
   }
 }
+
 
 function renderHome(){
   state.selected=null;
@@ -546,12 +377,6 @@ function render(){
   updateShell();
   updateNav();
   if(state.view==="hub") return renderHub();
-  if(state.view==="muscu-entry") return renderMuscuEntry();
-  if(state.view==="muscu-menu") return renderMuscuMenu();
-  if(state.view==="muscu-exercises") return renderMuscuExercises();
-  if(state.view==="muscu-sessions") return renderMuscuSessions();
-  if(state.view==="muscu-other") return renderMuscuOther();
-  if(state.view==="muscu-history") return renderMuscuHistory();
   if(state.selected) return renderDetail();
   if(state.view==="home") return renderHome();
   if(state.view==="favorites") return renderRecipeList("Mes favoris");
