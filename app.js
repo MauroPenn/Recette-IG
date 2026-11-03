@@ -293,6 +293,7 @@ function renderMuscuMenu(){
     const target=btn.dataset.next;
     if(target==="seances"){ state.view="muscu-sessions"; render(); return; }
     if(target==="autre-sport"){ state.view="muscu-other"; render(); return; }
+    if(target==="historique"){ state.view="muscu-history"; render(); return; }
     alert("Cette rubrique sera construite à l’étape suivante, après validation de cet écran.");
   }));
 }
@@ -343,50 +344,46 @@ function renderMuscuOther(){
 }
 
 
-
 function renderMuscuHistory(){
   main.innerHTML = `
-    <section class="muscu-history-v6" aria-label="Historique des activités">
-      <button class="muscu-back-pill muscu-history-back-v6" id="muscuHistoryBack" aria-label="Retour aux rubriques Musculation">
+    <section class="muscu-history-clean" aria-label="Historique des activités">
+      <button class="muscu-back-pill history-back" id="historyBack" aria-label="Retour aux rubriques Musculation">
         <span class="muscu-back-arrow">←</span><span>Retour</span>
       </button>
 
-      <div class="muscu-history-heading-v6">
-        <div class="muscu-history-icon-v6" aria-hidden="true">
-          <span class="cal-top"></span>
-          <span class="cal-grid"></span>
+      <div class="history-heading">
+        <div class="history-calendar-icon" aria-hidden="true">
+          <span class="history-calendar-top"></span>
+          <span class="history-calendar-grid"></span>
         </div>
-        <div>
-          <div class="muscu-history-kicker-v6">MUSCULATION</div>
+        <div class="history-heading-copy">
+          <div class="history-kicker">MUSCULATION</div>
           <h2>Historique</h2>
           <p>Retrouve l’ensemble de tes activités</p>
         </div>
       </div>
 
-      <div class="muscu-history-tabs-v6" role="tablist" aria-label="Période de l’historique">
-        <button class="muscu-history-tab-v6 active" type="button" data-history-period="week" role="tab" aria-selected="true">Semaine</button>
-        <button class="muscu-history-tab-v6" type="button" data-history-period="month" role="tab" aria-selected="false">Mois</button>
-        <button class="muscu-history-tab-v6" type="button" data-history-period="year" role="tab" aria-selected="false">Année</button>
+      <div class="history-tabs" role="tablist" aria-label="Période de l’historique">
+        <button class="history-tab active" type="button" data-period="week" role="tab" aria-selected="true">Semaine</button>
+        <button class="history-tab" type="button" data-period="month" role="tab" aria-selected="false">Mois</button>
+        <button class="history-tab" type="button" data-period="year" role="tab" aria-selected="false">Année</button>
       </div>
 
-      <div class="muscu-history-empty-v6">
-        <div class="muscu-history-chart-v6" aria-hidden="true">
-          <span></span><span></span><span></span>
-        </div>
+      <div class="history-empty-panel">
+        <div class="history-chart-icon" aria-hidden="true"><i></i><i></i><i></i></div>
         <h3>Aucune activité enregistrée</h3>
         <p>Les séances de musculation et les autres sports apparaîtront ici dès que tu commenceras à enregistrer tes activités.</p>
       </div>
     </section>`;
-  document.getElementById("muscuHistoryBack")?.addEventListener("click",()=>{state.view="muscu-menu";render();});
-  document.querySelectorAll("[data-history-period]").forEach(btn=>btn.addEventListener("click",()=>{
-    document.querySelectorAll("[data-history-period]").forEach(x=>{
-      x.classList.remove("active");
-      x.setAttribute("aria-selected","false");
-    });
+
+  document.getElementById("historyBack")?.addEventListener("click",()=>{state.view="muscu-menu";render();});
+  document.querySelectorAll(".history-tab").forEach(btn=>btn.addEventListener("click",()=>{
+    document.querySelectorAll(".history-tab").forEach(x=>{x.classList.remove("active");x.setAttribute("aria-selected","false");});
     btn.classList.add("active");
     btn.setAttribute("aria-selected","true");
   }));
 }
+
 
 function updateShell(){
   const onHub=state.view==="hub";
