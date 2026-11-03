@@ -336,20 +336,31 @@ function renderMuscuSessions(){
 }
 function renderMuscuOther(){
   const sports=[
-    ["Vélo","./sport-velo-v2.webp"],
-    ["Vélo d’appartement","./sport-velo-appartement-v2.webp"],
-    ["Marche","./sport-marche-v2.webp"],
-    ["Course à pied","./sport-course-v2.webp"],
-    ["Stand Up Paddle","./sport-paddle-v2.webp"]
+    ["Vélo","./sport-velo-v3.webp"],
+    ["Vélo d’appartement","./sport-velo-appartement-v3.webp"],
+    ["Marche","./sport-marche-v3.webp"],
+    ["Course à pied","./sport-course-v3.webp"],
+    ["Stand Up Paddle","./sport-paddle-v3.webp"]
   ];
   main.innerHTML=`
-    <section class="muscu-page">
+    <section class="muscu-page other-sport-page">
       ${muscuBackButton()}
-      <div class="muscu-head"><div class="muscu-head-icon icon-sport">●</div><div><h2>Autre sport</h2><p>Enregistrer une activité manuellement</p></div></div>
-      <div class="muscu-list muscu-other-list">
-        ${sports.map(([name,img])=>`<button class="muscu-list-row sport-row" data-sport="${name}"><span class="muscu-row-thumb sport-thumb"><img src="${img}" alt="${name}"></span><strong>${name}</strong><span class="muscu-arrow">›</span></button>`).join("")}
+      <div class="other-sport-header">
+        <div class="other-sport-titlemark" aria-hidden="true"></div>
+        <div>
+          <h2>Autre sport</h2>
+          <p>Enregistrer une activité manuellement</p>
+        </div>
       </div>
-      <button class="muscu-primary wide" type="button">＋ Enregistrer une activité</button>
+      <div class="other-sport-list">
+        ${sports.map(([name,img])=>`
+          <button class="other-sport-card" data-sport="${name}">
+            <span class="other-sport-image"><img src="${img}" alt="${name}"></span>
+            <span class="other-sport-name">${name}</span>
+            <span class="other-sport-chevron" aria-hidden="true">›</span>
+          </button>`).join("")}
+      </div>
+      <button class="muscu-primary wide other-sport-add" type="button">＋ Enregistrer une activité</button>
     </section>`;
   bindMuscuBack();
 }

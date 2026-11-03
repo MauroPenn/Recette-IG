@@ -323,3 +323,29 @@ body.muscu-mode .brand-mark{font-family:Arial,sans-serif;font-weight:900;font-si
 .muscu-other-list .sport-row .muscu-arrow{margin-left:auto!important;}
 .muscu-other-list .sport-icon{display:none!important;}
 @media(max-width:620px){.muscu-other-list .sport-row{height:76px!important;min-height:76px!important;gap:14px!important}.muscu-other-list .sport-thumb{width:112px!important;height:74px!important;flex-basis:112px!important}.muscu-other-list .sport-row strong{font-size:.98rem!important}}
+
+
+/* V5.8 — page Autre sport reconstruite de zéro, styles isolés */
+.other-sport-page{overflow:visible!important;}
+.other-sport-header{display:flex;align-items:center;gap:14px;margin:2px 0 22px;}
+.other-sport-titlemark{width:52px;height:52px;flex:0 0 52px;border-radius:15px;background:linear-gradient(145deg,#16323d,#0d222b);border:1px solid #35515e;position:relative;box-sizing:border-box;}
+.other-sport-titlemark::before{content:"";position:absolute;left:15px;right:15px;top:24px;height:4px;border-radius:999px;background:#ff7b00;transform:rotate(-25deg);}
+.other-sport-titlemark::after{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:#ff7b00;left:12px;top:12px;box-shadow:15px 14px 0 -2px #ff7b00;}
+.other-sport-header h2{margin:0;color:#fff;font-size:1.72rem;line-height:1.1;}
+.other-sport-header p{margin:5px 0 0;color:#b9c8d0;font-size:.92rem;}
+.other-sport-list{display:flex;flex-direction:column;gap:14px;width:100%;position:relative;}
+.other-sport-card{appearance:none;-webkit-appearance:none;width:100%;height:92px;min-height:92px;box-sizing:border-box;display:grid;grid-template-columns:148px minmax(0,1fr) 34px;align-items:center;gap:18px;padding:0 14px 0 0;margin:0;border:1px solid #38505b;border-radius:20px;overflow:hidden;position:relative;isolation:isolate;background:#0c1f29;color:#fff;text-align:left;box-shadow:0 10px 24px rgba(0,0,0,.18);}
+.other-sport-card::before,.other-sport-card::after{content:none!important;display:none!important;background:none!important;}
+.other-sport-image{display:block!important;width:148px!important;height:90px!important;min-width:148px!important;max-width:148px!important;min-height:90px!important;max-height:90px!important;overflow:hidden!important;border-radius:19px 0 0 19px!important;position:relative!important;inset:auto!important;margin:0!important;padding:0!important;transform:none!important;box-sizing:border-box!important;background:#142b35!important;}
+.other-sport-image::before,.other-sport-image::after{content:none!important;display:none!important;}
+.other-sport-image img{display:block!important;position:static!important;inset:auto!important;width:100%!important;height:100%!important;min-width:0!important;max-width:none!important;min-height:0!important;max-height:none!important;object-fit:cover!important;object-position:center!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;transform:none!important;filter:none!important;}
+.other-sport-name{display:block;min-width:0;font-size:1.08rem;font-weight:850;line-height:1.2;color:#fff;white-space:normal;}
+.other-sport-chevron{display:grid;place-items:center;width:30px;height:42px;color:#ff7900;font-size:2rem;line-height:1;margin-left:auto;}
+.other-sport-add{margin-top:18px!important;}
+.other-sport-card:active{transform:scale(.992);}
+@media(max-width:520px){
+  .other-sport-card{height:84px;min-height:84px;grid-template-columns:116px minmax(0,1fr) 28px;gap:13px;border-radius:18px;}
+  .other-sport-image{width:116px!important;min-width:116px!important;max-width:116px!important;height:82px!important;min-height:82px!important;max-height:82px!important;border-radius:17px 0 0 17px!important;}
+  .other-sport-name{font-size:1rem;}
+  .other-sport-chevron{font-size:1.8rem;width:25px;}
+}
