@@ -336,11 +336,11 @@ function renderMuscuSessions(){
 }
 function renderMuscuOther(){
   const sports=[
-    ["Vélo","./sport-velo-v3.webp"],
-    ["Vélo d’appartement","./sport-velo-appartement-v3.webp"],
-    ["Marche","./sport-marche-v3.webp"],
-    ["Course à pied","./sport-course-v3.webp"],
-    ["Stand Up Paddle","./sport-paddle-v3.webp"]
+    ["Vélo","./sport-velo-v4.webp"],
+    ["Vélo d’appartement","./sport-velo-appartement-v4.webp"],
+    ["Marche","./sport-marche-v4.webp"],
+    ["Course à pied","./sport-course-v4.webp"],
+    ["Stand Up Paddle","./sport-paddle-v4.webp"]
   ];
   main.innerHTML=`
     <section class="muscu-page other-sport-page">
