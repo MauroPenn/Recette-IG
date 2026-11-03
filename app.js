@@ -252,14 +252,40 @@ function renderMuscuEntry(){
       </div>
     </section>`;
   document.getElementById("enterMuscu")?.addEventListener("click",()=>{
-    alert("La suite de l’univers Musculation sera ajoutée après validation de cet écran.");
+    state.view="muscu-menu";
+    render();
   });
+}
+
+function renderMuscuMenu(){
+  main.innerHTML = `
+    <section class="muscu-menu-clean" aria-label="Rubriques Musculation">
+      <button class="muscu-menu-back" id="muscuMenuBack">← Retour</button>
+      <div class="muscu-menu-intro">
+        <div class="muscu-menu-icon">M</div>
+        <div>
+          <div class="muscu-menu-kicker">MUSCULATION</div>
+          <h2>Choisissez une rubrique</h2>
+          <p>Programmes, exercices et suivis pour progresser et rester en forme.</p>
+        </div>
+      </div>
+      <div class="muscu-menu-clean-grid">
+        <button class="muscu-menu-clean-card" data-next="exercices"><img src="./muscu-menu-exercices.png" alt="Exercices — tous les exercices par groupes musculaires"></button>
+        <button class="muscu-menu-clean-card" data-next="seances"><img src="./muscu-menu-seances.png" alt="Séances — programmes et séances guidées avec chrono"></button>
+        <button class="muscu-menu-clean-card" data-next="autre-sport"><img src="./muscu-menu-autre-sport.png" alt="Autre sport — vélo, marche, course, vélo d’appartement, paddle"></button>
+        <button class="muscu-menu-clean-card" data-next="historique"><img src="./muscu-menu-historique.png" alt="Historique — suivis, statistiques et progression"></button>
+      </div>
+    </section>`;
+  document.getElementById("muscuMenuBack")?.addEventListener("click",()=>{state.view="muscu-entry";render();});
+  document.querySelectorAll("[data-next]").forEach(btn=>btn.addEventListener("click",()=>{
+    alert("Cette rubrique sera construite à l’étape suivante, après validation de cet écran.");
+  }));
 }
 
 
 function updateShell(){
   const onHub=state.view==="hub";
-  const onMuscu=state.view==="muscu-entry";
+  const onMuscu=state.view==="muscu-entry" || state.view==="muscu-menu";
   bottomNav.classList.toggle("hidden",onHub || onMuscu);
   if(onHub){
     brandMark.textContent="MB";
@@ -411,6 +437,7 @@ function render(){
   updateNav();
   if(state.view==="hub") return renderHub();
   if(state.view==="muscu-entry") return renderMuscuEntry();
+  if(state.view==="muscu-menu") return renderMuscuMenu();
   if(state.selected) return renderDetail();
   if(state.view==="home") return renderHome();
   if(state.view==="favorites") return renderRecipeList("Mes favoris");
