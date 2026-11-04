@@ -330,6 +330,7 @@ function renderMuscuExercises(){
   document.querySelectorAll("[data-muscle]").forEach(btn=>btn.addEventListener("click",()=>{
     const muscle=btn.dataset.muscle;
     if(muscle==="pectoraux"){ state.view="muscu-pectoraux"; render(); return; }
+    if(muscle==="dos"){ state.view="muscu-dos"; render(); return; }
     if(muscle==="biceps"){ state.view="muscu-biceps"; render(); return; }
     const label=btn.getAttribute("aria-label")?.replace("Ouvrir les exercices ","") || "ce groupe";
     alert(`Les fiches ${label} seront ajoutées à l’étape suivante.`);
@@ -373,6 +374,48 @@ function renderMuscuPectoraux(){
     </section>`;
   document.getElementById("muscuPectorauxBack")?.addEventListener("click",()=>{state.view="muscu-exercises";render();});
   document.querySelectorAll("[data-pectoraux-exercise]").forEach(btn=>btn.addEventListener("click",()=>{
+    const label=btn.getAttribute("aria-label")?.replace("Ouvrir ","") || "cet exercice";
+    alert(`La fiche détaillée ${label} sera ajoutée à l’étape suivante.`);
+  }));
+}
+
+function renderMuscuDos(){
+  const exercises=[
+    "Rowing unilatéral haltère",
+    "Rowing buste penché",
+    "Pull-over haltère",
+    "Oiseau buste penché",
+    "Superman au sol",
+    "Bird-dog row",
+    "Rowing kettlebell",
+    "Soulevé de terre roumain",
+    "Tirage coudes ouverts",
+    "Extension lombaire au sol"
+  ];
+  main.innerHTML=`
+    <section class="muscu-biceps-v1 pec-match-biceps" aria-label="Exercices dos">
+      <button class="muscu-back-pill muscu-biceps-back" id="muscuDosBack" aria-label="Retour aux groupes musculaires">
+        <span class="muscu-back-arrow">←</span><span>Retour</span>
+      </button>
+      <div class="muscu-biceps-heading">
+        <div class="muscu-biceps-icon" aria-hidden="true">⌁</div>
+        <div>
+          <div class="muscu-biceps-kicker">EXERCICES</div>
+          <h2>Dos</h2>
+          <p>10 exercices pour développer et renforcer le dos à la maison</p>
+        </div>
+      </div>
+      <div class="pec-card-list pec-full-card-list">
+        ${exercises.map((label,i)=>`
+          <button class="pec-full-card" data-dos-exercise="${i}" aria-label="Ouvrir ${label}">
+            <div class="pec-full-card-viewport" aria-hidden="true">
+              <img class="pec-full-sprite" style="--i:${i}" src="./dos-sprite-v1.webp" alt="">
+            </div>
+          </button>`).join("")}
+      </div>
+    </section>`;
+  document.getElementById("muscuDosBack")?.addEventListener("click",()=>{state.view="muscu-exercises";render();});
+  document.querySelectorAll("[data-dos-exercise]").forEach(btn=>btn.addEventListener("click",()=>{
     const label=btn.getAttribute("aria-label")?.replace("Ouvrir ","") || "cet exercice";
     alert(`La fiche détaillée ${label} sera ajoutée à l’étape suivante.`);
   }));
@@ -504,7 +547,7 @@ function renderMuscuHistory(){
 
 function updateShell(){
   const onHub=state.view==="hub";
-  const onMuscu=state.view==="muscu-entry" || state.view==="muscu-menu" || state.view==="muscu-exercises" || state.view==="muscu-sessions" || state.view==="muscu-other" || state.view==="muscu-history" || state.view==="muscu-biceps" || state.view==="muscu-pectoraux";
+  const onMuscu=state.view==="muscu-entry" || state.view==="muscu-menu" || state.view==="muscu-exercises" || state.view==="muscu-sessions" || state.view==="muscu-other" || state.view==="muscu-history" || state.view==="muscu-biceps" || state.view==="muscu-pectoraux" || state.view==="muscu-dos";
   bottomNav.classList.toggle("hidden",onHub || onMuscu);
   if(onHub){
     brandMark.textContent="MB";
@@ -659,6 +702,7 @@ function render(){
   if(state.view==="muscu-menu") return renderMuscuMenu();
   if(state.view==="muscu-exercises") return renderMuscuExercises();
   if(state.view==="muscu-pectoraux") return renderMuscuPectoraux();
+  if(state.view==="muscu-dos") return renderMuscuDos();
   if(state.view==="muscu-biceps") return renderMuscuBiceps();
   if(state.view==="muscu-sessions") return renderMuscuSessions();
   if(state.view==="muscu-other") return renderMuscuOther();
