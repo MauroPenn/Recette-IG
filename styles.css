@@ -595,3 +595,22 @@ dialog::backdrop{background:rgba(31,42,35,.42);backdrop-filter:blur(2px)}
   .pec-line b{min-width:14px}
   .pec-arrow{font-size:1.85rem}
 }
+
+
+/* V5.33 — Pectoraux : sprite complet, même format visuel que Biceps */
+.pec-full-card-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:100%}
+.pec-full-card{
+  display:block;width:100%;padding:0;border:1px solid rgba(255,255,255,.46);border-radius:18px;
+  background:#0c141c;overflow:hidden;cursor:pointer;box-shadow:0 8px 22px rgba(0,0,0,.22);
+  aspect-ratio:560/190;position:relative;
+}
+.pec-full-card:active{transform:scale(.995)}
+.pec-full-card-viewport{position:absolute;inset:0;overflow:hidden}
+.pec-full-sprite{
+  position:absolute;left:0;top:calc(var(--i) * -100%);width:100%;height:auto;max-width:none;display:block;
+}
+@media(max-width:680px){
+  .pec-full-card-list{grid-template-columns:1fr;gap:9px}
+  .pec-full-card{width:100%!important;max-width:100%!important;min-width:0!important;border-radius:15px;aspect-ratio:560/190}
+  .pec-full-sprite{width:100%!important;max-width:none!important;height:auto!important}
+}

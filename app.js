@@ -338,16 +338,16 @@ function renderMuscuExercises(){
 
 function renderMuscuPectoraux(){
   const exercises=[
-    ["Pompes classiques","Poids du corps","8–12 répétitions ou 60 secondes","2–0–2"],
-    ["Pompes inclinées","Poids du corps","8–12 répétitions ou 60 secondes","2–0–2"],
-    ["Pompes déclinées","Poids du corps","8–12 répétitions ou 60 secondes","2–0–2"],
-    ["Développé couché au sol haltères","Haltères","8–12 répétitions ou 60 secondes","2–0–2"],
-    ["Écarté couché au sol haltères","Haltères","8–12 répétitions ou 60 secondes","2–0–2"],
-    ["Pullover haltère","Haltère","8–12 répétitions ou 60 secondes","2–0–2"],
-    ["Presse poitrine unilatérale au sol","Haltère","8–12 répétitions ou 60 secondes","2–0–2"],
-    ["Pompes prise large","Poids du corps","8–12 répétitions ou 60 secondes","2–0–2"],
-    ["Pompes tempo lent","Poids du corps","8–12 répétitions ou 60 secondes","4–1–2"],
-    ["Squeeze press haltères","Haltères","8–12 répétitions ou 60 secondes","2–0–2"]
+    "Pompes classiques",
+    "Pompes inclinées",
+    "Pompes déclinées",
+    "Développé couché au sol haltères",
+    "Écarté couché au sol haltères",
+    "Pullover haltère",
+    "Presse poitrine unilatérale au sol",
+    "Pompes prise large",
+    "Pompes tempo lent",
+    "Squeeze press haltères"
   ];
   main.innerHTML=`
     <section class="muscu-biceps-v1 pec-match-biceps" aria-label="Exercices pectoraux">
@@ -362,19 +362,12 @@ function renderMuscuPectoraux(){
           <p>10 exercices pour développer et renforcer les pectoraux à la maison</p>
         </div>
       </div>
-      <div class="pec-card-list">
-        ${exercises.map((ex,i)=>`
-          <button class="pec-card" data-pectoraux-exercise="${i}" aria-label="Ouvrir ${ex[0]}">
-            <div class="pec-card-visual" aria-hidden="true">
-              <img class="pec-sprite" style="--i:${i}" src="./pectoraux-sprite-v2.webp" alt="">
+      <div class="pec-card-list pec-full-card-list">
+        ${exercises.map((label,i)=>`
+          <button class="pec-full-card" data-pectoraux-exercise="${i}" aria-label="Ouvrir ${label}">
+            <div class="pec-full-card-viewport" aria-hidden="true">
+              <img class="pec-full-sprite" style="--i:${i}" src="./pectoraux-sprite-v3.webp" alt="">
             </div>
-            <div class="pec-card-copy">
-              <strong>${ex[0]}</strong>
-              <span class="pec-line"><b>▰</b>${ex[1]}</span>
-              <span class="pec-line"><b>▥</b>${ex[2]}</span>
-              <span class="pec-line"><b>◷</b>Tempo : ${ex[3]}</span>
-            </div>
-            <span class="pec-arrow" aria-hidden="true">›</span>
           </button>`).join("")}
       </div>
     </section>`;
