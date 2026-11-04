@@ -338,19 +338,19 @@ function renderMuscuExercises(){
 
 function renderMuscuPectoraux(){
   const exercises=[
-    ["pompes-classiques","Pompes classiques"],
-    ["pompes-inclinees","Pompes inclinées"],
-    ["pompes-declinees","Pompes déclinées"],
-    ["developpe-sol-halteres","Développé couché au sol haltères"],
-    ["ecarte-sol-halteres","Écarté couché au sol haltères"],
-    ["pullover-haltere","Pullover haltère"],
-    ["presse-unilaterale-sol","Presse poitrine unilatérale au sol"],
-    ["pompes-prise-large","Pompes prise large"],
-    ["pompes-tempo-lent","Pompes tempo lent"],
-    ["squeeze-press-halteres","Squeeze press haltères"]
+    ["Pompes classiques","Poids du corps","8–12 répétitions ou 60 secondes","2–0–2"],
+    ["Pompes inclinées","Poids du corps","8–12 répétitions ou 60 secondes","2–0–2"],
+    ["Pompes déclinées","Poids du corps","8–12 répétitions ou 60 secondes","2–0–2"],
+    ["Développé couché au sol haltères","Haltères","8–12 répétitions ou 60 secondes","2–0–2"],
+    ["Écarté couché au sol haltères","Haltères","8–12 répétitions ou 60 secondes","2–0–2"],
+    ["Pullover haltère","Haltère","8–12 répétitions ou 60 secondes","2–0–2"],
+    ["Presse poitrine unilatérale au sol","Haltère","8–12 répétitions ou 60 secondes","2–0–2"],
+    ["Pompes prise large","Poids du corps","8–12 répétitions ou 60 secondes","2–0–2"],
+    ["Pompes tempo lent","Poids du corps","8–12 répétitions ou 60 secondes","4–1–2"],
+    ["Squeeze press haltères","Haltères","8–12 répétitions ou 60 secondes","2–0–2"]
   ];
   main.innerHTML=`
-    <section class="muscu-biceps-v1" aria-label="Exercices pectoraux">
+    <section class="muscu-biceps-v1 pec-match-biceps" aria-label="Exercices pectoraux">
       <button class="muscu-back-pill muscu-biceps-back" id="muscuPectorauxBack" aria-label="Retour aux groupes musculaires">
         <span class="muscu-back-arrow">←</span><span>Retour</span>
       </button>
@@ -362,8 +362,20 @@ function renderMuscuPectoraux(){
           <p>10 exercices pour développer et renforcer les pectoraux à la maison</p>
         </div>
       </div>
-      <div class="muscu-biceps-list">
-        ${exercises.map(([key,label])=>`<button class="muscu-biceps-card" data-pectoraux-exercise="${key}" aria-label="Ouvrir ${label}"><img src="./pectoraux-${key}.webp" alt="${label}"></button>`).join("")}
+      <div class="pec-card-list">
+        ${exercises.map((ex,i)=>`
+          <button class="pec-card" data-pectoraux-exercise="${i}" aria-label="Ouvrir ${ex[0]}">
+            <div class="pec-card-visual" aria-hidden="true">
+              <img class="pec-sprite" style="--i:${i}" src="./pectoraux-sprite-v2.webp" alt="">
+            </div>
+            <div class="pec-card-copy">
+              <strong>${ex[0]}</strong>
+              <span class="pec-line"><b>▰</b>${ex[1]}</span>
+              <span class="pec-line"><b>▥</b>${ex[2]}</span>
+              <span class="pec-line"><b>◷</b>Tempo : ${ex[3]}</span>
+            </div>
+            <span class="pec-arrow" aria-hidden="true">›</span>
+          </button>`).join("")}
       </div>
     </section>`;
   document.getElementById("muscuPectorauxBack")?.addEventListener("click",()=>{state.view="muscu-exercises";render();});
