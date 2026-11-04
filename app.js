@@ -328,8 +328,47 @@ function renderMuscuExercises(){
     </section>`;
   document.getElementById("muscuExercisesBack")?.addEventListener("click",()=>{state.view="muscu-menu";render();});
   document.querySelectorAll("[data-muscle]").forEach(btn=>btn.addEventListener("click",()=>{
+    const muscle=btn.dataset.muscle;
+    if(muscle==="biceps"){ state.view="muscu-biceps"; render(); return; }
     const label=btn.getAttribute("aria-label")?.replace("Ouvrir les exercices ","") || "ce groupe";
     alert(`Les fiches ${label} seront ajoutées à l’étape suivante.`);
+  }));
+}
+
+function renderMuscuBiceps(){
+  const exercises=[
+    ["curl-marteau","Curl marteau"],
+    ["curl-classique","Curl classique"],
+    ["curl-alterne","Curl alterné"],
+    ["curl-concentration","Curl concentration"],
+    ["curl-zottman","Curl Zottman"],
+    ["curl-prise-inversee","Curl prise inversée"],
+    ["curl-assis","Curl assis"],
+    ["curl-unilateral","Curl unilatéral"],
+    ["curl-isometrique","Curl isométrique"],
+    ["curl-kettlebell","Curl kettlebell"]
+  ];
+  main.innerHTML=`
+    <section class="muscu-biceps-v1" aria-label="Exercices biceps">
+      <button class="muscu-back-pill muscu-biceps-back" id="muscuBicepsBack" aria-label="Retour aux groupes musculaires">
+        <span class="muscu-back-arrow">←</span><span>Retour</span>
+      </button>
+      <div class="muscu-biceps-heading">
+        <div class="muscu-biceps-icon" aria-hidden="true">⌁</div>
+        <div>
+          <div class="muscu-biceps-kicker">EXERCICES</div>
+          <h2>Biceps</h2>
+          <p>10 exercices pour développer et renforcer les biceps à la maison</p>
+        </div>
+      </div>
+      <div class="muscu-biceps-list">
+        ${exercises.map(([key,label])=>`<button class="muscu-biceps-card" data-biceps-exercise="${key}" aria-label="Ouvrir ${label}"><img src="./biceps-${key}.webp" alt="${label}"></button>`).join("")}
+      </div>
+    </section>`;
+  document.getElementById("muscuBicepsBack")?.addEventListener("click",()=>{state.view="muscu-exercises";render();});
+  document.querySelectorAll("[data-biceps-exercise]").forEach(btn=>btn.addEventListener("click",()=>{
+    const label=btn.getAttribute("aria-label")?.replace("Ouvrir ","") || "cet exercice";
+    alert(`La fiche détaillée ${label} sera ajoutée à l’étape suivante.`);
   }));
 }
 
@@ -422,7 +461,7 @@ function renderMuscuHistory(){
 
 function updateShell(){
   const onHub=state.view==="hub";
-  const onMuscu=state.view==="muscu-entry" || state.view==="muscu-menu" || state.view==="muscu-exercises" || state.view==="muscu-sessions" || state.view==="muscu-other" || state.view==="muscu-history";
+  const onMuscu=state.view==="muscu-entry" || state.view==="muscu-menu" || state.view==="muscu-exercises" || state.view==="muscu-sessions" || state.view==="muscu-other" || state.view==="muscu-history" || state.view==="muscu-biceps";
   bottomNav.classList.toggle("hidden",onHub || onMuscu);
   if(onHub){
     brandMark.textContent="MB";
@@ -576,6 +615,7 @@ function render(){
   if(state.view==="muscu-entry") return renderMuscuEntry();
   if(state.view==="muscu-menu") return renderMuscuMenu();
   if(state.view==="muscu-exercises") return renderMuscuExercises();
+  if(state.view==="muscu-biceps") return renderMuscuBiceps();
   if(state.view==="muscu-sessions") return renderMuscuSessions();
   if(state.view==="muscu-other") return renderMuscuOther();
   if(state.view==="muscu-history") return renderMuscuHistory();
