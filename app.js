@@ -337,34 +337,41 @@ function renderMuscuExercises(){
 }
 
 function renderMuscuPectoraux(){
-  const labels=[
-    "Pompes classiques",
-    "Pompes inclinées",
-    "Pompes déclinées",
-    "Développé couché au sol haltères",
-    "Écarté couché au sol haltères",
-    "Pullover haltère",
-    "Presse poitrine unilatérale au sol",
-    "Pompes prise large",
-    "Pompes tempo lent",
-    "Squeeze press haltères"
+  const exercises=[
+    ["pompes-classiques","Pompes classiques"],
+    ["pompes-inclinees","Pompes inclinées"],
+    ["pompes-declinees","Pompes déclinées"],
+    ["developpe-sol-halteres","Développé couché au sol haltères"],
+    ["ecarte-sol-halteres","Écarté couché au sol haltères"],
+    ["pullover-haltere","Pullover haltère"],
+    ["presse-unilaterale-sol","Presse poitrine unilatérale au sol"],
+    ["pompes-prise-large","Pompes prise large"],
+    ["pompes-tempo-lent","Pompes tempo lent"],
+    ["squeeze-press-halteres","Squeeze press haltères"]
   ];
-  const tops=[17.4,25.7,34.0,42.3,50.6,58.9,67.2,75.5,83.8,92.0];
   main.innerHTML=`
-    <section class="muscu-pectoraux-overlay-page" aria-label="Exercices pectoraux">
-      <div class="muscu-pectoraux-stage">
-        <img src="./pectoraux-page-v1.webp" class="muscu-pectoraux-fullimg" alt="Pectoraux — 10 exercices à la maison">
-        <button id="muscuPectorauxBack" class="muscu-pectoraux-hotspot muscu-pectoraux-backhot" aria-label="Retour aux groupes musculaires"></button>
-        ${labels.map((label,i)=>`<button class="muscu-pectoraux-hotspot muscu-pectoraux-exhot" data-pectoraux-exercise="${i}" style="top:${tops[i]}%" aria-label="Ouvrir ${label}"></button>`).join("")}
+    <section class="muscu-biceps-v1" aria-label="Exercices pectoraux">
+      <button class="muscu-back-pill muscu-biceps-back" id="muscuPectorauxBack" aria-label="Retour aux groupes musculaires">
+        <span class="muscu-back-arrow">←</span><span>Retour</span>
+      </button>
+      <div class="muscu-biceps-heading">
+        <div class="muscu-biceps-icon" aria-hidden="true">⌁</div>
+        <div>
+          <div class="muscu-biceps-kicker">EXERCICES</div>
+          <h2>Pectoraux</h2>
+          <p>10 exercices pour développer et renforcer les pectoraux à la maison</p>
+        </div>
+      </div>
+      <div class="muscu-biceps-list">
+        ${exercises.map(([key,label])=>`<button class="muscu-biceps-card" data-pectoraux-exercise="${key}" aria-label="Ouvrir ${label}"><img src="./pectoraux-${key}.webp" alt="${label}"></button>`).join("")}
       </div>
     </section>`;
   document.getElementById("muscuPectorauxBack")?.addEventListener("click",()=>{state.view="muscu-exercises";render();});
   document.querySelectorAll("[data-pectoraux-exercise]").forEach(btn=>btn.addEventListener("click",()=>{
-    const label=labels[Number(btn.dataset.pectorauxExercise)] || "cet exercice";
+    const label=btn.getAttribute("aria-label")?.replace("Ouvrir ","") || "cet exercice";
     alert(`La fiche détaillée ${label} sera ajoutée à l’étape suivante.`);
   }));
 }
-
 function renderMuscuBiceps(){
   const exercises=[
     ["curl-marteau","Curl marteau"],
