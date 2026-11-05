@@ -350,20 +350,11 @@ function renderMuscuPectoraux(){
     ["squeeze-press-halteres","Squeeze press haltères"]
   ];
   main.innerHTML=`
-    <section class="muscu-biceps-v1" aria-label="Exercices pectoraux">
-      <button class="muscu-back-pill muscu-biceps-back" id="muscuPectorauxBack" aria-label="Retour aux groupes musculaires">
-        <span class="muscu-back-arrow">←</span><span>Retour</span>
-      </button>
-      <div class="muscu-biceps-heading">
-        <div class="muscu-biceps-icon" aria-hidden="true">⌁</div>
-        <div>
-          <div class="muscu-biceps-kicker">EXERCICES</div>
-          <h2>Pectoraux</h2>
-          <p>10 exercices pour développer et renforcer les pectoraux à la maison</p>
-        </div>
-      </div>
-      <div class="muscu-biceps-list">
-        ${exercises.map(([key,label])=>`<button class="muscu-biceps-card" data-pectoraux-exercise="${key}" aria-label="Ouvrir ${label}"><img src="./pectoraux-${key}.webp" alt="${label}"></button>`).join("")}
+    <section class="muscu-pectoraux-final" aria-label="Exercices pectoraux">
+      <div class="muscu-pectoraux-final-wrap">
+        <img class="muscu-pectoraux-final-image" src="./pectoraux-page-final.webp" alt="Pectoraux — 10 exercices à la maison">
+        <button class="muscu-pectoraux-hotspot muscu-pectoraux-hotspot-back" id="muscuPectorauxBack" aria-label="Retour aux groupes musculaires"></button>
+        ${exercises.map(([key,label],i)=>`<button class="muscu-pectoraux-hotspot muscu-pectoraux-hotspot-row" data-pectoraux-exercise="${key}" data-row="${i}" aria-label="Ouvrir ${label}"></button>`).join("")}
       </div>
     </section>`;
   document.getElementById("muscuPectorauxBack")?.addEventListener("click",()=>{state.view="muscu-exercises";render();});
