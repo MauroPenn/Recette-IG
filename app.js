@@ -337,6 +337,18 @@ function renderMuscuExercises(){
 }
 
 function renderMuscuPectoraux(){
+  const exercises=[
+    ["pompes-classiques","Pompes classiques"],
+    ["pompes-inclinees","Pompes inclinées"],
+    ["pompes-declinees","Pompes déclinées"],
+    ["developpe-sol-halteres","Développé couché au sol"],
+    ["ecarte-sol-halteres","Écarté couché au sol"],
+    ["pullover-haltere","Pullover haltère"],
+    ["presse-unilaterale-sol","Presse poitrine unilatérale"],
+    ["pompes-prise-large","Pompes prise large"],
+    ["pompes-tempo-lent","Pompes tempo lent"],
+    ["squeeze-press-halteres","Squeeze press haltères"]
+  ];
   main.innerHTML=`
     <section class="muscu-biceps-v1" aria-label="Exercices pectoraux">
       <button class="muscu-back-pill muscu-biceps-back" id="muscuPectorauxBack" aria-label="Retour aux groupes musculaires">
@@ -347,19 +359,18 @@ function renderMuscuPectoraux(){
         <div>
           <div class="muscu-biceps-kicker">EXERCICES</div>
           <h2>Pectoraux</h2>
-          <p>Test de la première carte au gabarit Biceps</p>
+          <p>10 exercices pour développer et renforcer les pectoraux à la maison</p>
         </div>
       </div>
       <div class="muscu-biceps-list">
-        <button class="muscu-biceps-card" id="pectorauxPompesClassiques" aria-label="Ouvrir Pompes classiques">
-          <img src="./pectoraux-pompes-classiques.webp" alt="Pompes classiques">
-        </button>
+        ${exercises.map(([key,label])=>`<button class="muscu-biceps-card" data-pectoraux-exercise="${key}" aria-label="Ouvrir ${label}"><img src="./pectoraux-${key}.webp" alt="${label}"></button>`).join("")}
       </div>
     </section>`;
   document.getElementById("muscuPectorauxBack")?.addEventListener("click",()=>{state.view="muscu-exercises";render();});
-  document.getElementById("pectorauxPompesClassiques")?.addEventListener("click",()=>{
-    alert("Carte Pompes classiques validée : la fiche détaillée sera branchée après validation du rendu.");
-  });
+  document.querySelectorAll("[data-pectoraux-exercise]").forEach(btn=>btn.addEventListener("click",()=>{
+    const label=btn.getAttribute("aria-label")?.replace("Ouvrir ","") || "cet exercice";
+    alert(`La fiche détaillée ${label} sera ajoutée après validation de la liste complète.`);
+  }));
 }
 
 function renderMuscuBiceps(){
