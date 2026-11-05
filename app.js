@@ -336,21 +336,22 @@ function renderMuscuExercises(){
   }));
 }
 
+
 function renderMuscuPectoraux(){
   const exercises=[
-    "Pompes classiques",
-    "Pompes inclinées",
-    "Pompes déclinées",
-    "Développé couché au sol haltères",
-    "Écarté couché au sol haltères",
-    "Pullover haltère",
-    "Presse poitrine unilatérale au sol",
-    "Pompes prise large",
-    "Pompes tempo lent",
-    "Squeeze press haltères"
+    ["pompes-classiques","Pompes classiques"],
+    ["pompes-inclinees","Pompes inclinées"],
+    ["pompes-declinees","Pompes déclinées"],
+    ["developpe-sol-halteres","Développé couché au sol haltères"],
+    ["ecarte-sol-halteres","Écarté couché au sol haltères"],
+    ["pullover-haltere","Pullover haltère"],
+    ["presse-unilaterale-sol","Presse poitrine unilatérale au sol"],
+    ["pompes-prise-large","Pompes prise large"],
+    ["pompes-tempo-lent","Pompes tempo lent"],
+    ["squeeze-press-halteres","Squeeze press haltères"]
   ];
   main.innerHTML=`
-    <section class="muscu-biceps-v1 pec-match-biceps" aria-label="Exercices pectoraux">
+    <section class="muscu-biceps-v1" aria-label="Exercices pectoraux">
       <button class="muscu-back-pill muscu-biceps-back" id="muscuPectorauxBack" aria-label="Retour aux groupes musculaires">
         <span class="muscu-back-arrow">←</span><span>Retour</span>
       </button>
@@ -362,13 +363,8 @@ function renderMuscuPectoraux(){
           <p>10 exercices pour développer et renforcer les pectoraux à la maison</p>
         </div>
       </div>
-      <div class="pec-card-list pec-full-card-list">
-        ${exercises.map((label,i)=>`
-          <button class="pec-full-card" data-pectoraux-exercise="${i}" aria-label="Ouvrir ${label}">
-            <div class="pec-full-card-viewport" aria-hidden="true">
-              <img class="pec-full-sprite" style="--i:${i}" src="./pectoraux-sprite-v3.webp" alt="">
-            </div>
-          </button>`).join("")}
+      <div class="muscu-biceps-list">
+        ${exercises.map(([key,label])=>`<button class="muscu-biceps-card" data-pectoraux-exercise="${key}" aria-label="Ouvrir ${label}"><img src="./pectoraux-${key}.webp" alt="${label}"></button>`).join("")}
       </div>
     </section>`;
   document.getElementById("muscuPectorauxBack")?.addEventListener("click",()=>{state.view="muscu-exercises";render();});
