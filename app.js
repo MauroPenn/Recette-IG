@@ -337,27 +337,29 @@ function renderMuscuExercises(){
 }
 
 function renderMuscuPectoraux(){
-  const exercises=[
-    ["pompes-classiques","Pompes classiques"],["pompes-inclinees","Pompes inclinées"],["pompes-declinees","Pompes déclinées"],
-    ["developpe-sol-halteres","Développé couché au sol haltères"],["ecarte-sol-halteres","Écarté couché au sol haltères"],
-    ["pullover-haltere","Pullover haltère"],["presse-unilaterale-sol","Presse poitrine unilatérale au sol"],
-    ["pompes-prise-large","Pompes prise large"],["pompes-tempo-lent","Pompes tempo lent"],["squeeze-press-halteres","Squeeze press haltères"]
-  ];
-  main.innerHTML=`<section class="muscu-biceps-v1" aria-label="Exercices pectoraux">
-    <button class="muscu-back-pill muscu-biceps-back" id="muscuPectorauxBack"><span class="muscu-back-arrow">←</span><span>Retour</span></button>
-    <div class="muscu-biceps-heading"><div class="muscu-biceps-icon" aria-hidden="true">⌁</div><div><div class="muscu-biceps-kicker">EXERCICES</div><h2>Pectoraux</h2><p>10 exercices pour développer et renforcer les pectoraux à la maison</p></div></div>
-    <div class="muscu-biceps-list">${exercises.map(([key,label])=>`<button class="muscu-biceps-card" data-pectoraux-exercise="${key}" aria-label="Ouvrir ${label}"><img src="./pectoraux-${key}.webp" alt="${label}"></button>`).join("")}</div>
-  </section>`;
+  main.innerHTML=`
+    <section class="muscu-biceps-v1" aria-label="Exercices pectoraux">
+      <button class="muscu-back-pill muscu-biceps-back" id="muscuPectorauxBack" aria-label="Retour aux groupes musculaires">
+        <span class="muscu-back-arrow">←</span><span>Retour</span>
+      </button>
+      <div class="muscu-biceps-heading">
+        <div class="muscu-biceps-icon" aria-hidden="true">⌁</div>
+        <div>
+          <div class="muscu-biceps-kicker">EXERCICES</div>
+          <h2>Pectoraux</h2>
+          <p>Test de la première carte au gabarit Biceps</p>
+        </div>
+      </div>
+      <div class="muscu-biceps-list">
+        <button class="muscu-biceps-card" id="pectorauxPompesClassiques" aria-label="Ouvrir Pompes classiques">
+          <img src="./pectoraux-pompes-classiques.webp" alt="Pompes classiques">
+        </button>
+      </div>
+    </section>`;
   document.getElementById("muscuPectorauxBack")?.addEventListener("click",()=>{state.view="muscu-exercises";render();});
-  document.querySelectorAll("[data-pectoraux-exercise]").forEach(btn=>btn.addEventListener("click",()=>{
-    if(btn.dataset.pectorauxExercise==="pompes-classiques"){state.view="muscu-pectoraux-pompes-classiques";render();return;}
-    const label=btn.getAttribute("aria-label")?.replace("Ouvrir ","")||"cet exercice"; alert(`La fiche détaillée ${label} sera ajoutée ensuite.`);
-  }));
-}
-
-function renderPectorauxPompesClassiques(){
-  main.innerHTML=`<section class="muscu-detail-img-page"><div class="muscu-detail-img-wrap"><img src="./pectoraux-pompes-classiques-detail.webp" alt="Fiche Pompes classiques"><button class="muscu-detail-back-hit" id="pompesBack" aria-label="Retour aux pectoraux"></button></div></section>`;
-  document.getElementById("pompesBack")?.addEventListener("click",()=>{state.view="muscu-pectoraux";render();});
+  document.getElementById("pectorauxPompesClassiques")?.addEventListener("click",()=>{
+    alert("Carte Pompes classiques validée : la fiche détaillée sera branchée après validation du rendu.");
+  });
 }
 
 function renderMuscuBiceps(){
@@ -486,7 +488,7 @@ function renderMuscuHistory(){
 
 function updateShell(){
   const onHub=state.view==="hub";
-  const onMuscu=state.view==="muscu-entry" || state.view==="muscu-menu" || state.view==="muscu-exercises" || state.view==="muscu-sessions" || state.view==="muscu-other" || state.view==="muscu-history" || state.view==="muscu-biceps" || state.view==="muscu-pectoraux" || state.view==="muscu-pectoraux-pompes-classiques";
+  const onMuscu=state.view==="muscu-entry" || state.view==="muscu-menu" || state.view==="muscu-exercises" || state.view==="muscu-sessions" || state.view==="muscu-other" || state.view==="muscu-history" || state.view==="muscu-biceps" || state.view==="muscu-pectoraux";
   bottomNav.classList.toggle("hidden",onHub || onMuscu);
   if(onHub){
     brandMark.textContent="MB";
@@ -641,7 +643,6 @@ function render(){
   if(state.view==="muscu-menu") return renderMuscuMenu();
   if(state.view==="muscu-exercises") return renderMuscuExercises();
   if(state.view==="muscu-pectoraux") return renderMuscuPectoraux();
-  if(state.view==="muscu-pectoraux-pompes-classiques") return renderPectorauxPompesClassiques();
   if(state.view==="muscu-biceps") return renderMuscuBiceps();
   if(state.view==="muscu-sessions") return renderMuscuSessions();
   if(state.view==="muscu-other") return renderMuscuOther();
