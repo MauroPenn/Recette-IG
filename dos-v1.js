@@ -159,3 +159,33 @@ updateShell = function(){
     brandTitle.textContent = "Musculation";
   }
 };
+
+// DOS V2 : raccorder le bouton « Dos » du menu aux fiches déjà installées.
+// Ne modifie ni les Pectoraux, ni les Biceps, ni les recettes.
+const ancienneFonctionListeMusclesAvantDos = renderMuscuExercises;
+renderMuscuExercises = function(){
+  ancienneFonctionListeMusclesAvantDos();
+  // Le menu historique contient une alerte temporaire. Remplacer uniquement
+  // son bouton Dos retire son ancien gestionnaire de clic, sans toucher aux autres.
+  const ancienBoutonDos = main.querySelector('[data-muscle="dos"]');
+  if (!ancienBoutonDos) return;
+  const boutonDos = ancienBoutonDos.cloneNode(true);
+  ancienBoutonDos.replaceWith(boutonDos);
+  boutonDos.addEventListener("click", () => {
+    state.view = "muscu-dos";
+    state.selected = null;
+    render();
+  });
+};
+
+// Route dédiée, pour que les retours et les nouveaux affichages fonctionnent
+// même après une actualisation de la navigation.
+const ancienneFonctionRenduAvantDos = render;
+render = function(){
+  if (state.view === "muscu-dos") {
+    updateShell();
+    updateNav();
+    return renderMuscuDos();
+  }
+  return ancienneFonctionRenduAvantDos();
+};

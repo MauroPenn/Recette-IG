@@ -1,6 +1,6 @@
 // Ma Bibliothèque — mise à jour Pectoraux et correctif cache de navigation PWA.
-// v84 : noveaux bandeaux et mise a jour du cache; les pages et scripts se rechargent depuis le réseau dès qu'il est disponible.
-const CACHE = "ma-bibliotheque-v84";
+// v85 : noveaux bandeaux et mise a jour du cache; les pages et scripts se rechargent depuis le réseau dès qu'il est disponible.
+const CACHE = "ma-bibliotheque-v85";
 const CORE = [
   "./", "./index.html", "./styles.css", "./app.js", "./data.json",
   "./manifest.json", "./icon-192.png", "./icon-512.png",
