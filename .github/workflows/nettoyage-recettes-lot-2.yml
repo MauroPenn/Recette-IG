@@ -1,0 +1,65 @@
+name: Nettoyage des 10 anciens PNG de recettes - lot 2
+
+on:
+  push:
+    paths:
+      - '.github/workflows/nettoyage-recettes-lot-2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  nettoyer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Recuperer les fichiers du depot
+        uses: actions/checkout@v4
+
+      - name: Verifier les remplacements et retirer les 10 PNG obsoletes
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          bases = [
+              'recette-r122-poulet-cremeux-pommes-terre-v3',
+              'recette-r116-boulettes-boeuf-sauce-tomate-v2',
+              'recette-r119-poulet-citron-herbes-v2',
+              'recette-r012-fougasse-petit-epeautre-v2',
+              'recette-r120-porc-champignons-oignons-v2',
+              'recette-r118-boeuf-oignons-sauce-brune-v2',
+              'recette-r063-saucisses-pommes-terre-poivrons',
+              'recette-r113-poulet-cremeux-ail-v2',
+              'recette-r123-boeuf-mijote-thym-v2',
+              'recette-r010-cake-thon-tomate-olives',
+          ]
+          app = Path('app.js').read_text(encoding='utf-8')
+          sw = Path('sw.js').read_text(encoding='utf-8')
+          for base in bases:
+              ancien = Path(base + '.png')
+              nouveau = Path(base + '.webp')
+              if not ancien.is_file():
+                  raise RuntimeError('PNG introuvable, aucune suppression: ' + str(ancien))
+              if not nouveau.is_file() or nouveau.stat().st_size == 0:
+                  raise RuntimeError('WebP introuvable ou vide, aucune suppression: ' + str(nouveau))
+              if ancien.name in app or ancien.name in sw:
+                  raise RuntimeError('Un code utilise encore le PNG, aucune suppression: ' + ancien.name)
+              if nouveau.name not in app or nouveau.name not in sw:
+                  raise RuntimeError('Reference WebP absente, aucune suppression: ' + nouveau.name)
+
+          for base in bases:
+              ancien = Path(base + '.png')
+              ancien.unlink()
+              print('Retire:', ancien)
+          print('10 anciens PNG retires. Les WebP ont ete conserves.')
+          PY
+
+      - name: Enregistrer la suppression dans GitHub
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -u -- 'recette-*.png'
+          git commit -m "Nettoyer les 10 PNG obsoletes du lot 2"
+          git push origin HEAD:main
