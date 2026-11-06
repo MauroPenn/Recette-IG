@@ -1,0 +1,89 @@
+name: Conversion de 10 photos de recettes en WebP (lot 2)
+
+on:
+  push:
+    paths:
+      - '.github/workflows/optimisation-recettes-lot-2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  optimiser:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer les fichiers de l'application
+        uses: actions/checkout@v4
+
+      - name: Installer le convertisseur d'images
+        run: python -m pip install --quiet Pillow
+
+      - name: Convertir les 10 images et corriger les références
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageOps
+
+          images = [
+              'recette-r122-poulet-cremeux-pommes-terre-v3',
+              'recette-r116-boulettes-boeuf-sauce-tomate-v2',
+              'recette-r119-poulet-citron-herbes-v2',
+              'recette-r012-fougasse-petit-epeautre-v2',
+              'recette-r120-porc-champignons-oignons-v2',
+              'recette-r118-boeuf-oignons-sauce-brune-v2',
+              'recette-r063-saucisses-pommes-terre-poivrons',
+              'recette-r113-poulet-cremeux-ail-v2',
+              'recette-r123-boeuf-mijote-thym-v2',
+              'recette-r010-cake-thon-tomate-olives',
+          ]
+
+          app = Path('app.js')
+          sw = Path('sw.js')
+          app_text = app.read_text(encoding='utf-8')
+          sw_text = sw.read_text(encoding='utf-8')
+          old_cache = 'const CACHE="ma-bibliotheque-v79";'
+          new_cache = 'const CACHE="ma-bibliotheque-v80";'
+
+          if sw_text.count(old_cache) != 1:
+              raise RuntimeError('Version du cache inattendue : aucune modification effectuée')
+
+          # Vérifier tous les fichiers et les références AVANT de commencer.
+          for base in images:
+              original = base + '.png'
+              conversion = base + '.webp'
+              if not Path(original).is_file() or Path(conversion).exists():
+                  raise RuntimeError('Image absente ou déjà convertie : ' + original)
+              if app_text.count(original) != 1 or sw_text.count(original) != 1:
+                  raise RuntimeError('Référence inattendue : ' + original)
+
+          total_original, total_webp = 0, 0
+          for base in images:
+              original = Path(base + '.png')
+              conversion = Path(base + '.webp')
+              with Image.open(original) as im:
+                  image = ImageOps.exif_transpose(im)
+                  image = image.convert('RGBA' if 'A' in image.getbands() or 'transparency' in image.info else 'RGB')
+                  image.save(conversion, format='WEBP', quality=80, method=6)
+              total_original += original.stat().st_size
+              total_webp += conversion.stat().st_size
+              app_text = app_text.replace(original.name, conversion.name)
+              sw_text = sw_text.replace(original.name, conversion.name)
+              print(original.name, '->', conversion.name,
+                    f'({original.stat().st_size//1024} Ko -> {conversion.stat().st_size//1024} Ko)')
+
+          sw_text = sw_text.replace(old_cache, new_cache, 1)
+          app.write_text(app_text, encoding='utf-8')
+          sw.write_text(sw_text, encoding='utf-8')
+          print(f'Bilan : {total_original/1048576:.1f} Mo -> {total_webp/1048576:.1f} Mo')
+          print('Les anciens PNG sont conservés pour vérification.')
+          PY
+
+      - name: Sauvegarder les nouveaux WebP et les références
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add app.js sw.js recette-*.webp
+          git commit -m 'Optimiser 10 images de recettes en WebP - lot 2'
+          git push origin HEAD:main
