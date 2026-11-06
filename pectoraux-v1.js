@@ -1,4 +1,4 @@
-// PECTORAUX V1 — les bandeaux restent simples, les informations sont dans les fiches.
+// PECTORAUX V3 — 10 bandeaux complets de 560 x 190; les details restent dans les fiches.
 const pectorauxExercices = [
   {
     id:"pompes-classiques", titre:"Pompes classiques", image:"./pectoraux-pompes-classiques.webp", reference:true,
@@ -83,8 +83,9 @@ const pectorauxExercices = [
 ];
 let selectedPectoralExercise = null;
 function pectorauxPhotoMarkup(exercice, detail=false){
-  const estReference=exercice.reference===true;
-  return `<span style="--pectoral-photo:url(\'${exercice.image}\')" class="muscu-pectoraux-photo ${estReference?"muscu-pectoraux-photo-reference":"muscu-pectoraux-photo-recadree"}"><img src="${exercice.image}" alt="" loading="${detail?"eager":"lazy"}"></span>`;
+  // Les dix visuels sont deja des bandeaux complets (photo, titre et fleche).
+  // On ne superpose ni texte ni fleche supplementaire.
+  return `<span class="muscu-pectoraux-photo"><img src="${exercice.image}" alt="" loading="${detail?"eager":"lazy"}"></span>`;
 }
 function renderMuscuPectoraux(){
   main.innerHTML=`
@@ -101,9 +102,8 @@ function renderMuscuPectoraux(){
         </div>
       </div>
       <div class="muscu-pectoraux-list">
-        ${pectorauxExercices.map(exercice=>`<button type="button" class="muscu-pectoraux-card ${exercice.reference?"muscu-pectoraux-carte-reference":"muscu-pectoraux-carte-recadree"}" data-pectoraux-exercise="${exercice.id}" aria-label="Ouvrir la fiche ${esc(exercice.titre)}">
+        ${pectorauxExercices.map(exercice=>`<button type="button" class="muscu-pectoraux-card" data-pectoraux-exercise="${exercice.id}" aria-label="Ouvrir la fiche ${esc(exercice.titre)}">
           ${pectorauxPhotoMarkup(exercice)}
-          ${exercice.reference?"":`<span class="muscu-pectoraux-fondu" aria-hidden="true"></span><span class="muscu-pectoraux-card-titre">${esc(exercice.titre)}</span><span class="muscu-pectoraux-card-fleche" aria-hidden="true">›</span>`}
         </button>`).join("")}
       </div>
     </section>`;
@@ -128,7 +128,6 @@ function renderMuscuPectorauxDetail(){
       </header>
       <div class="muscu-pectoraux-fiche-visuel">
         ${pectorauxPhotoMarkup(exercice,true)}
-        ${exercice.reference?"":`<span class="muscu-pectoraux-fondu" aria-hidden="true"></span><span class="muscu-pectoraux-card-titre">${esc(exercice.titre)}</span>`}
       </div>
       <div class="muscu-pectoraux-fiche-stats">
         <div><span>Matériel</span><strong>${esc(exercice.materiel)}</strong></div>

@@ -1,6 +1,6 @@
 // Ma Bibliothèque — mise à jour Pectoraux et correctif cache de navigation PWA.
-// v82 : les pages et scripts se rechargent depuis le réseau dès qu'il est disponible.
-const CACHE = "ma-bibliotheque-v82";
+// v83 : noveaux bandeaux et mise a jour du cache; les pages et scripts se rechargent depuis le réseau dès qu'il est disponible.
+const CACHE = "ma-bibliotheque-v83";
 const CORE = [
   "./", "./index.html", "./styles.css", "./app.js", "./data.json",
   "./manifest.json", "./icon-192.png", "./icon-512.png",
@@ -44,7 +44,7 @@ self.addEventListener("install", event => {
     if (hasPreviousCache) {
       await Promise.all(PECTORAL_IMAGES.map(async path => {
         try {
-          const response = await fetch(path);
+          const response = await fetch(path, {cache:"no-store"});
           if (response.ok) await cache.put(path, response);
         } catch (_) { /* Le cache précédent sera préservé. */ }
       }));
@@ -62,7 +62,7 @@ self.addEventListener("install", event => {
     const images = [...new Set([...referencedImages, ...PECTORAL_IMAGES, ...BICEPS, ...MUSCLE_GROUPS])];
     await Promise.all(images.map(async path => {
       try {
-        const response = await fetch(path);
+        const response = await fetch(path, {cache:"no-store"});
         if (response.ok) await cache.put(path, response);
       } catch (_) { /* Une image non essentielle ne doit pas bloquer l'installation. */ }
     }));
