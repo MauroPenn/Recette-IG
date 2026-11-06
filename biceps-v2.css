@@ -1,0 +1,35 @@
+/* BICEPS : une seule bordure (déjà dans les images) et aucune déformation. */
+/* Biceps V2 : 10 vrais bandeaux 560 x 190; modele identique aux Pectoraux. */
+
+/* Pectoraux V3 : 10 vrais bandeaux 560 x 190; pas de recadrage ni de double texte. */
+.muscu-biceps-modern-v1{max-width:820px}
+.muscu-biceps-modern-list{display:grid;grid-template-columns:minmax(0,560px);justify-content:center;gap:14px;width:100%}
+.muscu-biceps-modern-card,.muscu-biceps-modern-fiche-visuel{box-sizing:border-box;display:block;position:relative;aspect-ratio:560/190;width:100%;max-width:560px;padding:0;margin:0;overflow:hidden;border:0;border-radius:0;background:#080c10;isolation:isolate}
+.muscu-biceps-modern-card{cursor:pointer;box-shadow:0 10px 25px rgba(0,0,0,.24)}
+.muscu-biceps-modern-card:focus-visible{outline:3px solid #ff9000;outline-offset:3px}
+.muscu-biceps-modern-card:active{transform:scale(.994)}
+.muscu-biceps-modern-photo{display:block;position:absolute;inset:0;overflow:hidden;z-index:0}
+.muscu-biceps-modern-photo img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;border:0}
+.muscu-biceps-modern-fiche{max-width:820px}
+.muscu-biceps-modern-fiche-en-tete{border-bottom:2px solid #ff7d00;padding-bottom:14px;margin-bottom:16px}
+.muscu-biceps-modern-fiche-en-tete h2{font-size:clamp(1.6rem,4vw,2.4rem);line-height:1.14;color:#fff;margin:5px 0 8px}
+.muscu-biceps-modern-fiche-en-tete p{color:#e1e4e7;font-size:.98rem;margin:0;line-height:1.4}
+.muscu-biceps-modern-fiche-visuel{max-width:none;margin-bottom:16px;border-radius:19px}
+.muscu-biceps-modern-fiche-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}
+.muscu-biceps-modern-fiche-stats>div{min-width:0;border:1px solid rgba(255,255,255,.33);border-radius:14px;padding:12px 14px;background:rgba(255,255,255,.065)}
+.muscu-biceps-modern-fiche-stats span{display:block;color:#ff9c36;font-size:.8rem;font-weight:900;margin-bottom:5px}
+.muscu-biceps-modern-fiche-stats strong{display:block;font-size:1rem;line-height:1.28;color:#fff;overflow-wrap:anywhere}
+.muscu-biceps-modern-fiche-section{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:18px;margin:12px 0}
+.muscu-biceps-modern-fiche-section h3{color:#ff9328;font-size:1.22rem;margin:0 0 12px}
+.muscu-biceps-modern-fiche-section ol{padding-left:22px;margin:0;display:grid;gap:12px}
+.muscu-biceps-modern-fiche-section li{color:#fff;padding-left:4px;line-height:1.45}
+.muscu-biceps-modern-fiche-section p{margin:0;line-height:1.48;color:#fff}
+.muscu-biceps-modern-precaution{font-size:.8rem;color:#d0d5da;line-height:1.4;margin:14px 3px 0}
+@media(max-width:750px){
+  .muscu-biceps-modern-list{grid-template-columns:minmax(0,560px);gap:10px}
+  .muscu-biceps-modern-card,.muscu-biceps-modern-fiche-visuel{border-radius:0}
+  .muscu-biceps-modern-fiche-stats{gap:8px}
+  .muscu-biceps-modern-fiche-stats>div{padding:10px}
+  .muscu-biceps-modern-fiche-stats strong{font-size:.9rem}
+  .muscu-biceps-modern-fiche-section{padding:14px}
+}

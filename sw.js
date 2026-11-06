@@ -1,10 +1,10 @@
 // Ma Bibliothèque — mise à jour Pectoraux et correctif cache de navigation PWA.
-// v86 : noveaux bandeaux et mise a jour du cache; les pages et scripts se rechargent depuis le réseau dès qu'il est disponible.
-const CACHE = "ma-bibliotheque-v86";
+// v87 : noveaux bandeaux et mise a jour du cache; les pages et scripts se rechargent depuis le réseau dès qu'il est disponible.
+const CACHE = "ma-bibliotheque-v87";
 const CORE = [
   "./", "./index.html", "./styles.css", "./app.js", "./data.json",
   "./manifest.json", "./icon-192.png", "./icon-512.png",
-  "./pectoraux-v1.js", "./pectoraux-v1.css", "./dos-v1.js", "./dos-v1.css", "./epaules-v1.js", "./epaules-v1.css"
+  "./pectoraux-v1.js", "./pectoraux-v1.css", "./dos-v1.js", "./dos-v1.css", "./epaules-v1.js", "./epaules-v1.css", "./biceps-v2.js", "./biceps-v2.css"
 ];
 const PECTORAL_IMAGES = [
   "pompes-classiques", "pompes-inclinees", "pompes-declinees",
@@ -63,7 +63,7 @@ self.addEventListener("install", event => {
     const cacheNames = await caches.keys();
     const hasPreviousCache = cacheNames.some(name => name.startsWith("ma-bibliotheque-") && name !== CACHE);
     if (hasPreviousCache) {
-      await Promise.all([...PECTORAL_IMAGES, ...DOS_IMAGES, ...EPAULES_IMAGES].map(async path => {
+      await Promise.all([...PECTORAL_IMAGES, ...DOS_IMAGES, ...EPAULES_IMAGES, ...BICEPS].map(async path => {
         try {
           const response = await fetch(path, {cache:"no-store"});
           if (response.ok) await cache.put(path, response);
@@ -78,7 +78,8 @@ self.addEventListener("install", event => {
     const css = await (await cache.match("./styles.css")).text();
     const pectoralCode = await (await cache.match("./pectoraux-v1.js")).text();
     const epaulesCode = await (await cache.match("./epaules-v1.js")).text();
-    const sources = [code, css, pectoralCode, epaulesCode].join("\n");
+    const bicepsCode = await (await cache.match("./biceps-v2.js")).text();
+    const sources = [code, css, pectoralCode, epaulesCode, bicepsCode].join("\n");
     const referencedImages = [...sources.matchAll(/\.\/[a-zA-Z0-9_-]+\.(?:webp|png)/g)]
       .map(m => m[0]);
     const images = [...new Set([...referencedImages, ...PECTORAL_IMAGES, ...DOS_IMAGES, ...EPAULES_IMAGES, ...BICEPS, ...MUSCLE_GROUPS])];
@@ -119,7 +120,7 @@ self.addEventListener("fetch", event => {
   if (url.origin !== self.location.origin) return;
   const path = url.pathname;
   const nav = request.mode === "navigate" || path.endsWith("/") || path.endsWith("/index.html");
-  const freshFile = /\/(?:index\.html|styles\.css|app\.js|data\.json|manifest\.json|sw\.js|pectoraux-v1\.js|pectoraux-v1\.css|dos-v1\.js|dos-v1\.css|epaules-v1\.js|epaules-v1\.css)$/.test(path);
+  const freshFile = /\/(?:index\.html|styles\.css|app\.js|data\.json|manifest\.json|sw\.js|pectoraux-v1\.js|pectoraux-v1\.css|dos-v1\.js|dos-v1\.css|epaules-v1\.js|epaules-v1\.css|biceps-v2\.js|biceps-v2\.css)$/.test(path);
   if (nav || freshFile) {
     event.respondWith((async () => {
       const cache = await caches.open(CACHE);
