@@ -1,45 +1,123 @@
-const CACHE="ma-bibliotheque-v81";
-const ASSETS=["./","./index.html","./styles.css","./app.js","./data.json","./manifest.json","./icon-192.png","./icon-512.png","./cat-cakes-desserts.webp","./cat-cakes-sales-terrines.webp","./cat-pancakes-gaufres.webp","./cat-pains-pizzas-bruschettas.webp","./cat-quiches-tartes.webp","./cat-pates-a-tartiner.webp","./cat-plats-sales.webp","./cat-recettes-mer.webp","./cat-pates.webp","./cat-salades.webp","./cat-soupes.webp","./cat-mijoteuse.webp","./univers-musculation.webp","./muscu-menu-exercices.png","./muscu-menu-seances.png","./muscu-menu-autre-sport.png","./muscu-menu-historique.png","./exercice-groupe-pectoraux.webp","./exercice-groupe-dos.webp","./exercice-groupe-epaules.webp","./exercice-groupe-biceps.webp","./exercice-groupe-triceps.webp","./exercice-groupe-jambes.webp","./exercice-groupe-abdominaux.webp","./biceps-curl-marteau.webp","./pectoraux-pompes-classiques.webp","./biceps-curl-classique.webp","./biceps-curl-alterne.webp","./biceps-curl-concentration.webp","./biceps-curl-zottman.webp","./biceps-curl-prise-inversee.webp","./biceps-curl-assis.webp","./biceps-curl-unilateral.webp","./biceps-curl-isometrique.webp","./biceps-curl-kettlebell.webp","./seance-haut-corps-v2.png","./seance-bas-corps-v2.png","./seance-corps-complet-v2.png","./seance-abdos-gainage-v2.png","./sport-marche-v3.png","./sport-course-v3.png","./sport-velo-v3.png","./sport-velo-appartement-v3.png","./sport-paddle-v3.png","./recette-r014-gaufres-ig-bas-proteinees.webp","./recette-r017-pancakes-proteines-ig-bas.webp","./recette-r001-appareil-a-quiche-proteine-ig-bas.webp","./recette-r013-gaufres-au-thon.webp","./recette-r021-quiche-proteinee-legumes-sans-pate.webp","./recette-r022-quiche-proteinee-legumes-thon-sans-pate.webp","./recette-r023-quiche-proteinee-poulet-epinards-skyr-sans-pate.webp","./recette-r029-pate-brisee-farine-pois-chiches.webp","./recette-r031-pancakes-courgettes-parmesan.webp","./recette-r019-choco-noisette-saine.webp","./recette-r020-choco-noisette-ig-bas.webp","./recette-r035-pate-amandes.webp","./recette-r036-pate-cacahuetes.webp","./recette-r058-veloute-pois-chiches-courgette-poireau-cumin.webp","./recette-r101-salade-poulet-avocat-oeufs.webp","./recette-r102-salade-pommes-terre-thon-oeufs.webp","./recette-r103-salade-cabillaud-avocat-oeufs.webp","./recette-r104-salade-poulet-croustillant.webp","./recette-r105-salade-mediterraneenne-pois-chiches.webp","./recette-r106-salade-pates-poulet-mozzarella.webp","./recette-r107-salade-crevettes-avocat-mangue.webp","./recette-r108-salade-quinoa-legumes-rotis-pois-chiches.webp","./recette-r109-salade-boeuf-grille-avocat.webp","./recette-r110-salade-riz-basmati-thon-oeufs.webp","./recette-r089-lasagnes-volaille-legumes.webp","./recette-r090-lasagnes-blanches-volaille-legumes.webp","./recette-r126-pates-poulet-courgettes-tomates.webp","./recette-r127-pates-pesto-tomates-parmesan.webp","./recette-r128-pates-cremeuses-poulet-champignons-epinards.webp","./recette-r129-pates-poulet-epinards-tomates.webp","./recette-r130-pates-thon-courgette-poivron-olives.webp","./recette-r131-pates-brocoli-burrata-tomates.webp","./recette-r132-pates-lentilles-corail-basilic.webp","./recette-r133-pates-lentilles-corail-tomates-confites-basilic.webp","./recette-r071-bowl-calamars-romaine.webp","./recette-r072-tacos-calamars-romaine.webp","./recette-r073-calamars-orge-legumes-rotis.webp","./recette-r074-risotto-mer-citron-safran-calamars.webp","./recette-r078-crevettes-courgettes-quinoa.webp","./recette-r079-crevettes-pois-chiches-legumes.webp","./recette-r002-cake-chocolat-poire-pepites.webp","./recette-r005-cake-marbre-proteine-avoine-amande-lupin.webp","./recette-r007-cake-proteine-myrtilles-chocolat.webp","./recette-r011-flan-proteine-myrtille-citron.webp","./recette-r030-gateau-fromage-blanc.webp","./recette-r037-clafoutis-leger-pommes.webp","./recette-r075-cake-proteine-ananas-coco-vanille.webp","./recette-r076-tiramisu-proteine-cafe-chia.webp","./recette-r077-tiramisu-proteine-poire-chocolat-chia.webp","./recette-r091-cake-proteine-banane-chocolat.webp","./recette-r092-cake-proteine-pomme-cannelle.webp","./recette-r093-cake-proteine-banane-coco.webp","./recette-r094-cake-proteine-chocolat-compote.webp","./recette-r095-cake-proteine-poire-amande.webp","./recette-r096-cake-proteine-carotte-cannelle-noix.webp","./recette-r097-cake-proteine-banane-fruits-rouges.webp","./recette-r098-cake-proteine-pomme-coco.webp","./recette-r099-cake-proteine-citron-amande.webp","./recette-r100-cake-proteine-banane-cacao-noisette.webp","./recette-r003-cake-courgette-poivron-feta.webp","./recette-r004-cake-jambon-epinards-chevre.webp","./recette-r006-cake-poulet-courgette-parmesan.webp","./recette-r008-cake-legumes-du-soleil.webp","./recette-r009-cake-thon-courgette-skyr-sans-farine.webp","./recette-r010-cake-thon-tomate-olives.webp","./recette-r024-terrine-legumes-ete.webp","./recette-r025-terrine-fraiche-thon-courgette.webp","./recette-r038-cake-epinards-feta.webp","./recette-r039-cake-poulet-curry.webp","./recette-r040-cake-poivron-mozzarella.webp","./recette-r041-cake-champignons-comte.webp","./recette-r042-cake-carotte-chevre.webp","./recette-r043-cake-thon-olives.webp","./recette-r080-flan-courgettes-parmesan-skyr.webp","./recette-r081-terrine-poulet-legumes.webp","./recette-r082-clafoutis-tomates-courgettes-fromage.webp","./recette-r083-terrine-champignons-poireaux-emmental.webp","./recette-r084-gateau-pommes-terre-courgettes-chevre.webp","./recette-r085-gateau-pommes-terre-chou-fleur-chevre.webp","./recette-r026-wok-poulet-pousses-soja.webp","./recette-r059-poulet-pommes-terre-brocoli.webp","./recette-r060-saumon-riz-legumes.webp","./recette-r061-poulet-cremeux-champignons-pates.webp","./recette-r062-boeuf-pommes-terre-carottes-mijotes.webp","./recette-r063-saucisses-pommes-terre-poivrons.webp","./recette-r064-poulet-riz-legumes.webp","./recette-r065-crevettes-riz-brocoli.webp","./recette-r066-poulet-tex-mex-haricots-mais.webp","./recette-r067-gnocchis-poulet-tomates.webp","./recette-r068-boulettes-boeuf-orzo-tomates.webp","./recette-r069-poulet-citron-orzo-epinards.webp","./recette-r070-boeuf-cremeux-champignons-pates.webp","./recette-r112-boeuf-bourguignon-mijoteuse-v2.webp","./recette-r113-poulet-cremeux-ail-v2.webp","./recette-r114-porc-effiloche-sauce-barbecue-v2.webp","./recette-r115-ragout-boeuf-legumes-pommes-terre-v2.webp","./recette-r116-boulettes-boeuf-sauce-tomate-v2.webp","./recette-r117-poulet-champignons-creme-v2.webp","./recette-r118-boeuf-oignons-sauce-brune-v2.webp","./recette-r119-poulet-citron-herbes-v2.webp","./recette-r120-porc-champignons-oignons-v2.webp","./recette-r121-chili-boeuf-haricots-blancs-v2.webp","./recette-r122-poulet-cremeux-pommes-terre-v3.webp","./recette-r123-boeuf-mijote-thym-v2.webp","./recette-r124-poulet-barbecue-miel-v3.webp","./recette-r125-roti-porc-pommes-terre-v3.webp","./recette-r012-fougasse-petit-epeautre-v2.webp","./recette-r015-pain-complet-ig-bas-v2.webp","./recette-r016-pain-pomme-terre-skyr-v2.webp","./recette-r018-pate-pizza-ig-bas-v2.webp","./recette-r027-pain-sarrasin-pois-chiches-graines-v2.webp","./recette-r028-pain-sarrasin-v2.webp","./recette-r032-pizza-express-proteinee-v2.webp","./recette-r033-petits-pains-pois-chiches-v2.webp","./recette-r034-pain-lentilles-corail-v2.webp","./recette-r044-bruschetta-tomate-basilic-v2.webp","./recette-r045-bruschetta-mozzarella-tomates-cerises.webp","./recette-r046-bruschetta-jambon-cru-roquette.webp","./recette-r047-bruschetta-ricotta-miel.webp","./recette-r048-bruschetta-champignons-ail.webp","./recette-r049-bruschetta-poivron-roti.webp","./recette-r050-bruschetta-saumon-fromage-frais.webp","./recette-r051-bruschetta-avocat-citron-vert.webp","./recette-r052-bruschetta-thon-olives.webp","./recette-r053-bruschetta-chevre-figues.webp","./recette-r054-bruschetta-pesto-tomates-sechees.webp","./recette-r055-bruschetta-burrata-pesto.webp","./recette-r056-bruschetta-poulet-tomates-sechees.webp","./recette-r057-bruschetta-crevettes-avocat.webp","./recette-r086-pain-lentilles-corail.webp","./recette-r087-pain-lentilles-avoine-lupin.webp","./recette-r088-pain-nordique-graines.webp","./recette-r111-pain-100-sarrasin.webp"];
+// Ma Bibliothèque — mise à jour Pectoraux et correctif cache de navigation PWA.
+// v82 : les pages et scripts se rechargent depuis le réseau dès qu'il est disponible.
+const CACHE = "ma-bibliotheque-v82";
+const CORE = [
+  "./", "./index.html", "./styles.css", "./app.js", "./data.json",
+  "./manifest.json", "./icon-192.png", "./icon-512.png",
+  "./pectoraux-v1.js", "./pectoraux-v1.css"
+];
+const PECTORAL_IMAGES = [
+  "pompes-classiques", "pompes-inclinees", "pompes-declinees",
+  "developpe-sol-halteres", "ecarte-sol-halteres", "pullover-haltere",
+  "presse-unilaterale-sol", "pompes-prise-large", "pompes-tempo-lent",
+  "squeeze-press-halteres"
+].map(x => "./pectoraux-" + x + ".webp");
+const BICEPS = [
+  "curl-marteau","curl-classique","curl-alterne","curl-concentration","curl-zottman",
+  "curl-prise-inversee","curl-assis","curl-unilateral","curl-isometrique","curl-kettlebell"
+].map(x => "./biceps-" + x + ".webp");
+const MUSCLE_GROUPS = [
+  "pectoraux", "dos", "epaules", "biceps", "triceps", "jambes", "abdominaux"
+].map(x => "./exercice-groupe-" + x + ".webp");
+
+async function networkAndCache(request, cache) {
+  const response = await fetch(request, {cache:"no-store"});
+  if (response.ok) await cache.put(request, response.clone());
+  return response;
+}
 
 self.addEventListener("install", event => {
   self.skipWaiting();
-  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)));
+  event.waitUntil((async () => {
+    const cache = await caches.open(CACHE);
+    // Toujours récupérer la dernière version du HTML et des scripts essentiels.
+    await Promise.all(CORE.map(async path => {
+      const response = await fetch(path, {cache:"no-store"});
+      if (!response.ok) throw new Error("Fichier essentiel introuvable : " + path);
+      await cache.put(path, response);
+    }));
+
+    // Lors d'une mise à jour, conserver les photos déjà téléchargées dans l'ancien cache.
+    // Seuls les visuels Pectoraux doivent éventuellement être récupérés.
+    const cacheNames = await caches.keys();
+    const hasPreviousCache = cacheNames.some(name => name.startsWith("ma-bibliotheque-") && name !== CACHE);
+    if (hasPreviousCache) {
+      await Promise.all(PECTORAL_IMAGES.map(async path => {
+        try {
+          const response = await fetch(path);
+          if (response.ok) await cache.put(path, response);
+        } catch (_) { /* Le cache précédent sera préservé. */ }
+      }));
+      return;
+    }
+
+    // Sur une nouvelle installation, garder aussi les recettes disponibles hors ligne.
+    // Les fichiers dans app.js utilisent une référence './fichier.webp' ou './fichier.png'.
+    const code = await (await cache.match("./app.js")).text();
+    const css = await (await cache.match("./styles.css")).text();
+    const pectoralCode = await (await cache.match("./pectoraux-v1.js")).text();
+    const sources = [code, css, pectoralCode].join("\n");
+    const referencedImages = [...sources.matchAll(/\.\/[a-zA-Z0-9_-]+\.(?:webp|png)/g)]
+      .map(m => m[0]);
+    const images = [...new Set([...referencedImages, ...PECTORAL_IMAGES, ...BICEPS, ...MUSCLE_GROUPS])];
+    await Promise.all(images.map(async path => {
+      try {
+        const response = await fetch(path);
+        if (response.ok) await cache.put(path, response);
+      } catch (_) { /* Une image non essentielle ne doit pas bloquer l'installation. */ }
+    }));
+  })());
 });
 
 self.addEventListener("activate", event => {
   event.waitUntil((async () => {
+    const fresh = await caches.open(CACHE);
     const keys = await caches.keys();
-    await Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)));
+    for (const key of keys) {
+      if (key === CACHE || !key.startsWith("ma-bibliotheque-")) continue;
+      const old = await caches.open(key);
+      const requests = await old.keys();
+      for (const request of requests) {
+        // Les ressources récentes du nouveau cache ont priorité.
+        if (!(await fresh.match(request))) {
+          const response = await old.match(request);
+          if (response) await fresh.put(request, response);
+        }
+      }
+      await caches.delete(key);
+    }
     await self.clients.claim();
   })());
 });
 
 self.addEventListener("fetch", event => {
-  const url = new URL(event.request.url);
-  const isCore = url.pathname.endsWith("/index.html") || url.pathname.endsWith("/styles.css") || url.pathname.endsWith("/app.js") || url.pathname.endsWith("/data.json") || url.pathname.endsWith("/manifest.json") || url.pathname.endsWith("/sw.js");
-  if (isCore) {
+  const request = event.request;
+  if (request.method !== "GET") return;
+  const url = new URL(request.url);
+  if (url.origin !== self.location.origin) return;
+  const path = url.pathname;
+  const nav = request.mode === "navigate" || path.endsWith("/") || path.endsWith("/index.html");
+  const freshFile = /\/(?:index\.html|styles\.css|app\.js|data\.json|manifest\.json|sw\.js|pectoraux-v1\.js|pectoraux-v1\.css)$/.test(path);
+  if (nav || freshFile) {
     event.respondWith((async () => {
-      try {
-        const fresh = await fetch(event.request, {cache:"no-store"});
-        const cache = await caches.open(CACHE);
-        cache.put(event.request, fresh.clone());
-        return fresh;
-      } catch(e) {
-        return (await caches.match(event.request)) || Response.error();
+      const cache = await caches.open(CACHE);
+      try { return await networkAndCache(request, cache); }
+      catch (_) {
+        return (await cache.match(request)) || (nav ? (await cache.match("./index.html")) : null) || Response.error();
       }
     })());
     return;
   }
   event.respondWith((async () => {
-    const cached = await caches.match(event.request);
+    const cache = await caches.open(CACHE);
+    const cached = await cache.match(request);
     if (cached) return cached;
     try {
-      const resp = await fetch(event.request);
-      const cache = await caches.open(CACHE);
-      cache.put(event.request, resp.clone());
-      return resp;
-    } catch(e) {
-      return (await caches.match("./index.html")) || Response.error();
+      const response = await fetch(request);
+      if (response.ok) await cache.put(request, response.clone());
+      return response;
+    } catch (_) {
+      return (await cache.match(request)) || Response.error();
     }
   })());
 });
