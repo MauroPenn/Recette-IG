@@ -1,10 +1,10 @@
 // Ma Bibliothèque — mise à jour Pectoraux et correctif cache de navigation PWA.
-// v83 : noveaux bandeaux et mise a jour du cache; les pages et scripts se rechargent depuis le réseau dès qu'il est disponible.
-const CACHE = "ma-bibliotheque-v83";
+// v84 : noveaux bandeaux et mise a jour du cache; les pages et scripts se rechargent depuis le réseau dès qu'il est disponible.
+const CACHE = "ma-bibliotheque-v84";
 const CORE = [
   "./", "./index.html", "./styles.css", "./app.js", "./data.json",
   "./manifest.json", "./icon-192.png", "./icon-512.png",
-  "./pectoraux-v1.js", "./pectoraux-v1.css"
+  "./pectoraux-v1.js", "./pectoraux-v1.css", "./dos-v1.js", "./dos-v1.css"
 ];
 const PECTORAL_IMAGES = [
   "pompes-classiques", "pompes-inclinees", "pompes-declinees",
@@ -12,6 +12,14 @@ const PECTORAL_IMAGES = [
   "presse-unilaterale-sol", "pompes-prise-large", "pompes-tempo-lent",
   "squeeze-press-halteres"
 ].map(x => "./pectoraux-" + x + ".webp");
+
+const DOS_IMAGES = [
+  "rowing-unilateral-haltere", "rowing-buste-penche-halteres", "pullover-haltere",
+  "oiseau-buste-penche", "superman-sol", "bird-dog-row",
+  "rowing-kettlebell", "souleve-terre-roumain", "tirage-coudes-ouverts-halteres",
+  "extension-lombaire-sol"
+].map(x => "./dos-" + x + ".webp");
+
 const BICEPS = [
   "curl-marteau","curl-classique","curl-alterne","curl-concentration","curl-zottman",
   "curl-prise-inversee","curl-assis","curl-unilateral","curl-isometrique","curl-kettlebell"
@@ -42,7 +50,7 @@ self.addEventListener("install", event => {
     const cacheNames = await caches.keys();
     const hasPreviousCache = cacheNames.some(name => name.startsWith("ma-bibliotheque-") && name !== CACHE);
     if (hasPreviousCache) {
-      await Promise.all(PECTORAL_IMAGES.map(async path => {
+      await Promise.all([...PECTORAL_IMAGES, ...DOS_IMAGES].map(async path => {
         try {
           const response = await fetch(path, {cache:"no-store"});
           if (response.ok) await cache.put(path, response);
@@ -59,7 +67,7 @@ self.addEventListener("install", event => {
     const sources = [code, css, pectoralCode].join("\n");
     const referencedImages = [...sources.matchAll(/\.\/[a-zA-Z0-9_-]+\.(?:webp|png)/g)]
       .map(m => m[0]);
-    const images = [...new Set([...referencedImages, ...PECTORAL_IMAGES, ...BICEPS, ...MUSCLE_GROUPS])];
+    const images = [...new Set([...referencedImages, ...PECTORAL_IMAGES, ...DOS_IMAGES, ...BICEPS, ...MUSCLE_GROUPS])];
     await Promise.all(images.map(async path => {
       try {
         const response = await fetch(path, {cache:"no-store"});
@@ -97,7 +105,7 @@ self.addEventListener("fetch", event => {
   if (url.origin !== self.location.origin) return;
   const path = url.pathname;
   const nav = request.mode === "navigate" || path.endsWith("/") || path.endsWith("/index.html");
-  const freshFile = /\/(?:index\.html|styles\.css|app\.js|data\.json|manifest\.json|sw\.js|pectoraux-v1\.js|pectoraux-v1\.css)$/.test(path);
+  const freshFile = /\/(?:index\.html|styles\.css|app\.js|data\.json|manifest\.json|sw\.js|pectoraux-v1\.js|pectoraux-v1\.css|dos-v1\.js|dos-v1\.css)$/.test(path);
   if (nav || freshFile) {
     event.respondWith((async () => {
       const cache = await caches.open(CACHE);
