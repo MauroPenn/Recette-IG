@@ -1,6 +1,6 @@
-// Ma Bibliothèque — mise à jour Pectoraux et correctif cache de navigation PWA.
-// v89 : noveaux bandeaux et mise a jour du cache; les pages et scripts se rechargent depuis le réseau dès qu'il est disponible.
-const CACHE = "ma-bibliotheque-v90";
+// Ma Bibliothèque — mise à jour Jambes sans écrasement.
+// v92 : nouveau cadrage proportionnel des bandeaux Jambes, sans étirement.
+const CACHE = "ma-bibliotheque-v92";
 const CORE = [
   "./", "./index.html", "./styles.css", "./app.js", "./data.json",
   "./manifest.json", "./icon-192.png", "./icon-512.png",
@@ -134,7 +134,7 @@ self.addEventListener("fetch", event => {
   if (url.origin !== self.location.origin) return;
   const path = url.pathname;
   const nav = request.mode === "navigate" || path.endsWith("/") || path.endsWith("/index.html");
-  const freshFile = /\/(?:index\.html|styles\.css|app\.js|data\.json|manifest\.json|sw\.js|pectoraux-v1\.js|pectoraux-v1\.css|dos-v1\.js|dos-v1\.css|epaules-v1\.js|epaules-v1\.css|biceps-v2\.js|biceps-v2\.css|triceps-v1\.js|triceps-v1\.css)$/.test(path);
+  const freshFile = /\/(?:index\.html|styles\.css|app\.js|data\.json|manifest\.json|sw\.js|pectoraux-v1\.js|pectoraux-v1\.css|dos-v1\.js|dos-v1\.css|epaules-v1\.js|epaules-v1\.css|biceps-v2\.js|biceps-v2\.css|triceps-v1\.js|triceps-v1\.css|jambes-v1\.js|jambes-v1\.css)$/.test(path);
   if (nav || freshFile) {
     event.respondWith((async () => {
       const cache = await caches.open(CACHE);
