@@ -1,0 +1,32 @@
+/* JAMBES V1 : même rendu que Pectoraux / Dos / Épaules / Biceps. */
+.muscu-jambes-v1{max-width:1180px}
+.muscu-jambes-list{display:grid;grid-template-columns:repeat(2,minmax(0,560px));justify-content:center;gap:14px;width:100%}
+.muscu-jambes-card,.muscu-jambes-fiche-visuel{box-sizing:border-box;display:block;position:relative;aspect-ratio:560/190;width:100%;max-width:560px;padding:0;margin:0;overflow:hidden;border:0;border-radius:0;background:#080c10;isolation:isolate}
+.muscu-jambes-card{cursor:pointer;box-shadow:0 10px 25px rgba(0,0,0,.24)}
+.muscu-jambes-card:focus-visible{outline:3px solid #ff9000;outline-offset:3px}
+.muscu-jambes-card:active{transform:scale(.994)}
+.muscu-jambes-photo{display:block;position:absolute;inset:0;overflow:hidden;z-index:0}
+.muscu-jambes-photo img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;border:0}
+.muscu-jambes-fiche{max-width:820px}
+.muscu-jambes-fiche-en-tete{border-bottom:2px solid #ff7d00;padding-bottom:14px;margin-bottom:16px}
+.muscu-jambes-fiche-en-tete h2{font-size:clamp(1.6rem,4vw,2.4rem);line-height:1.14;color:#fff;margin:5px 0 8px}
+.muscu-jambes-fiche-en-tete p{color:#e1e4e7;font-size:.98rem;margin:0;line-height:1.4}
+.muscu-jambes-fiche-visuel{max-width:none;margin-bottom:16px;border-radius:19px}
+.muscu-jambes-fiche-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}
+.muscu-jambes-fiche-stats>div{min-width:0;border:1px solid rgba(255,255,255,.33);border-radius:14px;padding:12px 14px;background:rgba(255,255,255,.065)}
+.muscu-jambes-fiche-stats span{display:block;color:#ff9c36;font-size:.8rem;font-weight:900;margin-bottom:5px}
+.muscu-jambes-fiche-stats strong{display:block;font-size:1rem;line-height:1.28;color:#fff;overflow-wrap:anywhere}
+.muscu-jambes-fiche-section{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:18px;margin:12px 0}
+.muscu-jambes-fiche-section h3{color:#ff9328;font-size:1.22rem;margin:0 0 12px}
+.muscu-jambes-fiche-section ol{padding-left:22px;margin:0;display:grid;gap:12px}
+.muscu-jambes-fiche-section li{color:#fff;padding-left:4px;line-height:1.45}
+.muscu-jambes-fiche-section p{margin:0;line-height:1.48;color:#fff}
+.muscu-jambes-precaution{font-size:.8rem;color:#d0d5da;line-height:1.4;margin:14px 3px 0}
+@media(max-width:750px){
+  .muscu-jambes-list{grid-template-columns:minmax(0,560px);gap:10px}
+  .muscu-jambes-card,.muscu-jambes-fiche-visuel{border-radius:0}
+  .muscu-jambes-fiche-stats{gap:8px}
+  .muscu-jambes-fiche-stats>div{padding:10px}
+  .muscu-jambes-fiche-stats strong{font-size:.9rem}
+  .muscu-jambes-fiche-section{padding:14px}
+}

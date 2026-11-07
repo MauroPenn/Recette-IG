@@ -1,10 +1,10 @@
 // Ma Bibliothèque — mise à jour Pectoraux et correctif cache de navigation PWA.
 // v89 : noveaux bandeaux et mise a jour du cache; les pages et scripts se rechargent depuis le réseau dès qu'il est disponible.
-const CACHE = "ma-bibliotheque-v89";
+const CACHE = "ma-bibliotheque-v90";
 const CORE = [
   "./", "./index.html", "./styles.css", "./app.js", "./data.json",
   "./manifest.json", "./icon-192.png", "./icon-512.png",
-  "./pectoraux-v1.js", "./pectoraux-v1.css", "./dos-v1.js", "./dos-v1.css", "./epaules-v1.js", "./epaules-v1.css", "./biceps-v2.js", "./biceps-v2.css", "./triceps-v1.js", "./triceps-v1.css"
+  "./pectoraux-v1.js", "./pectoraux-v1.css", "./dos-v1.js", "./dos-v1.css", "./epaules-v1.js", "./epaules-v1.css", "./biceps-v2.js", "./biceps-v2.css", "./triceps-v1.js", "./triceps-v1.css", "./jambes-v1.js", "./jambes-v1.css"
 ];
 const PECTORAL_IMAGES = [
   "pompes-classiques", "pompes-inclinees", "pompes-declinees",
@@ -43,6 +43,12 @@ const TRICEPS_IMAGES = [
   "extension-triceps-unilaterale", "tate-press-sol", "dips-entre-deux-supports"
 ].map(x => "./triceps-" + x + ".webp");
 
+const JAMBES_IMAGES = [
+  "squat-avec-halteres", "fentes-avant", "fentes-arriere", "squat-goblet",
+  "souleve-terre-jambes-tendues", "pont-fessier-sol", "hip-thrust-sol-haltere",
+  "fentes-bulgares", "mollets-debout-halteres", "sumo-squat"
+].map(x => "./jambes-" + x + ".webp");
+
 const MUSCLE_GROUPS = [
   "pectoraux", "dos", "epaules", "biceps", "triceps", "jambes", "abdominaux"
 ].map(x => "./exercice-groupe-" + x + ".webp");
@@ -69,7 +75,7 @@ self.addEventListener("install", event => {
     const cacheNames = await caches.keys();
     const hasPreviousCache = cacheNames.some(name => name.startsWith("ma-bibliotheque-") && name !== CACHE);
     if (hasPreviousCache) {
-      await Promise.all([...PECTORAL_IMAGES, ...DOS_IMAGES, ...EPAULES_IMAGES, ...BICEPS, ...TRICEPS_IMAGES].map(async path => {
+      await Promise.all([...PECTORAL_IMAGES, ...DOS_IMAGES, ...EPAULES_IMAGES, ...BICEPS, ...TRICEPS_IMAGES, ...JAMBES_IMAGES].map(async path => {
         try {
           const response = await fetch(path, {cache:"no-store"});
           if (response.ok) await cache.put(path, response);
@@ -86,10 +92,11 @@ self.addEventListener("install", event => {
     const epaulesCode = await (await cache.match("./epaules-v1.js")).text();
     const bicepsCode = await (await cache.match("./biceps-v2.js")).text();
     const tricepsCode = await (await cache.match("./triceps-v1.js")).text();
-    const sources = [code, css, pectoralCode, epaulesCode, bicepsCode, tricepsCode].join("\n");
+    const jambesCode = await (await cache.match("./jambes-v1.js")).text();
+    const sources = [code, css, pectoralCode, epaulesCode, bicepsCode, tricepsCode, jambesCode].join("\n");
     const referencedImages = [...sources.matchAll(/\.\/[a-zA-Z0-9_-]+\.(?:webp|png)/g)]
       .map(m => m[0]);
-    const images = [...new Set([...referencedImages, ...PECTORAL_IMAGES, ...DOS_IMAGES, ...EPAULES_IMAGES, ...BICEPS, ...TRICEPS_IMAGES, ...MUSCLE_GROUPS])];
+    const images = [...new Set([...referencedImages, ...PECTORAL_IMAGES, ...DOS_IMAGES, ...EPAULES_IMAGES, ...BICEPS, ...TRICEPS_IMAGES, ...JAMBES_IMAGES, ...MUSCLE_GROUPS])];
     await Promise.all(images.map(async path => {
       try {
         const response = await fetch(path, {cache:"no-store"});
