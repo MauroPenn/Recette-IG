@@ -1,25 +1,5 @@
 const tricepsExercices = [
   {
-    id: "dips-sur-chaise",
-    titre: "Dips sur chaise",
-    cible: "Triceps, épaules antérieures, poitrine en assistance",
-    materiel: "Chaise ou banc stable",
-    niveau: "Débutant à intermédiaire",
-    series: "3",
-    repetitions: "8 à 15",
-    tempo: "2–0–2",
-    repos: "45 à 60 s",
-    execution: [
-      "Place les mains sur le bord d’une chaise stable, doigts vers l’avant.",
-      "Avance légèrement les pieds et garde la poitrine ouverte.",
-      "Fléchis les coudes pour descendre le bassin vers le sol sans hausser les épaules.",
-      "Pousse dans les paumes pour revenir en extension sans verrouiller brutalement les coudes."
-    ],
-    conseil: "Garde les coudes dirigés vers l’arrière. Raccourcis l’amplitude si les épaules sont sensibles.",
-    erreurs: "Chaise instable, épaules remontées, descente trop profonde, pieds trop loin pour ton niveau.",
-    image: "./triceps-dips-sur-chaise.webp"
-  },
-  {
     id: "pompes-diamant",
     titre: "Pompes diamant",
     cible: "Triceps, poitrine, gainage",
@@ -38,6 +18,26 @@ const tricepsExercices = [
     conseil: "Si c’est trop difficile, réalise l’exercice sur les genoux ou sur un support surélevé.",
     erreurs: "Coudes trop écartés, dos creusé, mouvement trop rapide, amplitude incomplète.",
     image: "./triceps-pompes-diamant.webp"
+  },
+  {
+    id: "dips-sur-chaise",
+    titre: "Dips sur chaise",
+    cible: "Triceps, épaules antérieures, poitrine en assistance",
+    materiel: "Chaise ou banc stable",
+    niveau: "Débutant à intermédiaire",
+    series: "3",
+    repetitions: "8 à 15",
+    tempo: "2–0–2",
+    repos: "45 à 60 s",
+    execution: [
+      "Place les mains sur le bord d’une chaise stable, doigts vers l’avant.",
+      "Avance légèrement les pieds et garde la poitrine ouverte.",
+      "Fléchis les coudes pour descendre le bassin vers le sol sans hausser les épaules.",
+      "Pousse dans les paumes pour revenir en extension sans verrouiller brutalement les coudes."
+    ],
+    conseil: "Garde les coudes dirigés vers l’arrière. Raccourcis l’amplitude si les épaules sont sensibles.",
+    erreurs: "Chaise instable, épaules remontées, descente trop profonde, pieds trop loin pour ton niveau.",
+    image: "./triceps-dips-sur-chaise.webp"
   },
   {
     id: "kickback-triceps",
@@ -60,26 +60,6 @@ const tricepsExercices = [
     image: "./triceps-kickback-triceps.webp"
   },
   {
-    id: "extension-nuque-un-haltere",
-    titre: "Extension nuque à un haltère",
-    cible: "Triceps, accent sur la longue portion",
-    materiel: "Un haltère",
-    niveau: "Tous niveaux",
-    series: "3",
-    repetitions: "8 à 12",
-    tempo: "2–1–2",
-    repos: "45 à 60 s",
-    execution: [
-      "Tiens un haltère à deux mains au-dessus de la tête ou d’une main selon ton confort.",
-      "Garde les coudes orientés vers l’avant et proches de la tête.",
-      "Fléchis les coudes pour descendre l’haltère derrière la nuque.",
-      "Tends les bras vers le haut sans cambrer le bas du dos."
-    ],
-    conseil: "Contracte les abdominaux et serre les fessiers pour éviter de cambrer.",
-    erreurs: "Coudes trop ouverts, nuque crispée, amplitude trop grande, charge excessive.",
-    image: "./triceps-extension-nuque-un-haltere.webp"
-  },
-  {
     id: "extension-nuque-deux-mains",
     titre: "Extension nuque à deux mains",
     cible: "Triceps, longue portion",
@@ -98,46 +78,6 @@ const tricepsExercices = [
     conseil: "Travaille proprement plutôt que lourd pour bien sentir l’étirement du triceps.",
     erreurs: "Coudes qui s’ouvrent, dos trop cambré, épaules remontées, descente incontrôlée.",
     image: "./triceps-extension-nuque-deux-mains.webp"
-  },
-  {
-    id: "extension-triceps-allonge-sol",
-    titre: "Extension triceps allongé au sol",
-    cible: "Triceps",
-    materiel: "Deux haltères et tapis",
-    niveau: "Intermédiaire",
-    series: "3",
-    repetitions: "8 à 12",
-    tempo: "2–1–2",
-    repos: "60 s",
-    execution: [
-      "Allonge-toi au sol, bras tendus au-dessus de la poitrine, haltères en main.",
-      "Garde les bras quasi verticaux et les coudes orientés vers le plafond.",
-      "Fléchis les coudes pour descendre les haltères près des tempes.",
-      "Tends les bras pour revenir en haut sans laisser les coudes s’écarter."
-    ],
-    conseil: "Le sol limite l’amplitude et aide à rester en sécurité. Contrôle bien la descente.",
-    erreurs: "Bras qui partent vers l’arrière, poignets cassés, choc des haltères, coudes trop ouverts.",
-    image: "./triceps-extension-triceps-allonge-sol.webp"
-  },
-  {
-    id: "developpe-serre-sol",
-    titre: "Développé serré au sol",
-    cible: "Triceps, poitrine, épaules antérieures",
-    materiel: "Deux haltères et tapis",
-    niveau: "Tous niveaux",
-    series: "3",
-    repetitions: "8 à 12",
-    tempo: "2–0–2",
-    repos: "60 s",
-    execution: [
-      "Allonge-toi au sol, genoux fléchis, haltères au-dessus de la poitrine.",
-      "Garde une prise serrée et les coudes relativement proches du buste.",
-      "Descends jusqu’au contact léger des bras avec le sol.",
-      "Pousse vers le haut en accentuant l’extension des triceps."
-    ],
-    conseil: "Le développé serré est plus confortable au sol et très utile pour cibler les triceps à la maison.",
-    erreurs: "Coudes trop écartés, charge trop lourde, poignets cassés, rebond sur le sol.",
-    image: "./triceps-developpe-serre-sol.webp"
   },
   {
     id: "extension-triceps-unilaterale",
@@ -160,6 +100,46 @@ const tricepsExercices = [
     image: "./triceps-extension-triceps-unilaterale.webp"
   },
   {
+    id: "extension-triceps-travers-corps",
+    titre: "Extension triceps en travers du corps",
+    cible: "Triceps, surtout la longue portion",
+    materiel: "Un haltère et un tapis",
+    niveau: "Intermédiaire",
+    series: "3 par bras",
+    repetitions: "10 à 12 par bras",
+    tempo: "2–1–2",
+    repos: "45 à 60 s",
+    execution: [
+      "Allonge-toi sur le dos, genoux fléchis, un haltère dans une main.",
+      "Tends le bras chargé vers le haut, au-dessus de l’épaule ; stabilise le haut du bras.",
+      "Plie lentement le coude pour faire descendre l’haltère en diagonale vers l’épaule opposée, sans tourner le torse.",
+      "Tends le coude pour remonter sous contrôle, puis change de bras."
+    ],
+    conseil: "Commence avec un haltère léger ; conserve l’épaule stable et une amplitude indolore.",
+    erreurs: "Bouger l’épaule au lieu du coude, descendre trop près du visage, utiliser l’élan ou cambrer le dos.",
+    image: "./triceps-extension-triceps-travers-corps.webp"
+  },
+  {
+    id: "extension-triceps-allonge-sol",
+    titre: "Extension triceps allongé au sol",
+    cible: "Triceps",
+    materiel: "Deux haltères et tapis",
+    niveau: "Intermédiaire",
+    series: "3",
+    repetitions: "8 à 12",
+    tempo: "2–1–2",
+    repos: "60 s",
+    execution: [
+      "Allonge-toi au sol, bras tendus au-dessus de la poitrine, haltères en main.",
+      "Garde les bras quasi verticaux et les coudes orientés vers le plafond.",
+      "Fléchis les coudes pour descendre les haltères près des tempes.",
+      "Tends les bras pour revenir en haut sans laisser les coudes s’écarter."
+    ],
+    conseil: "Le sol limite l’amplitude et aide à rester en sécurité. Contrôle bien la descente.",
+    erreurs: "Bras qui partent vers l’arrière, poignets cassés, choc des haltères, coudes trop ouverts.",
+    image: "./triceps-extension-triceps-allonge-sol.webp"
+  },
+  {
     id: "tate-press-sol",
     titre: "Tate press au sol",
     cible: "Triceps, surtout portion latérale et médiale",
@@ -178,6 +158,26 @@ const tricepsExercices = [
     conseil: "Commence léger : le Tate press demande de la précision et un bon contrôle des coudes.",
     erreurs: "Amplitude trop grande, trajectoire confuse, charges trop lourdes, poignets instables.",
     image: "./triceps-tate-press-sol.webp"
+  },
+  {
+    id: "developpe-serre-sol",
+    titre: "Développé serré au sol",
+    cible: "Triceps, poitrine, épaules antérieures",
+    materiel: "Deux haltères et tapis",
+    niveau: "Tous niveaux",
+    series: "3",
+    repetitions: "8 à 12",
+    tempo: "2–0–2",
+    repos: "60 s",
+    execution: [
+      "Allonge-toi au sol, genoux fléchis, haltères au-dessus de la poitrine.",
+      "Garde une prise serrée et les coudes relativement proches du buste.",
+      "Descends jusqu’au contact léger des bras avec le sol.",
+      "Pousse vers le haut en accentuant l’extension des triceps."
+    ],
+    conseil: "Le développé serré est plus confortable au sol et très utile pour cibler les triceps à la maison.",
+    erreurs: "Coudes trop écartés, charge trop lourde, poignets cassés, rebond sur le sol.",
+    image: "./triceps-developpe-serre-sol.webp"
   },
   {
     id: "dips-entre-deux-supports",

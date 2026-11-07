@@ -1,6 +1,6 @@
 // Ma Bibliothèque — mise à jour Pectoraux et correctif cache de navigation PWA.
-// v87 : noveaux bandeaux et mise a jour du cache; les pages et scripts se rechargent depuis le réseau dès qu'il est disponible.
-const CACHE = "ma-bibliotheque-v88";
+// v89 : noveaux bandeaux et mise a jour du cache; les pages et scripts se rechargent depuis le réseau dès qu'il est disponible.
+const CACHE = "ma-bibliotheque-v89";
 const CORE = [
   "./", "./index.html", "./styles.css", "./app.js", "./data.json",
   "./manifest.json", "./icon-192.png", "./icon-512.png",
@@ -38,7 +38,7 @@ const BICEPS = [
   "curl-prise-inversee","curl-assis","curl-unilateral","curl-isometrique","curl-kettlebell"
 ].map(x => "./biceps-" + x + ".webp");
 const TRICEPS_IMAGES = [
-  "dips-sur-chaise", "pompes-diamant", "kickback-triceps", "extension-nuque-un-haltere",
+  "dips-sur-chaise", "pompes-diamant", "kickback-triceps", "extension-triceps-travers-corps",
   "extension-nuque-deux-mains", "extension-triceps-allonge-sol", "developpe-serre-sol",
   "extension-triceps-unilaterale", "tate-press-sol", "dips-entre-deux-supports"
 ].map(x => "./triceps-" + x + ".webp");
