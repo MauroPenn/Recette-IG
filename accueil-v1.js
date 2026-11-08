@@ -1,4 +1,4 @@
-/* Accueil 6 univers V3 : design approuvé, images avec textes intégrés — ajouts isolés après tous les autres scripts.
+/* Accueil 6 univers V3 + ouverture Autre sport V1 : design approuvé, images avec textes intégrés — ajouts isolés après tous les autres scripts.
    Les deux premiers univers réutilisent leurs liens et leur logique existants. */
 (function(){
   'use strict';
@@ -55,6 +55,12 @@
     main.append(root,legacy);
     root.querySelectorAll('[data-uv1]').forEach(card=>card.addEventListener('click',()=>{
       const key=card.dataset.uv1;
+      if (key === 'autre-sport') {
+        state.view = 'autre-sport-home';
+        state.selected = null;
+        render();
+        return;
+      }
       const old=activeTargets[key];
       if(old){old.click();return;}
       const universe=univers.find(u=>u.id===key);

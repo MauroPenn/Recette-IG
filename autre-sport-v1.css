@@ -1,0 +1,27 @@
+/* AUTRE SPORT V1 — image composite validée, sans double texte ni filtre.
+   Coordonnées des zones cliquables calculées sur 1024 × 1536.
+   Ne s'applique qu'aux deux vues Autre sport. */
+body.as1-active { background:#002d2c; }
+body.as1-active #app > header.topbar, body.as1-active #bottomNav { display:none !important; }
+body.as1-active #main { box-sizing:border-box; width:100%; max-width:none; padding:0 !important; margin:0 !important; background:#002d2c; min-height:100vh; }
+.as1-screen { display:block; position:relative; margin:0 auto; width:100%; max-width:690px; background:#002d2c; overflow:hidden; }
+.as1-screen-image { display:block; width:100%; height:auto; object-fit:contain; }
+.as1-hotspot { position:absolute; z-index:2; border:0; border-radius:18px; cursor:pointer; padding:0; margin:0; background:transparent; color:transparent; -webkit-tap-highlight-color:rgba(255,255,255,.12); }
+.as1-hotspot:focus-visible { outline:3px solid #fff; outline-offset:-4px; background:rgba(0,123,192,.09); }
+.as1-hotspot:active { background:rgba(255,255,255,.08); }
+.as1-h-back { left:2.4%; top:1.5%; width:10.0%; height:6.1%; border-radius:50%; }
+.as1-h-start { left:2.7%; top:39.1%; width:94.8%; height:14.3%; }
+.as1-h-history { left:2.7%; top:55.1%; width:94.8%; height:13.7%; }
+.as1-h-settings { left:2.7%; top:70.6%; width:94.8%; height:14.1%; }
+.as1-h-nav-home { left:0%; top:89.1%; width:33.34%; height:10.1%; }
+.as1-h-nav-sport { left:33.34%; top:89.1%; width:33.33%; height:10.1%; }
+.as1-h-nav-history { left:66.67%; top:89.1%; width:33.33%; height:10.1%; }
+.as1-visually-hidden { position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.as1-placeholder { min-height:100vh; padding:24px 18px 55px; color:#fff; background:linear-gradient(165deg,#006184,#004c60 35%,#00332f 75%,#002620); box-sizing:border-box; }
+.as1-ph-inner { max-width:650px; margin:0 auto; }
+.as1-return { font:inherit; font-size:1rem; font-weight:750; padding:12px 14px; border:1px solid rgba(195,244,250,.4); border-radius:14px; background:rgba(0,0,0,.23); color:#fff; cursor:pointer; }
+.as1-ph-inner h2 { font-size:clamp(1.9rem,5vw,2.8rem); margin:50px 0 15px; color:#fff; }
+.as1-ph-inner p { font-size:1rem; line-height:1.6; max-width:530px; color:#def4f3; }
+.as1-next { display:inline-block; padding:8px 14px; border:1px solid #3ed6d2; color:#d7ffff; border-radius:50px; background:rgba(0,50,60,.36); font-weight:800; }
+@media (min-width:760px) { .as1-screen { margin:20px auto 45px; border-radius:28px; box-shadow:0 16px 42px rgba(0,0,0,.3); } }
+@media(prefers-reduced-motion: reduce) { .as1-hotspot { transition:none; } }
