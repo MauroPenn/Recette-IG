@@ -1,0 +1,15 @@
+CORRECTION — ÉCRAN CHOIX DE L’ACTIVITÉ
+
+Nouveau parcours :
+Accueil général > Autre sport > Démarrer une activité > Choisir une activité > Marche.
+
+Marche affiche le visuel existant, sans changer ses images.
+Vélo, Vélo d’appartement, Course à pied, Paddle, Autre activité
+affichent pour l’instant une page EN PRÉPARATION.
+
+Les boutons du visuel Marche sont des démonstrations ; aucun suivi GPS/chrono réel
+n’est encore activé par cette mise à jour.
+
+Copier les quatre fichiers autre-sport-v1.js, autre-sport-v1.css,
+autre-sport-choix-v1.webp, sw.js à la RACINE du dépôt GitHub.
+Ne supprimer aucun autre fichier.

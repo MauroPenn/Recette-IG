@@ -1,6 +1,6 @@
 // Ma Bibliothèque — ajout accueil Autre sport V1 à l’accueil 6 univers V3.
-// v102 : ajout de l'écran Marche V1 accessible depuis Autre sport.
-const CACHE = "ma-bibliotheque-v102";
+// v103 : ajout de la sélection de sport entre accueil Autre sport et Marche.
+const CACHE = "ma-bibliotheque-v103";
 const CORE = [
   "./", "./index.html", "./styles.css", "./app.js", "./data.json",
   "./manifest.json", "./icon-192.png", "./icon-512.png",
@@ -57,7 +57,7 @@ const ABDOS_IMAGES = [
 
 const ACCUEIL_IMAGES = ["./univers-cuisine-nutrition-valide.webp", "./univers-musculation-valide.webp", "./univers-autre-sport-valide.webp", "./univers-etirements-valide.webp", "./univers-pilates-valide.webp", "./univers-historique-valide.webp"];
 
-const AUTRE_SPORT_IMAGES = ["./autre-sport-accueil-v3.webp", "./autre-sport-marche-v1.webp"];
+const AUTRE_SPORT_IMAGES = ["./autre-sport-accueil-v3.webp", "./autre-sport-marche-v1.webp", "./autre-sport-choix-v1.webp"];
 
 const MUSCLE_GROUPS = [
   "pectoraux", "dos", "epaules", "biceps", "triceps", "jambes", "abdominaux"
@@ -145,7 +145,7 @@ self.addEventListener("fetch", event => {
   if (url.origin !== self.location.origin) return;
   const path = url.pathname;
   const nav = request.mode === "navigate" || path.endsWith("/") || path.endsWith("/index.html");
-  const freshFile = /\/(?:index\.html|styles\.css|app\.js|data\.json|manifest\.json|sw\.js|pectoraux-v1\.js|pectoraux-v1\.css|dos-v1\.js|dos-v1\.css|epaules-v1\.js|epaules-v1\.css|biceps-v2\.js|biceps-v2\.css|triceps-v1\.js|triceps-v1\.css|jambes-v1\.js|jambes-v1\.css|abdominaux-v1\.js|abdominaux-v1\.css|groupes-musculaires-v2\.js|groupes-musculaires-v2\.css|accueil-v1\.js|accueil-v1\.css|autre-sport-v1\.js|autre-sport-v1\.css|autre-sport-accueil-v3\.webp|univers-[a-z-]+-valide\.webp)$/.test(path);
+  const freshFile = /\/(?:index\.html|styles\.css|app\.js|data\.json|manifest\.json|sw\.js|pectoraux-v1\.js|pectoraux-v1\.css|dos-v1\.js|dos-v1\.css|epaules-v1\.js|epaules-v1\.css|biceps-v2\.js|biceps-v2\.css|triceps-v1\.js|triceps-v1\.css|jambes-v1\.js|jambes-v1\.css|abdominaux-v1\.js|abdominaux-v1\.css|groupes-musculaires-v2\.js|groupes-musculaires-v2\.css|accueil-v1\.js|accueil-v1\.css|autre-sport-v1\.js|autre-sport-v1\.css|autre-sport-accueil-v3\.webp|autre-sport-marche-v1\.webp|autre-sport-choix-v1\.webp|univers-[a-z-]+-valide\.webp)$/.test(path);
   if (nav || freshFile) {
     event.respondWith((async () => {
       const cache = await caches.open(CACHE);
