@@ -1,0 +1,15 @@
+AUTRE SPORT — ACCUEIL V2 (BANDES PLUS HAUTES)
+
+ZIP à déposer à la RACINE du dépôt GitHub de l'application.
+Remplacer les fichiers du même nom, sans supprimer les fichiers existants.
+
+- autre-sport-accueil-v2.webp : image approuvée, complète, texte intégré, 941 × 1672.
+- autre-sport-v1.css : zones transparentes alignées sur les boutons V2 ; ratio conservé.
+- autre-sport-v1.js : mêmes fonctions que V1, nouvelle image V2.
+- index.html : activation de CSS/JS version 2 pour éviter les anciens fichiers en cache.
+- sw.js : nouveau cache v100 avec l’image V2.
+- accueil-v1.js : routage du bouton Autre sport inchangé.
+
+Disponibles : navigations Autre sport, retour Accueil, boutons vers les écrans de préparation.
+Les écrans GPS, chronomètre, sports et historique fonctionnel seront ajoutés lors des étapes futures.
+Aucune modification des autres univers Musculation et Cuisine & Nutrition.

@@ -1,4 +1,4 @@
-/* AUTRE SPORT — écran principal V1. Aucun GPS ni historique factice.
+/* AUTRE SPORT — écran principal V2. Aucun GPS ni historique factice.
    Fonctionne avec le routeur existant de Ma Bibliothèque (state + render).
    Les zones transparentes suivent exactement les boutons du visuel validé. */
 (function(){
@@ -45,9 +45,9 @@
     screen.appendChild(heading);
     const img=document.createElement('img');
     img.className='as1-screen-image';
-    img.src='./autre-sport-accueil-v1.webp?v=1';
+    img.src='./autre-sport-accueil-v2.webp?v=2';
     img.alt='';
-    img.width=1024;img.height=1536;
+    img.width=941;img.height=1672;
     img.decoding='async';
     screen.appendChild(img);
     [
