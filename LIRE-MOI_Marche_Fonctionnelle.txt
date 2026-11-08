@@ -1,0 +1,14 @@
+MARCHE FONCTIONNELLE V1 — Ma Bibliothèque
+
+Dépose tous les fichiers de ce ZIP directement à la racine du dépôt GitHub, comme d’habitude. Ne supprime pas les autres fichiers de l’application.
+
+Contenu : index.html, sw.js, marche-suivi-v1.js, marche-suivi-v1.css, marche-paysage-v1.webp.
+
+Parcours : Accueil → Autre sport → Démarrer une activité → Marche.
+
+Marche : Démarrer, chronomètre réel, GPS si autorisé et disponible sous HTTPS, distance estimée, allure, Pause/Reprendre, Terminer, correction manuelle des km, sauvegarde locale puis historique Autre sport.
+
+Pour tester : dehors, GPS autorisé dans Chrome, téléphone déverrouillé et application visible. Le GPS web peut être interrompu écran verrouillé; la distance doit être vérifiée avant sauvegarde.
+
+Les calories ne sont pas calculées dans cette première version; la case affiche un tiret afin de ne pas montrer une valeur fictive.
+Les séances enregistrées restent sur le navigateur/appareil : elles ne se synchronisent pas encore avec la tablette.
