@@ -1,0 +1,9 @@
+CORRECTION — Accès à la sélection des sports
+
+1. Téléverser les 5 fichiers suivants à la RACINE du dépôt GitHub :
+   index.html, autre-sport-v2.js, autre-sport-v2.css, autre-sport-choix-v1.webp, sw.js.
+2. Remplacer index.html et sw.js existants, ajouter les deux nouveaux fichiers V2 et remplacer l’image si GitHub le propose.
+3. Attendre que GitHub Pages ait publié la mise à jour, puis fermer et rouvrir l’application ou actualiser dans le navigateur.
+4. Aller sur Accueil > Autre sport > Démarrer une activité > Marche.
+
+Le reste de Cuisine, Musculation, Autre sport et Marche est conservé. Les commandes GPS et chronomètre restent à développer.
