@@ -38,3 +38,15 @@ body.as1-active { overflow-y: auto; }
 body.as1-active #main { min-height:100dvh; }
 .as1-screen, .as1-screen-image { max-height:none !important; }
 .as1-screen-image { width:100%; height:auto; object-fit:contain; }
+
+
+/* Marche V1 — zones cliquables sur visuel 941 × 1672 */
+.as1-walk-screen { max-width:690px; }
+.as1-w-back { left:1.17%; top:1.20%; width:9.35%; height:5.10%; border-radius:50%; }
+.as1-w-start { left:2.87%; top:52.15%; width:92.88%; height:8.55%; border-radius:28px; }
+.as1-w-pause { left:3.19%; top:62.98%; width:44.42%; height:5.80%; border-radius:24px; }
+.as1-w-stop { left:52.39%; top:62.98%; width:42.93%; height:5.80%; border-radius:24px; }
+.as1-w-reset { left:30.50%; top:86.54%; width:39.11%; height:5.20%; border-radius:22px; }
+.as1-w-nav-home { left:0%; top:92.58%; width:33.26%; height:7.42%; }
+.as1-w-nav-sport { left:33.26%; top:92.58%; width:33.48%; height:7.42%; }
+.as1-w-nav-history { left:66.74%; top:92.58%; width:33.26%; height:7.42%; }

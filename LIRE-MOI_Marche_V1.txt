@@ -1,0 +1,10 @@
+Autre sport — Marche V1
+
+Fichiers inclus :
+- autre-sport-v1.js
+- autre-sport-v1.css
+- sw.js
+- autre-sport-marche-v1.webp
+
+Effet : le bouton “Démarrer une activité” de l'écran Autre sport ouvre maintenant l'écran Marche.
+Les boutons Démarrer, Pause, Terminer et Réinitialiser mènent provisoirement vers une page “En préparation”.
