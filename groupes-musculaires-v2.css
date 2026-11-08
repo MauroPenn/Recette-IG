@@ -1,0 +1,58 @@
+/* Page Exercices — groupes musculaires V2.
+   Dimensions et disposition identiques aux listes des exercices : 560 x 190,
+   2 colonnes sur écrans larges, 1 colonne sur téléphone.
+   Ne modifie AUCUNE fiche de détail existante. */
+.muscu-group-standard-list {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 560px)) !important;
+  gap: 14px !important;
+  justify-content: center !important;
+  align-items: start !important;
+  width: 100% !important;
+  max-width: 1180px !important;
+  box-sizing: border-box;
+  margin-inline: auto;
+}
+.muscu-group-standard-list > .muscu-group-standard-card,
+.muscu-group-standard-card {
+  display: block !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+  flex: initial !important;
+  width: 100% !important;
+  max-width: 560px !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  height: auto !important;
+  aspect-ratio: 560 / 190 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+  background: #08090b !important;
+  box-shadow: 0 10px 25px rgba(0,0,0,.24) !important;
+  line-height: 0 !important;
+  isolation: isolate !important;
+  cursor: pointer !important;
+  text-align: center !important;
+}
+.muscu-group-standard-card::before,
+.muscu-group-standard-card::after { content:none !important; display:none !important; }
+.muscu-group-standard-card > img {
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  max-width:none !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  border:0 !important;
+  border-radius:0 !important;
+  padding:0 !important;
+  margin:0 !important;
+}
+.muscu-group-standard-card:focus-visible { outline: 3px solid #ff9000 !important; outline-offset: 3px; }
+.muscu-group-standard-card:active { transform:scale(.994); }
+@media (max-width:750px) {
+  .muscu-group-standard-list { grid-template-columns: minmax(0, 560px) !important; gap: 10px !important; }
+}
