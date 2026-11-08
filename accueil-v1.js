@@ -1,4 +1,4 @@
-/* Accueil 6 univers V1 — ajouts isolés après tous les autres scripts.
+/* Accueil 6 univers V3 : design approuvé, images avec textes intégrés — ajouts isolés après tous les autres scripts.
    Les deux premiers univers réutilisent leurs liens et leur logique existants. */
 (function(){
   'use strict';
@@ -18,15 +18,14 @@
     pilates:'<circle cx="12" cy="12" r="7"/><path d="M4 12h16M12 5a9 9 0 0 1 0 14M12 5a9 9 0 0 0 0 14"/>',
     chart:'<path d="M4 20V12h3v8m4 0V7h3v13m4 0V3h3v17"/>'
   };
+  // The six validated cards already include their texts, icons and status badges.
+  // Do not put another text layer or gradient over these images.
   function cardHtml(u){
-    const src = './univers-'+u.id+'.webp?v=1';
-    const mob = './univers-'+u.id+'-mobile.webp?v=1';
-    return `<button type="button" class="uv1-card" data-uv1="${u.id}" style="--uv-accent:${u.accent}" aria-label="${u.title}${u.available?'':' — à venir'}">
-      <picture><source media="(max-width:650px)" srcset="${mob}"><img class="uv1-backdrop" src="${src}" alt="" loading="lazy" decoding="async"></picture>
-      <span class="uv1-badge${u.available?'':' uv1-upcoming'}">${u.available?'DISPONIBLE':'À VENIR'}</span>
-      <span class="uv1-text"><span class="uv1-icon" aria-hidden="true"><svg viewBox="0 0 24 24">${icons[u.symbol]}</svg></span>
-      <span class="uv1-title">${u.title}</span><span class="uv1-desc">${u.desc}</span>
-      <span class="uv1-cta">${u.cta} →</span></span></button>`;
+    const src = './univers-' + u.id + '-valide.webp?v=3';
+    const status = u.available ? 'Disponible' : 'À venir';
+    return `<button type="button" class="uv1-card" data-uv1="${u.id}" aria-label="${u.title} — ${status}" title="${u.title}">
+       <img class="uv1-full-card-image" src="${src}" alt="" loading="lazy" decoding="async">
+    </button>`;
   }
   function targetFor(legacy,kind){
     const name = kind === 'cuisine' ? /(?:^|\s)Cuisine(?:$|\s)/i : /Musculation/i;

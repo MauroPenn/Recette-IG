@@ -1,25 +1,19 @@
-/* Accueil six univers V1. N'intervient pas sur les pages Cuisine/Musculation. */
-.uv1-root { max-width: 1240px; margin: 18px auto 60px; color: #16231c; font-family: inherit; }
-.uv1-grid { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; align-items:stretch; }
-.uv1-card { --uv-accent:#168547; position:relative; isolation:isolate; display:flex; flex-direction:column; align-items:stretch; justify-content:flex-end; width:100%; min-width:0; min-height:270px; aspect-ratio:2.40; border:0; padding:18px 24px 21px; border-radius:24px; overflow:hidden; box-sizing:border-box; background:#11221c; color:#fff; box-shadow:0 7px 24px rgba(39,43,43,.10); cursor:pointer; text-align:left; font:inherit; }
-.uv1-card:focus-visible { outline:3px solid var(--uv-accent); outline-offset:4px; }
-.uv1-card:hover .uv1-backdrop { transform:scale(1.025); }
-.uv1-backdrop { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center center; transition:transform .25s ease; z-index:-2; }
-.uv1-card::before { content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(0,0,0,.16) 0,transparent 70%),linear-gradient(0deg,rgba(0,0,0,.48),transparent 65%); z-index:-1; }
-.uv1-badge { position:absolute; top:17px; left:20px; background:#e4f9e5; color:#0d5835; font-weight:850; font-size:.78rem; letter-spacing:.01em; border-radius:40px; padding:6px 14px; line-height:1.2; }
-.uv1-badge.uv1-upcoming { color:#503d1b; background:#fbefd0; }
-.uv1-text { position:relative; z-index:1; display:flex; flex-direction:column; align-items:flex-start; gap:4px; max-width:82%; }
-.uv1-icon { display:inline-flex; align-items:center; justify-content:center; flex:none; height:49px; width:49px; border-radius:14px; margin-bottom:3px; color:white; background:var(--uv-accent); box-shadow:0 5px 12px rgba(0,0,0,.16); }
-.uv1-icon svg { width:30px; height:30px; stroke:currentColor; stroke-width:2.4; fill:none; stroke-linecap:round; stroke-linejoin:round; }
-.uv1-title { color:white; font-weight:850; font-size:clamp(1.3rem,2.1vw,2rem); line-height:1.10; letter-spacing:-.025em; text-shadow:0 2px 3px rgba(0,0,0,.2); }
-.uv1-desc { color:white; font-size:clamp(.83rem,1.08vw,.97rem); line-height:1.38; font-weight:500; max-width:430px; }
-.uv1-cta { margin-top:4px; color:#fff; font-weight:820; font-size:clamp(.85rem,1.1vw,1rem); }
+/* Accueil 6 univers V3 — exact six vignettes du visuel validé.
+   Photos ET inscriptions sont présentes dans chaque fichier image.
+   Aucun filtre, dégradé ou assombrissement CSS supplémentaire. */
+.uv1-root { max-width:1240px; margin:18px auto 60px; color:#16231c; font-family:inherit; }
+.uv1-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; align-items:start; }
+.uv1-card { display:block; position:relative; box-sizing:border-box; width:100%; min-width:0; height:auto; aspect-ratio:610/319; margin:0; padding:0; overflow:hidden; border:0; background:transparent; border-radius:23px; font:inherit; text-align:left; line-height:0; cursor:pointer; isolation:isolate; box-shadow:0 7px 22px rgba(32,39,31,.08); }
+.uv1-card:nth-child(n+3) { aspect-ratio:610/399; }
+.uv1-card:nth-child(n+5) { aspect-ratio:610/395; }
+.uv1-full-card-image { display:block; width:100%; height:100%; object-fit:fill; border:0; }
+.uv1-card:hover { transform:translateY(-1px); }
+.uv1-card:focus-visible { outline:3px solid #2285c4; outline-offset:4px; }
 .uv1-legacy { display:none !important; }
 .uv1-placeholder { max-width:850px; margin:22px auto; padding:30px; min-height:260px; border-radius:22px; color:#fff; background:linear-gradient(125deg,var(--uv-accent),#17201f 92%); box-shadow:0 10px 22px rgba(0,0,0,.12); }
 .uv1-placeholder h2 { font-size:clamp(1.7rem,4vw,2.5rem); margin:18px 0 6px; color:#fff; }
 .uv1-placeholder p { font-size:1rem; color:#fff; line-height:1.5; }
 .uv1-back { background:#fff; color:#18241f; border:0; border-radius:12px; font-weight:750; padding:9px 16px; font-size:1rem; cursor:pointer; }
-@media (min-width:1100px) { .uv1-card { min-height:300px; } }
-@media (max-width:800px) { .uv1-grid { gap:12px; } .uv1-card { aspect-ratio:auto; min-height:300px; padding:16px 18px 19px; } .uv1-text { max-width:95%; } .uv1-title { font-size:1.55rem; } .uv1-desc { font-size:.86rem; } }
-@media (max-width:650px) { .uv1-root { margin:12px auto 38px; } .uv1-grid { grid-template-columns:1fr; gap:14px; } .uv1-card { min-height:345px; aspect-ratio:1.05; border-radius:22px; padding:18px 20px 23px; } .uv1-backdrop { object-position:center; } .uv1-card::before { background:linear-gradient(0deg,rgba(0,0,0,.47) 0%,transparent 75%); } .uv1-text { max-width:100%; } .uv1-title { font-size:1.85rem; } .uv1-desc { font-size:.95rem; } .uv1-cta { font-size:.98rem; } }
-@media (prefers-reduced-motion:reduce) { .uv1-backdrop { transition:none; } }
+@media(max-width:800px) { .uv1-grid { gap:12px; } .uv1-root { margin:12px auto 38px; } }
+@media(max-width:650px) { .uv1-grid { grid-template-columns:1fr; gap:14px; } .uv1-card { border-radius:22px; } }
+@media(prefers-reduced-motion:reduce) { .uv1-card:hover { transform:none; } }
