@@ -1,10 +1,10 @@
 // Ma Bibliothèque — ajout accueil Autre sport V1 à l’accueil 6 univers V3.
-// v101 : visuel V3 plein écran mobile, bandeaux hauts et zones cliquables recalées.
-const CACHE = "ma-bibliotheque-v101";
+// v102 : nouveau menu Musculation, accès direct sans écran intermédiaire.
+const CACHE = "ma-bibliotheque-v102";
 const CORE = [
   "./", "./index.html", "./styles.css", "./app.js", "./data.json",
   "./manifest.json", "./icon-192.png", "./icon-512.png",
-  "./pectoraux-v1.js", "./pectoraux-v1.css", "./dos-v1.js", "./dos-v1.css", "./epaules-v1.js", "./epaules-v1.css", "./biceps-v2.js", "./biceps-v2.css", "./triceps-v1.js", "./triceps-v1.css", "./jambes-v1.js", "./jambes-v1.css", "./abdominaux-v1.js", "./abdominaux-v1.css", "./groupes-musculaires-v2.js", "./groupes-musculaires-v2.css", "./accueil-v1.js", "./accueil-v1.css", "./autre-sport-v1.js", "./autre-sport-v1.css"
+  "./pectoraux-v1.js", "./pectoraux-v1.css", "./dos-v1.js", "./dos-v1.css", "./epaules-v1.js", "./epaules-v1.css", "./biceps-v2.js", "./biceps-v2.css", "./triceps-v1.js", "./triceps-v1.css", "./jambes-v1.js", "./jambes-v1.css", "./abdominaux-v1.js", "./abdominaux-v1.css", "./groupes-musculaires-v2.js", "./groupes-musculaires-v2.css", "./accueil-v1.js", "./accueil-v1.css", "./autre-sport-v1.js", "./autre-sport-v1.css", "./muscu-rubriques-v1.js", "./muscu-rubriques-v1.css"
 ];
 const PECTORAL_IMAGES = [
   "pompes-classiques", "pompes-inclinees", "pompes-declinees",
@@ -59,6 +59,13 @@ const ACCUEIL_IMAGES = ["./univers-cuisine-nutrition-valide.webp", "./univers-mu
 
 const AUTRE_SPORT_IMAGES = ["./autre-sport-accueil-v3.webp"];
 
+const MUSCU_RUBRIQUES_IMAGES = [
+  "./muscu-rubriques-en-tete-v1.webp",
+  "./muscu-rubriques-exercices-v1.webp",
+  "./muscu-rubriques-seances-v1.webp",
+  "./muscu-rubriques-navigation-v1.webp"
+];
+
 const MUSCLE_GROUPS = [
   "pectoraux", "dos", "epaules", "biceps", "triceps", "jambes", "abdominaux"
 ].map(x => "./exercice-groupe-" + x + ".webp");
@@ -85,7 +92,7 @@ self.addEventListener("install", event => {
     const cacheNames = await caches.keys();
     const hasPreviousCache = cacheNames.some(name => name.startsWith("ma-bibliotheque-") && name !== CACHE);
     if (hasPreviousCache) {
-      await Promise.all([...PECTORAL_IMAGES, ...DOS_IMAGES, ...EPAULES_IMAGES, ...BICEPS, ...TRICEPS_IMAGES, ...JAMBES_IMAGES, ...ABDOS_IMAGES, ...ACCUEIL_IMAGES, ...AUTRE_SPORT_IMAGES].map(async path => {
+      await Promise.all([...PECTORAL_IMAGES, ...DOS_IMAGES, ...EPAULES_IMAGES, ...BICEPS, ...TRICEPS_IMAGES, ...JAMBES_IMAGES, ...ABDOS_IMAGES, ...ACCUEIL_IMAGES, ...AUTRE_SPORT_IMAGES, ...MUSCU_RUBRIQUES_IMAGES].map(async path => {
         try {
           const response = await fetch(path, {cache:"no-store"});
           if (response.ok) await cache.put(path, response);
@@ -107,7 +114,7 @@ self.addEventListener("install", event => {
     const sources = [code, css, pectoralCode, epaulesCode, bicepsCode, tricepsCode, jambesCode, abdominauxCode].join("\n");
     const referencedImages = [...sources.matchAll(/\.\/[a-zA-Z0-9_-]+\.(?:webp|png)/g)]
       .map(m => m[0]);
-    const images = [...new Set([...referencedImages, ...PECTORAL_IMAGES, ...DOS_IMAGES, ...EPAULES_IMAGES, ...BICEPS, ...TRICEPS_IMAGES, ...JAMBES_IMAGES, ...ABDOS_IMAGES, ...MUSCLE_GROUPS, ...ACCUEIL_IMAGES, ...AUTRE_SPORT_IMAGES])];
+    const images = [...new Set([...referencedImages, ...PECTORAL_IMAGES, ...DOS_IMAGES, ...EPAULES_IMAGES, ...BICEPS, ...TRICEPS_IMAGES, ...JAMBES_IMAGES, ...ABDOS_IMAGES, ...MUSCLE_GROUPS, ...ACCUEIL_IMAGES, ...AUTRE_SPORT_IMAGES, ...MUSCU_RUBRIQUES_IMAGES])];
     await Promise.all(images.map(async path => {
       try {
         const response = await fetch(path, {cache:"no-store"});
@@ -145,7 +152,7 @@ self.addEventListener("fetch", event => {
   if (url.origin !== self.location.origin) return;
   const path = url.pathname;
   const nav = request.mode === "navigate" || path.endsWith("/") || path.endsWith("/index.html");
-  const freshFile = /\/(?:index\.html|styles\.css|app\.js|data\.json|manifest\.json|sw\.js|pectoraux-v1\.js|pectoraux-v1\.css|dos-v1\.js|dos-v1\.css|epaules-v1\.js|epaules-v1\.css|biceps-v2\.js|biceps-v2\.css|triceps-v1\.js|triceps-v1\.css|jambes-v1\.js|jambes-v1\.css|abdominaux-v1\.js|abdominaux-v1\.css|groupes-musculaires-v2\.js|groupes-musculaires-v2\.css|accueil-v1\.js|accueil-v1\.css|autre-sport-v1\.js|autre-sport-v1\.css|autre-sport-accueil-v3\.webp|univers-[a-z-]+-valide\.webp)$/.test(path);
+  const freshFile = /\/(?:index\.html|styles\.css|app\.js|data\.json|manifest\.json|sw\.js|pectoraux-v1\.js|pectoraux-v1\.css|dos-v1\.js|dos-v1\.css|epaules-v1\.js|epaules-v1\.css|biceps-v2\.js|biceps-v2\.css|triceps-v1\.js|triceps-v1\.css|jambes-v1\.js|jambes-v1\.css|abdominaux-v1\.js|abdominaux-v1\.css|groupes-musculaires-v2\.js|groupes-musculaires-v2\.css|accueil-v1\.js|accueil-v1\.css|autre-sport-v1\.js|autre-sport-v1\.css|muscu-rubriques-v1\.js|muscu-rubriques-v1\.css|autre-sport-accueil-v3\.webp|univers-[a-z-]+-valide\.webp)$/.test(path);
   if (nav || freshFile) {
     event.respondWith((async () => {
       const cache = await caches.open(CACHE);

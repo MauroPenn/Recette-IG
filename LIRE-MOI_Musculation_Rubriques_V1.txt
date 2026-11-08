@@ -1,0 +1,23 @@
+MUSCULATION — MENU DIRECT V1 / GITHUB
+
+MODIFICATIONS
+- L'écran "Choisissez votre univers d'entraînement" n'apparaît plus.
+  La vignette Musculation de l'accueil ouvre directement "Choisissez une rubrique".
+- Deux grandes cartes empilées : Exercices et Séances.
+- Anciennes cartes Autre sport et Historique retirées du menu Musculation.
+- Barre du bas : Accueil / Musculation / Historique (futur historique commun).
+- Espace sous Séances ajusté automatiquement à la hauteur du téléphone.
+- Sur appareil plus court, le défilement vertical est possible.
+- Les pages Exercices et Séances existantes ne sont pas modifiées.
+- Aucun effet sur Cuisine, Autre sport et les recettes.
+
+INSTALLATION
+Décompresser le ZIP, transférer tous les fichiers À LA RACINE du dépôt GitHub.
+Remplacer uniquement les fichiers portant le même nom, sans supprimer les autres.
+Le fichier index.html ajoute le nouveau module en fin de page.
+Le service worker passe à la version 102 pour actualiser les ressources.
+
+IMPORTANT
+La fonction Historique sportif global n'est pas encore développée.
+Le bouton Historique ouvre pour l'instant son écran "À venir", comme la
+vignette Historique de la page d'accueil.

@@ -1,0 +1,45 @@
+/* Musculation – Rubriques V1 : visuel approuvé, deux bandeaux sans deformation.
+   La zone entre Séances et la navigation s'adapte a la hauteur disponible. */
+body.mm1-active { background:#001d21; overflow-y:auto; }
+body.mm1-active #app > header.topbar,
+body.mm1-active #bottomNav { display:none !important; }
+body.mm1-active #main {
+  width:100%; max-width:none; min-height:100dvh; box-sizing:border-box;
+  margin:0 !important; padding:0 !important; background:#001d21;
+}
+.mm1-screen {
+  width:100%; max-width:720px; min-height:100dvh;
+  display:flex; flex-direction:column; margin:0 auto;
+  background:#001e22; box-sizing:border-box;
+  box-shadow:0 10px 45px rgba(0,0,0,.22);
+}
+.mm1-hero { position:relative; width:100%; flex:none; }
+.mm1-hero img,
+.mm1-card img,
+.mm1-footer img {
+  width:100%; height:auto; display:block; object-fit:contain;
+}
+.mm1-menu-cards { display:flex; flex-direction:column; gap:clamp(8px,2.5vw,22px); margin:0; padding:0; flex:none; }
+.mm1-card { display:block; position:relative; width:100%; padding:0; margin:0; border:0; border-radius:0; background:transparent; cursor:pointer; -webkit-tap-highlight-color:transparent; }
+.mm1-card:focus-visible { outline:3px solid #ff8b18; outline-offset:-4px; }
+.mm1-card:active { filter:brightness(1.08); }
+.mm1-between {
+  flex:1 0 clamp(30px,7dvh,76px); min-height:30px;
+  background:radial-gradient(ellipse at 50% 15%,#002c30 0%,#001d21 64%,#001719 100%);
+}
+.mm1-footer { position:relative; width:100%; flex:none; margin-top:auto; }
+.mm1-hotspot {
+  position:absolute; z-index:2; display:block; border:0; border-radius:20px;
+  color:transparent; background:transparent; cursor:pointer; padding:0;
+  -webkit-tap-highlight-color:rgba(255,151,16,.15);
+}
+.mm1-hotspot:focus-visible { outline:3px solid #fff; outline-offset:-3px; background:rgba(255,151,16,.07); }
+.mm1-hotspot:active { background:rgba(255,255,255,.12); }
+.mm1-back {left:2.5%;top:4%;width:11%;height:23%;border-radius:50%;}
+.mm1-nav-home {left:1%;top:7%;width:32%;height:75%;}
+.mm1-nav-muscu {left:33%;top:7%;width:34%;height:75%;}
+.mm1-nav-history {left:67%;top:7%;width:32%;height:75%;}
+.mm1-sr-only { position:absolute !important; width:1px;height:1px; padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0; }
+@media(min-width:760px){.mm1-screen{margin:18px auto 38px;border-radius:24px;overflow:hidden}}
+@media(max-width:759px){.mm1-screen{max-width:none;box-shadow:none}}
+@media(prefers-reduced-motion:reduce){.mm1-card:active{filter:none}}
