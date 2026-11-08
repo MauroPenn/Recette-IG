@@ -1,4 +1,4 @@
-/* JAMBES V1 : même rendu que Pectoraux / Dos / Épaules / Biceps. */
+/* JAMBES V4 : en-tête identique à Biceps/Triceps, images V3 inchangées. */
 .muscu-jambes-v1{max-width:1180px}
 .muscu-jambes-list{display:grid;grid-template-columns:repeat(2,minmax(0,560px));justify-content:center;gap:14px;width:100%}
 .muscu-jambes-card,.muscu-jambes-fiche-visuel{box-sizing:border-box;display:block;position:relative;aspect-ratio:560/190;width:100%;max-width:560px;padding:0;margin:0;overflow:hidden;border:0;border-radius:0;background:#080c10;isolation:isolate}
@@ -30,3 +30,11 @@
   .muscu-jambes-fiche-stats strong{font-size:.9rem}
   .muscu-jambes-fiche-section{padding:14px}
 }
+
+/* Garder l'univers musculation sombre dans toute la page Jambes. */
+.muscu-biceps-v1.muscu-jambes-v1{background:#0b1018;color:#fff}
+.muscu-jambes-v1 .muscu-biceps-heading h2{color:#fff}
+.muscu-jambes-v1 .muscu-biceps-heading p{color:#e1e4e7}
+.muscu-jambes-v1 .muscu-jambes-list{margin-top:4px}
+.muscu-jambes-fiche-photo{display:block;position:absolute;inset:0;overflow:hidden;z-index:0}
+.muscu-jambes-fiche-photo img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}

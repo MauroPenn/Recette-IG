@@ -1,6 +1,6 @@
-// Ma Bibliothèque — mise à jour Jambes sans écrasement.
-// v92 : nouveau cadrage proportionnel des bandeaux Jambes, sans étirement.
-const CACHE = "ma-bibliotheque-v92";
+// Ma Bibliothèque — Jambes V4 : en-tête conforme Biceps/Triceps, photos V3 conservées.
+// v93 : nouveau rendu du haut de page sans modifier les dix bandeaux validés.
+const CACHE = "ma-bibliotheque-v93";
 const CORE = [
   "./", "./index.html", "./styles.css", "./app.js", "./data.json",
   "./manifest.json", "./icon-192.png", "./icon-512.png",

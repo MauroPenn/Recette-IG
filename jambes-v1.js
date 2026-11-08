@@ -213,15 +213,18 @@ function renderMuscuJambes(){
       ${jambesPhotoMarkup(exercice,false)}
     </button>`).join("");
   main.innerHTML = `
-    <section class="panel muscu-jambes-v1">
-      <button class="back-chip" id="muscuJambesBack">← Retour</button>
-      <header class="panel-header">
+    <section class="muscu-biceps-v1 muscu-jambes-v1" aria-label="Exercices jambes">
+      <button type="button" class="muscu-back-pill muscu-biceps-back" id="muscuJambesBack" aria-label="Retour aux groupes musculaires">
+        <span class="muscu-back-arrow">←</span><span>Retour</span>
+      </button>
+      <div class="muscu-biceps-heading">
+        <div class="muscu-biceps-icon" aria-hidden="true">⌁</div>
         <div>
-          <p class="section-kicker">Exercices</p>
+          <div class="muscu-biceps-kicker">EXERCICES</div>
           <h2>Jambes</h2>
           <p>10 exercices pour renforcer les jambes à la maison</p>
         </div>
-      </header>
+      </div>
       <div class="muscu-jambes-list">${cards}</div>
     </section>`;
   document.getElementById("muscuJambesBack")?.addEventListener("click", ()=>{ state.view = "muscu-exercises"; render(); });
@@ -234,10 +237,12 @@ function renderMuscuJambes(){
 function renderMuscuJambesDetail(){
   const exercice = jambesById(state.selected) || jambesExercices[0];
   main.innerHTML = `
-    <section class="panel muscu-jambes-fiche">
-      <button class="back-chip" id="muscuJambesDetailBack">← Retour</button>
+    <section class="muscu-biceps-v1 muscu-jambes-v1 muscu-jambes-fiche" aria-label="Fiche ${esc(exercice.titre)}">
+      <button type="button" class="muscu-back-pill muscu-biceps-back" id="muscuJambesDetailBack" aria-label="Retour à la liste Jambes">
+        <span class="muscu-back-arrow">←</span><span>Retour aux jambes</span>
+      </button>
       <header class="muscu-jambes-fiche-en-tete">
-        <div class="section-kicker">Exercice jambes</div>
+        <div class="muscu-biceps-kicker">JAMBES · FICHE EXERCICE</div>
         <h2>${esc(exercice.titre)}</h2>
         <p>${esc(exercice.cible)}</p>
       </header>
@@ -258,7 +263,7 @@ function renderMuscuJambesDetail(){
       <section class="muscu-jambes-fiche-section"><h3>Erreurs à éviter</h3><p>${esc(exercice.erreurs)}</p></section>
       <p class="muscu-jambes-precaution">Adapte l’amplitude et la charge à ton niveau. Arrête si une douleur articulaire apparaît, notamment aux genoux, aux hanches ou au bas du dos.</p>
     </section>`;
-  document.getElementById("muscuJambesDetailBack")?.addEventListener("click",()=>{ renderMuscuJambes(); });
+  document.getElementById("muscuJambesDetailBack")?.addEventListener("click",()=>{ state.view = "muscu-jambes"; render(); });
 }
 const ancienneMiseAJourBandeauJambes = updateShell;
 updateShell = function(){
