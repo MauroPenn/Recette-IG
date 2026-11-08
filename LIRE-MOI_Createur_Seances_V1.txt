@@ -1,0 +1,34 @@
+MUSCULATION — CRÉATEUR DE SÉANCES V1
+
+Installation dans GitHub :
+1. Décompresser le ZIP.
+2. Déposer les 4 fichiers de l'application à la racine du dépôt GitHub.
+3. Remplacer index.html et sw.js existants ; ne supprimer AUCUN autre fichier.
+4. Valider les changements (Commit changes), puis réouvrir l'application.
+
+Fichiers de l'application à injecter :
+- index.html
+- sw.js
+- seances-createur-v1.js
+- seances-createur-v1.css
+
+Parcours : Musculation > Séances > Créer une séance personnalisée.
+
+Fonctionnalités livrées :
+- Créer une séance et lui donner un nom.
+- Choisir Circuit Training (durée d'effort, pause entre exercices, nombre de tours, pause entre les tours)
+  OU Séries / répétitions (nombre de séries, répétitions, pause entre séries, pause entre exercices).
+- Sélectionner les exercices existants avec leurs photos, par groupe ou via la recherche.
+- Retirer et réorganiser les exercices ; en mode séries, ajuster individuellement séries/répétitions/repos.
+- Enregistrer les séances localement sur ce navigateur/appareil, les retrouver dans « Mes séances »,
+  les modifier, les dupliquer ou les supprimer avec confirmation.
+
+IMPORTANT — LIMITES DE CETTE ÉTAPE
+- Le chronomètre d'entraînement et les trois écrans validés (effort, pause, fin de tour)
+  ne sont PAS encore reliés au créateur. Ils seront ajoutés après validation du présent écran.
+- Les données restent dans le stockage local du navigateur/appareil, sans synchronisation entre PC et téléphone.
+  Ne pas effacer les données de site ou désinstaller l'application sans sauvegarde préalable.
+- La Marche, le GPS et les écrans d'exercices existants restent inchangés.
+
+Contrôles : syntaxe JS vérifiée ; parcours création/sélection/sauvegarde/modification/duplication
+validé dans un navigateur automatisé avec des données d'exercice simulées.
