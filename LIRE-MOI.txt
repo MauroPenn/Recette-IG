@@ -1,0 +1,21 @@
+MUSCULATION - LECTEUR V2 : RETOUR AUX VISUELS VALIDÉS
+
+Ce ZIP corrige UNIQUEMENT la présentation du lecteur de séances :
+- exercice en cours : photo dynamique, anneau orange, effort et repos, progression du tour
+- récupération : anneau orange et illustration de l'exercice suivant
+- fin du tour : photo EXACTE du sportif qui boit, extraite du visuel validé
+- séries/répétitions : action « Série terminée » et pauses inchangées
+
+Les chronomètres sont RÉELS, pas les chiffres figés de la maquette.
+Cette version utilise les images des fiches d'exercices pour chaque programme.
+
+INJECTION GITHUB : déposer les 5 fichiers ci-dessous dans le dossier racine :
+  index.html
+  sw.js
+  seances-lecteur-v2.js
+  seances-lecteur-v2.css
+  muscu-hydratation-validee-v2.webp
+Remplacer index.html et sw.js. Ne pas supprimer les autres.
+
+Les séances enregistrées localement restent conservées.
+Les créations de séances, les fiches d'exercices et la Marche ne sont pas modifiées.
