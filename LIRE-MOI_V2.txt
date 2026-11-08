@@ -1,0 +1,30 @@
+MUSCULATION — CRÉATEUR DE SÉANCES V2, CORRECTION
+=================================================
+
+4 fichiers de l'application :
+- index.html  (OBLIGATOIRE à remplacer)
+- sw.js      (OBLIGATOIRE à remplacer)
+- seances-createur-v2.js  (nouveau)
+- seances-createur-v2.css (nouveau)
+
+Installation :
+1. Décompresse le ZIP.
+2. Dans ton dépôt GitHub, Add file > Upload files.
+3. Dépose les 4 fichiers à la RACINE, dans le même dossier que app.js.
+4. Clique sur Commit changes. NE supprime PAS les autres fichiers.
+5. Assure-toi que index.html n'est pas un deuxième fichier avec un nom différent.
+6. Recharge l'application. La page Musculation > Séances doit montrer un bouton
+   « Créer une séance personnalisée » et 4 grands bandeaux.
+7. Appuie sur Créer une séance : le formulaire noir/orange doit s'ouvrir.
+
+Détails :
+- Format uniforme des quatre bandeaux : ratio 560/190, sans étirement.
+- Les bandeaux modèles ouvrent un formulaire prérempli, modifiable et enregistrable.
+- Les exercices réutilisent leurs photos existantes et les 7 groupes musculaires.
+- Modes Circuit Training et Séries/Répétitions, avec réglages individuels.
+- Les séances sauvegardées restent dans localStorage avec la clé
+  mb_muscu_seances_v1 : elles ne sont pas effacées par cette mise à jour.
+- La Marche/GPS et les autres pages ne sont pas modifiées.
+
+IMPORTANT : les écrans de déroulement de séance chronométré seront branchés
+ultérieurement. Cette version sert à CRÉER et ENREGISTRER les séances.

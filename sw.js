@@ -1,10 +1,10 @@
 // Ma Bibliothèque — ajout accueil Autre sport V1 à l’accueil 6 univers V3.
-// v107 : maintien de l’écran actif pendant les séances Marche GPS.
-const CACHE = "ma-bibliotheque-v108";
+// v109 : créateur de séances relié à index.html ; cartes 560x190 et nouveaux fichiers V2.
+const CACHE = "ma-bibliotheque-v109";
 const CORE = [
   "./", "./index.html", "./styles.css", "./app.js", "./data.json",
   "./manifest.json", "./icon-192.png", "./icon-512.png",
-  "./pectoraux-v1.js", "./pectoraux-v1.css", "./dos-v1.js", "./dos-v1.css", "./epaules-v1.js", "./epaules-v1.css", "./biceps-v2.js", "./biceps-v2.css", "./triceps-v1.js", "./triceps-v1.css", "./jambes-v1.js", "./jambes-v1.css", "./abdominaux-v1.js", "./abdominaux-v1.css", "./groupes-musculaires-v2.js", "./groupes-musculaires-v2.css", "./accueil-v1.js", "./accueil-v1.css", "./autre-sport-v2.js", "./autre-sport-v2.css", "./marche-suivi-v1.js", "./marche-suivi-v1.css", "./sport-ecran-actif-v1.js", "./seances-createur-v1.js", "./seances-createur-v1.css"
+  "./pectoraux-v1.js", "./pectoraux-v1.css", "./dos-v1.js", "./dos-v1.css", "./epaules-v1.js", "./epaules-v1.css", "./biceps-v2.js", "./biceps-v2.css", "./triceps-v1.js", "./triceps-v1.css", "./jambes-v1.js", "./jambes-v1.css", "./abdominaux-v1.js", "./abdominaux-v1.css", "./groupes-musculaires-v2.js", "./groupes-musculaires-v2.css", "./accueil-v1.js", "./accueil-v1.css", "./autre-sport-v2.js", "./autre-sport-v2.css", "./marche-suivi-v1.js", "./marche-suivi-v1.css", "./sport-ecran-actif-v1.js", "./seances-createur-v2.js", "./seances-createur-v2.css"
 ];
 const PECTORAL_IMAGES = [
   "pompes-classiques", "pompes-inclinees", "pompes-declinees",
