@@ -1,0 +1,14 @@
+AUTRE SPORT — V3 PLEINE HAUTEUR SUR MOBILE
+
+Nouvelle image : 850 × 1791 pixels, plus verticale que la V2.
+- Grands bandeaux : Démarrer, Historique & statistiques et Paramètres.
+- Personnages, textes, flèches et icônes conservés à leurs proportions (aucun étirement).
+- Barre d'état Android artificielle supprimée du visuel : le téléphone affiche la vraie.
+- Les boutons restent actifs et les pages provisoires inchangées.
+- Défilement normal sur les appareils dont l'écran est moins haut.
+
+Copier les fichiers du ZIP À LA RACINE de ton dépôt GitHub, en remplaçant ceux de même nom.
+Ne pas supprimer les autres fichiers.
+Après la mise à jour, recharger l'application pour forcer l'actualisation du cache V101.
+
+Cette mise à jour concerne uniquement la page principale Autre sport ; Cuisine/Musculation ne sont pas modifiées.
