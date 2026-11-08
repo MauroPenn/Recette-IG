@@ -1,0 +1,32 @@
+MARCHE — V3 CORRECTION DU CHARGEMENT (8 NOVEMBRE 2026)
+
+CAUSE IDENTIFIÉE SUR LE DÉPÔT GITHUB :
+Le fichier index.html publié n'appelait ni marche-suivi-v1.js ni marche-suivi-v1.css.
+Par conséquent, l'ancien écran avec « 5,8 km » et « En préparation » continuait
+à s'afficher. Le module sport-ecran-actif-v1.js manquait également.
+
+LES 6 FICHIERS À COPIER À LA RACINE DU DÉPÔT :
+- index.html                   ← OBLIGATOIRE, corrige la cause de l'erreur
+- sw.js                       ← version de cache v107
+- marche-suivi-v1.js          ← vrai chrono, suivi GPS, sauvegarde locale, Wake Lock
+- marche-suivi-v1.css         ← affichage du suivi dynamique
+- sport-ecran-actif-v1.js     ← maintient l'écran allumé pendant la marche active
+- marche-paysage-v1.webp      ← illustration de l'écran Marche
+
+NE PAS TOUCHER aux autres fichiers (Musculation, Recettes, etc.).
+Dans GitHub : Add file > Upload files, déposer les 6 fichiers à la racine
+et valider avec « Commit changes ». Les doublons remplacent les versions actuelles.
+
+POUR VÉRIFIER :
+1. Ouvrir l'application et actualiser après publication GitHub Pages.
+2. Aller dans Autre sport > Démarrer une activité > Marche.
+3. AVANT de démarrer, l'écran doit indiquer Distance 0,00 km et Durée 00:00:00.
+   Il ne doit PLUS afficher 5,8 km et 01:12:36.
+4. Appuyer sur Démarrer : autoriser la localisation. Le chronomètre avance,
+   le système demande de conserver l'écran allumé.
+5. Tester Pause, Reprendre, Terminer, distance manuelle et Enregistrer.
+6. Une séance sauvegardée apparaît dans l'historique local.
+
+ATTENTION : GPS nécessite HTTPS et autorisation. Une PWA ne garantit pas le suivi
+GPS en arrière-plan ou écran verrouillé. Wake Lock peut être refusé par Android.
+La séance est sauvegardée sur cet appareil, non synchronisée entre appareils.

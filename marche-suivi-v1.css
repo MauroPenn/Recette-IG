@@ -64,3 +64,8 @@ body.ml1-active #main { width:100%;max-width:none;margin:0!important;padding:0!i
 .ml1-empty {padding:32px 15px;border-radius:15px;background:#00535b;text-align:center;line-height:1.6;color:#d7f4f8;}
 @media(min-width:760px) {.ml1-screen {border-radius:26px;min-height: min(100dvh,1300px);margin:16px auto 42px;box-shadow:0 16px 45px rgba(0,0,0,.3);}.ml1-hero{height:340px;}}
 @media(max-width:420px){.ml1-metric{padding:10px 6px;gap:7px;}.ml1-metric .ml1-svg {width:24px;height:24px;padding:7px;}.ml1-metric span{font-size:.75rem;}.ml1-metric strong{font-size:1.16rem;}.ml1-hero-copy h1{font-size:3.05rem;}}
+
+/* Marche V2 — indicateur discret du maintien de l'écran. */
+.ml1-screen-note {font-size:.81rem;line-height:1.35;margin:7px 2px 0;color:#d6f2e6;}
+.ml1-screen-note-active {color:#a5ffaf;font-weight:750;}
+.ml1-screen-note-warning {color:#ffd4aa;}

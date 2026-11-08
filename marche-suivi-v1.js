@@ -110,12 +110,15 @@
     catch(_){current.gpsStatus='error';current.gpsNote='Impossible de démarrer le GPS. Saisie manuelle disponible.';}
     refreshWalk();
   }
+  const keepScreen=()=>window.SportScreenAwake?.start();
+  const allowSleep=()=>window.SportScreenAwake?.stop();
   function begin(){
     if(!current||current.status==='idle'||current.status==='finished'){
       current={status:'paused',startedISO:new Date().toISOString(),accumulatedMs:0,startedMs:null,distanceMeters:0,route:[],lastAccepted:null,gpsStatus:'paused',gpsNote:savedStatus.detail};
     }
     if(current.status==='running')return;
     current.status='running';current.startedMs=Date.now();current.lastAccepted=null;
+    keepScreen(); // called directly from the Start/Resume button gesture
     if(!ticker)ticker=setInterval(()=>{
       refreshWalk();
       if(Date.now()-lastUiSaved>3000){persistDraft();lastUiSaved=Date.now();}
@@ -127,19 +130,19 @@
     if(!current||current.status!=='running')return;
     current.accumulatedMs=elapsed();current.startedMs=null;current.status='paused';
     current.lastAccepted=null;current.gpsStatus='paused';current.gpsNote='Séance en pause. Reprends pour relancer le GPS.';
-    stopGPS();stopTicker();persistDraft();refreshWalk();
+    allowSleep();stopGPS();stopTicker();persistDraft();refreshWalk();
   }
   function finish(){
     if(!current || !['running','paused'].includes(current.status))return;
     if(current.status==='running'){current.accumulatedMs=elapsed();current.startedMs=null;}
     current.status='finished';current.finishedISO=new Date().toISOString();
-    stopGPS();stopTicker();safeRemove(DRAFT);
+    allowSleep();stopGPS();stopTicker();safeRemove(DRAFT);
     finished={...current,distanceMeters:round(current.distanceMeters,1)};
     state.view='marche-v1-summary';render();
   }
   function reset(){
     if(current && elapsed()>0 && !confirm('Effacer la marche en cours ?'))return;
-    stopGPS();stopTicker();safeRemove(DRAFT);current=null;finished=null;
+    allowSleep();stopGPS();stopTicker();safeRemove(DRAFT);current=null;finished=null;
     state.view='autre-sport-walk';render();
   }
   const icons={
@@ -178,6 +181,7 @@
       if(!confirm('La marche est en cours. La mettre en pause et quitter cet écran ?'))return;
       pause();
     }
+    if(view!=='autre-sport-walk')allowSleep();
     state.view=view;
     if(view==='autre-sport-section')state.as1Section='history';
     render();
@@ -201,6 +205,7 @@
             <div class="ml1-metric">${svg('fire')}<div><span>Calories</span><strong>— kcal</strong></div></div>
           </div>
           <p id="ml1GpsNote" class="ml1-note">Le GPS sera demandé au démarrage.</p>
+          <p id="ml1ScreenNote" class="ml1-screen-note" role="status" aria-live="polite">Écran maintenu allumé pendant la marche si le téléphone l’autorise.</p>
         </section>
         <div class="ml1-actions">
           <button type="button" class="ml1-btn ml1-btn-primary" id="ml1Start">▶ <span>Démarrer</span></button>
@@ -210,7 +215,7 @@
           </div>
         </div>
         <section class="ml1-info"><div>${svg('gps')} <strong>Progression de la séance</strong></div>
-          <p>Le GPS calcule la distance lorsque le signal est suffisamment précis. Si tu verrouilles ton téléphone, le suivi peut s’interrompre.</p>
+          <p>Le GPS calcule la distance lorsque le signal est suffisamment précis. L’écran restera allumé pendant la marche si le téléphone l’autorise. En arrière-plan, le suivi GPS peut s’interrompre.</p>
           <button type="button" class="ml1-link" id="ml1Reset">Réinitialiser la séance</button>
         </section>
       </div>${footer()}
@@ -221,6 +226,7 @@
     $$('#ml1Finish').addEventListener('click',finish);
     $$('#ml1Reset').addEventListener('click',reset);
     attachFooter();refreshWalk();
+    if(current?.status==='running')keepScreen();
     if(current?.status==='running' && !ticker) ticker=setInterval(refreshWalk,650);
   }
   function refreshWalk(){
@@ -234,6 +240,23 @@
     $$('#ml1GpsStatus').textContent=stat[stateCode]||'GPS inactif';
     $$('#ml1GpsLed').className='ml1-gps-led '+('ml1-gps-'+stateCode);
     $$('#ml1GpsNote').textContent=current?.gpsNote||savedStatus.detail;
+    const screenNote=$$('#ml1ScreenNote');
+    if(screenNote){
+      const w=window.SportScreenAwake?.getStatus()||'unsupported';
+      const isWalking=current?.status==='running';
+      const messages={
+        active:'✓ Écran maintenu allumé pendant la marche.',
+        requesting:'Activation du maintien de l’écran…',
+        released:'L’écran peut se mettre en veille : maintien interrompu par le téléphone.',
+        unavailable:'Maintien de l’écran refusé : vérifie la batterie et le mode économie d’énergie.',
+        unsupported:'Maintien de l’écran non disponible sur ce navigateur.',
+        hidden:'Application en arrière-plan : maintien de l’écran suspendu.',
+        off:'Écran maintenu allumé pendant la marche si le téléphone l’autorise.'
+      };
+      screenNote.textContent=isWalking?messages[w]||messages.unavailable:current?.status==='paused'?'Écran autorisé à s’éteindre pendant la pause.':messages.off;
+      screenNote.classList.toggle('ml1-screen-note-active',isWalking&&w==='active');
+      screenNote.classList.toggle('ml1-screen-note-warning',isWalking&&['released','unavailable','unsupported'].includes(w));
+    }
     const status=current?.status||'idle';
     const start=$$('#ml1Start');
     start.disabled=status==='running';
@@ -336,6 +359,7 @@
     if(v==='marche-v1-history' || (v==='autre-sport-section' && state.as1Section==='history')){
       updateShell();showHistory();return;
     }
+    allowSleep();
     document.body.classList.remove('ml1-active');
     return previousRender.apply(this,arguments);
   };
@@ -345,5 +369,6 @@
       refreshWalk();
     }
   });
-  window.addEventListener('pagehide',()=>{persistDraft();stopGPS();stopTicker();});
+  window.addEventListener('pagehide',()=>{allowSleep();persistDraft();stopGPS();stopTicker();});
+  window.SportScreenAwake?.onChange(()=>refreshWalk());
 })();
