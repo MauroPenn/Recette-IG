@@ -1,0 +1,30 @@
+MUSCULATION — SIGNAUX SONORES V1 (Version 112)
+
+INSTALLATION
+1. Décompresser le ZIP.
+2. Envoyer à la RACINE du dépôt GitHub les 5 fichiers de l’application :
+   - index.html (remplacer)
+   - sw.js (remplacer)
+   - muscu-son-v1.js (nouveau)
+   - muscu-son-v1.css (nouveau)
+   - seances-lecteur-v3.js (nouveau)
+3. Valider les changements dans GitHub et attendre la publication.
+4. Fermer puis rouvrir l’application.
+5. Musculation > Séances > Mes séances > Choisir une séance > Démarrer.
+6. Bouton 🔊 pendant la séance, ou “Réglages sonores” dans le détail.
+
+EFFETS
+- Début d’une séance et d’un nouveau tour : signal distinct.
+- Décompte des 3 dernières secondes d’effort ET de récupération.
+- Fin d’exercice et validation manuelle d’une série : son de transition.
+- Fin de tour : signal de réussite, avec visuel du sportif qui boit.
+- Fin complète de la séance : courte mélodie originale.
+- Volume, bips de décompte, fin de tour et de séance modifiables.
+- Pas de MP3, audio Web Audio, compatible si accepté par le navigateur.
+
+REMARQUES
+- Le volume dépend aussi du volume multimédia du téléphone, mode silencieux et permissions Web Audio.
+- Rien à changer aux séances prédéfinies ou aux données enregistrées.
+- Les trois écrans Musculation validés restent identiques hormis le bouton 🔊.
+- La Marche / GPS n’est pas modifiée.
+- Si la séance est mise en pause ou que l’écran devient invisible, les sons sont arrêtés.

@@ -1,0 +1,21 @@
+/* Paramètres sonores discrets, indépendants des visuels validés */
+.mp1-sound-settings{width:38px;height:38px;flex:0 0 38px;border:1px solid #ff9223;border-radius:50%;background:#17252a;color:#ffbe65;font-size:21px;display:grid;place-items:center;cursor:pointer;padding:0}
+.mp1-top.mp2-top .mp1-sound-settings{margin-left:auto}
+.mp1-top.mp2-top .mp1-end-small{margin-left:0}
+.mp1-sound-detail-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin:6px 0;padding:11px 15px;border:1px solid #f8972a;border-radius:16px;background:#1d292b;color:#fff;font-weight:800}
+.mb-sound-overlay{z-index:99999;position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:18px;background:rgba(0,0,0,.8);overflow-y:auto}
+.mb-sound-dialog{width:min(100%,460px);max-height:90dvh;overflow:auto;box-sizing:border-box;padding:20px;border-radius:23px;border:2px solid #ff8b06;background:linear-gradient(140deg,#16282b,#080e13);color:#fff;box-shadow:0 20px 80px #000e;font-family:system-ui,-apple-system,sans-serif}
+.mb-sound-dialog button{cursor:pointer;font-family:inherit}
+.mb-sound-title{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:17px}
+.mb-sound-title h2{margin:0;color:#fff;font-size:clamp(19px,5.8vw,25px)}
+#mbSoundClose{width:38px;height:38px;background:#29393e;color:#fff;border:1px solid #6e8589;border-radius:50%;font-size:18px}
+.mb-sound-check{display:flex;align-items:center;gap:10px;margin:12px 0;padding:8px 0;line-height:1.36;font-size:15px}
+.mb-sound-check input{width:22px;height:22px;accent-color:#ff8800;flex-shrink:0}
+.mb-sound-volume{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;margin:16px 0}
+.mb-sound-volume input{grid-column:1/-1;width:100%;accent-color:#ff8800}
+.mb-sound-volume strong{color:#ffb64d;font-variant-numeric:tabular-nums}
+.mb-sound-test,.mb-sound-done{display:block;width:100%;min-height:49px;margin-top:12px;border-radius:17px;color:white;font-size:16px;font-weight:800}
+.mb-sound-test{background:#213338;border:1px solid #86aeb3}.mb-sound-test:disabled{opacity:.4}
+.mb-sound-done{background:linear-gradient(#ffa424,#ee7400);border:1px solid #ffd085}
+.mb-sound-help{font-size:12px;line-height:1.5;color:#bdd1d2}
+@media(max-width:390px){.mp1-brand{font-size:15px}.mp1-top.mp2-top{gap:4px}.mp1-sound-settings{width:34px;height:34px;flex-basis:34px}.mp1-top.mp2-top .mp1-end-small{width:34px;height:34px}}
