@@ -1,0 +1,42 @@
+MUSCULATION — HISTORIQUE V1
+==========================
+Pour le dépôt GitHub : MauroPenn/Recette-IG
+
+FICHIERS À INSTALLER À LA RACINE DU DÉPÔT :
+- index.html (remplace la version actuelle)
+- muscu-historique-v1.js (nouveau fichier)
+- muscu-historique-v1.css (nouveau fichier)
+
+Aucun autre fichier n'est à remplacer. Ne supprime aucun autre fichier du dépôt.
+Les sons de cloche, les images, les chronomètres, le lecteur de séances v4,
+le créateur de séances, le GPS Marche et les autres rubriques sont conservés.
+
+APRÈS INSTALLATION :
+1. Dans GitHub : Add file → Upload files. Déposer les 3 fichiers ci-dessus.
+2. Valider avec Commit changes.
+3. Vérifier que GitHub Pages / Actions a terminé avec succès.
+4. Sur le téléphone, connecter Internet, fermer et rouvrir l'application.
+5. Ouvrir Musculation → Historique : tableau de bord, filtres Semaine/Mois/Année/Tout,
+   durée totale, séance par séance, bouton « Voir le détail » et suppression confirmée.
+6. Tester une courte séance : à la fin, cliquer sur « Enregistrer la séance ».
+   L'application doit ouvrir le nouvel historique avec un message de confirmation.
+7. Vérifier aussi l'accès depuis Musculation → Séances → Historique des séances.
+
+IMPORTANT :
+- Les données sont stockées localement dans le navigateur du téléphone
+  (clé conservée : mb_muscu_historique_v1).
+- Les séances précédemment enregistrées sont réutilisées et ne sont pas effacées.
+- Les informations affichées correspondent au bilan existant : durée, nom,
+  mode, exercices prévus, efforts ou séries validés. Les répétitions individuelles
+  et les calories ne sont pas inventées.
+- Les données ne sont pas synchronisées entre appareils : ne pas effacer les
+  données du site ou désinstaller l'application sans sauvegarde préalable.
+- Cette mise à jour ne modifie pas sw.js : les nouveaux fichiers sont chargés
+  lors de la première ouverture en ligne, puis pourront être mis en cache
+  comme les autres ressources par le service worker existant.
+
+Contrôles effectués :
+- Syntaxe JS vérifiée avec Node.js.
+- Tests de la navigation, du filtrage, de l'affichage, de la suppression,
+  et du retour après enregistrement réalisés dans un environnement simulé.
+- Un contrôle final sur le téléphone est nécessaire avant validation.

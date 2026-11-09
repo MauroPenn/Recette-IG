@@ -1,0 +1,61 @@
+/* MUSCULATION — HISTORIQUE V1. Indépendant des CSS des séances validées. */
+.mhl-screen,.mhl-screen *{box-sizing:border-box}
+.mhl-screen{width:min(100%,860px);margin:0 auto 34px;padding:16px 13px 32px;border-radius:21px;background:radial-gradient(ellipse at top right,rgba(209,102,13,.16),transparent 45%),linear-gradient(160deg,#111b20,#070e12 75%);color:#f6fafb;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.mhl-screen button{font-family:inherit;cursor:pointer}
+.mhl-header{padding:2px 2px 16px}
+.mhl-back{display:inline-flex;align-items:center;justify-content:center;background:#1c3035;border:1px solid #54717b;color:#fff;border-radius:13px;padding:9px 14px;font-size:14px;font-weight:800;margin:0 0 18px}
+.mhl-kicker{display:block;color:#ffa636;font-size:12px;letter-spacing:.13em;font-weight:950;margin-bottom:4px}
+.mhl-header h2{color:#fff;font-size:clamp(27px,7vw,38px);line-height:1.08;letter-spacing:-.04em;font-weight:950;margin:0 0 7px}
+.mhl-header p{color:#bed0d4;font-size:14px;line-height:1.4;margin:0}
+.mhl-success{color:#d8ffe9;border:1px solid #458367;border-radius:13px;padding:11px 13px;background:#153328;margin-bottom:14px;font-size:14px;font-weight:800}
+.mhl-periods{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;border:1px solid #455c66;background:#111e23;border-radius:16px;padding:5px;margin:0 0 15px}
+.mhl-periods button{min-width:0;min-height:41px;border:1px solid transparent;border-radius:12px;background:transparent;color:#bfced1;font-size:clamp(11px,3.4vw,15px);font-weight:850;padding:7px 4px}
+.mhl-periods button.selected{border-color:#ffbd67;color:#211308;background:linear-gradient(180deg,#ffb641,#ff8d10);box-shadow:0 2px 9px #0005}
+.mhl-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:0 0 14px}
+.mhl-stats>div{min-width:0;display:flex;flex-direction:column;gap:6px;min-height:86px;border:1px solid #40535a;border-radius:15px;background:linear-gradient(145deg,#1a292e,#112027);padding:14px}
+.mhl-stats>div span{font-size:12px;color:#c7d2d6;font-weight:750}
+.mhl-stats>div strong{font-size:clamp(20px,5.6vw,29px);font-weight:950;color:#ffae40;line-height:1.1;overflow-wrap:anywhere}
+.mhl-panel{border:1px solid #415861;background:linear-gradient(150deg,#15262b,#0d191d);padding:15px 12px;border-radius:17px;margin:0 0 19px}
+.mhl-section-heading{display:flex;align-items:center;justify-content:space-between;gap:9px;margin:0 0 12px}
+.mhl-section-heading h3{color:#fff;font-size:18px;font-weight:900;margin:0;line-height:1.15}
+.mhl-section-heading>span{color:#9fbdc4;font-size:12px;white-space:nowrap;font-weight:750}
+.mhl-chart{height:160px;display:flex;align-items:flex-end;gap:7px;padding:9px 4px 0;border-bottom:1px solid #4c626b}
+.mhl-bar-item{height:100%;flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:4px}
+.mhl-bar-value{height:18px;font-size:10px;color:#ffcf97;white-space:nowrap;font-weight:750}
+.mhl-bar-track{flex:1 1 auto;min-height:0;width:100%;max-width:37px;display:flex;align-items:flex-end;background:linear-gradient(180deg,transparent,#14252b);border-radius:7px 7px 0 0}
+.mhl-bar-fill{width:100%;background:linear-gradient(180deg,#ffb451,#ef7900);border-radius:6px 6px 0 0;min-height:0;box-shadow:0 0 9px #ef79001e}
+.mhl-bar-label{font-size:clamp(9px,2.2vw,12px);color:#d5e0e2;min-height:22px;text-align:center;white-space:nowrap}
+.mhl-chart-note{font-size:11px;line-height:1.5;color:#a9bdc2;margin:11px 0 0}
+.mhl-history-section{margin-top:1px}
+.mhl-activity{border:1px solid #52666d;border-radius:16px;background:linear-gradient(140deg,#203039,#101d22);padding:13px;margin:10px 0;box-shadow:0 6px 17px #0002}
+.mhl-activity-head{display:flex;align-items:flex-start;gap:10px}
+.mhl-mode-icon{flex-shrink:0;width:39px;height:39px;background:#2a2117;border:1px solid #9c672e;border-radius:12px;display:grid;place-items:center;color:#ffaf47;font-size:24px;font-weight:900}
+.mhl-activity-main{flex:1;min-width:0}
+.mhl-activity-main h4{color:#fff;font-size:16px;line-height:1.25;overflow-wrap:anywhere;margin:1px 0 5px;font-weight:900}
+.mhl-activity-main p{color:#c1d0d3;font-size:12px;margin:0;line-height:1.4}
+.mhl-status{font-size:10px;font-weight:850;border-radius:20px;border:1px solid #6b7880;padding:5px 7px;white-space:nowrap;color:#e4ebee;background:#24343b}
+.mhl-status.done{border-color:#5a886c;color:#d7ffe4;background:#1c382a}
+.mhl-status.partial{border-color:#a17c47;color:#ffe8c3;background:#402d1a}
+.mhl-activity-metrics{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 11px}
+.mhl-activity-metrics span{background:#0d1b21;border:1px solid #40585e;border-radius:9px;color:#e6f0f1;font-size:12px;font-weight:800;padding:7px 9px}
+.mhl-details{border-top:1px solid #425761;padding-top:8px}
+.mhl-details summary{list-style:none;display:flex;justify-content:space-between;align-items:center;cursor:pointer;color:#ffc079;font-size:13px;font-weight:900;padding:4px 2px}
+.mhl-details summary::-webkit-details-marker{display:none}
+.mhl-details[open] summary>span{transform:rotate(180deg)}
+.mhl-detail-inside{padding:12px 3px 3px;color:#dee9ea}
+.mhl-detail-summary{display:flex;justify-content:space-between;gap:9px;margin:6px 0;font-size:13px}
+.mhl-detail-summary strong{color:#f4b75e}
+.mhl-detail-inside h5{font-size:14px;color:#fff;margin:16px 0 8px}
+.mhl-exercises{margin:0;padding:0;list-style:none;display:grid;gap:6px}
+.mhl-exercises li{display:flex;flex-direction:column;gap:2px;border-left:3px solid #e68c20;border-radius:5px;background:#101b22;padding:9px 10px}
+.mhl-exercises strong{font-size:13px;color:#fff}
+.mhl-exercises small{font-size:11px;color:#abc4c7}
+.mhl-detail-note{font-size:11px;line-height:1.45;color:#9db6bb;margin:12px 0}
+.mhl-delete{font-size:12px;font-weight:850;background:transparent;color:#ffb2ab;border:1px solid #ac6b66;border-radius:10px;padding:10px 12px;max-width:100%}
+.mhl-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px dashed #51676a;border-radius:16px;background:#15252a;color:#d9e7e7;padding:34px 18px;text-align:center}
+.mhl-empty-icon{font-size:42px;color:#ff9d30}.mhl-empty h4{font-size:18px;margin:8px 0;color:white}.mhl-empty p{font-size:13px;line-height:1.5;margin:0;max-width:380px}
+.mhl-local-note{font-size:12px;line-height:1.55;color:#adbec0;border-top:1px solid #445158;padding:17px 2px 0;margin:20px 0 15px}
+.mhl-open-sessions{border:1px solid #ffbb69;color:#fff;font-weight:900;font-size:15px;border-radius:15px;background:linear-gradient(180deg,#ff9f24,#ed7200);padding:14px 16px;width:100%;min-height:48px}
+.mhl-screen button:focus-visible,.mhl-details summary:focus-visible{outline:3px solid #aaf4ff;outline-offset:2px}
+@media (min-width:680px){.mhl-screen{padding:27px 26px 36px}.mhl-stats{grid-template-columns:repeat(4,minmax(0,1fr))}.mhl-chart{height:190px}.mhl-chart-panel{padding:20px}.mhl-activity{padding:19px}}
+@media (max-width:365px){.mhl-screen{padding-left:9px;padding-right:9px}.mhl-stats>div{padding:11px}.mhl-activity-head{gap:7px}.mhl-mode-icon{width:32px;height:33px}.mhl-status{font-size:9px;padding:5px}}
