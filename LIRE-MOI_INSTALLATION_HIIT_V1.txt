@@ -1,0 +1,46 @@
+HIIT — PREMIÈRE INTÉGRATION (24 EXERCICES) — 09/11/2026
+=============================================================
+
+INSTALLATION SUR GITHUB
+1. Décompresser ce ZIP sur votre ordinateur.
+2. Dans le dépôt MauroPenn/Recette-IG, cliquer sur Add file > Upload files.
+3. Envoyer les 9 fichiers applicatifs ci-dessous DIRECTEMENT À LA RACINE (pas dans un dossier).
+4. Valider Commit changes et attendre Actions > pages build and deployment : Success.
+5. Sur votre téléphone, fermer et rouvrir l'application si nécessaire.
+
+FICHIERS À INJECTER :
+- index.html (mis à jour depuis la version actuelle après Marche avec carte)
+- sw.js (cache v122)
+- hiit-v1.js
+- hiit-v1.css
+- hiit-accueil-valide-v1.webp
+- hiit-photo-course-v1.webp
+- hiit-photo-coordination-v1.webp
+- hiit-photo-renforcement-v1.webp
+- hiit-photo-creation-v1.webp
+
+CE QUI EST DISPONIBLE
+- Musculation : apparition du troisième bandeau HIIT à la même largeur que les deux autres.
+- Accueil HIIT : visuel intégral validé, avec quatre zones vraiment cliquables.
+- Trois familles (10 + 6 + 8 = 24 exercices) et fiches avec consignes et variantes douces.
+- Création et modification de séances HIIT : exercices sélectionnables, durée d'effort,
+  repos entre exercices, tours, repos entre tours ; sauvegarde locale.
+- Démarrage via le MÊME lecteur Circuit Training Musculation : cloches, compte à rebours,
+  temporisation de 2 secondes et enregistrement dans l'historique existant.
+- Les séances HIIT restent identifiées comme HIIT dans Mes séances et peuvent aussi
+  apparaître dans les séances Musculation car elles partagent le lecteur.
+
+IMPORTANT :
+- Les images des exercices individuels sont pour l'instant des PHOTOS DE LEUR CATÉGORIE,
+  issues du visuel approuvé. Les 24 photos de mouvements exacts sont à illustrer
+  et à valider séparément, sans changer les images validées ici.
+- Aucune donnée de localisation n'est utilisée par HIIT.
+- Aucun ancien fichier GitHub ne doit être supprimé.
+- Les séances sont enregistrées localement sur le navigateur/appareil utilisé.
+- Si vous ouvrez une séance HIIT depuis la liste générale Musculation > Séances,
+  utilisez de préférence la rubrique HIIT pour la modifier.
+- Vérifier en premier : Musculation > HIIT > Course sur place > première fiche ;
+  puis créer un circuit de 2 exercices, 2 tours et le démarrer.
+
+INCHANGÉ : Musculation classique, lecteur Circuit Training, sons de cloche,
+GPS Marche, carte GPS Marche, historique et images validés.
