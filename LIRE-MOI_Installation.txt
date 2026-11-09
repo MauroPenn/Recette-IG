@@ -1,22 +1,28 @@
-CORRECTION VISUELLE MUSCULATION — SEANCES (V2)
-===================================================
-Cette version retire les fleches sur les 4 modeles de seances, et cache les
-restes de bordures orange deja incrustes dans les photos des modeles
-Corps complet et Abdos et gainage.
+MUSCULATION — PHOTO D’HYDRATATION ENTRE EXERCICES (MODE CLASSIQUE) — V1
 
-INSTALLATION (GitHub : MauroPenn / Recette-IG)
-1. Ouvrir ce ZIP sur votre ordinateur et extraire son contenu.
-2. Selectionner UNIQUEMENT les 3 fichiers ci-dessous :
-   - index.html
-   - sw.js
-   - seances-bandeaux-net-v2.css
-3. GitHub -> Add file -> Upload files -> deposer les 3 fichiers A LA RACINE
-   du depot (pas dans un sous-dossier) -> Commit changes.
-4. Verifier que GitHub Actions / pages build and deployment passe au vert.
-5. Sur telephone, fermer puis rouvrir l'application et observer les 4
-   bandeaux dans Musculation -> Seances.
+FICHIERS À INJECTER SUR GITHUB (RACINE DU DEPÔT Recette-IG) :
+  1. index.html (remplacement)
+  2. sw.js (remplacement : cache v118)
+  3. seances-lecteur-v4.js (nouveau fichier)
 
-INCHANGE : grandes photos, titres et contenus des seances, clic sur les
-cartes, chrono, pauses, sons de cloche valides, GPS Marche, historique.
-Ne pas effacer les autres fichiers de votre depot GitHub.
-L'ancien fichier seances-bandeaux-net-v1.css peut rester en place.
+IMPORTANT : ne pas injecter ce LIRE-MOI, uniquement les trois fichiers ci-dessus.
+
+Modification précise :
+  • En Musculation classique, entre deux EXERCICES différents, la récupération
+    affiche la même photo « homme buvant au shaker » qu’en Circuit Training.
+  • Le compte à rebours est superposé à la photo comme sur l’écran Circuit,
+    et la carte du prochain exercice reste affichée en dessous.
+  • Entre deux SÉRIES du même exercice : ancien affichage conservé.
+  • Circuit Training : aucun changement.
+  • Durées, sons de cloche, chronomètre, historique, photos et écrans validés : inchangés.
+
+Installation : GitHub > Add file > Upload files > ajouter les 3 fichiers à la racine
+> Commit changes. Attendre le ✓ vert dans Actions.
+Sur le téléphone, fermer puis rouvrir l’application pour renouveler le cache.
+
+TEST RECOMMANDÉ : séance classique, 2 exercices, 2 séries chacun,
+réglages 20 s entre séries et 10 s entre exercices.
+  Série 1 → pause 20 s SANS photo.
+  Série 2 → pause 10 s AVEC photo shaker et aperçu du prochain exercice.
+
+Ne pas supprimer les anciens fichiers (notamment seances-lecteur-v3.js).
