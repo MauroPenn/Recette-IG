@@ -1,0 +1,37 @@
+/* Carte GPS Marche V1 — extension visuelle exclusivement sur l'historique / detail. */
+.ml1-history-row{flex-wrap:wrap}
+.mc1-history-open{display:block;flex:0 0 100%;width:100%;padding:11px 12px;margin:6px 0 0;
+  border:1.5px solid #88e2e0;border-radius:12px;background:#096f75;color:#fff;
+  font:800 .94rem system-ui,-apple-system,'Segoe UI',sans-serif;text-align:center;cursor:pointer}
+.mc1-history-open:focus-visible,.mc1-return:focus-visible{outline:3px solid #d8ff9e;outline-offset:2px}
+.mc1-screen{background:linear-gradient(160deg,#054e51 0%,#003b3d 45%,#012f33 100%)}
+.mc1-header{min-height:155px;padding-bottom:21px}
+.mc1-content{padding-top:18px!important;gap:16px}
+.mc1-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.mc1-stats>div{display:flex;flex-direction:column;gap:7px;background:#00616c;border:1px solid #2ac4cc;
+  border-radius:16px;padding:14px 10px;min-width:0}
+.mc1-stats span{color:#c8f1ed;font-size:.82rem;font-weight:650}
+.mc1-stats strong{font-size:clamp(1.02rem,4.7vw,1.5rem);letter-spacing:-.025em;line-height:1.15;
+  color:#fff;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.mc1-card{padding:14px 12px 15px;border:1.5px solid #39bcc1;border-radius:22px;background:#00464b;overflow:hidden}
+.mc1-card-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:13px}
+.mc1-card-title h2{font-size:clamp(1.05rem,4.4vw,1.36rem);margin:0;color:#fff}
+.mc1-card-title span{color:#c6eceb;font-size:.76rem;white-space:nowrap}
+.mc1-map{height:clamp(285px,88vw,435px);width:100%;position:relative;border-radius:15px;
+  overflow:hidden;background:#e3eeea;color:#0c3438;isolation:isolate}
+.mc1-loading{height:100%;display:flex;align-items:center;justify-content:center;font-size:.94rem;font-weight:750;text-align:center;padding:20px}
+.mc1-legend{display:flex;justify-content:center;gap:22px;padding-top:12px;font-size:.89rem;color:#e3fffc;font-weight:750}
+.mc1-legend span{display:inline-flex;align-items:center;gap:7px}
+.mc1-legend i{display:inline-block;width:12px;height:12px;border-radius:50%;border:2px solid white}
+.mc1-start{background:#159b4d}.mc1-end{background:#f07f18}
+.mc1-note,.mc1-privacy{font-size:.8rem;color:#c7e6e4;line-height:1.47;margin:11px 2px 2px}
+.mc1-privacy{margin:0 4px;color:#d3f3ee}
+.mc1-empty{background:#0d6469;border:1px dashed #75bec4;padding:26px 17px;border-radius:14px;line-height:1.5}
+.mc1-return{border:1px solid #8fdbdb;background:#08767e;color:#fff;border-radius:16px;
+  padding:14px 18px;width:100%;font-weight:850;font-size:1rem;cursor:pointer}
+.mc1-fallback{display:flex;flex-direction:column;height:100%;justify-content:center}
+.mc1-fallback svg{width:100%;height:calc(100% - 54px);display:block;object-fit:contain}
+.mc1-fallback p{color:#24494b;font-size:.72rem;line-height:1.3;text-align:center;margin:0 9px 12px}
+.mc1-map .leaflet-container,.mc1-map.leaflet-container{font-family:system-ui,-apple-system,sans-serif}
+.mc1-map .leaflet-control-attribution{font-size:10px}
+@media(max-width:355px){.mc1-stats>div{padding:12px 8px}.mc1-card{padding:11px 8px}.mc1-legend{gap:15px}}

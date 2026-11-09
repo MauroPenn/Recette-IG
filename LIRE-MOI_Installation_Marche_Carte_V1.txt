@@ -1,0 +1,47 @@
+MA BIBLIOTHÈQUE — MARCHE : CARTE GPS INTERACTIVE V1
+Date : 9 novembre 2026
+
+INSTALLATION SUR GITHUB (Recette-IG, branche main)
+1. Décompresser le ZIP sur l'ordinateur.
+2. Dans le dépôt GitHub, choisir Add file > Upload files.
+3. Déposer UNIQUEMENT les quatre fichiers ci-dessous à la racine :
+   - index.html               (remplacement)
+   - sw.js                    (remplacement ; cache v121)
+   - marche-carte-v1.js       (nouveau)
+   - marche-carte-v1.css      (nouveau)
+4. Cliquer sur Commit changes, puis vérifier GitHub > Actions.
+5. Une fois le déploiement réussi, fermer et rouvrir l'application.
+
+Aucun autre fichier ne doit être supprimé ni modifié.
+Le suivi GPS Marche, les autres sports, la musculation, les sons de cloche,
+les séances et les historiques existants ne sont pas changés.
+
+UTILISATION
+1. Autre sport > Historique (ou Marche > Historique).
+2. Pour une marche GPS, appuyer sur "Voir la carte du parcours".
+3. Consulter la carte, déplacer et zoomer avec les doigts, repérer le départ
+   en vert et l'arrivée en orange ; les statistiques s'affichent au-dessus.
+4. Appuyer sur "Retour à l'historique" pour revenir à la liste.
+
+ANCIENS ENREGISTREMENTS
+Les marches avec au moins deux points GPS sauvegardés affichent une carte.
+Celles enregistrées manuellement ou sans points GPS montrent un détail sans carte.
+Aucune donnée ne sera fabriquée, aucune sauvegarde n'est réinitialisée.
+
+CARTE ET VIE PRIVÉE
+Les coordonnées de tes séances restent dans le stockage local du navigateur.
+Pour afficher le fond de carte, le navigateur charge Leaflet 1.9.4 depuis
+cdn.jsdelivr.net et les tuiles de carte depuis tile.openstreetmap.org.
+Ces services voient les requêtes réseau nécessaires à l'affichage de la zone.
+Le tracé complet n'est pas envoyé à un serveur d'analyse d'itinéraire.
+La connexion Internet est nécessaire pour le fond cartographique ; sans
+connexion, un tracé graphique simplifié est affiché.
+Les données GPS peuvent manquer si le téléphone a été verrouillé pendant
+la marche ; aucun itinéraire absent n'est reconstitué automatiquement.
+Les cartes sont fournies avec attribution aux contributeurs OpenStreetMap.
+
+TEST CONSEILLÉ
+- D'abord, ouvrir une marche déjà enregistrée avec GPS : vérifier la carte.
+- Puis, faire une petite marche (500 m par exemple), enregistrer la séance,
+  ouvrir l'Historique et vérifier le tracé réel sur le téléphone.
+- Ne pas effacer les données du site : les historiques sont encore locaux.
