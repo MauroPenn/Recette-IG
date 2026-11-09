@@ -1,0 +1,60 @@
+/* Paramètres sonores discrets, indépendants des visuels validés */
+.mp1-sound-settings{width:38px;height:38px;flex:0 0 38px;border:1px solid #ff9223;border-radius:50%;background:#17252a;color:#ffbe65;font-size:21px;display:grid;place-items:center;cursor:pointer;padding:0}
+.mp1-top.mp2-top .mp1-sound-settings{margin-left:auto}
+.mp1-top.mp2-top .mp1-end-small{margin-left:0}
+.mp1-sound-detail-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin:6px 0;padding:11px 15px;border:1px solid #f8972a;border-radius:16px;background:#1d292b;color:#fff;font-weight:800}
+.mb-sound-overlay{z-index:99999;position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:18px;background:rgba(0,0,0,.8);overflow-y:auto}
+.mb-sound-dialog{width:min(100%,460px);max-height:90dvh;overflow:auto;box-sizing:border-box;padding:20px;border-radius:23px;border:2px solid #ff8b06;background:linear-gradient(140deg,#16282b,#080e13);color:#fff;box-shadow:0 20px 80px #000e;font-family:system-ui,-apple-system,sans-serif}
+.mb-sound-dialog button{cursor:pointer;font-family:inherit}
+.mb-sound-title{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:17px}
+.mb-sound-title h2{margin:0;color:#fff;font-size:clamp(19px,5.8vw,25px)}
+#mbSoundClose{width:38px;height:38px;background:#29393e;color:#fff;border:1px solid #6e8589;border-radius:50%;font-size:18px}
+.mb-sound-check{display:flex;align-items:center;gap:10px;margin:12px 0;padding:8px 0;line-height:1.36;font-size:15px}
+.mb-sound-check input{width:22px;height:22px;accent-color:#ff8800;flex-shrink:0}
+.mb-sound-volume{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;margin:16px 0}
+.mb-sound-volume input{grid-column:1/-1;width:100%;accent-color:#ff8800}
+.mb-sound-volume strong{color:#ffb64d;font-variant-numeric:tabular-nums}
+.mb-sound-test,.mb-sound-done{display:block;width:100%;min-height:49px;margin-top:12px;border-radius:17px;color:white;font-size:16px;font-weight:800}
+.mb-sound-test{background:#213338;border:1px solid #86aeb3}.mb-sound-test:disabled{opacity:.4}
+.mb-sound-done{background:linear-gradient(#ffa424,#ee7400);border:1px solid #ffd085}
+.mb-sound-help{font-size:12px;line-height:1.5;color:#bdd1d2}
+@media(max-width:390px){.mp1-brand{font-size:15px}.mp1-top.mp2-top{gap:4px}.mp1-sound-settings{width:34px;height:34px;flex-basis:34px}.mp1-top.mp2-top .mp1-end-small{width:34px;height:34px}}
+
+/* SONS V2 : choix des 3 ambiances et accès direct depuis la page Séances */
+.mb-sound-access {
+  width:100%;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
+  column-gap:10px;row-gap:2px;box-sizing:border-box;margin:0 0 15px;
+  padding:12px 13px;border:1.5px solid #fa9c30;border-radius:15px;
+  background:linear-gradient(110deg,#14272e,#1d3031);color:#fff;
+  font:inherit;font-weight:850;font-size:16px;cursor:pointer;
+  box-shadow:0 4px 15px rgba(0,0,0,.22);
+}
+.mb-sound-access span {font-size:21px}
+.mb-sound-access small {display:block;flex-basis:100%;font-size:12px;line-height:1.3;color:#fecb80;font-weight:500}
+.mb-sound-access:focus-visible{outline:3px solid white;outline-offset:3px}
+.mb-sound-intro{color:#d3e3e2;margin:0 0 14px;font-size:14px;line-height:1.5}
+.mb-sound-subhead{font-size:16px;color:#ffb24b;margin:15px 0 8px}
+.mb-sound-profiles{display:grid;gap:8px}
+.mb-sound-profile{display:flex;flex-wrap:wrap;gap:7px;align-items:center;
+  border:1px solid #486267;border-radius:15px;padding:8px;background:#102027}
+.mb-sound-profile.selected{border-color:#ffa024;background:#1b2b29;box-shadow:inset 0 0 0 1px rgba(255,160,36,.24)}
+.mb-sound-select{display:flex;align-items:center;gap:9px;flex:1;min-width:180px;text-align:left;
+  color:#fff;background:none;border:0;padding:4px 0;font-size:14px;cursor:pointer}
+.mb-sound-profile-icon{min-width:30px;font-size:25px;color:#ff9d22;text-align:center}
+.mb-sound-profile-text{display:grid;gap:2px}
+.mb-sound-profile-text strong{font-size:14px;line-height:1.2;color:#fff}
+.mb-sound-profile-text small{font-size:12px;line-height:1.4;color:#c1d5d8}
+.mb-sound-selected{display:flex;align-items:center;justify-content:center;border:1px solid #ffa024;
+  border-radius:50%;width:20px;height:20px;flex:0 0 20px;font-size:13px;color:#ffa024;opacity:.25}
+.mb-sound-profile.selected .mb-sound-selected{opacity:1;background:#ed8c0b;color:#151719}
+.mb-sound-listen{border:1px solid #ffad51;background:#293437;color:#fff;border-radius:12px;
+  padding:9px 12px;min-height:40px;font-size:13px;font-weight:800;cursor:pointer}
+.mb-sound-listen:disabled{opacity:.4;cursor:not-allowed}
+.mb-sound-listen:focus-visible,.mb-sound-select:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.mb-sound-dialog{max-height:88dvh}
+@media(max-width:390px){
+  .mb-sound-dialog{padding:14px}
+  .mb-sound-profile{padding:7px}
+  .mb-sound-select{min-width:170px}
+  .mb-sound-listen{width:100%;min-height:36px}
+}

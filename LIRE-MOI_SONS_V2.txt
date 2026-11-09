@@ -1,0 +1,32 @@
+MUSCULATION — SONS V2 : CHOIX DE 3 AMBIANCES
+==============================================
+
+INSTALLATION GITHUB :
+1. Décompresse le ZIP sur ton PC.
+2. Ouvre le dépôt GitHub Recette-IG sur la branche main.
+3. Add file > Upload files, à la RACINE du dépôt (avec app.js).
+4. Charge ces QUATRE fichiers :
+   - index.html                 (remplacer l'ancien : très important)
+   - sw.js                      (remplacer l'ancien : version du cache 113)
+   - muscu-son-v2.js            (nouveau)
+   - muscu-son-v2.css           (nouveau)
+5. Clique sur Commit changes.
+6. Vérifie dans Actions que « pages build and deployment » est réussi.
+7. Ferme puis rouvre l'application pour charger la nouvelle version.
+
+CE QUE TU GAGNES :
+- Dans Musculation > Séances, un bouton « Réglages sonores » accessible SANS créer de séance.
+- Trois ambiances : Sons doux (carillons), Sons sportifs (signaux nets), Annonces vocales en français.
+- Écouter un aperçu pour chacun, puis mémoriser le choix sur cet appareil.
+- Volume, marche/arrêt, bips de décompte et sons de fin conservés.
+- Les signaux fonctionnent pendant les deux modes : circuit et séries/répétitions.
+- Sur certains téléphones, la synthèse vocale française peut être indisponible :
+  retour automatique aux bips sportifs ; tester sur le téléphone.
+
+FICHIERS LAISSÉS INTACTS :
+- seances-lecteur-v3.js et ses trois visuels validés ;
+- seances-createur-v2.js, les modèles de séances et les données enregistrées ;
+- Marche GPS et tous les autres univers.
+
+IMPORTANT : ne supprime aucun des anciens fichiers de GitHub, même ceux de l'ancien
+module sonore. Seule la page index.html utilisera les fichiers sons V2.
