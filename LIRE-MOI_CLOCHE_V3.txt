@@ -1,0 +1,30 @@
+MUSCULATION — SONS V3 : CLOCHE DE BOXE
+====================================
+
+Fichiers à injecter à la RACINE de ton dépôt GitHub :
+  1. index.html                (remplacer l'ancien)
+  2. sw.js                     (remplacer l'ancien)
+  3. muscu-son-v3.js           (nouveau fichier)
+  4. muscu-cloche-boxe-v1.wav  (nouveau son, indispensable)
+
+Ne supprime aucun fichier existant, notamment muscu-son-v2.css,
+les fiches d'exercice, les séances enregistrées ou les fichiers de Marche.
+
+Pour tester : Musculation > Séances > Réglages sonores >
+« Cloche de boxe » > « Écouter ».
+
+Pendant le circuit :
+ - Début de séance / tour : 1 coup de cloche
+ - Dernières secondes : bips courts 3, 2, 1
+ - Pause entre exercices : signaux discrets, sans grosse cloche
+ - Fin de tour : 2 coups de cloche
+ - Fin de séance : 3 coups de cloche
+
+Le son est un échantillon original au format WAV, embarqué dans le site.
+Il ne nécessite pas de téléchargement externe lors de l'entraînement,
+une fois l'application mise en cache.
+
+Les quatre ambiances (Doux / Sportif / Voix / Cloche de boxe) et le
+volume restent réglables. Le choix est mémorisé sur cet appareil.
+
+Aucune modification du lecteur, des exercices, des visuels ou du GPS.
