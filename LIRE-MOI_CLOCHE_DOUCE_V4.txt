@@ -1,0 +1,31 @@
+MUSCULATION — SONS V4 : LA MÊME CLOCHE DE RING, EN PLUS DOUX
+================================================================
+
+Cette version utilise EXACTEMENT l'aperçu de cloche adoucie validé.
+La GROSSE cloche de ring (fichier « muscu-cloche-boxe-v1.wav »)
+reste INCHANGÉE et n'est pas incluse dans le ZIP : elle est déjà sur GitHub.
+
+À la racine de GitHub (Recette-IG), déposer les 5 fichiers :
+1. index.html (remplacer l'existant)
+2. sw.js (remplacer l'existant)
+3. muscu-son-v4.js (nouveau fichier)
+4. muscu-clochette-v4.css (nouveau fichier)
+5. muscu-cloche-ring-douce-v1.wav (nouveau fichier audio)
+
+Ne PAS supprimer les anciens fichiers ; ne PAS vider les données de l'appli.
+Attendre Actions > pages build and deployment : tout vert.
+Fermer et rouvrir l'appli sur téléphone.
+
+POUR ESSAYER :
+Musculation > Séances > Réglages sonores > Cloche de boxe
+Puis : « Écouter la cloche douce : 3 · 2 · 1 ».
+
+LES SIGNAUX :
+- Début de circuit/tour : grosse cloche validée.
+- Fin de tour : deux grosses cloches validées.
+- Fin de séance : trois grosses cloches validées.
+- 3, 2, 1 et transitions : EXACTEMENT le timbre du ring,
+  mais plus doux, sans changement de tonalité.
+
+Les autres ambiances sonores, les visuels, circuits, séries,
+exercices, chrono et GPS Marche ne sont pas modifiés.
