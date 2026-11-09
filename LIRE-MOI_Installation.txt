@@ -1,28 +1,32 @@
-MUSCULATION — PHOTO D’HYDRATATION ENTRE EXERCICES (MODE CLASSIQUE) — V1
+MUSCULATION — TEMPO ENTRE ÉCRANS DU CIRCUIT — V1 (09/11/2026)
 
-FICHIERS À INJECTER SUR GITHUB (RACINE DU DEPÔT Recette-IG) :
-  1. index.html (remplacement)
-  2. sw.js (remplacement : cache v118)
-  3. seances-lecteur-v4.js (nouveau fichier)
+À INJECTER À LA RACINE DU DÉPÔT GITHUB Recette-IG :
+  • index.html                 (remplace la version existante)
+  • sw.js                      (remplace la version existante)
+  • seances-lecteur-v5.js      (nouveau fichier, il remplace le lecteur V4 dans index.html)
 
-IMPORTANT : ne pas injecter ce LIRE-MOI, uniquement les trois fichiers ci-dessus.
+Ne pas injecter ce fichier de notice.
+Ne supprimer AUCUN ancien fichier, notamment seances-lecteur-v4.js.
 
-Modification précise :
-  • En Musculation classique, entre deux EXERCICES différents, la récupération
-    affiche la même photo « homme buvant au shaker » qu’en Circuit Training.
-  • Le compte à rebours est superposé à la photo comme sur l’écran Circuit,
-    et la carte du prochain exercice reste affichée en dessous.
-  • Entre deux SÉRIES du même exercice : ancien affichage conservé.
-  • Circuit Training : aucun changement.
-  • Durées, sons de cloche, chronomètre, historique, photos et écrans validés : inchangés.
+FONCTIONNEMENT
+• Mode Circuit Training uniquement : à la fin de chaque effort et de chaque
+  récupération (entre exercices et entre tours), l'écran reste affiché 2 secondes
+  avec le chronomètre à 00:00, puis l'écran suivant démarre à sa durée normale.
+• Cette transition ne réduit ni la durée de l'effort ni celle des pauses.
+• En cas de Pause au cours de la transition, son délai restant est conservé.
+• En cas de reprise après fermeture de l'application, le délai restant est conservé.
+• Le bouton 'Suivant' peut passer directement la transition en cours.
+• Musculation classique : aucun délai supplémentaire.
+• Visuels (notamment le personnage qui boit), sons de cloche, GPS et historique inchangés.
 
-Installation : GitHub > Add file > Upload files > ajouter les 3 fichiers à la racine
-> Commit changes. Attendre le ✓ vert dans Actions.
-Sur le téléphone, fermer puis rouvrir l’application pour renouveler le cache.
+TEST CONSEILLÉ
+1. Sur GitHub : Add file > Upload files > envoyer les 3 fichiers.
+2. Cliquer Commit changes, puis vérifier GitHub Actions : déploiement vert.
+3. Fermer puis rouvrir l'application, lancer un circuit 2 exercices / 2 tours,
+   5 à 10 s d'effort et 5 s de repos.
+4. Vérifier une pause d'affichage à 00:00 d'environ 2 s à chaque transition.
+5. Tester Pause/Reprendre pendant la transition, et le mode classique pour vérifier
+   qu'il ne change pas.
 
-TEST RECOMMANDÉ : séance classique, 2 exercices, 2 séries chacun,
-réglages 20 s entre séries et 10 s entre exercices.
-  Série 1 → pause 20 s SANS photo.
-  Série 2 → pause 10 s AVEC photo shaker et aperçu du prochain exercice.
-
-Ne pas supprimer les anciens fichiers (notamment seances-lecteur-v3.js).
+IMPORTANT : l'historique et les séances sont dans le stockage local du navigateur.
+La mise à jour de ces fichiers n'efface pas le stockage local.
