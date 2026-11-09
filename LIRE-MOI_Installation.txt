@@ -1,0 +1,22 @@
+CORRECTION VISUELLE MUSCULATION — SEANCES (V2)
+===================================================
+Cette version retire les fleches sur les 4 modeles de seances, et cache les
+restes de bordures orange deja incrustes dans les photos des modeles
+Corps complet et Abdos et gainage.
+
+INSTALLATION (GitHub : MauroPenn / Recette-IG)
+1. Ouvrir ce ZIP sur votre ordinateur et extraire son contenu.
+2. Selectionner UNIQUEMENT les 3 fichiers ci-dessous :
+   - index.html
+   - sw.js
+   - seances-bandeaux-net-v2.css
+3. GitHub -> Add file -> Upload files -> deposer les 3 fichiers A LA RACINE
+   du depot (pas dans un sous-dossier) -> Commit changes.
+4. Verifier que GitHub Actions / pages build and deployment passe au vert.
+5. Sur telephone, fermer puis rouvrir l'application et observer les 4
+   bandeaux dans Musculation -> Seances.
+
+INCHANGE : grandes photos, titres et contenus des seances, clic sur les
+cartes, chrono, pauses, sons de cloche valides, GPS Marche, historique.
+Ne pas effacer les autres fichiers de votre depot GitHub.
+L'ancien fichier seances-bandeaux-net-v1.css peut rester en place.
