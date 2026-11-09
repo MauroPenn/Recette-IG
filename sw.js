@@ -1,10 +1,10 @@
 // Ma Bibliothèque — ajout accueil Autre sport V1 à l’accueil 6 univers V3.
-// v115 : même cloche de ring en version adoucie pour les décomptes et transitions.
-const CACHE = "ma-bibliotheque-v115";
+// v116 : correction des superpositions des cadres et fleches sur les 4 modeles de seance ; sons conserves.
+const CACHE = "ma-bibliotheque-v116";
 const CORE = [
   "./", "./index.html", "./styles.css", "./app.js", "./data.json",
   "./manifest.json", "./icon-192.png", "./icon-512.png",
-  "./pectoraux-v1.js", "./pectoraux-v1.css", "./dos-v1.js", "./dos-v1.css", "./epaules-v1.js", "./epaules-v1.css", "./biceps-v2.js", "./biceps-v2.css", "./triceps-v1.js", "./triceps-v1.css", "./jambes-v1.js", "./jambes-v1.css", "./abdominaux-v1.js", "./abdominaux-v1.css", "./groupes-musculaires-v2.js", "./groupes-musculaires-v2.css", "./accueil-v1.js", "./accueil-v1.css", "./autre-sport-v2.js", "./autre-sport-v2.css", "./marche-suivi-v1.js", "./marche-suivi-v1.css", "./sport-ecran-actif-v1.js", "./seances-createur-v2.js", "./seances-createur-v2.css", "./seances-lecteur-v3.js", "./seances-lecteur-v2.css", "./muscu-son-v4.js", "./muscu-son-v2.css", "./muscu-clochette-v4.css", "./muscu-cloche-boxe-v1.wav", "./muscu-cloche-ring-douce-v1.wav"
+  "./pectoraux-v1.js", "./pectoraux-v1.css", "./dos-v1.js", "./dos-v1.css", "./epaules-v1.js", "./epaules-v1.css", "./biceps-v2.js", "./biceps-v2.css", "./triceps-v1.js", "./triceps-v1.css", "./jambes-v1.js", "./jambes-v1.css", "./abdominaux-v1.js", "./abdominaux-v1.css", "./groupes-musculaires-v2.js", "./groupes-musculaires-v2.css", "./accueil-v1.js", "./accueil-v1.css", "./autre-sport-v2.js", "./autre-sport-v2.css", "./marche-suivi-v1.js", "./marche-suivi-v1.css", "./sport-ecran-actif-v1.js", "./seances-createur-v2.js", "./seances-createur-v2.css", "./seances-bandeaux-net-v1.css", "./seances-lecteur-v3.js", "./seances-lecteur-v2.css", "./muscu-son-v4.js", "./muscu-son-v2.css", "./muscu-clochette-v4.css", "./muscu-cloche-boxe-v1.wav", "./muscu-cloche-ring-douce-v1.wav"
 ];
 const PECTORAL_IMAGES = [
   "pompes-classiques", "pompes-inclinees", "pompes-declinees",
@@ -145,7 +145,7 @@ self.addEventListener("fetch", event => {
   if (url.origin !== self.location.origin) return;
   const path = url.pathname;
   const nav = request.mode === "navigate" || path.endsWith("/") || path.endsWith("/index.html");
-  const freshFile = /\/(?:index\.html|styles\.css|app\.js|data\.json|manifest\.json|sw\.js|pectoraux-v1\.js|pectoraux-v1\.css|dos-v1\.js|dos-v1\.css|epaules-v1\.js|epaules-v1\.css|biceps-v2\.js|biceps-v2\.css|triceps-v1\.js|triceps-v1\.css|jambes-v1\.js|jambes-v1\.css|abdominaux-v1\.js|abdominaux-v1\.css|groupes-musculaires-v2\.js|groupes-musculaires-v2\.css|accueil-v1\.js|accueil-v1\.css|autre-sport-v2\.js|autre-sport-v2\.css|marche-suivi-v1\.js|marche-suivi-v1\.css|sport-ecran-actif-v1\.js|seances-createur-v2\.js|seances-createur-v2\.css|seances-lecteur-v3\.js|seances-lecteur-v2\.css|muscu-son-v4\.js|muscu-son-v2\.css|muscu-clochette-v4\.css|muscu-cloche-boxe-v1\.wav|muscu-clochette-legere-v1\.wav|muscu-hydratation-validee-v2\.webp|muscu-pause-hydratation-v1\.webp|marche-paysage-v1\.webp|autre-sport-accueil-v3\.webp|autre-sport-marche-v1\.webp|autre-sport-choix-v1\.webp|univers-[a-z-]+-valide\.webp)$/.test(path);
+  const freshFile = /\/(?:index\.html|styles\.css|app\.js|data\.json|manifest\.json|sw\.js|pectoraux-v1\.js|pectoraux-v1\.css|dos-v1\.js|dos-v1\.css|epaules-v1\.js|epaules-v1\.css|biceps-v2\.js|biceps-v2\.css|triceps-v1\.js|triceps-v1\.css|jambes-v1\.js|jambes-v1\.css|abdominaux-v1\.js|abdominaux-v1\.css|groupes-musculaires-v2\.js|groupes-musculaires-v2\.css|accueil-v1\.js|accueil-v1\.css|autre-sport-v2\.js|autre-sport-v2\.css|marche-suivi-v1\.js|marche-suivi-v1\.css|sport-ecran-actif-v1\.js|seances-createur-v2\.js|seances-createur-v2\.css|seances-bandeaux-net-v1\.css|seances-lecteur-v3\.js|seances-lecteur-v2\.css|muscu-son-v4\.js|muscu-son-v2\.css|muscu-clochette-v4\.css|muscu-cloche-boxe-v1\.wav|muscu-clochette-legere-v1\.wav|muscu-hydratation-validee-v2\.webp|muscu-pause-hydratation-v1\.webp|marche-paysage-v1\.webp|autre-sport-accueil-v3\.webp|autre-sport-marche-v1\.webp|autre-sport-choix-v1\.webp|univers-[a-z-]+-valide\.webp)$/.test(path);
   if (nav || freshFile) {
     event.respondWith((async () => {
       const cache = await caches.open(CACHE);

@@ -1,0 +1,26 @@
+CORRECTION DES BANDEAUX DE SEANCES — V1
+========================================
+
+Ce ZIP comporte exactement TROIS fichiers a ajouter/remplacer :
+1) index.html                (remplacer)
+2) sw.js                     (remplacer)
+3) seances-bandeaux-net-v1.css  (ajouter)
+
+INSTALLATION SUR GITHUB
+1. Decompresser le ZIP.
+2. Ouvrir le depot MauroPenn/Recette-IG (branche main).
+3. Cliquer sur Add file > Upload files.
+4. Ajouter les TROIS fichiers ci-dessus a la racine du depot.
+5. Valider Commit changes (et remplacer les fichiers existants).
+6. Verifier dans Actions que pages build and deployment passe au vert.
+7. Ouvrir l'application sur le telephone, puis Musculation > Seances.
+   Si necessaire, la fermer completement puis la rouvrir pour charger le nouveau cache.
+
+CE QUE FAIT CETTE CORRECTION
+- Corrige la superposition des doubles cadres orange et des fleches.
+- Conserve les photos, les 4 modeles Haut / Bas / Corps complet / Abdos.
+- Recadre seulement le fond photographique sans ecraser les proportions.
+- N'intervient PAS sur les sons (grosse cloche + cloche douce), les
+  seances personnalisees, les chronometres, l'historique ou le GPS Marche.
+
+Le CSS de correction est isole ; le createur et le lecteur ne sont pas modifies.

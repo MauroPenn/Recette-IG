@@ -1,0 +1,69 @@
+/* CORRECTION VISUELLE SEANCES V1 — 09/11/2026
+   Les 4 photos historiques contiennent leurs propres cadres et fleches.
+   Le createur affiche volontairement un cadre + une fleche HTML par-dessus.
+   On recadre la PHOTO SEULEMENT pour exclure les elements deja incrustes.
+   Aucun changement au createur, a son historique ou au lecteur des seances. */
+
+/* Un seul contour externe pour chacune des 4 cartes. */
+.muscu-sessions-list .mcs-session-feature {
+  border:2px solid #ff8d0b;
+  outline:none;
+  box-shadow:0 8px 24px rgba(0,0,0,.24);
+  isolation:isolate;
+}
+
+/* La photo originale est tres large (1050x204) et contient sur ses bords
+   un cadre orange, un texte et une fleche. On utilise seulement son centre
+   droit : la silhouette reste visible, les decors incrustes sont hors champ.
+   object-fit:cover conserve strictement les proportions des personnes. */
+.muscu-sessions-list .mcs-session-feature-photo {
+  display:block;
+  position:absolute;
+  top:0;
+  right:0;
+  width:72%;
+  height:100%;
+  max-width:none;
+  object-fit:cover;
+  object-position:72% 50%;
+  transform:scale(1.16);
+  transform-origin:center center;
+  border:0;
+  border-radius:0;
+  filter:none;
+  pointer-events:none;
+}
+
+/* Evite de voir d'anciens textes photographiques sous la copie HTML. */
+.muscu-sessions-list .mcs-session-feature-shade {
+  background:linear-gradient(90deg,
+    #070d0f 0%, #0a1315 29%,
+    rgba(6,13,15,.97) 45%,
+    rgba(8,12,15,.44) 76%,
+    rgba(4,7,10,.24) 100%);
+  pointer-events:none;
+}
+
+/* Une seule pastille de navigation, sans seconde ombre orange. */
+.muscu-sessions-list .mcs-session-feature-arrow {
+  z-index:3;
+  border:2px solid #ff8f10;
+  background:rgba(4,13,16,.86);
+  box-shadow:none;
+  outline:none;
+  pointer-events:none;
+}
+
+/* Aucune couche decorative additionnelle sur ces boutons. */
+.muscu-sessions-list .mcs-session-feature::before,
+.muscu-sessions-list .mcs-session-feature::after,
+.muscu-sessions-list .mcs-session-feature-arrow::before,
+.muscu-sessions-list .mcs-session-feature-arrow::after {
+  content:none;
+}
+
+/* Le contour de focus clavier reste visible, uniquement lors du focus. */
+.muscu-sessions-list .mcs-session-feature:focus-visible {
+  outline:3px solid #d0fbff;
+  outline-offset:3px;
+}
