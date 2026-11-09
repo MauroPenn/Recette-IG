@@ -1,0 +1,24 @@
+CORRECTION DU BOUTON HISTORIQUE — MUSCULATION
+
+Objectif : le bouton « Historique » dans la barre inférieure de l'écran Musculation
+ouvre désormais l'historique réel des séances enregistrées, avec statistiques, périodes
+semaine / mois / année et détails des entraînements.
+
+A INJECTER A LA RACINE DU DEPOT GITHUB « Recette-IG » :
+  index.html
+  muscu-rubriques-v1.js
+  sw.js
+
+Fichier LIRE-MOI : pour ton information uniquement ; ne pas injecter.
+
+Mode d'emploi :
+1. Décompresser le ZIP sur ton ordinateur.
+2. Sur GitHub, ouvrir le dépôt Recette-IG, puis Add file > Upload files.
+3. Faire glisser les 3 fichiers ci-dessus à la racine, remplacer les existants.
+4. Commit changes, attendre le point vert de GitHub Pages.
+5. Fermer puis rouvrir la PWA. Musculation > bouton « Historique » en bas.
+
+Aucun enregistrement n'est supprimé : les données restent dans localStorage
+sous « mb_muscu_historique_v1 ». Les sons, photos, minuteurs et GPS ne sont pas modifiés.
+Ce bouton concerne, pour le moment, les séances Musculation ; les autres sports auront
+leur historique commun quand cette partie sera développée.

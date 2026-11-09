@@ -1,7 +1,7 @@
 /* MUSCULATION – RUBRIQUES V1
    Court-circuite totalement l'ancien écran "Choisissez votre univers d'entraînement".
    Réutilise les routes existantes pour Exercices et Séances et ne modifie ni leurs
-   listes ni leurs fiches. Historique pointe vers le futur historique commun.
+   listes ni leurs fiches. Historique ouvre le suivi réel des séances enregistrées.
    Navigation accessible via de vraies zones bouton posées sur le visuel approuvé. */
 (function(){
   'use strict';
@@ -74,7 +74,7 @@
     footer.appendChild(picture('muscu-rubriques-navigation-v1.webp',941,196));
     footer.appendChild(hotspot('mm1-nav-home','Accueil général','hub'));
     footer.appendChild(hotspot('mm1-nav-muscu','Musculation','muscu-menu'));
-    footer.appendChild(hotspot('mm1-nav-history','Historique sportif commun','history-global'));
+    footer.appendChild(hotspot('mm1-nav-history','Historique des séances de musculation','muscu-history'));
     root.appendChild(footer);
     main.appendChild(root);
   }
