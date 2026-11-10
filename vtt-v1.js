@@ -158,7 +158,7 @@
     activeShell();restore();
     main.innerHTML=`<section class="ml1-screen vt1-screen" aria-label="VTT — suivi GPS en temps réel">
       <header class="ml1-hero vt1-hero">
-        <img class="vt1-cover" src="./sport-card-velo-v5.webp" alt="" decoding="async">
+        <img class="vt1-cover" src="./vtt-paysage-v2.webp?v=2" alt="" decoding="async">
         <button type="button" class="ml1-back" id="vt1Back" aria-label="Retour aux activités">←</button>
         <div class="ml1-hero-copy"><div class="vt1-kicker">AUTRE SPORT</div><h1>VTT</h1><p>Suivi GPS de tes sorties en extérieur</p></div>
       </header>
@@ -412,30 +412,62 @@
       row.appendChild(btn);
     });
   }
-  // Extension du menu validé : on garde la composition d'origine, la carte
-  // « Autre activité », puis on ajoute une 7e carte VTT et une navigation en bas.
-  // Le recouvrement ne masque que l'ancienne barre de navigation dessinée dans
-  // la photo composite. Les six zones cliquables d'origine restent inchangées.
+  // VTT V2 : insertion DIRECTE sous « Vélo » dans la même liste illustrée.
+  // Le visuel original étant une image composite, on le montre en deux
+  // portions intactes et on intercale notre carte VTT sans écraser les autres.
+  // Les 10 hotspots existants sont repositionnés exactement en conservant
+  // leur taille et leur destination (y compris le pied de menu).
   function enhanceChoice(){
     const screen=main.querySelector('.as1-choice-screen');
-    if(!screen||screen.querySelector('.vt1-menu-extension'))return;
-    const extra=document.createElement('div');
-    extra.className='vt1-menu-extension';
-    extra.innerHTML=`<button type="button" class="vt1-choice-tile" aria-label="VTT — ouvrir le suivi GPS">
-       <span class="vt1-choice-copy"><strong>VTT</strong><small>Sorties tout-terrain · GPS</small></span>
-       <span class="vt1-choice-arrow" aria-hidden="true">›</span>
-      </button><nav class="vt1-choice-nav" aria-label="Navigation autre sport">
-        <button type="button" data-vtchoice="hub"><span aria-hidden="true">⌂</span>Accueil</button>
-        <button type="button" data-vtchoice="autre-sport-home"><span aria-hidden="true">◈</span>Autre sport</button>
-        <button type="button" data-vtchoice="marche-v1-history"><span aria-hidden="true">▥</span>Historique</button>
-      </nav>`;
-    screen.appendChild(extra);
-    extra.querySelector('.vt1-choice-tile').addEventListener('click',()=>{
+    if(!screen || screen.querySelector('.vt2-menu-art'))return;
+    const original=screen.querySelector('.as1-choice-image');
+    if(!original)return;
+    const ORIGINAL_HEIGHT=1716;
+    const INSERT_Y=603;  // entre Vélo et Vélo d'appartement, avant ce dernier
+    const ROW_HEIGHT=225;
+    const TOTAL_HEIGHT=ORIGINAL_HEIGHT+ROW_HEIGHT;
+    const art=document.createElement('div');
+    art.className='vt2-menu-art';
+    art.setAttribute('role','img');
+    art.setAttribute('aria-label','Liste des sports avec VTT entre Vélo et Vélo d’appartement');
+    art.innerHTML=`<div class="vt2-art-upper" aria-hidden="true"></div>
+      <div class="vt2-insert" aria-hidden="true"><img src="./vtt-bandeau-v2.webp?v=2" alt=""></div>
+      <div class="vt2-art-lower" aria-hidden="true"></div>`;
+    original.replaceWith(art);
+    // Emplacements d'origine dans le visuel 760x1716. Ne touche pas
+    // aux gestionnaires de clic du menu original.
+    const hotspots={
+      'as1-c-back':[1.15,6.6],
+      'as1-c-walk':[9.4,12.3],
+      'as1-c-bike':[22.5,12.1],
+      'as1-c-indoor':[35.6,12.0],
+      'as1-c-running':[48.7,12.0],
+      'as1-c-paddle':[61.6,12.3],
+      'as1-c-custom':[74.6,13.0],
+      'as1-c-nav-home':[90.75,9.25],
+      'as1-c-nav-sport':[90.75,9.25],
+      'as1-c-nav-history':[90.75,9.25]
+    };
+    for(const btn of screen.querySelectorAll('.as1-hotspot')){
+      const cls=Object.keys(hotspots).find(c=>btn.classList.contains(c));
+      if(!cls)continue;
+      const [originalTop,originalHeightPct]=hotspots[cls];
+      const y=ORIGINAL_HEIGHT*originalTop/100;
+      const dy=y>=INSERT_Y ? ROW_HEIGHT : 0;
+      btn.style.top=((y+dy)/TOTAL_HEIGHT*100).toFixed(5)+'%';
+      btn.style.height=(ORIGINAL_HEIGHT*originalHeightPct/100/TOTAL_HEIGHT*100).toFixed(5)+'%';
+    }
+    const vtt=document.createElement('button');
+    vtt.type='button';
+    vtt.className='as1-hotspot vt2-vtt-hotspot';
+    vtt.setAttribute('aria-label','VTT — ouvrir le suivi GPS');
+    vtt.setAttribute('title','VTT — suivi GPS');
+    vtt.style.top=(INSERT_Y/TOTAL_HEIGHT*100).toFixed(5)+'%';
+    vtt.style.height=(ROW_HEIGHT/TOTAL_HEIGHT*100).toFixed(5)+'%';
+    vtt.addEventListener('click',()=>{
       state.view='autre-sport-vtt';render();window.scrollTo?.(0,0);
     });
-    extra.querySelectorAll('[data-vtchoice]').forEach(b=>b.addEventListener('click',()=>{
-      state.view=b.dataset.vtchoice;render();window.scrollTo?.(0,0);
-    }));
+    screen.appendChild(vtt);
   }
 
   const prevRender=render;
@@ -455,7 +487,7 @@
     if(v==='marche-v1-history'||(v==='autre-sport-section'&&state.as1Section==='history'))enhanceHistory();
     return result;
   };
-  // Lien VTT ajouté à la fin du menu de sélection ; le menu original reste intact.
+  // VTT V2 — carte intercalée, navigation originale conservée.
   // L’historique réaffiche directement son DOM lors d’un filtrage ou d’une suppression.
   // Raccrocher le lien Carte pour le VTT après ces réaffichages sans modifier Marche.
   if(typeof MutationObserver!=='undefined'){

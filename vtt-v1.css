@@ -27,33 +27,22 @@
 
 .vt1-date{margin:0;color:#cef1ee;font-size:.88rem;font-weight:650}
 
-/* VTT — carte dédiée dans Autre sport, sans déformer l'image de sélection. */
-.as1-choice-screen .as1-c-nav-home,
-.as1-choice-screen .as1-c-nav-sport,
-.as1-choice-screen .as1-c-nav-history{display:none!important}
-.vt1-menu-extension{position:relative;z-index:5;box-sizing:border-box;margin-top:-28.1%;
-  padding:2.2% 2.7% max(9px,env(safe-area-inset-bottom));
-  background:linear-gradient(180deg,#002d2c 0%,#003d41 100%);color:#fff}
-.vt1-choice-tile{position:relative;display:flex;flex-direction:row;align-items:flex-end;
-  justify-content:space-between;box-sizing:border-box;width:100%;aspect-ratio:3.58;
-  min-height:96px;padding:17px 19px 16px;overflow:hidden;cursor:pointer;text-align:left;
-  border:1px solid #477e68;border-radius:18px;color:white;
-  background:linear-gradient(90deg,rgba(0,35,27,.97) 1%,rgba(0,51,42,.84) 46%,rgba(2,32,26,.26) 100%),
-    url('./sport-card-velo-v5.webp') center 42%/cover no-repeat;
-  box-shadow:0 7px 18px rgba(0,0,0,.2)}
-.vt1-choice-tile:focus-visible{outline:3px solid #fff;outline-offset:2px}
-.vt1-choice-copy{display:flex;flex-direction:column;gap:4px;position:relative;z-index:1}
-.vt1-choice-copy strong{font-size:clamp(1.5rem,7vw,2.6rem);line-height:1.04;letter-spacing:.02em}
-.vt1-choice-copy small{font-weight:650;font-size:clamp(.69rem,2.6vw,.94rem);color:#d7f6df}
-.vt1-choice-arrow{width:36px;height:36px;display:grid;place-items:center;border:1.5px solid #d1ead7;
-  background:rgba(8,36,31,.58);border-radius:50%;font-size:2rem;line-height:1;flex:none;z-index:1}
-.vt1-choice-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:12px -2.7vw 0;
-  gap:0;border-top:1px solid rgba(177,228,218,.25)}
-.vt1-choice-nav button{display:flex;flex-direction:column;justify-content:center;align-items:center;
-  gap:3px;min-height:64px;font:650 .78rem system-ui,-apple-system,Segoe UI,sans-serif;
-  color:#edfdfc;border:0;background:transparent;cursor:pointer}
-.vt1-choice-nav button span{font-size:1.65rem;line-height:1.1}
-.vt1-choice-nav button:focus-visible{outline:3px solid #fff;outline-offset:-4px}
+/* VTT V2 — menu unique, sans bandeau annexe en bas d'écran.
+   Image source conservée en deux bandes avec le même ratio : pas de distortion. */
+.vt2-menu-art{display:block;width:100%;height:auto;overflow:hidden;line-height:0}
+.vt2-art-upper,.vt2-art-lower{width:100%;background-image:url('./autre-sport-choix-v1.webp');
+  background-repeat:no-repeat;background-size:100% auto;display:block}
+.vt2-art-upper{aspect-ratio:760/603;background-position:center top}
+.vt2-art-lower{aspect-ratio:760/1113;background-position:center bottom}
+.vt2-insert{width:100%;aspect-ratio:760/225;display:flex;align-items:center;justify-content:center;
+  box-sizing:border-box;background:linear-gradient(90deg,#002e30,#01403e 52%,#002d2c)}
+.vt2-insert img{width:94.8%;height:auto;max-height:97%;box-sizing:border-box;
+  display:block;border:4px solid white;border-radius:22px;object-fit:cover;
+  box-shadow:0 3px 8px rgba(0,0,0,.34)}
+.vt2-vtt-hotspot{left:2.7%;width:94.8%;border-radius:21px;z-index:5}
+.as1-choice-screen .as1-c-nav-home,.as1-choice-screen .as1-c-nav-sport,
+.as1-choice-screen .as1-c-nav-history{display:block!important}
+.vt2-vtt-hotspot:focus-visible{outline:4px solid #e5f5da;outline-offset:-5px}
 .vt1-screen .ml1-field select{width:100%;box-sizing:border-box;padding:13px;border:2px solid #64dcdc;
   border-radius:13px;background:#f2ffff;color:#102a29;font:600 1.05rem system-ui,-apple-system,Segoe UI,sans-serif}
 .vt1-terrain-detail{background:#005563;border:1px solid #2eb7bf;border-radius:14px;padding:15px 16px}
