@@ -1,0 +1,36 @@
+HIIT — V2 : VISUELS INDIVIDUELS ET SÉLECTION PAR BANDEAUX
+==========================================================
+INSTALLATION SUR GITHUB
+1. Décompresser le ZIP sur l’ordinateur.
+2. Dans MauroPenn/Recette-IG : Add file > Upload files.
+3. Déposer les 28 fichiers applicatifs contenus à la racine du dépôt.
+   Ne pas glisser le dossier entier ; ne supprimer aucun fichier préexistant.
+4. Commit changes, puis vérifier Actions > pages build and deployment : Success.
+5. Fermer et rouvrir l’application sur le téléphone.
+
+FICHIERS :
+- index.html, sw.js
+- hiit-v2.js, hiit-v2.css
+- 24 photos hiit-ex-*.webp
+La notice n'est pas à injecter.
+
+NOUVEAUTÉS
+- 24 illustrations distinctes, avec bandeaux au même format que Musculation.
+- Sélection des exercices par grands bandeaux cliquables et indicateur orange.
+- Les 3 catégories restent à 10, 6 et 8 exercices.
+- « Pas du patineur » devient « Course rapide bras actifs ».
+- Les anciennes séances HIIT sauvegardées restent disponibles ; si elles
+  contiennent le patineur, ce mouvement est remplacé dans la séance par la course bras actifs.
+- Le lecteur circuit, la temporisation, les sons, le GPS Marche et l'historique
+  ne sont pas modifiés.
+
+NOTE SUR LES PHOTOS
+Les images sont des compositions distinctes dans la même ambiance visuelle.
+Certaines restent illustratives : elles ne montrent pas encore exactement chaque
+mouvement. Les 24 photos pédagogiques précises seront améliorées séparément
+après validation de cette présentation.
+
+TEST RECOMMANDÉ
+- Musculation > HIIT > Course sur place : vérifier les 10 bandeaux.
+- Créer une séance : sélectionner 2 ou 3 bandeaux, régler les temps,
+  enregistrer, démarrer et tester les cloches.

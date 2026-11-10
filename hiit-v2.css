@@ -1,0 +1,94 @@
+/* HIIT V2 — bandeaux illustrés individuels, sans modification des rubriques validées. */
+body.hi1-active{background:#001e22;overflow-x:hidden}
+body.hi1-active #app>header.topbar,body.hi1-active #bottomNav{display:none!important}
+body.hi1-active #main{box-sizing:border-box;min-height:100dvh;width:100%;max-width:none;margin:0!important;padding:0!important;background:#001e22}
+body.hi1-active button{cursor:pointer;font-family:inherit}
+/* Nouveau bandeau Musculation : exactement la largeur des deux précédents. */
+.mm1-hiit-entry{width:100%;aspect-ratio:941 / 315;box-sizing:border-box;display:block;position:relative;overflow:hidden;isolation:isolate;border:0;border-radius:0;margin:0;padding:0;background:linear-gradient(135deg,#04191d 20%,#061116 90%);color:white;text-align:left;-webkit-tap-highlight-color:transparent}
+.mm1-hiit-entry:before{content:'';position:absolute;z-index:1;inset:5% 2%;border:clamp(2px,.6vw,5px) solid #ff951e;border-radius:clamp(16px,5vw,38px);pointer-events:none}
+.mm1-hiit-entry:after{content:'';position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,#00262a 0%,#041b21 31%,rgba(0,17,23,.7) 53%,rgba(0,10,13,.08) 100%);pointer-events:none}
+.mm1-hiit-entry>img{position:absolute;z-index:0;right:3.5%;top:9%;height:82%;width:43%;object-fit:cover;object-position:65% 42%;border-radius:14px;opacity:.9}
+.mm1-hiit-icon{position:absolute;left:4.9%;top:30%;height:40%;aspect-ratio:1;border-radius:19%;display:grid;place-items:center;background:linear-gradient(145deg,#ffb344,#ff7600);z-index:2;font-size:clamp(23px,8vw,65px);font-weight:800;color:white}
+.mm1-hiit-name{position:absolute;z-index:2;top:25%;left:21%;height:54%;max-width:52%;display:flex;flex-direction:column;justify-content:center;gap:3%;text-shadow:0 2px 9px #00171a}
+.mm1-hiit-name strong{font-size:clamp(30px,7vw,67px);font-weight:850;line-height:1}
+.mm1-hiit-name small{font-size:clamp(12px,3.1vw,27px);font-weight:600;line-height:1.18}
+.mm1-hiit-arrow{position:absolute;z-index:2;right:6%;top:28%;font-size:clamp(48px,11vw,88px);font-weight:550;line-height:.8}
+.mm1-hiit-entry:focus-visible{outline:3px solid #c7fcff;outline-offset:-3px}
+/* Le panneau principal est l'image validée par l'utilisateur, sans redessin. */
+.hi1-poster{max-width:720px;position:relative;margin:0 auto;background:#00272a;box-shadow:0 12px 45px rgba(0,0,0,.2)}
+.hi1-poster>img{display:block;width:100%;height:auto;object-fit:contain}
+.hi1-zone{position:absolute;z-index:3;border:0;background:transparent;color:transparent;opacity:1;-webkit-tap-highlight-color:rgba(255,156,25,.08)}
+.hi1-zone:focus-visible{outline:3px solid #c6f2ff;outline-offset:-5px}
+.hi1-zone:active{background:rgba(255,185,76,.1)}
+.hi1-back-zone{top:1%;left:1%;width:13%;height:7%}
+.hi1-course-zone{top:24.7%;left:1.4%;width:97%;height:16.1%;border-radius:22px}
+.hi1-coord-zone{top:41.1%;left:1.4%;width:97%;height:16%;border-radius:22px}
+.hi1-renfo-zone{top:57.2%;left:1.4%;width:97%;height:15.2%;border-radius:22px}
+.hi1-create-zone{top:72.5%;left:1.4%;width:97%;height:15.1%;border-radius:22px}
+.hi1-home-zone{top:88.6%;left:1.6%;width:30%;height:10%}
+.hi1-muscu-zone{top:88.6%;left:33%;width:32%;height:10%}
+.hi1-history-zone{top:88.6%;left:66%;width:32%;height:10%}
+/* Pages de catégories, fiches et séances. */
+.hi1-screen{min-height:100dvh;max-width:720px;margin:0 auto;box-sizing:border-box;background:radial-gradient(circle at 85% 0%,rgba(253,136,22,.14),transparent 40%),linear-gradient(160deg,#001e22 0%,#07151c 60%,#020f14 100%);color:white;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;display:flex;flex-direction:column;overflow:hidden}
+.hi1-screen *{box-sizing:border-box}
+.hi1-top{display:flex;align-items:center;gap:13px;padding:12px 14px;border-bottom:1px solid rgba(255,155,46,.2)}
+.hi1-back{width:44px;height:44px;border-radius:50%;border:1px solid #688891;background:#092832;color:#fff;font-size:34px;line-height:1;display:grid;place-items:center}
+.hi1-brand{font-size:clamp(19px,5.5vw,29px);font-weight:900;color:#ff9a1a;font-style:italic}
+.hi1-brand small{color:#e9f5f7;font-size:.55em;font-style:normal}
+.hi1-heading{padding:21px clamp(17px,4vw,27px) 17px;background:linear-gradient(95deg,rgba(255,139,0,.11),transparent)}
+.hi1-heading h1{margin:0;font-size:clamp(28px,7vw,42px);line-height:1.11;letter-spacing:-.035em;color:#fff}
+.hi1-heading p{color:#d5e1e5;font-size:clamp(14px,3vw,17px);line-height:1.45;margin:8px 0 0}
+.hi1-content{display:flex;flex-direction:column;gap:14px;padding:6px clamp(13px,3vw,23px) 27px;flex:1}
+.hi1-group-photo,.hi1-detail-photo{height:clamp(165px,36vw,240px);border:2px solid #ff941c;border-radius:23px;background:#07191d;position:relative;overflow:hidden;isolation:isolate}
+.hi1-group-photo img,.hi1-detail-photo img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 42%}
+.hi1-group-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#081317,transparent 75%)}
+.hi1-group-photo strong{position:absolute;z-index:1;bottom:13px;left:16px;font-size:clamp(19px,4.5vw,31px);text-shadow:0 2px 5px black}
+.hi1-note{color:#b9ced1;font-size:13px;line-height:1.5;margin:4px 0}
+.hi1-exercise-list{display:flex;flex-direction:column;gap:11px}
+.hi1-exercise-card{position:relative;isolation:isolate;width:100%;aspect-ratio:560/190;min-height:112px;border:2px solid #ff981e;border-radius:20px;overflow:hidden;background:#070e12;display:flex;align-items:end;text-align:left;padding:15px clamp(14px,4vw,23px);color:#fff}
+.hi1-exercise-card:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#071016 0%,rgba(7,16,22,.98) 29%,rgba(7,16,22,.58) 61%,rgba(7,16,22,.28) 100%)}
+.hi1-exercise-card img{position:absolute;z-index:-2;right:0;top:0;width:72%;height:100%;object-fit:cover;object-position:center center;opacity:.82}
+.hi1-exercise-name{display:flex;flex-direction:column;gap:4px;max-width:82%;text-shadow:0 2px 4px #000}
+.hi1-exercise-name small{font-size:clamp(11px,2.7vw,15px);color:#ffba59;font-weight:850;letter-spacing:.05em}
+.hi1-exercise-name strong{font-size:clamp(21px,5vw,34px);font-weight:900;line-height:1.1}
+.hi1-chevron{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:50px;font-weight:650;color:#fff;text-shadow:0 2px 6px #081719}
+.hi1-panel{border:1px solid #4e7277;border-radius:18px;padding:16px;background:linear-gradient(160deg,#18282e,#0a1b21)}
+.hi1-panel h2{margin:0 0 11px;font-size:20px;color:#fff}.hi1-panel p{font-size:15px;line-height:1.55;color:#dae9ed;margin:0}
+.hi1-label{display:block;font-weight:800;font-size:16px;margin-bottom:7px}
+.hi1-input,.hi1-setting input{width:100%;background:#15272c;border:1px solid #8ca9b0;border-radius:12px;padding:12px;color:#fff;font-family:inherit;font-size:17px;font-weight:700}
+.hi1-settings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.hi1-setting{color:#d8e6e9;font-size:13px;font-weight:700;display:flex;flex-direction:column;gap:8px}
+.hi1-setting input{text-align:center;min-width:0}
+.hi1-pick-group{margin:14px 0;padding-top:3px;border-top:1px solid #455d61}.hi1-pick-group h3{font-size:17px;color:#ffab30;margin:10px 0}
+.hi1-picker-row{display:flex;align-items:center;gap:12px;padding:12px 3px;border-bottom:1px solid rgba(255,255,255,.08);font-size:14px;line-height:1.3}
+.hi1-picker-row input{flex:0 0 auto;width:20px;height:20px;accent-color:#ff921a}
+.hi1-summary{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.hi1-summary span{color:#ffb04b;font-size:14px}
+.hi1-cta,.hi1-secondary{width:100%;min-height:55px;padding:14px;border-radius:16px;font-size:clamp(15px,3.8vw,19px);font-weight:850;color:#fff;border:1px solid #ffbb65;background:linear-gradient(165deg,#ffad33,#ff7e00)}
+.hi1-secondary{background:#17323a;border-color:#749ca5}.hi1-cta:focus-visible,.hi1-secondary:focus-visible,.hi1-exercise-card:focus-visible{outline:3px solid #bfeaff;outline-offset:2px}
+.hi1-saved-card{background:linear-gradient(135deg,#182e35,#081820);border:1px solid #f69a23;border-radius:18px;padding:16px}
+.hi1-saved-card small{font-weight:700;color:#ffaf51}.hi1-saved-card h2{font-size:23px;margin:5px 0}.hi1-saved-card p{font-size:14px;line-height:1.5;color:#d4e2e7}
+.hi1-saved-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.hi1-saved-actions button{background:#25414a;border:1px solid #83a2a7;color:#fff;padding:10px 12px;border-radius:11px;font-weight:800}.hi1-saved-actions button:first-child{background:#e87500;border-color:#ffbb62}.hi1-saved-actions .hi1-danger{border-color:#ae6464;color:#ffcccc;background:#362020}
+.hi1-empty{text-align:center;color:#dbeaf0;padding:28px;line-height:1.5}
+.hi1-footer{margin-top:auto;background:#f8f9f8;color:#3b5458;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-radius:34px 34px 0 0;min-height:100px;overflow:hidden}
+.hi1-footer button{background:transparent;border:0;font-size:26px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:#3b5357}
+.hi1-footer button span{font-size:13px;font-weight:700}.hi1-footer button:nth-child(2){color:#ff7b00}
+@media(min-width:760px){.hi1-screen,.hi1-poster{margin:14px auto 36px;border-radius:23px;box-shadow:0 14px 35px rgba(0,0,0,.3)}}
+@media(max-width:380px){.hi1-exercise-name strong{font-size:20px}.hi1-chevron{font-size:37px}.hi1-settings{gap:7px}.hi1-panel{padding:12px}}
+
+/* V2 — choix directement dans des bandeaux plein format, y compris au téléphone. */
+.hi1-pick-grid{display:flex;flex-direction:column;gap:11px;min-width:0}
+.hi1-select-card{position:relative;display:flex;isolation:isolate;align-items:flex-end;min-width:0;width:100%;aspect-ratio:560/190;min-height:122px;padding:14px 76px 16px clamp(13px,4vw,22px);border:2px solid #fa931b;border-radius:20px;overflow:hidden;background:#071014;color:#fff;cursor:pointer;text-align:left;box-shadow:0 6px 15px rgba(0,0,0,.14);-webkit-tap-highlight-color:rgba(255,155,29,.12)}
+.hi1-select-card>img{position:absolute;z-index:-2;right:0;top:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center center;opacity:.9;pointer-events:none}
+.hi1-select-card:before{content:'';position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,#061116 0%,rgba(6,15,20,.91) 37%,rgba(6,13,17,.47) 70%,rgba(5,13,16,.32) 100%);pointer-events:none}
+.hi1-select-card input{appearance:none;-webkit-appearance:none;display:grid;place-items:center;position:absolute;top:14px;right:13px;z-index:3;margin:0;width:34px;height:34px;background:#0e2128;border:2px solid #e8f0ef;border-radius:9px;color:#fff;cursor:pointer;box-shadow:0 1px 7px #0006}
+.hi1-select-card input:checked{background:linear-gradient(145deg,#ffa62c,#f47a00);border-color:#fff}
+.hi1-select-card input:checked:after{content:'✓';color:#fff;font-size:24px;line-height:1;font-weight:900}
+.hi1-select-card input:focus-visible{outline:3px solid #b6f8ff;outline-offset:3px}
+.hi1-select-card.is-selected{border-color:#ffc152;box-shadow:0 0 0 2px rgba(255,165,36,.21),0 8px 19px rgba(0,0,0,.22)}
+.hi1-select-text{z-index:1;display:flex;flex-direction:column;gap:5px;max-width:100%;text-shadow:0 2px 6px #000}
+.hi1-select-text small{font-size:clamp(10px,2.5vw,13px);font-weight:850;letter-spacing:.06em;color:#ffba59}
+.hi1-select-text strong{font-size:clamp(19px,4.6vw,31px);font-weight:920;line-height:1.12;overflow-wrap:break-word}
+.hi1-select-flag{position:absolute;right:12px;bottom:12px;z-index:1;border-radius:10px;background:#091c22d9;border:1px solid #708287;color:#ddecef;padding:5px 8px;font-size:11px;font-weight:800;pointer-events:none}
+.hi1-select-card.is-selected .hi1-select-flag{background:#995000;color:#fff;border-color:#ffb64c}
+@media(max-width:420px){.hi1-select-card{min-height:130px;padding-right:70px}.hi1-select-text strong{font-size:clamp(19px,5.5vw,23px)}.hi1-select-flag{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.hi1-select-card{transition:none}}
