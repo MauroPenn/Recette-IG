@@ -50,3 +50,24 @@
 .vt1-screen{background:linear-gradient(170deg,#0c443c,#07352d 55%,#022a2a)}
 .vt1-hero{background:linear-gradient(145deg,#174b38,#124e43)}
 .vt1-hero:before{background:linear-gradient(180deg,rgba(0,17,12,.15),rgba(0,34,24,.3) 35%,rgba(0,33,26,.96))}
+
+
+/* VTT V3 — raccord transparent du cadre vertical de la liste des activités.
+   La maquette d'origine a une bordure blanche sur chaque côté. Son découpage
+   pour intercaler VTT interrompait ces lignes entre les deux moitiés.
+   On restaure exactement ces côtés, sans modifier la carte, sa taille,
+   les zones cliquables, ni le suivi GPS. */
+.as1-choice-screen .vt2-insert{position:relative}
+.as1-choice-screen .vt2-insert::before,
+.as1-choice-screen .vt2-insert::after{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:3px;
+  background:#f7fbfa;
+  z-index:3;
+  pointer-events:none;
+}
+.as1-choice-screen .vt2-insert::before{left:0}
+.as1-choice-screen .vt2-insert::after{right:0}
