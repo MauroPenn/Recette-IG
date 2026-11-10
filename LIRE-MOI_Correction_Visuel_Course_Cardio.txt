@@ -1,0 +1,11 @@
+Correction ciblée — visuel de catégorie HIIT
+
+Contenu du ZIP :
+- hiit-photo-course-v1.webp
+
+À remplacer dans le dépôt GitHub :
+- Remplace uniquement le fichier hiit-photo-course-v1.webp à la racine du projet / dépôt où tu avais injecté le package HIIT.
+
+Effet attendu :
+- correction du cadrage du bandeau de catégorie « Course sur place & cardio »
+- aucune autre partie du HIIT n’est modifiée
