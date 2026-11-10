@@ -1,9 +1,10 @@
+// v125 : recadrage HIIT global, 24 images + 3 categories, autres fonctionnalités inchangées.
 // v123 : HIIT V2, 24 bandeaux illustrés et sélection visuelle. Historique, Musculation et GPS conservés.
 // v122 : intégration HIIT dans Musculation, 3 catégories, 24 exercices et créateur de séances.
 // Ma Bibliothèque — temporisation Circuit Training 2 secondes (V120).
 // Ma Bibliothèque — lien Historique depuis le menu Musculation.
 // v119 : navigation vers l’historique réel, cache actualisé ; séances et sons conservés.
-const CACHE = "ma-bibliotheque-v124";
+const CACHE = "ma-bibliotheque-v125";
 const CORE = [
   "./", "./index.html", "./styles.css", "./app.js", "./data.json",
   "./manifest.json", "./icon-192.png", "./icon-512.png",

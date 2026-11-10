@@ -1,0 +1,30 @@
+HIIT – CORRECTION GLOBALE DES CADRAGES V4
+==========================================
+
+Cette archive contient 28 fichiers applicatifs a copier directement a la racine
+DU DEPOT GITHUB Recette-IG (pas dans un sous-dossier) :
+- 24 fichiers hiit-ex-...-v3.webp : chaque illustration corrigee a 560 x 190 px
+- 3 fichiers hiit-photo-...-v1.webp : les bandeaux des categories a 720 x 260 px
+- sw.js : mise a jour du cache vers v125
+
+INSTRUCTIONS :
+1. Decompresser l'archive.
+2. GitHub > Recette-IG > Add file > Upload files.
+3. Copier les 28 fichiers applicatifs (pas besoin de copier cette notice).
+4. Remplacer les fichiers de meme nom ; Commit changes.
+5. Verifier Actions : deploiement Pages en vert.
+6. Fermer completement l'appli sur le telephone et la rouvrir pour actualiser le cache.
+
+CE QUI RESTE INCHANGE :
+- Tous les scripts JavaScript (meme hiit-v3.js)
+- Le choix des 24 exercices, les 3 categories et leurs intitulés
+- Les circuits HIIT et leurs sauvegardes, le chronometre et la temporisation
+- Les sons de cloche, la Musculation, le GPS et les cartes de Marche
+
+DETAIL : les images ont conserve exactement les MEMES NOMS. Leur correction
+apparait donc dans la liste des exercices, dans Creer une seance et dans le
+lecteur, y compris pour les seances deja creees.
+
+ATTENTION : Bird-dog dynamique et Gainage dynamique conservent une illustration
+provisoire. Leurs mouvements devront etre illustres plus precisement dans
+une revision distincte ; la presente correction porte sur les cadrages.
