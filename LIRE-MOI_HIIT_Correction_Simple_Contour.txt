@@ -1,0 +1,10 @@
+HIIT – correction du bandeau « Course sur place & cardio »
+
+Ce ZIP contient UN SEUL fichier à injecter sur GitHub :
+  hiit-photo-course-v1.webp
+
+Remplacement : dans le dépôt Recette-IG, utiliser Add file > Upload files puis déposer uniquement l’image ci-dessus à la racine, valider le remplacement si demandé, puis Commit changes.
+
+La photographie a été nettoyée de la bordure et du texte incrustés. Le contour orange et le titre sont déjà dessinés par l’application, donc une seule bordure et un seul titre doivent désormais apparaître.
+
+Les 24 exercices, les autres catégories, les sons et le suivi GPS ne sont pas modifiés. Au besoin, fermer/rouvrir l’application pour actualiser le cache.
