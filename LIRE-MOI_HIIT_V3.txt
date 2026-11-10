@@ -1,0 +1,17 @@
+HIIT V3 — INSTALLATION GITHUB — 10 novembre 2026
+
+1. Décompresse le ZIP. À la racine du dépôt MauroPenn/Recette-IG, injecte les 28 fichiers de l'application : index.html, sw.js, hiit-v3.js, hiit-v3.css et les 24 photos hiit-ex-*-v3.webp.
+2. Ne dépose PAS le ZIP lui-même et ne crée pas de sous-dossier ; dans GitHub, Add file > Upload files > Commit changes.
+3. Attends le voyant vert sur Actions. Ferme/réouvre l'application pour renouveler le cache.
+
+CE QUI CHANGE :
+- 10 fiches Course sur place & cardio, 6 Cardio & coordination et 8 Renforcement HIIT, toutes avec leur fichier photo propre.
+- Le numéro 7 Course sur place est de nouveau « Pas du patineur ».
+- Les mêmes photos apparaissent dans la liste des exercices, dans la création de séance HIIT et pendant l'entraînement HIIT.
+- Les images des séances HIIT déjà sauvegardées sont rafraîchies, sans effacer les séances ni leurs paramètres.
+
+PRÉCISION : les trois montages validés illustrent explicitement 22 mouvements (10 + 6 + 6). Les photos des exercices 7 et 8 de Renforcement HIIT (Bird-dog dynamique et Gainage dynamique) sont des visuels de dépannage, non encore validés individuellement, distincts des autres. Une photo adaptée du Bird-dog doit être validée avant de figer définitivement le rendu.
+
+NON MODIFIÉ : musculation classique et Circuit Training, sons, tempo 2 s, GPS Marche, carte GPS, historique.
+
+TESTS CONSEILLÉS : HIIT > chaque catégorie ; Créer une séance > sélectionner 3 mouvements ; sauvegarder ; rouvrir > Démarrer, et vérifier la photo affichée pour chaque exercice. Vérifier également le n°7 « Pas du patineur ».
