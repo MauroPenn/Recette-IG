@@ -9,13 +9,18 @@
   const DRAFT='mb_custom_brouillon_v1';
   const HISTORY='mb_activites_sportives_v1';
   const VIEWS=['custom-studio-v1','custom-create-v1','custom-ready-v1','custom-summary-v1','custom-detail-v1'];
+  // Fonds visuels V2 sans personnage : les 6 identifiants historiques restent
+  // inchangés pour préserver les activités déjà créées par l'utilisateur.
   const THEMES={
-    montagne:{label:'Montagne',image:'./marche-paysage-v1.webp'},
-    foret:{label:'Forêt',image:'./vtt-paysage-v2.webp'},
-    nature:{label:'Nature',image:'./sport-card-marche-v5.webp'},
-    mer:{label:'Mer / lac',image:'./sport-card-paddle-v5.webp'},
-    route:{label:'Route',image:'./sport-card-velo-v5.webp'},
-    salle:{label:'Salle',image:'./velo-appartement-hero-v1.webp'}
+    montagne:{label:'Montagne',image:'./custom-fond-montagne-v2.webp'},
+    foret:{label:'Forêt',image:'./custom-fond-foret-v2.webp'},
+    nature:{label:'Lac / nature',image:'./custom-fond-lac-v2.webp'},
+    mer:{label:'Mer',image:'./custom-fond-mer-v2.webp'},
+    route:{label:'Route',image:'./custom-fond-route-v2.webp'},
+    salle:{label:'Intérieur',image:'./custom-fond-interieur-v2.webp'},
+    fitness:{label:'Salle de sport',image:'./custom-fond-salle-sport-v2.webp'},
+    piscine:{label:'Piscine',image:'./custom-fond-piscine-v2.webp'},
+    athletisme:{label:'Athlétisme',image:'./custom-fond-athletisme-v2.webp'}
   };
   const COLORS={vert:'#34c74a',turquoise:'#09b6b7',bleu:'#168de8',orange:'#e48a2c',violet:'#b264e6',rose:'#d94e8b'};
   const ICONS=['🥾','🚶','🏃','🚴','🏊','🛶','🧘','🎾','🏸','🏋️','🏄','⭐'];

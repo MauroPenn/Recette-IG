@@ -100,3 +100,10 @@ body.cp-active #main{padding:0!important;margin:0 auto!important;background:#032
 .cp-footer button b{font-size:21px;font-weight:500}
 @media (min-width:760px){.cp-screen{border-radius:24px;margin:18px auto 45px;overflow:hidden;box-shadow:0 12px 35px #0005}}
 @media(max-width:355px){.cp-content{padding:15px 11px}.cp-panel{padding:14px 11px}.cp-stats{gap:7px}.cp-stat{padding:12px 8px}.cp-icons{grid-template-columns:repeat(5,minmax(0,1fr))}.cp-hero{height:225px}}
+
+/* V2 : 9 fonds adaptés au mobile : 2 colonnes, dernière vignette pleine largeur. */
+.cp-themes .cp-theme-choice:last-child:nth-child(odd){grid-column:1/-1}
+@media (min-width:540px){
+  .cp-themes{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .cp-themes .cp-theme-choice:last-child:nth-child(odd){grid-column:auto}
+}
