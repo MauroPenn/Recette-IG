@@ -1,0 +1,42 @@
+/* PARAMÈTRES GÉNÉRAUX V1 — tout est isolé des sports existants. */
+.uv1-grid .gs1-home-card{aspect-ratio:610/395}
+@media(min-width:651px){.uv1-grid .gs1-home-card{grid-column:1/-1;justify-self:center;width:calc((100% - 18px)/2)}}
+@media(min-width:651px) and (max-width:800px){.uv1-grid .gs1-home-card{width:calc((100% - 12px)/2)}}
+.uv1-grid .gs1-home-card .uv1-full-card-image{display:block;width:100%;height:100%;object-fit:fill}
+body.gs1-active{background:#032b2d}
+body.gs1-active #app>.topbar,body.gs1-active #bottomNav{display:none!important}
+body.gs1-active #main{box-sizing:border-box;width:100%;max-width:none;margin:0!important;padding:0!important;background:#032b2d;min-height:100dvh}
+.gs1-screen{box-sizing:border-box;max-width:720px;min-height:100dvh;margin:auto;background:linear-gradient(170deg,#064e50,#03383c 56%,#022a2c);color:white;font-family:system-ui,-apple-system,'Segoe UI',sans-serif}
+.gs1-screen *{box-sizing:border-box}
+.gs1-hero{position:relative;display:flex;align-items:center;gap:19px;padding:51px 22px 26px 77px;background:radial-gradient(circle at 84% 0%,#26988e70,transparent 63%),linear-gradient(125deg,#0a7173,#03434e 78%);border-bottom:1px solid #75c5bc80;min-height:183px}
+.gs1-back{position:absolute;left:18px;top:27px;display:grid;place-items:center;width:44px;height:44px;border:1px solid #c5eeeeab;background:#003a45;color:white;border-radius:50%;font:700 1.6rem system-ui}
+.gs1-hero-icon{display:grid;place-items:center;flex-shrink:0;width:60px;height:60px;background:#0f8484;border:1px solid #7ce0d3;border-radius:17px;font-size:2.3rem}
+.gs1-eyebrow{color:#b7f2df;font-weight:800;font-size:.7rem;letter-spacing:.17em;margin:0 0 7px}
+.gs1-hero h1{color:#fff;font-size:clamp(1.9rem,6vw,2.55rem);margin:0 0 9px;letter-spacing:-.04em;line-height:1.12}
+.gs1-hero p:last-child{color:#e4f6f3;margin:0;font-size:.89rem;line-height:1.4}
+.gs1-content{display:flex;flex-direction:column;gap:15px;padding:25px clamp(14px,4vw,28px) 34px}
+.gs1-profile-card{display:flex;gap:15px;align-items:center;width:100%;min-height:145px;padding:20px 15px;text-align:left;color:white;background:linear-gradient(115deg,#096f61,#04505c 80%);border:2px solid #5fe6b6;border-radius:22px;box-shadow:0 10px 30px #0003;cursor:pointer}
+.gs1-tile-icon{display:grid;place-items:center;background:#12a28c;flex:0 0 58px;border-radius:17px;width:58px;height:58px;font-size:2.3rem}
+.gs1-tile-copy{flex:1;min-width:0}
+.gs1-tile-copy h2{color:#fff;font-size:clamp(1.16rem,4.4vw,1.55rem);margin:0 0 7px}
+.gs1-tile-copy p{margin:0;font-size:.88rem;line-height:1.42;color:#e1fffa}
+.gs1-tile-copy span{display:block;font-size:.79rem;font-weight:800;color:#b5ffce;margin-top:9px}
+.gs1-chevron{font-size:2.8rem;line-height:1;color:#fff;flex:0 0 15px}
+.gs1-section-title{font-size:1.19rem;color:white;margin:15px 3px 0}
+.gs1-disabled-tile{display:flex;align-items:center;gap:13px;padding:16px 12px;background:#084849;border:1px solid #357b79;border-radius:17px;color:#fff}
+.gs1-small-icon{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:13px;background:#197875;font-size:1.5rem}
+.gs1-disabled-tile>div{min-width:0;flex:1}
+.gs1-disabled-tile strong{font-size:.93rem}
+.gs1-disabled-tile p{font-size:.78rem;line-height:1.4;margin:5px 0 0;color:#c6e4df}
+.gs1-later{font-size:.67rem;color:#d7e7e6;border:1px solid #6f9895;background:#185a5a;border-radius:9px;padding:5px 7px;white-space:nowrap}
+.gs1-privacy{font-size:.81rem;line-height:1.5;padding:13px;border-left:3px solid #a0e8b9;background:#07403d;color:#d5f3ec;margin:4px 0}
+.gs1-footer-back{width:100%;font:750 .98rem system-ui;color:white;background:#086471;border:1px solid #83d4d0;border-radius:15px;padding:14px;cursor:pointer}
+.gs1-screen button:focus-visible,.gs1-home-card:focus-visible{outline:3px solid #d7ff9b;outline-offset:3px}
+/* Autre sport : retirer uniquement la carte Paramètres centrale de
+   l'image composite validée (850×1791), en conservant le bas de menu. */
+.gs1-sport-art{display:block;width:100%;height:auto;line-height:0;overflow:hidden}
+.gs1-sport-upper,.gs1-sport-footer{display:block;width:100%;background-image:url('./autre-sport-accueil-v3.webp');background-repeat:no-repeat;background-size:100% auto}
+.gs1-sport-upper{aspect-ratio:850/1176;background-position:center top}
+.gs1-sport-footer{aspect-ratio:850/227;background-position:center bottom}
+@media(max-width:420px){.gs1-hero{padding:64px 14px 24px 73px}.gs1-hero-icon{width:48px;height:48px;font-size:1.8rem}.gs1-profile-card{gap:11px}.gs1-tile-icon{flex-basis:48px;width:48px;height:48px;font-size:1.75rem}.gs1-later{font-size:.61rem}}
+@media(min-width:760px){.gs1-screen{margin:20px auto 45px;border-radius:24px;box-shadow:0 15px 40px #0006;overflow:hidden}}
