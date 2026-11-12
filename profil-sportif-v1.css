@@ -1,0 +1,40 @@
+/* PROFIL SPORTIF V1 — Styles isolés. Aucun style des sports existants n'est modifié. */
+body.ps1-active{background:#032e2e}
+body.ps1-active #app>.topbar,body.ps1-active #bottomNav{display:none!important}
+body.ps1-active #main{padding:0!important;margin:0 auto!important;max-width:none!important;background:#032e2e;min-height:100dvh;color:#fff}
+.ps1-screen{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;min-height:100dvh;max-width:720px;margin:auto;background:linear-gradient(170deg,#064e50 0%,#033a3b 35%,#02282b 100%);color:#fff;box-sizing:border-box}
+.ps1-screen *{box-sizing:border-box}
+.ps1-hero{position:relative;min-height:208px;padding:48px 24px 27px 79px;background:radial-gradient(circle at 85% 12%,#0b8f8b85,transparent 57%),linear-gradient(125deg,#0b7376,#003b43 80%);border-bottom:1px solid #70c6ba6b}
+.ps1-back{position:absolute;left:18px;top:32px;height:44px;width:44px;border-radius:50%;border:1px solid #b8e7e4aa;background:#003c4bbc;color:#fff;font:800 1.65rem system-ui;cursor:pointer}
+.ps1-eyebrow{font-weight:800;font-size:.74rem;color:#aeefdf;letter-spacing:.14em;margin:0 0 9px}
+.ps1-hero h1{font-size:clamp(1.7rem,6vw,2.55rem);letter-spacing:-.035em;line-height:1.13;margin:0 0 12px}
+.ps1-hero>p:last-child{margin:0;font-size:.94rem;line-height:1.43;color:#e4fffb;max-width:500px}
+.ps1-content{padding:20px clamp(14px,4vw,28px) 32px;display:flex;flex-direction:column;gap:16px}
+.ps1-info-banner{display:flex;gap:12px;align-items:center;background:#08726f;border:1px solid #26bbb0;padding:14px 15px;border-radius:17px}
+.ps1-info-icon{display:grid;place-items:center;min-width:42px;height:42px;font-size:1.4rem;border-radius:12px;background:#0aa99b}
+.ps1-info-banner strong{font-size:1rem}
+.ps1-info-banner p{color:#def7f1;line-height:1.38;margin:5px 0 0;font-size:.84rem}
+#ps1Form{display:flex;flex-direction:column;gap:17px}
+.ps1-panel{padding:20px 16px 21px;border:1.5px solid #208b8d;background:linear-gradient(143deg,#084a4b,#034041);border-radius:21px}
+.ps1-panel h2{font-size:1.3rem;margin:0 0 17px;line-height:1.2;letter-spacing:-.025em;color:#fff}
+.ps1-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px 12px}
+.ps1-field{display:flex;flex-direction:column;gap:8px;min-width:0;font-size:.92rem;font-weight:720;color:#e7fff9}
+.ps1-field em{font-style:normal;color:#b0ffce}.ps1-field small{font-size:.75rem;font-weight:500;color:#b6d9d6}
+.ps1-field input,.ps1-field select{display:block;width:100%;min-width:0;max-width:100%;padding:13px 11px;color:#0b3032;background:#f5fffd;border:2px solid #9de5d7;border-radius:12px;min-height:49px;font:650 1rem system-ui,-apple-system,Segoe UI,sans-serif}
+.ps1-field input:focus,.ps1-field select:focus{outline:2px solid #cdfa9f;outline-offset:1px;border-color:#77b978}
+.ps1-age{margin-top:15px;color:#bdfdd9;font-weight:730;font-size:.91rem}
+.ps1-help{font-size:.88rem;line-height:1.55;color:#cee6e3;margin:-7px 0 14px}
+.ps1-use-row{display:flex;align-items:flex-start;gap:10px;margin:12px 0}
+.ps1-use-row p{margin:0;color:#e8faf5;line-height:1.48;font-size:.87rem}
+.ps1-check{flex-shrink:0;width:27px;height:27px;display:grid;place-items:center;border-radius:50%;background:#0b977e;color:#fff;font-weight:900}
+.ps1-save{border:1px solid #68ffe1;background:linear-gradient(120deg,#09d0ac,#008f84);border-radius:18px;padding:16px 10px;color:#fff;font:850 1.1rem system-ui;min-height:56px;cursor:pointer;text-shadow:0 1px 2px #034}
+.ps1-status{margin:0;padding:14px 13px;border-radius:12px;line-height:1.4;font-weight:650}
+.ps1-status-error{color:#ffe9e9;border:1px solid #ed7c82;background:#6a2732}
+.ps1-status-success{color:#d8ffe6;border:1px solid #28ba7f;background:#076c50}
+.ps1-updated{font-size:.78rem;color:#bddfd9;margin:0 8px;text-align:center}
+.ps1-delete{background:none;color:#f4c5bc;border:1px solid #d48d8d;border-radius:13px;padding:12px 10px;font:650 .9rem system-ui;cursor:pointer}
+.ps1-privacy{border-left:3px solid #9ee6c6;padding:12px 13px;background:#073c3a;color:#c9e7dd;border-radius:0 9px 9px 0;font-size:.8rem;line-height:1.55;margin:0}
+.ps1-return{width:100%;border:1px solid #69b0b1;border-radius:15px;background:#09646d;color:white;padding:15px 12px;font:750 1rem system-ui;cursor:pointer}
+.ps1-screen button:focus-visible{outline:3px solid #c1fa93;outline-offset:2px}
+@media(max-width:400px){.ps1-fields{grid-template-columns:1fr}.ps1-hero{padding-left:76px;min-height:200px}.ps1-content{padding:15px 12px 25px}}
+@media(min-width:760px){.ps1-screen{margin:22px auto 50px;border-radius:24px;overflow:hidden;box-shadow:0 13px 45px #001f2470}}
