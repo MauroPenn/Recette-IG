@@ -1,0 +1,44 @@
+/* Synchronisation isolée : seuls les éléments sy1 sont stylisés */
+.sy1-settings-link{display:flex;gap:12px;align-items:center;text-align:left;width:100%;border:1px solid #1caaa2;border-radius:17px;background:#064c52;color:#fff;padding:16px 14px;font:inherit;cursor:pointer}
+.sy1-settings-icon{font-size:1.65rem;flex:0 0 33px;color:#72ffe3}
+.sy1-settings-link span:nth-child(2){flex:1;display:grid;gap:4px;min-width:0}
+.sy1-settings-link strong{font-size:1rem}
+.sy1-settings-link small{font-size:.81rem;color:#c5f1ec;line-height:1.4}
+.sy1-settings-link b{font-size:1.8rem;color:#9ff4e1}
+.sy1-settings-link:focus-visible{outline:3px solid #ccffae;outline-offset:3px}
+body.sy1-active #app>.topbar,body.sy1-active #bottomNav{display:none!important}
+body.sy1-active #main{margin:0!important;padding:0!important;max-width:none!important;background:#002f32;min-height:100dvh}
+.sy1-screen{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:720px;margin:0 auto;background:linear-gradient(168deg,#064448,#002f32 65%);color:#fff;min-height:100dvh;box-sizing:border-box}
+.sy1-screen *{box-sizing:border-box}
+.sy1-hero{background:linear-gradient(125deg,#087b74,#00383f);position:relative;padding:48px 20px 25px 75px;border-bottom:1px solid #31b9ac}
+.sy1-back{position:absolute;left:15px;top:34px;width:44px;height:44px;border-radius:50%;border:1px solid #b1efde;background:#07505a;color:#fff;font-size:1.55rem;cursor:pointer}
+.sy1-kicker{font-weight:800;font-size:.72rem;letter-spacing:.13em;color:#b9eee0;margin:0 0 9px}
+.sy1-hero h1{font-size:clamp(1.65rem,6vw,2.35rem);white-space:normal;line-height:1.18;margin:0 0 13px}
+.sy1-hero>p:last-child{margin:0;line-height:1.5;color:#ddf6f1;font-size:.93rem}
+.sy1-content{padding:18px 14px 34px;display:grid;gap:16px}
+.sy1-panel{border:1.5px solid #168e88;background:linear-gradient(145deg,#075055,#034245);padding:19px 15px;border-radius:20px;min-width:0}
+.sy1-panel h2{font-size:1.28rem;line-height:1.25;color:#fff;margin:0 0 12px}
+.sy1-panel p{font-size:.92rem;line-height:1.55;color:#dcf3ed;margin:8px 0 14px}
+.sy1-primary,.sy1-secondary,.sy1-footer{width:100%;display:block;min-height:46px;padding:12px;border-radius:13px;cursor:pointer;font-size:.92rem;font-weight:790}
+.sy1-primary{background:#06bc9b;border:1px solid #7affdd;color:#052c31}
+.sy1-primary:disabled{opacity:.48;cursor:not-allowed}
+.sy1-secondary{background:#075b62;color:#fff;border:1px solid #3bafaa}
+.sy1-small{color:#bce1da!important;font-size:.8rem!important}
+.sy1-import{padding-top:16px;border-top:1px solid #348a88;display:grid;gap:10px;margin-top:18px}
+.sy1-import>label,.sy1-details label,.sy1-credentials label{display:grid;gap:8px;font-size:.85rem;font-weight:730}
+.sy1-details{border:1px solid #307e7c;border-radius:13px;padding:11px 12px;margin:14px 0}
+.sy1-details summary{font-weight:780;cursor:pointer}
+.sy1-details label{margin:10px 0}
+.sy1-screen input[type='file'],.sy1-screen input[type='text'],.sy1-screen input[type='email'],.sy1-screen input[type='password'],.sy1-screen input[type='url']{width:100%;border:2px solid #9ddad1;border-radius:10px;background:#f7fffc;color:#14363a;padding:12px;min-height:43px;font:inherit;min-width:0}
+.sy1-credentials{display:grid;gap:11px;margin:10px 0 13px}
+.sy1-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sy1-text-button{grid-column:1/-1;border:1px solid #699d9c;background:transparent;color:#e3f7f1;padding:10px;border-radius:11px;cursor:pointer}
+.sy1-ok{color:#a7ffda!important;font-weight:780}
+.sy1-pending{color:#ffd98b!important;font-weight:730}
+.sy1-notice{border:1px solid #3d9996;padding:15px;line-height:1.5;border-radius:13px;margin:0;font-weight:650;font-size:.9rem}
+.sy1-notice[hidden]{display:none}
+.sy1-success{background:#075a46;border-color:#33c899;color:#d7ffea}
+.sy1-error{background:#5a2731;border-color:#d98189;color:#ffebed}
+.sy1-info{background:#064e61;color:#e3f9fa}
+.sy1-footer{background:transparent;border:1px solid #3c9d99;color:#fff}
+@media(min-width:760px){.sy1-screen{margin:22px auto 45px;border-radius:24px;overflow:hidden;box-shadow:0 14px 42px #001c2370}}
