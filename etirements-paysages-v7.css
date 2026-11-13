@@ -1,0 +1,16 @@
+/* Étirements V7 – vrais bandeaux validés (photographies à plan large, paysage visible).
+ * Pas de recadrage dynamique des personnages : l’image entière demeure visible.
+ */
+body.ez1-active #main:has(.et7-screen){max-width:none;width:100%;margin:0!important;padding:0!important;background:#003a34;min-height:100dvh;}
+body.ez1-active .et7-screen{box-sizing:border-box;display:flex;flex-direction:column;gap:11px;max-width:720px;width:100%;margin:0 auto;padding:15px 8px 28px;min-height:100dvh;background:#003a34;color:#fff;}
+.et7-screen *{box-sizing:border-box;}
+.et7-back{font:inherit;cursor:pointer;align-self:flex-start;color:#fff;font-weight:760;font-size:clamp(.91rem,3.8vw,1.2rem);background:#064d41;border:1.7px solid #f0c477;border-radius:30px;padding:12px 18px;min-height:47px;margin-bottom:1px;}
+.et7-zones{display:flex;flex-direction:column;gap:10px;}
+.et7-picture-card{display:block;width:100%;height:auto;aspect-ratio:1842/717;background:transparent;border:0;padding:0;margin:0;line-height:0;overflow:hidden;position:relative;border-radius:0;}
+.et7-screen button.et7-picture-card{cursor:pointer;-webkit-tap-highlight-color:rgba(255,205,124,.16);}
+.et7-picture-card img{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none;user-select:none;-webkit-user-drag:none;}
+.et7-picture-card:active:not(.et7-soon){filter:brightness(1.12)}
+.et7-screen button:focus-visible{outline:3px solid #ffdeaa;outline-offset:2px;}
+.et7-footer{margin:6px 3% 0;padding:20px 3% 0;border-top:1px solid #d4a768;color:#f1d1a0;font-size:clamp(.63rem,2.7vw,.84rem);text-align:center;font-weight:750;}
+@media(min-width:760px){body.ez1-active .et7-screen{padding:20px 12px 35px;gap:17px}.et7-zones{gap:16px}}
+@media(prefers-reduced-motion:reduce){.et7-picture-card{transition:none}}
