@@ -1,0 +1,70 @@
+/* Étirements – Nuque & cervicales V2 : même ratio que les bandeaux Musculation (560 / 190).
+   Les images entières sont affichées sans distorsion. Les autres univers ne sont pas concernés. */
+body.ez1-active .evc2-category.evc1-screen {
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:flex-start!important;
+  align-items:stretch;
+  gap:clamp(12px,2.8vw,21px);
+  min-height:100dvh;
+  height:auto;
+  padding-bottom:clamp(12px,2.8vw,22px)!important;
+  background:#003a34;
+}
+.evc2-category .evc2-banner {
+  box-sizing:border-box;
+  display:block;
+  position:relative;
+  flex:0 0 auto;
+  width:100%;
+  height:auto;
+  aspect-ratio:560/190;
+  max-height:none;
+  min-height:0;
+  padding:0;
+  margin:0;
+  background:transparent;
+  border:0;
+  border-radius:0;
+  line-height:0;
+  cursor:pointer;
+}
+.evc2-category .evc2-banner img {
+  box-sizing:border-box;
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+  user-select:none;
+  pointer-events:none;
+}
+.evc2-category .evc2-banner:focus-visible {outline:3px solid #f7cb8e;outline-offset:-5px;}
+.evc2-category .evc2-banner:active{filter:brightness(1.13);}
+.evc2-category .evc2-header,
+.evc2-category .evc2-footer{flex:none;width:100%;height:auto;position:relative;line-height:0;}
+.evc2-category .evc2-header img,
+.evc2-category .evc2-footer img{width:100%;height:auto;display:block;object-fit:contain;}
+.evc2-category .evc2-header .evc2-back {
+  position:absolute;
+  left:3.5%;top:3%;width:55%;height:20%;z-index:1;
+  border:0;background:transparent;border-radius:23px;cursor:pointer;
+}
+.evc2-category .evc2-header .evc2-back:focus-visible {outline:3px solid #fff4c5;outline-offset:0;}
+/* All six detailed views share the same accepted seven-slice template as exercise #1. */
+.evc2-detail.evc1-fiche-approuvee .evc1-slice {
+  display:block;
+  flex:0 0 auto;
+  width:100%;
+  height:auto;
+  margin:0;
+  padding:0;
+  border:0;
+  line-height:0;
+}
+.evc2-detail .evc1-slice img{display:block;width:100%;height:auto;object-fit:contain;}
+.evc2-detail button.evc1-slice{cursor:pointer;}
+@media(min-width:760px){
+  .evc2-category.evc1-screen{border-radius:22px;}
+}
+@media(prefers-reduced-motion:reduce){.evc2-category .evc2-banner{transition:none}}
