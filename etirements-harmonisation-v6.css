@@ -1,0 +1,64 @@
+/* Étirements : accueil des 7 zones et 10 bandeaux Épaules & bras, version 6.
+   Calibré pour le mobile, sans image aplatie, sans textes intégrés aux photos.
+   Les anciennes fiches explicatives et Nuque & cervicales demeurent inchangées. */
+body.ez1-active .et6-screen,
+body.ez1-active .et6-screen * { box-sizing:border-box; }
+body.ez1-active #main:has(.et6-screen){margin:0!important;padding:0!important;width:100%;max-width:none;min-height:100dvh;background:#003a34;}
+body.ez1-active .et6-screen {
+ width:100%;max-width:720px;margin:0 auto;min-height:100dvh;
+ padding:17px 9px 30px;display:flex;flex-direction:column;
+ gap:14px;background:#003a34;color:#fff;font-family:inherit;
+}
+.et6-screen button {font:inherit;-webkit-tap-highlight-color:rgba(248,196,120,.14);cursor:pointer;}
+.et6-screen button:focus-visible{outline:3px solid #fff3cd;outline-offset:3px;}
+.et6-back {
+ display:inline-flex;align-items:center;align-self:flex-start;min-height:47px;
+ padding:10px 18px;border:1.8px solid #f3c477;border-radius:28px;
+ background:#045044;color:#fff;font-size:clamp(.91rem,3.9vw,1.15rem);
+ font-weight:780;line-height:1.25;text-align:left;
+}
+.et6-intro{
+ display:flex;flex-direction:column;justify-content:center;position:relative;isolation:isolate;
+ overflow:hidden;border:2px solid #f3c477;border-radius:23px;
+ aspect-ratio:960/325;padding:20px 4%;background:#00392f;
+}
+.et6-intro::before,.et6-card::before{
+ content:'';z-index:-1;position:absolute;inset:0;
+ background-image:var(--et6-bg);background-size:cover;background-position:center;pointer-events:none;
+}
+.et6-intro span{color:#f6c887;font-size:clamp(.72rem,3vw,.98rem);font-weight:790;letter-spacing:.03em;line-height:1.13;}
+.et6-intro h1{color:white;font-size:clamp(2.1rem,9vw,3.6rem);font-weight:850;line-height:1.05;margin:7px 0 8px;}
+.et6-intro p{color:white;font-size:clamp(.88rem,3.75vw,1.34rem);line-height:1.25;margin:0;max-width:59%;}
+.et6-intro--shoulders h1{font-size:clamp(1.9rem,7.3vw,3.15rem);}
+.et6-intro--shoulders p{font-size:clamp(.86rem,3.5vw,1.18rem);color:#ffe0a9;font-weight:700;}
+.et6-list{display:flex;flex-direction:column;gap:12px;}
+.et6-card{
+ width:100%;position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;
+ gap:clamp(8px,2.5vw,16px);aspect-ratio:560/190;min-height:0;padding:8px 7.5% 8px 4%;
+ background:#003a34;border:2px solid #f2c27a;border-radius:22px;
+ text-align:left;color:white;line-height:1.12;
+}
+.et6-card:active:not(:disabled){filter:brightness(1.12)}
+.et6-icon{width:clamp(43px,14vw,79px);height:clamp(43px,14vw,79px);object-fit:contain;flex:0 0 auto;display:block;border-radius:12px;}
+.et6-copy{min-width:0;display:flex;flex-direction:column;gap:7px;max-width:62%;position:relative;z-index:2;}
+.et6-name{font-size:clamp(1.04rem,4.55vw,1.85rem);font-weight:820;line-height:1.12;overflow-wrap:normal;hyphens:auto;text-wrap:pretty;text-shadow:0 1px 3px rgba(0,26,21,.26)}
+.et6-count{font-size:clamp(.84rem,3.7vw,1.16rem);line-height:1.1;color:#ffdfa8;font-weight:550;}
+.et6-chevron{position:absolute;right:2.4%;top:50%;transform:translateY(-50%);color:white;font-size:clamp(2rem,9vw,3.7rem);font-family:Arial,sans-serif;font-weight:400;line-height:.8;filter:drop-shadow(0px 1px 3px rgba(0,0,0,.25));}
+.et6-card:disabled{opacity:1;cursor:default;}
+.et6-card:disabled .et6-chevron{opacity:.58;}
+.et6-footer{margin-top:16px;padding:19px 4% 9px;border-top:1px solid #e7bc77;font-size:clamp(.64rem,2.6vw,.83rem);color:#f0ca91;letter-spacing:.02em;font-weight:750;text-align:center;}
+/* Long exercise names remain readable within the 560×190 source proportions on small screens. */
+.et6-card--exercise .et6-name{font-size:clamp(.96rem,4.1vw,1.6rem);font-weight:820;max-width:100%;}
+.et6-card--exercise .et6-copy{width:60%;max-width:60%;gap:0;}
+.et6-card--exercise.et6-long .et6-name{font-size:clamp(.87rem,3.7vw,1.43rem);line-height:1.1;}
+.et6-card--exercise.et6-very-long .et6-name{font-size:clamp(.78rem,3.28vw,1.25rem);line-height:1.1;}
+@media(max-width:360px){
+ .et6-screen{padding-left:7px!important;padding-right:7px!important;gap:11px!important}
+ .et6-list{gap:10px}.et6-card{border-radius:18px;padding-left:3.5%;gap:8px}
+ .et6-card--exercise .et6-name{font-size:.95rem}
+ .et6-card--exercise.et6-long .et6-name{font-size:.85rem}
+ .et6-card--exercise.et6-very-long .et6-name{font-size:.78rem}
+ .et6-chevron{right:2%}
+}
+@media(min-width:760px){body.ez1-active .et6-screen{border-radius:22px;overflow:hidden;margin:18px auto 30px;gap:22px;padding:20px 15px 35px}.et6-list{gap:19px}}
+@media(prefers-reduced-motion:reduce){.et6-card{transition:none}}
