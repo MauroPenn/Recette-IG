@@ -1,5 +1,5 @@
-/* Sport & Nutrition — Étirements / Épaules & bras V12 — 14/11/2026.
-   Réglage VISUEL uniquement après le correctif V11 :
+/* Sport & Nutrition — Étirements / Épaules & bras V13 — 14/11/2026.
+   Réglage VISUEL uniquement après le correctif V12 :
    - Les 10 bandeaux individuels gardent le ratio et leur affichage complet, sans étirement.
    - Les fiches héritent du style aéré de Nuque & cervicales : titres lisibles,
      panneau « Comment faire », conseils, bienfaits, 4 informations bien visibles.
@@ -171,9 +171,9 @@
         if(hero){
           const n=(idx<0?1:idx+1);
           hero.style.setProperty('background-image',
-            'linear-gradient(90deg,rgba(0,49,42,.96) 0%,rgba(0,49,42,.88) 37%,rgba(0,49,42,.12) 79%,transparent 100%),url("./etirements-epaules-photo-'+n+'-v11.webp?v=11")','important');
+            'linear-gradient(90deg,rgba(0,49,42,.94) 0%,rgba(0,49,42,.76) 28%,rgba(0,49,42,.28) 56%,rgba(0,49,42,0) 77%),url("./etirements-epaules-photo-'+n+'-v11.webp?v=13")','important');
           hero.style.setProperty('background-size','cover','important');
-          hero.style.setProperty('background-position','right center','important');
+          hero.style.setProperty('background-position','58% center','important');
         }
       }
     }
