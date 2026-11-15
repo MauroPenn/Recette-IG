@@ -1,0 +1,22 @@
+CORRECTIF V3 – ACCÈS PECTORAUX – 15 novembre 2026
+
+Pourquoi : l'écran des sept catégories d'étirements est créé par
+« etirements-paysages-v7.js », qui bloquait Pectoraux. Le correctif V2
+ne touchait pas au bon écran.
+
+Fichiers à placer à la racine de ton dépôt GitHub :
+ - index.html (remplacer l'ancien)
+ - etirements-paysages-v8.js (nouveau fichier)
+
+Ne supprime aucun autre fichier. Les deux fiches, leurs quatre visuels,
+les 10 exercices Épaules & bras et la catégorie Nuque & cervicales
+restent inchangés.
+
+Après « Commit changes », ferme puis rouvre l'application.
+Le clic sur Étirements > Exercices > Pectoraux doit ouvrir la liste
+avec « Étirement des pectoraux contre un mur » et « Ouverture des
+pectoraux dans l'encadrement d'une porte ».
+
+Si la page ne se met pas à jour immédiatement, vérifie par le navigateur
+sur l'adresse du site publiée. La mise à jour du site peut nécessiter
+un rechargement complet.
