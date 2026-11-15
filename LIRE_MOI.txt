@@ -1,10 +1,20 @@
-CORRECTIF PECTORAUX — ESPACEMENT DES 3 DERNIERS BANDEAUX
+CORRECTIF PECTORAUX — HAUTEUR DES TROIS DERNIERS BANDEAUX
 
-Ce ZIP remplace uniquement les 3 derniers bandeaux de la catégorie Pectoraux pour uniformiser la hauteur et donc l'écart visuel entre tous les bandeaux.
+Les trois derniers bandeaux avaient un espace vide autour de l'image.
+Leur bordure dorée est maintenant aussi haute que celle des autres bandeaux.
 
-Fichiers à remplacer à la racine du dépôt GitHub :
-- etirements-pectoraux-bandeau-5-v3.webp
-- etirements-pectoraux-bandeau-6-v3.webp
-- etirements-pectoraux-bandeau-7-v3.webp
+INSTALLATION :
+1. Décompresser ce ZIP.
+2. Dans GitHub, ajouter les 5 fichiers à la racine de votre dépôt.
+3. Remplacer index.html, puis cliquer sur Commit changes.
+4. Fermer complètement puis rouvrir l'application sur le téléphone.
 
-Aucun autre fichier n'est à modifier.
+FICHIERS :
+- index.html (ouvre la nouvelle version du correctif)
+- etirements-pectoraux-lot3-v2.js (charge les images corrigées)
+- etirements-pectoraux-bandeau-5-v4.webp
+- etirements-pectoraux-bandeau-6-v4.webp
+- etirements-pectoraux-bandeau-7-v4.webp
+
+Les 7 fiches d'exercices, les 4 premiers bandeaux, l'en-tête Pectoraux et
+les autres catégories ne sont pas modifiés.
