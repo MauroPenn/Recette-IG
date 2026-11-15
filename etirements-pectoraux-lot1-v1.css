@@ -1,0 +1,31 @@
+/* Pectoraux Étirements — Lot 1. Toutes les règles sont limitées à la nouvelle rubrique. */
+body.ez1-active .px2-screen,body.ez1-active .px2-screen *{box-sizing:border-box}
+body.ez1-active .px2-screen{width:100%;max-width:720px;min-height:100dvh;margin:0 auto;padding:12px 10px 30px;background:#003a34;color:#fff;font-family:inherit;display:flex;flex-direction:column;gap:17px}
+.px2-screen button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:rgba(255,221,161,.18)}
+.px2-screen button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.px2-back{align-self:flex-start;min-height:46px;border:2px solid #edc17b;border-radius:27px;padding:10px 17px;background:#004b41;color:#fff;font-weight:800;font-size:clamp(.90rem,3.85vw,1.18rem);line-height:1.18}
+.px2-list-heading{border:2px solid #edc17b;border-radius:23px;padding:22px 25px;background:linear-gradient(105deg,#00352d,#075546)}
+.px2-list-heading span{color:#efc17e;font-size:.94rem;font-weight:800}
+.px2-list-heading h1{color:#fff;margin:7px 0;font-size:clamp(2rem,7.5vw,3.1rem);line-height:1.04}
+.px2-list-heading p{color:#f7dda8;font-weight:700;margin:8px 0 0;font-size:1rem}
+.px2-band{border:0;padding:0;margin:0;width:100%;background:transparent;display:block;border-radius:20px;overflow:hidden;line-height:0;text-align:left;aspect-ratio:941/319;flex:none}
+.px2-band img{display:block;width:100%;height:100%;object-fit:contain;transform:none!important;filter:none!important}
+.px2-band:active{filter:brightness(1.1)}
+.px2-coming{text-align:center;color:#d5b98a;font-size:.90rem;line-height:1.4;margin:5px 10px}
+.px2-hero{display:block;width:100%;height:auto;border-radius:0;object-fit:contain;max-width:100%;flex:none}
+.px2-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.px2-stat{display:flex;gap:9px;align-items:center;min-width:0;min-height:73px;padding:8px 7px;background:#004c40;border:1.5px solid #edc17b;border-radius:14px;color:white}
+.px2-stat img{display:block;width:clamp(30px,8.3vw,53px);height:clamp(30px,8.3vw,53px);object-fit:contain;flex:none;border-radius:9px}
+.px2-stat div{display:flex;min-width:0;flex-direction:column;gap:2px}
+.px2-stat span{font-size:clamp(.60rem,2.45vw,.91rem);line-height:1.12;color:#fff;overflow-wrap:anywhere}
+.px2-stat strong{font-size:clamp(.71rem,3vw,1rem);line-height:1.13;color:#fff;overflow-wrap:anywhere}
+.px2-panel{background:linear-gradient(130deg,#0b5346,#074a3f);border:2px solid #edc17b;border-radius:22px;padding:18px 20px;color:white}
+.px2-panel-heading{display:flex;gap:14px;align-items:center;color:white;font-size:clamp(1.37rem,5.7vw,2rem);font-weight:850;line-height:1.15;margin:0 0 12px}
+.px2-symbol{display:grid;place-items:center;flex:none;width:clamp(45px,10vw,64px);height:clamp(45px,10vw,64px);background:#ef9f28;border-radius:12px;font-size:1.6rem;font-weight:750;color:white}
+.px2-panel ol,.px2-panel ul{padding:0;margin:0 0 0 clamp(30px,6.6vw,46px);list-style:none;counter-reset:px2-count;display:flex;flex-direction:column;gap:11px}
+.px2-panel li{position:relative;font-size:clamp(.94rem,3.6vw,1.15rem);line-height:1.42}
+.px2-panel ol li::before{counter-increment:px2-count;content:counter(px2-count);position:absolute;left:calc(-1*clamp(30px,6.6vw,46px));top:0;width:26px;height:26px;display:grid;place-items:center;border-radius:50%;background:#efa72d;color:white;font-weight:800}
+.px2-panel ul li::before{content:'•';position:absolute;left:-24px;color:#f4b344;font-size:1.4em;top:-3px}
+.px2-caution{text-align:center;color:#cce2db;margin:0 10px;line-height:1.4;font-size:.8rem}
+@media(max-width:390px){body.ez1-active .px2-screen{gap:12px;padding:10px 8px 20px}.px2-stats{gap:5px}.px2-stat{gap:4px;padding:6px 3px;min-height:65px}.px2-stat img{width:28px;height:28px}.px2-panel{padding:14px 12px}}
+@media(min-width:760px){body.ez1-active .px2-screen{border-radius:20px;margin:15px auto 35px;padding:20px;gap:20px}}

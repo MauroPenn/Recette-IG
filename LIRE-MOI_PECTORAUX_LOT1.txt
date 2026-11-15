@@ -1,0 +1,19 @@
+ÉTIREMENTS / PECTORAUX — LOT 1 (2 EXERCICES)
+
+Décompresser ce ZIP, puis déposer les fichiers À LA RACINE du dépôt GitHub (pas le ZIP lui-même).
+Enregistrer avec « Commit changes » et attendre la publication normale du site.
+
+Le fichier index.html ajoute seulement la rubrique Pectoraux (2 exercices).
+Le reste du site et les catégories déjà validées demeurent inchangés.
+
+CONTENU :
+- index.html : uniquement 2 références nouvelles (feuille CSS + script)
+- etirements-pectoraux-lot1-v1.js
+- etirements-pectoraux-lot1-v1.css
+- etirements-pectoraux-bandeau-1-v1.webp
+- etirements-pectoraux-bandeau-2-v1.webp
+- etirements-pectoraux-fiche-1-v1.webp
+- etirements-pectoraux-fiche-2-v1.webp
+
+Images dérivées des quatre visuels approuvés. Les sujets sont conservés sans déformation.
+Les 5 exercices restants de Pectoraux ne sont pas encore créés.
