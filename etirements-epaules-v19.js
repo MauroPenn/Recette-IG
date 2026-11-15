@@ -12,7 +12,7 @@
  const LIST='etirements-epaules-liste',DETAIL='etirements-epaules-fiche';
  const IDS=['cercles','haussement','deltoide','triceps','ouverture-poitrine','avantbras','triceps-haut','ouverture-epaules','biceps-mur','epaule-croisee'];
  const src=n=>'./etirements-epaules-bandeau-'+n+'-v19.webp?v=19';
- const heroSrc=n=>'./etirements-epaules-hero-'+n+'-v19.webp?v=19';
+ const heroSrc=n=>n===1?'./etirements-epaules-hero-1-v20.webp?v=20':'./etirements-epaules-hero-'+n+'-v19.webp?v=19';
  const mapped={
   haussement:['Épaules','8 à 10 répétitions','Deux côtés'],
   deltoide:['Épaules','20–30 s','Deux côtés'],
@@ -42,7 +42,7 @@
   if(state.view!==DETAIL)return;
   const root=main.querySelector('.eeb1-detail');if(!root)return;
   const ix=IDS.indexOf(state.eeb1Selected),n=ix+1;
-  if(n<2 || n>10)return; // Preserve original Cercles d’épaules fiche, which was not replaced here.
+  if(n<1 || n>10)return; // V20: the validated Cercles d’épaules image is now used, too.
   if(root.getAttribute('data-ev19-detail')==='1')return;
   const el=root.querySelector('.eeb1-hero');if(!el)return;
   const fallbackHTML=el.innerHTML, fallbackBg=el.style.backgroundImage;
