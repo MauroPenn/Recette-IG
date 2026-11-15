@@ -1,0 +1,19 @@
+PECTORAUX — LOT FINAL (EXERCICES 5, 6 ET 7)
+
+Ce ZIP complète la catégorie Pectoraux avec les 3 derniers exercices validés.
+
+À ajouter à la racine du dépôt GitHub :
+- index.html
+- etirements-pectoraux-lot3-v1.js
+- etirements-pectoraux-bandeau-5-v3.webp
+- etirements-pectoraux-fiche-5-v3.webp
+- etirements-pectoraux-bandeau-6-v3.webp
+- etirements-pectoraux-fiche-6-v3.webp
+- etirements-pectoraux-bandeau-7-v3.webp
+- etirements-pectoraux-fiche-7-v3.webp
+
+Remarques :
+- Le script met la rubrique Pectoraux à 7 exercices disponibles sur 7.
+- L’en-tête déjà validé sans personnage est conservé.
+- Les catégories précédentes restent inchangées.
+- Après l’ajout, remplacer les fichiers si GitHub le demande, puis faire “Commit changes”.
