@@ -1,19 +1,10 @@
-CORRECTIF PECTORAUX – 2 EXERCICES SUPPLÉMENTAIRES
+CORRECTIF PECTORAUX — ESPACEMENT DES 3 DERNIERS BANDEAUX
 
-Ajoute :
-- Ouverture de la poitrine, bras en croix
-- Étirement des pectoraux, mains derrière le dos
+Ce ZIP remplace uniquement les 3 derniers bandeaux de la catégorie Pectoraux pour uniformiser la hauteur et donc l'écart visuel entre tous les bandeaux.
 
-INSTALLATION :
-1. Décompresser le ZIP.
-2. Ajouter à la racine de GitHub les six fichiers suivants :
-   index.html
-   etirements-pectoraux-lot2-v3.js
-   etirements-pectoraux-bandeau-3-v2.webp
-   etirements-pectoraux-fiche-3-v2.webp
-   etirements-pectoraux-bandeau-4-v2.webp
-   etirements-pectoraux-fiche-4-v2.webp
-3. Remplacer index.html lors de l'ajout.
-4. Enregistrer avec Commit changes, puis fermer et rouvrir l'application.
+Fichiers à remplacer à la racine du dépôt GitHub :
+- etirements-pectoraux-bandeau-5-v3.webp
+- etirements-pectoraux-bandeau-6-v3.webp
+- etirements-pectoraux-bandeau-7-v3.webp
 
-Les deux anciens exercices, l'en-tête sans personnage et les autres catégories sont préservés.
+Aucun autre fichier n'est à modifier.
