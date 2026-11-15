@@ -1,0 +1,15 @@
+CORRECTIF : accès aux étirements Pectoraux — 15/11/2026
+
+Cause : le bandeau « Pectoraux » du menu était défini comme non cliquable
+alors que les deux exercices et les images avaient déjà été installés.
+
+Décompresser puis déposer les 3 fichiers du ZIP à la RACINE de GitHub
+au même endroit que index.html, puis valider par « Commit changes ».
+
+- index.html : charge les nouvelles versions, pour forcer le rechargement.
+- etirements-harmonisation-v7.js : rend cliquable le bouton « Pectoraux ».
+- etirements-pectoraux-lot1-v2.js : conserve les deux exercices, supprime la rustine d'activation devenue inutile.
+
+AUCUNE image n'est modifiée ; les 4 visuels Pectoraux restent identiques.
+Les autres rubriques et leurs visuels ne sont pas modifiés.
+En cas de cache : fermer complètement l'application et la rouvrir.
