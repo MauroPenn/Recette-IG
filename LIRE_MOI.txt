@@ -1,0 +1,19 @@
+CORRECTIF PECTORAUX – 2 EXERCICES SUPPLÉMENTAIRES
+
+Ajoute :
+- Ouverture de la poitrine, bras en croix
+- Étirement des pectoraux, mains derrière le dos
+
+INSTALLATION :
+1. Décompresser le ZIP.
+2. Ajouter à la racine de GitHub les six fichiers suivants :
+   index.html
+   etirements-pectoraux-lot2-v3.js
+   etirements-pectoraux-bandeau-3-v2.webp
+   etirements-pectoraux-fiche-3-v2.webp
+   etirements-pectoraux-bandeau-4-v2.webp
+   etirements-pectoraux-fiche-4-v2.webp
+3. Remplacer index.html lors de l'ajout.
+4. Enregistrer avec Commit changes, puis fermer et rouvrir l'application.
+
+Les deux anciens exercices, l'en-tête sans personnage et les autres catégories sont préservés.
