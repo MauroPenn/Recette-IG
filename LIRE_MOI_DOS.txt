@@ -1,0 +1,15 @@
+ÉTIREMENTS — DOS : LES DEUX PREMIERS EXERCICES
+
+Ce lot ajoute à la catégorie Dos :
+- le bandeau d’accueil avec le lac au coucher du soleil ;
+- Chat-vache : bandeau + fiche ;
+- Posture de l’enfant : bandeau + fiche.
+
+Installation :
+1. Ouvre le ZIP et décompresse-le.
+2. Ajoute les 8 fichiers de l’application à la racine de ton dépôt GitHub, comme pour Pectoraux.
+3. Remplace index.html, enregistre avec « Commit changes ».
+4. Ferme et rouvre l’application, puis va dans Étirements > Exercices > Dos.
+
+Les 2 premiers exercices doivent s’ouvrir en touchant leur bandeau.
+Les autres catégories et la synchronisation ne sont pas modifiées.
