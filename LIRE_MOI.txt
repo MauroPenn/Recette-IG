@@ -1,16 +1,13 @@
-ÉTIREMENTS – DOS : EXERCICES 3 ET 4
+DOS – EXERCICES 5 ET 6
 
-Ce lot ajoute les deux exercices validés :
-• Rotation lombaire allongée
-• Genoux vers la poitrine
+Ajouter tous les fichiers directement à la racine de votre dépôt GitHub.
+Remplacer uniquement index.html lorsqu'il est proposé.
+Les exercices 1 à 4 et l'accueil Dos restent inchangés.
 
-Les deux premiers exercices (Chat-vache et Posture de l’enfant), leurs images et l’en-tête restent inchangés.
+Nouveaux exercices :
+5. Posture de l'enfant avec étirement latéral
+6. Ouverture thoracique en livre ouvert
 
-Pour l’installation :
-1. Décompresse ce ZIP.
-2. Dans GitHub, ajoute les fichiers contenus dans ce ZIP directement au même endroit que index.html et les autres fichiers de ton application.
-3. Remplace index.html si GitHub te le demande et enregistre les modifications.
-4. Ferme puis rouvre l’application pour vérifier les deux nouveaux exercices.
+Les deux boutons « Voir la vidéo explicative » sont cliquables et ouvrent le message indiquant que la démonstration sera prochainement disponible.
 
-Les visuels sont au format exact des bandeaux précédents (941 × 319) sans étirement.
-Les fiches sont découpées entre des encadrés dorés complets, à hauteur adaptable, et leurs boutons vidéo sont réellement cliquables. Les vidéos elles-mêmes seront ajoutées séparément.
+Les fiches s'adaptent à la hauteur du téléphone. Tous les cadres dorés sont préservés dans leur entier, sans déformer les personnages ni les textes.
