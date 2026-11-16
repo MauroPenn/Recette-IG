@@ -1,16 +1,16 @@
-CORRECTIF DOS — ENCADRÉS V5
+ÉTIREMENTS – DOS : EXERCICES 3 ET 4
 
-Ce fichier corrige uniquement les deux fiches de la catégorie Dos :
-- Chat-vache
-- Posture de l’enfant
+Ce lot ajoute les deux exercices validés :
+• Rotation lombaire allongée
+• Genoux vers la poitrine
 
-Les contours dorés de chaque encadré sont maintenant entiers. Les fiches
-occupent la hauteur du téléphone, sans étirer le personnage ni les textes.
-Les boutons vidéo restent cliquables et indiquent que les vidéos sont à venir.
+Les deux premiers exercices (Chat-vache et Posture de l’enfant), leurs images et l’en-tête restent inchangés.
 
-Pour installer : décompresser le ZIP puis ajouter à la racine de GitHub
-le fichier index.html, les deux nouveaux fichiers et les 14 panneaux.
-Remplacer index.html, enregistrer avec « Commit changes », puis rouvrir l’appli.
+Pour l’installation :
+1. Décompresse ce ZIP.
+2. Dans GitHub, ajoute les fichiers contenus dans ce ZIP directement au même endroit que index.html et les autres fichiers de ton application.
+3. Remplace index.html si GitHub te le demande et enregistre les modifications.
+4. Ferme puis rouvre l’application pour vérifier les deux nouveaux exercices.
 
-Les bandeaux d’accueil, les fiches des autres catégories, l’historique,
-les séances et la synchronisation ne sont pas modifiés.
+Les visuels sont au format exact des bandeaux précédents (941 × 319) sans étirement.
+Les fiches sont découpées entre des encadrés dorés complets, à hauteur adaptable, et leurs boutons vidéo sont réellement cliquables. Les vidéos elles-mêmes seront ajoutées séparément.
