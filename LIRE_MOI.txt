@@ -1,12 +1,14 @@
-DOS – EXERCICES 7 ET 8 (avec visuels validés)
+DOS — LES DEUX DERNIERS EXERCICES (9 ET 10)
 
-Décompressez le ZIP et ajoutez tous les fichiers directement à la racine du dépôt GitHub.
-Remplacez index.html si GitHub le propose.
+Cette archive remplace la version précédente du Dos et ajoute :
+9. Étirement du haut du dos
+10. Torsion assise douce
 
-7. Étirement du grand dorsal sur chaise
-8. Inclinaison latérale debout
+Mode d'emploi : décompresser le ZIP, puis envoyer TOUS les fichiers
+qu'il contient directement dans le dépôt GitHub, au même endroit que index.html.
+Confirmer le remplacement de index.html. Enregistrer les modifications.
 
-Les exercices 1 à 6 sont conservés, inchangés.
-La nouvelle version utilise les mêmes dimensions et les mêmes boutons vidéo cliquables que les exercices précédents.
-Les cadres dorés des fiches sont séparés uniquement dans les zones sans contours.
-Les boutons vidéo affichent le message « Démonstration bientôt disponible » en attendant les vidéos.
+Les exercices 1 à 8 restent inchangés.
+Les deux nouvelles fiches ont des encadrements dorés complets, affichage pleine
+hauteur et boutons « Voir la vidéo explicative » cliquables (message provisoire
+jusqu'à ajout des vraies vidéos).
