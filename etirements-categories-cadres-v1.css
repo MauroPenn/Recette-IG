@@ -1,0 +1,39 @@
+/* Étirements — bordures régulières des 7 catégories, version validée.
+   Les anciennes bordures intégrées aux visuels sont cachées sous une bordure
+   continue dessinée par le navigateur, sans écraser le personnage ni le texte. */
+body.ez1-active .et7-zones .et7-picture-card {
+  box-sizing: border-box !important;
+  position: relative !important;
+  isolation: isolate;
+  overflow: hidden !important;
+  border: 3px solid #f1c978 !important;
+  border-radius: clamp(17px,3.6vw,27px) !important;
+  padding: 0 !important;
+  background: #003a34 !important;
+  aspect-ratio: 1842 / 717 !important;
+  height: auto !important;
+  box-shadow: inset 0 0 0 1px rgba(255,240,189,.28);
+}
+body.ez1-active .et7-zones .et7-picture-card > img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  transform: scale(1.028) !important;
+  transform-origin: center !important;
+  border: none !important;
+  border-radius: 0 !important;
+  pointer-events: none !important;
+}
+body.ez1-active .et7-zones .et7-picture-card:focus-visible {
+  outline: 3px solid #fff3d0 !important;
+  outline-offset: 2px !important;
+}
+
+/* Les trois nouveaux visuels ont déjà été nettoyés de leurs anciennes bordures. */
+body.ez1-active .et7-zones .et7-picture-card > img[src*="et7-cadre-corrige-"] {
+  transform: none !important;
+}

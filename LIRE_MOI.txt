@@ -1,14 +1,13 @@
-DOS — LES DEUX DERNIERS EXERCICES (9 ET 10)
+CORRECTIF — CADRES DORÉS DES 7 CATÉGORIES D’ÉTIREMENTS
 
-Cette archive remplace la version précédente du Dos et ajoute :
-9. Étirement du haut du dos
-10. Torsion assise douce
+Ce ZIP corrige le contour doré de toutes les catégories, de Nuque & cervicales à Mollets & chevilles.
+Il installe aussi les trois visuels validés pour Dos, Hanches & fessiers et Cuisses, avec le personnage corrigé.
 
-Mode d'emploi : décompresser le ZIP, puis envoyer TOUS les fichiers
-qu'il contient directement dans le dépôt GitHub, au même endroit que index.html.
-Confirmer le remplacement de index.html. Enregistrer les modifications.
+Pour installer :
+1. Décompresse le fichier ZIP.
+2. Dépose les fichiers contenus dedans directement à la racine de ton dépôt GitHub.
+3. Remplace index.html si GitHub te le demande.
+4. Ne supprime aucun autre fichier de l’application.
+5. Ouvre les catégories d’étirements sur ton téléphone et vérifie le résultat.
 
-Les exercices 1 à 8 restent inchangés.
-Les deux nouvelles fiches ont des encadrements dorés complets, affichage pleine
-hauteur et boutons « Voir la vidéo explicative » cliquables (message provisoire
-jusqu'à ajout des vraies vidéos).
+Les 10 fiches du Dos, les boutons vidéo, les autres catégories et la synchronisation restent inchangés.
