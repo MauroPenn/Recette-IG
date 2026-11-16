@@ -1,14 +1,8 @@
-CORRECTIF DOS — BOUTONS VIDÉO (2 premiers exercices)
+CORRECTIF DOS — FICHES PLUS LISIBLES
 
-Décompresser ce ZIP, puis mettre les 3 fichiers de correction à la racine du dépôt GitHub :
-- index.html (remplacer l'ancien)
-- etirements-dos-lot1-v2.js (nouveau)
-- etirements-dos-lot1-v2.css (nouveau)
+Ajoute les 5 fichiers à la racine du dépôt GitHub et valide les modifications.
+Conserve les autres fichiers actuels (bandeaux, autres exercices, etc.).
+Après installation, ferme puis rouvre l’application pour voir la nouvelle version.
 
-Valider les modifications sur GitHub, puis fermer et rouvrir l'application.
-
-Ce que le correctif fait :
-- La souris prend la forme d'une petite main sur toute la surface du bouton doré.
-- Un appui ouvre une fenêtre indiquant que la démonstration sera ajoutée prochainement, comme pour Nuque & cervicales.
-- Les images, les bandeaux, les exercices, et les autres catégories ne changent pas.
-- Les nouveaux noms de fichiers évitent de garder en mémoire une ancienne correction.
+Les deux fiches sont agrandies à la largeur du téléphone sans déformer les visuels.
+Le bouton vidéo reste cliquable. Les vidéos elles-mêmes seront ajoutées plus tard.

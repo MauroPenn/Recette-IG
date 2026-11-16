@@ -1,0 +1,60 @@
+/* Étirements > Dos. Styles limités à la catégorie Dos uniquement. */
+body.ez1-active .dos1-screen,body.ez1-active .dos1-screen *{box-sizing:border-box}
+body.ez1-active .dos1-screen{width:100%;max-width:720px;min-height:100dvh;margin:0 auto;padding:12px 10px 30px;background:#003a34;color:#fff;font-family:inherit;display:flex;flex-direction:column;gap:17px}
+.dos1-screen button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:rgba(255,221,161,.18)}
+.dos1-screen button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.dos1-back{align-self:flex-start;min-height:46px;border:2px solid #edc17b;border-radius:27px;padding:10px 17px;background:#004b41;color:#fff;font-weight:800;font-size:clamp(.90rem,3.85vw,1.18rem);line-height:1.18}
+.dos1-header{display:block;width:100%;height:auto;aspect-ratio:941/387;object-fit:contain;border-radius:25px;flex:none}
+.dos1-band{border:0;padding:0;margin:0;width:100%;background:transparent;display:block;border-radius:20px;overflow:hidden;line-height:0;text-align:left;aspect-ratio:941/319;flex:none}
+.dos1-band-image{display:block;width:100%;height:100%;object-fit:contain;transform:none!important;filter:none!important}
+.dos1-band:active{filter:brightness(1.10)}
+.dos1-note{text-align:center;color:#d5b98a;font-size:.90rem;line-height:1.4;margin:5px 10px}
+.dos1-fiche-wrap{display:block;position:relative;width:100%;margin:0}
+.dos1-fiche-img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain;transform:none!important;filter:none!important}
+.dos1-back-hit{position:absolute;left:3%;top:0.9%;width:41%;height:4.1%;border:0;border-radius:25px;padding:0;background:transparent;cursor:pointer;z-index:3}
+.dos1-back-hit:focus-visible{background:rgba(255,255,255,.12);outline:3px solid #fff;outline-offset:2px}
+@media(max-width:390px){body.ez1-active .dos1-screen{gap:12px;padding:10px 8px 20px}}
+@media(min-width:760px){body.ez1-active .dos1-screen{border-radius:20px;margin:15px auto 35px;padding:20px;gap:20px}}
+
+/* Bouton vidéo visible dans l'image, avec une zone interactive sur TOUT le bouton.
+   Le rectangle doré occupe environ y=90%-97% de la fiche 941×1672. */
+body.ez1-active .dos1-fiche-wrap .dos2-video-hit {
+  position:absolute;
+  left:1.5%; top:89.65%; width:97%; height:8%;
+  z-index:999; display:block; padding:0;
+  border:0; border-radius:999px;
+  background:transparent;
+  cursor:pointer !important;
+  pointer-events:auto !important;
+  -webkit-tap-highlight-color:rgba(255,255,255,.15);
+  appearance:none;
+}
+body.ez1-active .dos1-fiche-wrap .dos2-video-hit:hover,
+body.ez1-active .dos1-fiche-wrap .dos2-video-hit:focus-visible {
+  background:rgba(255,255,255,.10);
+  outline:2px solid rgba(255,238,193,.55);
+  outline-offset:-3px;
+}
+body.ez1-active .dos1-fiche-wrap .dos2-video-hit:active {
+  background:rgba(255,255,255,.16);
+}
+.dos2-video-modal {
+  position:fixed; inset:0; z-index:99999;
+  display:flex; justify-content:center; align-items:center;
+  box-sizing:border-box; padding:20px;
+  background:rgba(0,28,25,.82);
+}
+.dos2-video-modal-card {
+  width:min(100%,440px); padding:26px 22px;
+  box-sizing:border-box; border:2px solid #edbd70; border-radius:24px;
+  background:#06493f; color:white; text-align:center;
+  box-shadow:0 16px 50px rgba(0,0,0,.4);
+}
+.dos2-video-modal-card h2 {color:#ffe1a6;font-size:clamp(1.25rem,5vw,1.7rem);line-height:1.23;margin:0 0 16px}
+.dos2-video-modal-card p {color:#f6f6f1;line-height:1.5;margin:0 0 23px;font-size:1rem}
+.dos2-video-modal-close {display:block;min-height:45px;margin:0 auto;padding:10px 19px;background:#eead55;color:#073e36;border:0;border-radius:999px;font:inherit;font-weight:800;cursor:pointer!important}
+.dos2-video-modal-close:hover {background:#ffc16d}
+.dos2-video-modal-close:focus-visible {outline:3px solid white;outline-offset:3px}
+
+/* Fiches Dos : affichage bord à bord sur téléphone, image non déformée */
+@media(max-width:759px){body.ez1-active .dos1-screen{max-width:none;padding:5px 4px 14px;gap:9px}body.ez1-active .dos1-fiche-wrap{width:100%;max-width:none}body.ez1-active .dos1-fiche-img{display:block;width:100%;height:auto;object-fit:contain}}
