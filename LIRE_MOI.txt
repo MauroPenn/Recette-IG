@@ -1,8 +1,15 @@
-CORRECTIF DOS — FICHES PLUS LISIBLES
+DOS — FICHES PLEINE HAUTEUR / V4
 
-Ajoute les 5 fichiers à la racine du dépôt GitHub et valide les modifications.
-Conserve les autres fichiers actuels (bandeaux, autres exercices, etc.).
-Après installation, ferme puis rouvre l’application pour voir la nouvelle version.
+Ce correctif n'apporte AUCUN changement aux bandeaux ni aux fiches validées.
+Il répartit les sections des deux fiches en hauteur pour mieux occuper l'écran du téléphone.
+Le texte et le personnage conservent leurs proportions. Les boutons retour et vidéo restent cliquables.
 
-Les deux fiches sont agrandies à la largeur du téléphone sans déformer les visuels.
-Le bouton vidéo reste cliquable. Les vidéos elles-mêmes seront ajoutées plus tard.
+Installation :
+1. Décompresser le ZIP.
+2. Copier les 16 fichiers (dont index.html) à la RACINE du dépôt GitHub.
+3. Remplacer index.html quand GitHub le propose, valider "Commit changes".
+4. Fermer puis rouvrir l'application pour récupérer la nouvelle version.
+
+Les fichiers graphiques des autres catégories ne sont pas modifiés.
+Si le téléphone est plus court, la fiche se fait défiler verticalement normalement.
+La démonstration vidéo affiche encore le message "bientôt disponible".
