@@ -1,13 +1,10 @@
-CORRECTIF — CADRES DORÉS DES 7 CATÉGORIES D’ÉTIREMENTS
+CORRECTIF — BOUTONS VIDÉO DES 7 FICHES PECTORAUX
 
-Ce ZIP corrige le contour doré de toutes les catégories, de Nuque & cervicales à Mollets & chevilles.
-Il installe aussi les trois visuels validés pour Dos, Hanches & fessiers et Cuisses, avec le personnage corrigé.
+1. Ouvrir le ZIP.
+2. Ajouter les 3 fichiers dans le dépôt GitHub de l’application, à la racine.
+3. Remplacer index.html et enregistrer les changements.
+4. Fermer puis rouvrir l’application sur le téléphone.
 
-Pour installer :
-1. Décompresse le fichier ZIP.
-2. Dépose les fichiers contenus dedans directement à la racine de ton dépôt GitHub.
-3. Remplace index.html si GitHub te le demande.
-4. Ne supprime aucun autre fichier de l’application.
-5. Ouvre les catégories d’étirements sur ton téléphone et vérifie le résultat.
-
-Les 10 fiches du Dos, les boutons vidéo, les autres catégories et la synchronisation restent inchangés.
+Les 7 fiches Pectoraux auront un bouton doré « Voir la vidéo explicative » cliquable.
+Pour l’instant, le bouton indique que la vidéo sera disponible plus tard.
+Tous les autres visuels et exercices sont conservés.

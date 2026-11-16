@@ -1,0 +1,35 @@
+/* Bouton vidéo des 7 fiches Pectoraux — présentation identique au modèle doré du Dos. */
+body.ez1-active .px2-screen .pxv-video-button{
+  box-sizing:border-box;display:flex;align-items:center;justify-content:center;
+  gap:clamp(10px,3vw,21px);width:100%;min-height:clamp(66px,14vw,100px);
+  margin:2px 0 12px;padding:12px 13px;flex:none;
+  border:2px solid #ffe1a6;border-radius:999px;
+  background:linear-gradient(180deg,#ffc66c 0%,#efa843 45%,#dc841c 100%);
+  box-shadow:inset 0 2px 0 rgba(255,255,255,.24),0 5px 12px rgba(0,32,25,.2);
+  color:#fff;font:inherit;font-size:clamp(1.02rem,4.75vw,1.75rem);
+  font-weight:850;line-height:1.12;text-align:center;cursor:pointer!important;
+  -webkit-tap-highlight-color:rgba(255,255,255,.15);
+}
+body.ez1-active .px2-screen .pxv-video-button:hover{filter:brightness(1.06)}
+body.ez1-active .px2-screen .pxv-video-button:active{filter:brightness(.98)}
+body.ez1-active .px2-screen .pxv-video-button:focus-visible{outline:3px solid #fff;outline-offset:3px}
+body.ez1-active .px2-screen .pxv-play{
+  display:grid;place-items:center;width:clamp(38px,10vw,64px);height:clamp(38px,10vw,64px);
+  flex:0 0 auto;border:3px solid white;border-radius:50%;
+}
+body.ez1-active .px2-screen .pxv-triangle{
+  width:0;height:0;border-top:10px solid transparent;border-bottom:10px solid transparent;
+  border-left:16px solid white;transform:translateX(2px)
+}
+.pxv-video-overlay{position:fixed;inset:0;z-index:99999;display:flex;justify-content:center;
+  align-items:center;padding:20px;box-sizing:border-box;background:rgba(0,28,25,.82)}
+.pxv-video-dialog{width:min(100%,440px);padding:26px 22px;box-sizing:border-box;
+  border:2px solid #edbd70;border-radius:24px;background:#06493f;color:#fff;
+  text-align:center;box-shadow:0 16px 50px rgba(0,0,0,.4)}
+.pxv-video-dialog h2{margin:0 0 16px;color:#ffe1a6;font-size:clamp(1.25rem,5vw,1.7rem);line-height:1.23}
+.pxv-video-dialog p{margin:0 0 23px;font-size:1rem;line-height:1.5;color:#f6f6f1}
+.pxv-video-close{display:block;min-height:45px;margin:0 auto;padding:10px 19px;
+  border:0;border-radius:999px;background:#eead55;color:#073e36;font:inherit;font-weight:800;cursor:pointer!important}
+.pxv-video-close:hover{background:#ffc16d}
+.pxv-video-close:focus-visible{outline:3px solid white;outline-offset:3px}
+@media(max-width:380px){body.ez1-active .px2-screen .pxv-video-button{gap:9px;padding:12px 8px;font-size:clamp(.95rem,4.65vw,1.3rem)}}
