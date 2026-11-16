@@ -63,6 +63,13 @@
     note.textContent='Les autres étirements du dos seront ajoutés après validation.';
     screen.appendChild(note);
   }
+
+  function bindVideoButton(button, title) {
+    button.addEventListener('click', () => {
+      alert('La vidéo explicative de « ' + title + ' » sera ajoutée prochainement.');
+    });
+  }
+
   function detail(){
     const ex=EXERCISES[selected] || EXERCISES[0];
     const screen=root('Fiche étirement — '+ex.title);
@@ -72,6 +79,9 @@
     const hit=document.createElement('button');hit.className='dos1-back-hit';hit.type='button';
     hit.setAttribute('aria-label','Retour à Dos');hit.title='Retour à Dos';
     hit.addEventListener('click',()=>go(LIST));holder.appendChild(hit);
+    const video=document.createElement('button');video.className='dos1-video-hit';video.type='button';
+    video.setAttribute('aria-label','Voir la vidéo explicative de '+ex.title);video.title='Voir la vidéo explicative';
+    bindVideoButton(video, ex.title);holder.appendChild(video);
     screen.appendChild(holder);
   }
   function activateDosInExistingMenu(){

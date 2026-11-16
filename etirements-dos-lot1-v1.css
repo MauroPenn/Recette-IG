@@ -15,3 +15,9 @@ body.ez1-active .dos1-screen{width:100%;max-width:720px;min-height:100dvh;margin
 .dos1-back-hit:focus-visible{background:rgba(255,255,255,.12);outline:3px solid #fff;outline-offset:2px}
 @media(max-width:390px){body.ez1-active .dos1-screen{gap:12px;padding:10px 8px 20px}}
 @media(min-width:760px){body.ez1-active .dos1-screen{border-radius:20px;margin:15px auto 35px;padding:20px;gap:20px}}
+
+
+.dos1-video-hit{position:absolute;left:4.2%;top:92.1%;width:90.6%;height:5.8%;border:0;border-radius:999px;padding:0;background:transparent;cursor:pointer;z-index:3}
+.dos1-video-hit:hover{background:rgba(255,255,255,.06)}
+.dos1-video-hit:active{background:rgba(255,255,255,.12)}
+.dos1-video-hit:focus-visible{background:rgba(255,255,255,.10);outline:3px solid #fff;outline-offset:2px}
