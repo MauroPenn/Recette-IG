@@ -1,13 +1,12 @@
-DOS – EXERCICES 5 ET 6
+DOS – EXERCICES 7 ET 8 (avec visuels validés)
 
-Ajouter tous les fichiers directement à la racine de votre dépôt GitHub.
-Remplacer uniquement index.html lorsqu'il est proposé.
-Les exercices 1 à 4 et l'accueil Dos restent inchangés.
+Décompressez le ZIP et ajoutez tous les fichiers directement à la racine du dépôt GitHub.
+Remplacez index.html si GitHub le propose.
 
-Nouveaux exercices :
-5. Posture de l'enfant avec étirement latéral
-6. Ouverture thoracique en livre ouvert
+7. Étirement du grand dorsal sur chaise
+8. Inclinaison latérale debout
 
-Les deux boutons « Voir la vidéo explicative » sont cliquables et ouvrent le message indiquant que la démonstration sera prochainement disponible.
-
-Les fiches s'adaptent à la hauteur du téléphone. Tous les cadres dorés sont préservés dans leur entier, sans déformer les personnages ni les textes.
+Les exercices 1 à 6 sont conservés, inchangés.
+La nouvelle version utilise les mêmes dimensions et les mêmes boutons vidéo cliquables que les exercices précédents.
+Les cadres dorés des fiches sont séparés uniquement dans les zones sans contours.
+Les boutons vidéo affichent le message « Démonstration bientôt disponible » en attendant les vidéos.
