@@ -1,15 +1,16 @@
-DOS — FICHES PLEINE HAUTEUR / V4
+CORRECTIF DOS — ENCADRÉS V5
 
-Ce correctif n'apporte AUCUN changement aux bandeaux ni aux fiches validées.
-Il répartit les sections des deux fiches en hauteur pour mieux occuper l'écran du téléphone.
-Le texte et le personnage conservent leurs proportions. Les boutons retour et vidéo restent cliquables.
+Ce fichier corrige uniquement les deux fiches de la catégorie Dos :
+- Chat-vache
+- Posture de l’enfant
 
-Installation :
-1. Décompresser le ZIP.
-2. Copier les 16 fichiers (dont index.html) à la RACINE du dépôt GitHub.
-3. Remplacer index.html quand GitHub le propose, valider "Commit changes".
-4. Fermer puis rouvrir l'application pour récupérer la nouvelle version.
+Les contours dorés de chaque encadré sont maintenant entiers. Les fiches
+occupent la hauteur du téléphone, sans étirer le personnage ni les textes.
+Les boutons vidéo restent cliquables et indiquent que les vidéos sont à venir.
 
-Les fichiers graphiques des autres catégories ne sont pas modifiés.
-Si le téléphone est plus court, la fiche se fait défiler verticalement normalement.
-La démonstration vidéo affiche encore le message "bientôt disponible".
+Pour installer : décompresser le ZIP puis ajouter à la racine de GitHub
+le fichier index.html, les deux nouveaux fichiers et les 14 panneaux.
+Remplacer index.html, enregistrer avec « Commit changes », puis rouvrir l’appli.
+
+Les bandeaux d’accueil, les fiches des autres catégories, l’historique,
+les séances et la synchronisation ne sont pas modifiés.
