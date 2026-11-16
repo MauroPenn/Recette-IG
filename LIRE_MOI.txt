@@ -1,20 +1,14 @@
-CORRECTIF PECTORAUX — HAUTEUR DES TROIS DERNIERS BANDEAUX
+CORRECTIF DOS — BOUTONS VIDÉO (2 premiers exercices)
 
-Les trois derniers bandeaux avaient un espace vide autour de l'image.
-Leur bordure dorée est maintenant aussi haute que celle des autres bandeaux.
+Décompresser ce ZIP, puis mettre les 3 fichiers de correction à la racine du dépôt GitHub :
+- index.html (remplacer l'ancien)
+- etirements-dos-lot1-v2.js (nouveau)
+- etirements-dos-lot1-v2.css (nouveau)
 
-INSTALLATION :
-1. Décompresser ce ZIP.
-2. Dans GitHub, ajouter les 5 fichiers à la racine de votre dépôt.
-3. Remplacer index.html, puis cliquer sur Commit changes.
-4. Fermer complètement puis rouvrir l'application sur le téléphone.
+Valider les modifications sur GitHub, puis fermer et rouvrir l'application.
 
-FICHIERS :
-- index.html (ouvre la nouvelle version du correctif)
-- etirements-pectoraux-lot3-v2.js (charge les images corrigées)
-- etirements-pectoraux-bandeau-5-v4.webp
-- etirements-pectoraux-bandeau-6-v4.webp
-- etirements-pectoraux-bandeau-7-v4.webp
-
-Les 7 fiches d'exercices, les 4 premiers bandeaux, l'en-tête Pectoraux et
-les autres catégories ne sont pas modifiés.
+Ce que le correctif fait :
+- La souris prend la forme d'une petite main sur toute la surface du bouton doré.
+- Un appui ouvre une fenêtre indiquant que la démonstration sera ajoutée prochainement, comme pour Nuque & cervicales.
+- Les images, les bandeaux, les exercices, et les autres catégories ne changent pas.
+- Les nouveaux noms de fichiers évitent de garder en mémoire une ancienne correction.
