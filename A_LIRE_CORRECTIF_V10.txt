@@ -1,0 +1,17 @@
+CORRECTIF V10 – HANCHES & FESSIERS
+
+Contenu :
+- etirements-hanches-bandeau-5-v7.webp
+- etirements-hanches-bandeau-6-v7.webp
+- etirements-hanches-bandeau-7-v7.webp
+
+Correction apportée :
+- suppression du trait/doublage parasite dans la bordure dorée sur les côtés
+  des bandeaux des exercices 5, 6 et 7.
+
+Installation :
+- décompresser ce ZIP ;
+- envoyer ces fichiers à la racine du dépôt GitHub ;
+- remplacer les fichiers existants du même nom.
+
+Aucun changement n'est nécessaire pour les fiches exercices.
