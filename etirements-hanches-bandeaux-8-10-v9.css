@@ -1,0 +1,18 @@
+/* V9 : égalise exactement les trois bandeaux avec les exercices 1 à 7.
+   Format normalisé de chaque image : 941 x 252 ; pas de bandeau rétréci.
+   Aucune règle ne touche aux fiches des exercices. */
+body.ez1-active .hf1-screen.hf1-list > button.hf8-v9-band {
+  display:block!important; box-sizing:border-box!important;
+  width:100%!important; min-width:0!important; max-width:100%!important;
+  height:auto!important; max-height:none!important;
+  flex:0 0 auto!important; align-self:stretch!important;
+  padding:0!important; margin:0!important; transform:none!important;
+  border:0!important; background:transparent!important; overflow:hidden!important;
+}
+body.ez1-active .hf1-screen.hf1-list > button.hf8-v9-band > img.hf8-v9-image {
+  display:block!important; width:100%!important; max-width:100%!important;
+  height:auto!important; min-height:0!important; max-height:none!important;
+  object-fit:contain!important; object-position:center center!important;
+  padding:0!important; margin:0!important; border:0!important;
+  transform:none!important; filter:none!important;
+}

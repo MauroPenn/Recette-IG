@@ -1,0 +1,26 @@
+CORRECTIF V9 — TAILLE DES BANDEAUX HANCHES & FESSIERS (EXERCICES 8, 9, 10)
+
+Corrige uniquement la taille d'affichage des trois bandeaux, pour qu'ils soient
+exactement au même format que les bandeaux des exercices 1 à 7 : 941 x 252 pixels.
+Les photographies, textes et fonds validés sont conservés. Aucun changement des
+fiches exercices, des autres groupes ou des sept premiers exercices.
+
+INSTALLATION GITHUB :
+1. Décompresse ce ZIP.
+2. Ajoute les SIX fichiers à la racine de ton dépôt GitHub.
+3. Remplace le fichier index.html existant.
+4. Attends la publication de GitHub Pages et recharge ton application.
+
+Le correctif s'appuie sur la V8 déjà injectée et fonctionnelle : il garde
+etirements-hanches-ex8-10-v8.css et les 3 images des fiches v8 en place.
+Ne supprime aucun des anciens fichiers.
+
+Fichiers contenus :
+- index.html (charge le JS V9 à la place du V8 et ajoute le CSS V9)
+- etirements-hanches-ex8-10-v9.js (ouvre les mêmes fiches déjà validées)
+- etirements-hanches-bandeaux-8-10-v9.css (force la même largeur que les autres)
+- etirements-hanches-bandeau-8-v9.webp (taille 941 x 252)
+- etirements-hanches-bandeau-9-v9.webp (taille 941 x 252)
+- etirements-hanches-bandeau-10-v9.webp (taille 941 x 252)
+
+Les noms V9 sont nouveaux pour éviter d'afficher les anciennes images en cache.
