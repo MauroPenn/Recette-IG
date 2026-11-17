@@ -26,3 +26,17 @@ body.ez1-active .hf1-screen.hf1-detail .hf1-stack{display:flex;flex-direction:co
 .hf1-video-close:hover{background:#ffc16d;}
 @media(max-width:390px){body.ez1-active .hf1-screen.hf1-list{gap:12px;padding:10px 8px 20px;}}
 @media(min-width:760px){body.ez1-active .hf1-screen.hf1-list{border-radius:20px;margin:15px auto 35px;padding:20px;gap:20px;}body.ez1-active .hf1-screen.hf1-detail{min-height:0;padding:0 6px 16px;}body.ez1-active .hf1-screen.hf1-detail .hf1-stack{min-height:0;gap:10px;}}
+
+/* V5 : quatre bandeaux visuellement identiques et cadres dorés uniques.
+   Le contour est dessiné dans chaque image, le bouton ne doit pas le couper. */
+body.ez1-active .hf1-screen.hf1-list .hf1-band{
+  width:100%; aspect-ratio:941 / 252; height:auto;
+  overflow:visible!important; border-radius:0!important;
+  border:0!important; box-shadow:none!important; padding:0!important;
+}
+body.ez1-active .hf1-screen.hf1-list .hf1-band .hf1-band-image{
+  display:block; width:100%; height:auto!important; max-width:100%;
+  aspect-ratio:941 / 252; object-fit:contain!important;
+  transform:none!important; filter:none!important;
+  border:0!important; border-radius:0!important;
+}

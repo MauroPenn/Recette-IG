@@ -54,7 +54,7 @@
       const button=document.createElement('button');
       button.type='button';button.className='hf1-band';
       button.setAttribute('aria-label','Ouvrir la fiche : '+exercise.title);
-      const version=index<2?'v4':'v3';
+      const version='v5';
       const picture=img('etirements-hanches-bandeau-'+(index+1)+'-'+version+'.webp','hf1-band-image','');
       picture.loading=index===0?'eager':'lazy';
       button.appendChild(picture);
