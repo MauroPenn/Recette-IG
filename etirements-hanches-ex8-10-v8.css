@@ -1,0 +1,9 @@
+/* V8 : les images entières sont celles déjà validées et ne sont jamais recadrées. */
+body.ez1-active .hf1-screen.hf8-screen{display:block;padding:0 3px 16px;}
+.hf8-visual{display:block;position:relative;width:100%;margin:0;padding:0;line-height:0;}
+.hf8-visual .hf8-detail-image{display:block;width:100%;height:auto;max-width:100%;object-fit:contain;filter:none!important;transform:none!important;}
+.hf8-hotspot{box-sizing:border-box;position:absolute;display:block;appearance:none;border:0;background:transparent;color:transparent;font-size:0;cursor:pointer;z-index:1;padding:0;touch-action:manipulation;}
+.hf8-hotspot--back{top:0%;left:1%;width:53%;height:3.5%;border-radius:40px;}
+.hf8-hotspot--video{top:90%;left:2.4%;width:95.3%;height:7%;border-radius:50px;}
+.hf8-hotspot:focus-visible{outline:3px solid #fff;outline-offset:-3px;background:rgba(255,255,255,.08);}
+@media(min-width:760px){body.ez1-active .hf1-screen.hf8-screen{padding:0 6px 16px;}}

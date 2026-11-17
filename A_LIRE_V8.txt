@@ -1,0 +1,22 @@
+HANCHES & FESSIERS — EXERCICES 8, 9 ET 10 — ZIP GITHUB V8
+
+MODE D'EMPLOI :
+1. Décompresse le ZIP.
+2. Place TOUS les fichiers fournis à la racine du dépôt GitHub de ton application.
+3. Autorise le remplacement de index.html.
+4. Attends la publication GitHub Pages puis recharge l'application. Si l'ancienne version reste visible, ferme/réouvre l'application ou actualise sa page.
+
+Ce ZIP complète la V7 qui fonctionnait déjà : les 7 premiers exercices et leurs fichiers restent en place.
+Ne supprime pas les images ou scripts des exercices 1 à 7.
+
+AJOUTS :
+- 3 nouveaux bandeaux (images v8, identifiants nouveaux pour contourner l'ancien cache)
+- 3 nouvelles fiches complètes, exactement les images validées
+- etirements-hanches-ex8-10-v8.js : ajout de 3 boutons et accès aux fiches
+- etirements-hanches-ex8-10-v8.css : affichage sans déformation
+- index.html : charge le script et le style V8 après la V7
+
+Le message « 3 autres exercices ... » est retiré car les 10 exercices sont maintenant présents.
+Les boutons Retour et Voir la vidéo explicative des fiches sont actifs. Tant que les vidéos ne sont pas intégrées, le second bouton affiche un message explicatif ; il ne lance pas de vidéo inventée.
+
+Aucune modification des autres univers, des exercices 1 à 7 ou des fonctions de synchronisation.
