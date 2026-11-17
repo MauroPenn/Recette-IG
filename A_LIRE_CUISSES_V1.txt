@@ -1,0 +1,17 @@
+CUISSES – DEUX PREMIERS EXERCICES (V1)
+
+Ce ZIP ajoute dans Étirements > Exercices :
+- l'accueil Cuisses, au même format que Hanches & fessiers ;
+- Quadriceps debout (bandeau et fiche) ;
+- Quadriceps allongé sur le côté (bandeau et fiche).
+
+Les deux exercices sont consultables. Les boutons de retour fonctionnent.
+Les vidéos sont indiquées comme non encore disponibles.
+
+INSTALLATION GITHUB
+1. Décompresser le ZIP.
+2. Importer TOUS les fichiers à la racine du dépôt, au même endroit que index.html.
+3. Remplacer l'ancien index.html par celui du ZIP.
+4. Attendre la publication puis rouvrir/recharger l'application.
+
+Ne supprimer aucun ancien fichier : les catégories et exercices précédents restent utilisés.
