@@ -1,4 +1,4 @@
-/* Hanches & fessiers : accueil + exercices 1 et 2.
+/* Hanches & fessiers : accueil + exercices 1 a 4.
    Ajoute la navigation sans changer les autres catégories déjà validées. */
 (function(){
   'use strict';
@@ -7,7 +7,9 @@
   const DETAIL='etirements-hanches-fiche';
   const EXERCISES=[
     {id:'piriforme-assis',title:'Étirement du piriforme assis'},
-    {id:'papillon-assis',title:'Papillon assis'}
+    {id:'papillon-assis',title:'Papillon assis'},
+    {id:'figure-4-allongee',title:'Étirement en figure 4 allongée'},
+    {id:'pigeon-adapte',title:'Posture du pigeon adaptée'}
   ];
   let selected=0;
   function go(view,index){
@@ -44,7 +46,7 @@
     return el;
   }
   function showList(){
-    const screen=createScreen('Étirements — Hanches & fessiers : 2 exercices sur 10',false);
+    const screen=createScreen('Étirements — Hanches & fessiers : 4 exercices sur 10',false);
     screen.appendChild(back('Retour aux Exercices',GROUPS));
     screen.appendChild(img('etirements-hanches-entete-v1.webp','hf1-header',
       'Hanches et fessiers. Choisissez un exercice. Mobilité douce, ouverture des hanches et relâchement des fessiers.'));
@@ -52,14 +54,15 @@
       const button=document.createElement('button');
       button.type='button';button.className='hf1-band';
       button.setAttribute('aria-label','Ouvrir la fiche : '+exercise.title);
-      const picture=img('etirements-hanches-bandeau-'+(index+1)+'-v1.webp','hf1-band-image','');
+      const version=index<2?'v1':'v2';
+      const picture=img('etirements-hanches-bandeau-'+(index+1)+'-'+version+'.webp','hf1-band-image','');
       picture.loading=index===0?'eager':'lazy';
       button.appendChild(picture);
       button.addEventListener('click',()=>go(DETAIL,index));
       screen.appendChild(button);
     });
     const note=document.createElement('p');note.className='hf1-note';
-    note.textContent='Les 8 autres étirements des hanches et fessiers seront ajoutés après validation.';
+    note.textContent='Les 6 autres étirements des hanches et fessiers seront ajoutés après validation.';
     screen.appendChild(note);
   }
   function openVideoNotice(ex){
@@ -95,7 +98,8 @@
       const part=document.createElement(isInteractive?'button':'div');
       if(isInteractive)part.type='button';
       part.className='hf1-part'+(isVideo?' hf1-part--video':'')+(isBack?' hf1-part--back':'');
-      const picture=img('etirements-hanches-panneau-'+(selected+1)+'-'+partNum+'-v1.webp','hf1-panel-image','');
+      const version=selected<2?'v1':'v2';
+      const picture=img('etirements-hanches-panneau-'+(selected+1)+'-'+partNum+'-'+version+'.webp','hf1-panel-image','');
       picture.loading=partNum===1?'eager':'lazy';
       part.appendChild(picture);
       if(isBack){
@@ -119,7 +123,7 @@
       button.type='button';
       button.className=target.className.replace(/\bet7-soon\b/g,'').trim();
       button.dataset.hf1Ready='1';
-      button.setAttribute('aria-label','Hanches & fessiers : 2 exercices disponibles sur 10 prévus');
+      button.setAttribute('aria-label','Hanches & fessiers : 4 exercices disponibles sur 10 prévus');
       while(target.firstChild)button.appendChild(target.firstChild);
       button.addEventListener('click',()=>go(LIST));
       target.replaceWith(button);
@@ -130,7 +134,7 @@
     if(older&&!older.dataset.hf1Ready){
       older.disabled=false;
       older.dataset.hf1Ready='1';
-      older.setAttribute('aria-label','Hanches & fessiers : 2 exercices disponibles');
+      older.setAttribute('aria-label','Hanches & fessiers : 4 exercices disponibles');
       older.addEventListener('click',()=>go(LIST));
     }
   }
