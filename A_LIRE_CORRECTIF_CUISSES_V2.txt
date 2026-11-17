@@ -1,0 +1,17 @@
+CUISSES – CORRECTIF BANDEAUX 1 ET 2 – V2
+
+Cette version corrige uniquement les deux bandeaux des exercices :
+1. Quadriceps debout
+2. Quadriceps allongé sur le côté
+
+Les nouvelles images sont dans le même format 941 x 252 pixels que les bandeaux validés,
+mais la photo du personnage et la typographie conservent leurs proportions naturelles.
+Le bandeau d’accueil « Cuisses » et les deux fiches restent inchangés.
+
+INSTALLATION GITHUB
+- Décompresser le ZIP.
+- Déposer tous les fichiers contenus dans le ZIP à la racine du dépôt (avec index.html).
+- Remplacer index.html par le nouveau fichier. Ne pas supprimer les anciens fichiers.
+- Recharger l’application après publication pour visualiser les nouveaux bandeaux.
+
+Les anciens fichiers de bandeau v1 ne sont plus utilisés : ne pas les supprimer sans nécessité.
