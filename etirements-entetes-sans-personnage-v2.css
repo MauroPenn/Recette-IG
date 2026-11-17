@@ -1,0 +1,70 @@
+/* Deux en-tetes validates, sans modifier les fiches ni les bandeaux d'exercices. */
+body.ez1-active .evc2-category .evc2-header {
+  display:flex!important;
+  flex-direction:column!important;
+  gap:10px!important;
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:auto!important;
+  overflow:visible!important;
+  flex:none!important;
+}
+body.ez1-active .evc2-category .evc2-header > img.et-head-nuque-v2 {
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-width:100%!important;
+  aspect-ratio:1916 / 821!important;
+  object-fit:contain!important;
+  transform:none!important;
+  flex:none!important;
+}
+body.ez1-active .evc2-category .evc2-header > button.evc2-back.et-head-back-v2 {
+  box-sizing:border-box!important;
+  position:relative!important;
+  inset:auto!important;
+  left:auto!important;top:auto!important;right:auto!important;bottom:auto!important;
+  display:block!important;
+  order:-1!important;
+  align-self:flex-start!important;
+  z-index:2!important;
+  width:auto!important;
+  height:auto!important;
+  min-height:44px!important;
+  margin:0 0 0 3%!important;
+  padding:10px 17px!important;
+  border:2px solid #edc17b!important;
+  border-radius:27px!important;
+  background:#004b41!important;
+  color:#fff!important;
+  font-size:clamp(.9rem,3.85vw,1.18rem)!important;
+  font-weight:800!important;
+  line-height:1.18!important;
+  text-align:left!important;
+  cursor:pointer!important;
+  white-space:nowrap!important;
+}
+body.ez1-active .ev14-screen .ev14-header {
+  display:block!important;
+  position:relative!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:1916/821!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  overflow:visible!important;
+  flex:none!important;
+}
+body.ez1-active .ev14-screen .ev14-header > img.et-head-epaules-v2 {
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-width:100%!important;
+  aspect-ratio:1916/821!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  transform:none!important;
+  filter:none!important;
+}
