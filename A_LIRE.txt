@@ -1,0 +1,13 @@
+CORRECTIF VISUEL HANCHES & FESSIERS 5, 6, 7 — V7
+
+Décompresser le ZIP, puis transférer les 5 fichiers suivants à la racine du dépôt GitHub de l'application :
+- index.html (remplace l'ancien)
+- etirements-hanches-ex5-7-v7.js (nouveau)
+- etirements-hanches-bandeau-5-v7.webp (nouveau)
+- etirements-hanches-bandeau-6-v7.webp (nouveau)
+- etirements-hanches-bandeau-7-v7.webp (nouveau)
+
+Les fiches des exercices, les 4 premiers exercices et tous les autres univers ne sont pas modifiés.
+
+Les anciennes images v6 peuvent rester en place. Le nouvel index.html chargera automatiquement la V7.
+Le texte « Les 3 autres étirements ... » signifie qu'il reste 3 exercices à réaliser sur les 10 prévus : ce texte est normal.
