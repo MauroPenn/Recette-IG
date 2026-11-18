@@ -1,11 +1,23 @@
-ACCUEIL GÉNÉRAL — VISUEL AVEC ONGLET MON COACH
+CORRECTIF « MON COACH » — ACCUEIL GÉNÉRAL V2
 
-Contenu du ZIP :
-- accueil-general-mon-coach-v1.png
+Ce ZIP fonctionne différemment de la version précédente : il contient
+la nouvelle carte ET les fichiers nécessaires pour l'ajouter à l'accueil.
 
-Description :
-- visuel validé de la page d’accueil générale
-- inclut les univers existants
-- inclut le nouvel onglet « Mon coach »
-- inclut aussi l’onglet « Paramètres »
-- format cohérent avec les autres cartes de la page d’accueil
+Il ajoute « Mon coach – Créateur de programmes » avant « Paramètres »,
+conserve tous les autres univers et leur fonctionnement,
+et indique « À VENIR » puisque le créateur sera développé plus tard.
+
+INSTALLATION :
+1. Décompresse le ZIP.
+2. Dans ton dépôt GitHub, ouvre le dossier principal (la racine).
+3. Ajoute les 4 fichiers (dont index.html) et remplace index.html.
+4. Ne supprime aucun autre fichier du dépôt.
+5. Recharge l'application ; si nécessaire, ferme et rouvre l'onglet.
+
+Fichiers :
+- index.html
+- accueil-mon-coach-v2.css
+- accueil-mon-coach-v2.js
+- accueil-mon-coach-carte-v2.webp
+
+Base : dernier accueil Séances d'étirements V6 validé.
