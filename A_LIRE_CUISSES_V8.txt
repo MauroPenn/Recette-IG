@@ -1,0 +1,17 @@
+CUISSES – CORRECTIF BANDEAUX 9 ET 10 – V8
+
+Contenu du ZIP :
+- etirements-cuisses-bandeau-9-v2.webp
+- etirements-cuisses-bandeau-10-v2.webp
+- etirements-cuisses-lot1-v8.js
+- index.html
+
+Correction apportée :
+- suppression des marges/lignes blanches visibles autour des bandeaux 9 et 10 ;
+- bandeaux recadrés au bon format 941 x 252 pixels.
+
+Installation :
+1) Décompresser le ZIP.
+2) Envoyer tous les fichiers à la racine du dépôt GitHub.
+3) Remplacer les fichiers existants du même nom.
+4) Ne supprimer aucun autre fichier.
