@@ -1,14 +1,11 @@
-CORRECTIF AFFICHAGE TÉLÉPHONE – SÉANCES D’ÉTIREMENTS V3
+CORRECTIF AFFICHAGE TÉLÉPHONE – SÉANCES D’ÉTIREMENTS V4
 
-Le visuel PC et tablette reste inchangé.
-Sur téléphone en portrait, les 3 bandeaux sont espacés sur la hauteur disponible.
-Aucune déformation des photos, personnages ni écritures.
-Le retour vers Étirements et les 3 rubriques restent cliquables.
+Ce correctif remonte légèrement les 3 bandeaux sur téléphone.
+Le 1er bandeau est désormais plus proche du texte du haut.
+Le rendu PC et tablette reste inchangé.
 
 Installation :
 1. Décompresse le ZIP.
-2. Ajoute ses fichiers à la racine de GitHub, comme d’habitude.
-3. Remplace index.html lorsqu’il te le demande.
-4. Ne supprime aucun autre fichier.
-
-Ce correctif ne construit pas encore les fonctions internes de création des séances.
+2. Ajoute ses fichiers à la racine de GitHub.
+3. Remplace les fichiers du même nom.
+4. Ne supprime rien d’autre.
