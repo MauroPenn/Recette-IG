@@ -29,11 +29,11 @@ body.ez1-active .esv2-screen,body.ez1-active .esv2-screen *{box-sizing:border-bo
   .esv3-sessions .esv2-overview{display:none!important;}
   .esv3-sessions .esv3-mobile{
     display:flex;flex-direction:column;justify-content:flex-start;
-    width:100%;min-height:100dvh;gap:16px;padding:0 0 14px;
+    width:100%;min-height:100dvh;gap:18px;padding:0 0 14px;
     line-height:0;background:#00342e;
   }
-  .esv3-header{position:relative;width:100%;flex:0 0 auto;margin-bottom:-6px;}
-  .esv3-mobile .esv3-tile:first-of-type{margin-top:-8px;}
+  .esv3-header{position:relative;width:100%;flex:0 0 auto;margin-bottom:-42px;}
+  .esv3-mobile .esv3-tile:first-of-type{margin-top:0;}
   .esv3-mobile img{display:block!important;width:100%!important;height:auto!important;
     max-width:100%!important;object-fit:contain!important;filter:none!important;transform:none!important;}
   .esv3-header .esv3-back-hit{

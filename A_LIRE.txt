@@ -1,11 +1,11 @@
-CORRECTIF AFFICHAGE TÉLÉPHONE – SÉANCES D’ÉTIREMENTS V4
+CORRECTIF AFFICHAGE TÉLÉPHONE – SÉANCES D’ÉTIREMENTS V5
 
-Ce correctif remonte légèrement les 3 bandeaux sur téléphone.
-Le 1er bandeau est désormais plus proche du texte du haut.
+Cette version remonte nettement les 3 bandeaux sur téléphone.
+Le premier bandeau est maintenant beaucoup plus proche du texte du haut.
 Le rendu PC et tablette reste inchangé.
 
 Installation :
 1. Décompresse le ZIP.
-2. Ajoute ses fichiers à la racine de GitHub.
+2. Ajoute les fichiers à la racine de GitHub.
 3. Remplace les fichiers du même nom.
-4. Ne supprime rien d’autre.
+4. Recharge ensuite la page dans l’application.
