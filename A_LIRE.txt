@@ -1,17 +1,12 @@
-MON COACH – AJOUT SUR LA PAGE « MES UNIVERS » (V4)
+MON COACH – CORRECTIF DE LA PAGE MES UNIVERS (V5)
 
-Ce correctif remplace la version précédente pour intégrer la carte « Mon Coach »
-avec le même gabarit que les autres cartes de la page d'accueil générale.
-La carte est placée avant « Paramètres » quand cette carte existe.
+Cette version restaure l'ajout de Mon Coach à partir de la V3 qui fonctionnait,
+et le place avant Paramètres sur la même ligne sur PC.
 
-Pour l'installer :
-1. Ouvre le ZIP et décompresse-le.
-2. Ajoute ses fichiers dans GitHub à la racine du dépôt.
-3. Si GitHub le demande, remplace index.html.
-4. Ne supprime aucun autre fichier.
-5. Recharge l'application.
+Elle reprend la hauteur réelle des cartes déjà présentes, aussi sur téléphone.
+Elle conserve les autres univers et la version des séances d'étirements déjà validée.
 
-Cette version corrige :
-- la hauteur de la carte sur PC,
-- l'alignement dans la grille,
-- l'affichage sur téléphone.
+Installation : décompresse ce ZIP, envoie les 4 fichiers sur GitHub et remplace index.html.
+Ne supprime aucun autre fichier. Actualise l'application après installation.
+
+Mon Coach reste marqué À VENIR. Aucun programme automatique n'est encore actif.
