@@ -1,0 +1,26 @@
+CUISSES – AJOUT EXERCICES 6, 7 ET 8 – V6
+
+Contenu du ZIP :
+- etirements-cuisses-bandeau-6-v1.webp
+- etirements-cuisses-bandeau-7-v1.webp
+- etirements-cuisses-bandeau-8-v1.webp
+- etirements-cuisses-fiche-6-v1.webp
+- etirements-cuisses-fiche-7-v1.webp
+- etirements-cuisses-fiche-8-v1.webp
+- etirements-cuisses-lot1-v6.js
+- index.html
+
+Ajouts :
+- Exercice 6 : Ischio-jambiers assis, jambe tendue
+- Exercice 7 : Ischio-jambiers allongé avec sangle
+- Exercice 8 : Adducteurs, jambes écartées au sol
+
+L'application conserve :
+- les exercices 1 à 5 de Cuisses ;
+- la catégorie Hanches & fessiers déjà validée.
+
+Installation :
+1) Décompresser le ZIP.
+2) Envoyer tous les fichiers à la racine du dépôt GitHub.
+3) Remplacer les fichiers existants du même nom.
+4) Ne supprimer aucun autre fichier.
