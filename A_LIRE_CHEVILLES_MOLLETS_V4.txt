@@ -1,0 +1,22 @@
+CHEVILLES & MOLLETS — EXERCICES 6, 7 ET 8 — V4 FONCTIONNELLE
+
+Cette mise à jour ajoute les trois derniers exercices dans la catégorie existante :
+6. Flexion-extension de cheville assis
+7. Mollet assis avec sangle
+8. Étirement de la voûte plantaire assis
+
+Contenu :
+- Trois bandeaux et trois fiches validés (6 images WebP).
+- etirements-chevilles-mollets-v4.js : navigation mise à jour pour huit exercices.
+- etirements-chevilles-mollets-v2.css : présentation validée, inchangée.
+- index.html : chargement du nouveau fichier JavaScript.
+
+INSTALLATION SUR GITHUB
+1. Décompresse ce ZIP sur ton ordinateur.
+2. Importe les fichiers à la racine de ton dépôt GitHub, comme pour la V3.
+3. Remplace index.html et le CSS s'il t'est proposé (son contenu est inchangé).
+4. Ne supprime aucun ancien fichier : les exercices 1 à 5 et les autres catégories continuent de les utiliser.
+5. Ouvre Étirements > Chevilles & mollets dans ton application et teste les 8 exercices.
+
+Note : le bouton vidéo ouvre le message « Démonstration bientôt disponible »,
+comme dans la V3 fonctionnelle. Les vidéos ne sont pas fournies dans ce ZIP.
