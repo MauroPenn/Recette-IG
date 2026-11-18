@@ -1,0 +1,25 @@
+/* New global-home tile, using the proportions of the established universe cards. */
+.mon-coach-univers-v3 {
+  box-sizing:border-box!important;display:block!important;position:relative!important;
+  appearance:none!important;-webkit-appearance:none!important;border:0!important;
+  border-radius:22px!important;padding:0!important;margin:0!important;
+  width:100%!important;min-width:0!important;max-width:100%!important;
+  height:auto!important;aspect-ratio:2/1!important;
+  background:#291e38!important;overflow:hidden!important;
+  box-shadow:0 7px 18px #0002!important;cursor:pointer!important;
+  line-height:0!important;text-align:left!important;
+}
+.mon-coach-univers-v3:before,.mon-coach-univers-v3:after {content:none!important;display:none!important;}
+.mon-coach-univers-v3 img {
+  display:block!important;width:100%!important;height:100%!important;
+  object-fit:cover!important;object-position:center center!important;
+  border:none!important;border-radius:inherit!important;
+  filter:none!important;opacity:1!important;transform:none!important;
+}
+.mon-coach-univers-v3:focus-visible {outline:3px solid #9339be!important;outline-offset:2px!important;}
+.mon-coach-note-v3 {
+  position:fixed;z-index:2147483000;bottom:calc(20px + env(safe-area-inset-bottom));left:50%;
+  transform:translateX(-50%);max-width:min(90vw,430px);width:max-content;
+  padding:13px 17px;border-radius:13px;background:#332044;color:white;
+  box-shadow:0 6px 18px #0006;text-align:center;font:600 15px/1.4 system-ui,sans-serif;
+}
