@@ -1,0 +1,22 @@
+CUISSES – CORRECTIF FICHES 6 À 10 – V12
+
+Contenu du ZIP :
+- etirements-cuisses-fiche-6-v4.webp
+- etirements-cuisses-fiche-7-v4.webp
+- etirements-cuisses-fiche-8-v4.webp
+- etirements-cuisses-fiche-9-v4.webp
+- etirements-cuisses-fiche-10-v4.webp
+- etirements-cuisses-lot1-v12.js
+- index.html
+- A_LIRE_CUISSES_V12.txt
+
+Correction apportée :
+- correction du bouton « Retour à Cuisses » sur les fiches 6 à 10 ;
+- suppression du défaut graphique de la flèche en haut à gauche ;
+- aucun autre élément des fiches n'a été modifié.
+
+Installation :
+1) Décompresser le ZIP.
+2) Envoyer tous les fichiers à la racine du dépôt GitHub.
+3) Remplacer les fichiers existants du même nom.
+4) Ne supprimer aucun autre fichier.
