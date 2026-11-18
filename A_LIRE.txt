@@ -1,13 +1,22 @@
-CORRECTIF VISUEL HANCHES & FESSIERS 5, 6, 7 — V7
+CHEVILLES & MOLLETS — LOT 1 — ACCUEIL + EXERCICES 1 ET 2
 
-Décompresser le ZIP, puis transférer les 5 fichiers suivants à la racine du dépôt GitHub de l'application :
-- index.html (remplace l'ancien)
-- etirements-hanches-ex5-7-v7.js (nouveau)
-- etirements-hanches-bandeau-5-v7.webp (nouveau)
-- etirements-hanches-bandeau-6-v7.webp (nouveau)
-- etirements-hanches-bandeau-7-v7.webp (nouveau)
+Contenu :
+- 1 bandeau d'accueil de catégorie
+- 2 bandeaux d'exercices
+- 2 fiches d'exercices
 
-Les fiches des exercices, les 4 premiers exercices et tous les autres univers ne sont pas modifiés.
+Exercice 1 : Mollet debout contre un mur
+Exercice 2 : Soléaire, genou fléchi
 
-Les anciennes images v6 peuvent rester en place. Le nouvel index.html chargera automatiquement la V7.
-Le texte « Les 3 autres étirements ... » signifie qu'il reste 3 exercices à réaliser sur les 10 prévus : ce texte est normal.
+Validation :
+- bandeau d'accueil validé
+- bandeau et fiche de l'exercice 1 validés
+- bandeau de l'exercice 2 validé
+- fiche de l'exercice 2 corrigée puis validée
+
+Fichiers inclus :
+- chevilles-mollets-bandeau-2-soleaire-genou-flechi-v1.png — 2172x724
+- chevilles-mollets-accueil-v1.png — 1983x793
+- chevilles-mollets-bandeau-1-mollet-debout-contre-un-mur-v1.png — 2172x724
+- chevilles-mollets-fiche-1-mollet-debout-contre-un-mur-v1.png — 1024x1536
+- chevilles-mollets-fiche-2-soleaire-genou-flechi-v2.png — 1024x1536
