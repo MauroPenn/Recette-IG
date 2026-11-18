@@ -1,12 +1,14 @@
-SÉANCES D’ÉTIREMENTS – ÉCRAN D’ACCUEIL
+CORRECTIF AFFICHAGE TÉLÉPHONE – SÉANCES D’ÉTIREMENTS V3
 
-Cette version affiche l’écran validé et permet d’ouvrir les trois rubriques.
-Les outils pour composer, enregistrer et lancer des séances seront créés lors des prochaines étapes.
+Le visuel PC et tablette reste inchangé.
+Sur téléphone en portrait, les 3 bandeaux sont espacés sur la hauteur disponible.
+Aucune déformation des photos, personnages ni écritures.
+Le retour vers Étirements et les 3 rubriques restent cliquables.
 
-Pour l’installer :
+Installation :
 1. Décompresse le ZIP.
-2. Ajoute les quatre fichiers dans le dépôt GitHub, au même endroit que les fichiers déjà présents.
-3. Remplace « index.html » par celui de ce ZIP.
-4. Ne supprime rien d’autre.
+2. Ajoute ses fichiers à la racine de GitHub, comme d’habitude.
+3. Remplace index.html lorsqu’il te le demande.
+4. Ne supprime aucun autre fichier.
 
-La catégorie Exercices d’étirements n’est pas modifiée.
+Ce correctif ne construit pas encore les fonctions internes de création des séances.

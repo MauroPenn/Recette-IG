@@ -1,0 +1,50 @@
+/* Écran de séance d'étirements — entrée et cartes validées. */
+body.ez1-active #main:has(.esv2-screen){margin:0!important;padding:0!important;width:100%!important;max-width:none!important;background:#003a34!important;}
+body.ez1-active .esv2-screen,body.ez1-active .esv2-screen *{box-sizing:border-box;}
+.esv2-screen{width:100%;max-width:720px;margin:0 auto;min-height:100dvh;background:#003a34;color:#fff;font-family:inherit;}
+.esv2-screen button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:rgba(255,220,130,.2);}
+.esv2-overview{position:relative;line-height:0;}
+.esv2-overview img{display:block!important;width:100%!important;max-width:100%!important;height:auto!important;object-fit:contain!important;transform:none!important;filter:none!important;}
+.esv2-hit{position:absolute;display:block;border:0;background:transparent;color:transparent;font-size:0;z-index:1;cursor:pointer;touch-action:manipulation;}
+.esv2-hit:focus-visible{outline:3px solid white;outline-offset:-5px;background:rgba(255,255,255,.08);border-radius:22px;}
+.esv2-hit--back{left:3%;top:1.8%;width:47%;height:4.5%;border-radius:40px;}
+.esv2-hit--create{left:1%;top:29.9%;width:98%;height:20.9%;border-radius:35px;}
+.esv2-hit--saved{left:1%;top:52.5%;width:98%;height:20.5%;border-radius:35px;}
+.esv2-hit--preset{left:1%;top:74.1%;width:98%;height:20.9%;border-radius:35px;}
+.esv2-placeholder{padding:22px 20px 38px;min-height:85dvh;}
+.esv2-back{background:#00473f;color:white;border:2px solid #f0c377;border-radius:28px;padding:11px 18px;font-size:clamp(.94rem,3.7vw,1.15rem);font-weight:750;}
+.esv2-subpanel{margin-top:24px;background:linear-gradient(135deg,#004a41,#006051);border:2px solid #f0c377;border-radius:25px;padding:27px 22px;}
+.esv2-kicker{color:#f0c377;font-weight:800;font-size:.9rem;letter-spacing:.02em;margin:0 0 16px;}
+.esv2-placeholder h2{font-size:clamp(1.8rem,6vw,2.45rem);line-height:1.18;margin:0 0 20px;}
+.esv2-placeholder p{font-size:1.08rem;line-height:1.5;margin:0;color:#f5f8f6;}
+@media(min-width:760px){.esv2-overview{margin:20px auto;}.esv2-screen{min-height:0;}}
+
+/* V3 : sur téléphone uniquement, chaque carte conserve ses proportions,
+   mais les espaces entre les cartes sont distribués sur la hauteur disponible.
+   L'écran tablette et PC reste celui de la version V2 validée. */
+.esv3-mobile{display:none;}
+@media (max-width:480px) and (orientation:portrait){
+  .esv2-screen.esv3-sessions{max-width:none;background:#00342e;}
+  body.ez1-active #main:has(.esv3-sessions){background:#00342e!important;}
+  .esv3-sessions .esv2-overview{display:none!important;}
+  .esv3-sessions .esv3-mobile{
+    display:flex;flex-direction:column;justify-content:space-between;
+    width:100%;min-height:100dvh;gap:12px;padding:0 0 14px;
+    line-height:0;background:#00342e;
+  }
+  .esv3-header{position:relative;width:100%;flex:0 0 auto;}
+  .esv3-mobile img{display:block!important;width:100%!important;height:auto!important;
+    max-width:100%!important;object-fit:contain!important;filter:none!important;transform:none!important;}
+  .esv3-header .esv3-back-hit{
+    position:absolute;left:3%;top:4%;width:47%;height:21%;
+    margin:0;padding:0;background:transparent;border:0;border-radius:30px;
+    color:transparent;font-size:0;cursor:pointer;touch-action:manipulation;
+  }
+  .esv3-tile{display:block;width:100%;padding:0;margin:0;border:0;
+    outline:0;background:transparent;text-align:left;flex:0 0 auto;
+    appearance:none;-webkit-appearance:none;cursor:pointer;touch-action:manipulation;
+  }
+  .esv3-tile:focus-visible,.esv3-back-hit:focus-visible{
+    outline:3px solid #fff;outline-offset:-4px;border-radius:24px;
+  }
+}
