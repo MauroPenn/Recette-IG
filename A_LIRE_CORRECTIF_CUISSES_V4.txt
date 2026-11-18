@@ -1,0 +1,20 @@
+CORRECTIF V4 — CUISSES (EXERCICES 3, 4, 5)
+
+Ce ZIP contient seulement :
+- les 3 bandeaux corrigés : 941 × 252 pixels ;
+- le nouveau fichier de chargement des bandeaux (JS V4) ;
+- index.html avec la référence au nouveau fichier JS.
+
+Les fiches d'exercices, les exercices 1 et 2 et les autres catégories ne sont PAS modifiés.
+Les 3 bandeaux reprennent les visuels validés : le paysage/fondu a été étendu
+sans déformer la typographie ou les personnages.
+
+INSTALLATION GITHUB :
+1. Décompresser le ZIP.
+2. Ajouter les fichiers au niveau racine du dépôt GitHub.
+3. Remplacer index.html (ne pas conserver l'ancien à la place).
+4. Ne supprimer aucun autre fichier. Recharger ensuite l'application.
+
+Le fichier JS V3 reste sur le dépôt mais ne sera plus chargé. Il est possible
+qu'un navigateur conserve temporairement les anciennes images en cache ; les
+noms V4 servent justement à éviter ce problème.
