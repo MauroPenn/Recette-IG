@@ -1,0 +1,21 @@
+CUISSES – EXERCICES 3, 4 ET 5 – V3
+
+NOUVEAUX EXERCICES :
+3. Quadriceps avec sangle sur le ventre
+4. Quadriceps à genou contre un support
+5. Ischio-jambiers debout, pied surélevé
+
+Contenu : 3 bandeaux au format uniforme 941 × 252 pixels, sans déformation,
+3 fiches complètes validées, le fichier de navigation mis à jour et index.html.
+Les deux premiers exercices Cuisses, la bannière d'accueil et les autres
+catégories restent inchangés.
+
+INSTALLATION GITHUB :
+1. Décompresser ce ZIP.
+2. Envoyer TOUS ses fichiers à la racine du dépôt, avec index.html.
+3. Remplacer index.html et garder TOUS les anciens fichiers.
+4. Après publication, actualiser complètement l'application sur téléphone.
+
+Les nouvelles fiches et bandeaux utilisent le suffixe v3 pour éviter le cache.
+Les boutons de retour fonctionnent ; la vidéo affiche un avis en attendant
+son ajout (aucune vidéo n'est incluse dans le ZIP).
