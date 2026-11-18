@@ -1,0 +1,25 @@
+CORRECTIF V5 — ÉTIREMENTS / CUISSES — BANDEAUX 3, 4 ET 5
+
+Le ZIP contient :
+• index.html
+• etirements-cuisses-lot1-v5.js
+• etirements-cuisses-bandeau-3-v5.webp
+• etirements-cuisses-bandeau-4-v5.webp
+• etirements-cuisses-bandeau-5-v5.webp
+
+Ce qui change : les 3 bandeaux des exercices 3-5, uniquement.
+Les anciennes zones vertes rectangulaires ont disparu : images recadrées sans
+élargissement artificiel ni déformation du texte ou des personnes.
+Même format que les autres bandeaux : 941 × 252 pixels.
+Une seule bordure dorée. Images renommées pour éviter le cache.
+
+INSTALLATION GITHUB : décompresser le ZIP, puis téléverser ses 5 fichiers
+à la racine de votre dépôt, en remplaçant index.html.
+Conserver tous les fichiers déjà présents, même les anciennes versions.
+Ne pas téléverser le fichier ZIP lui-même.
+
+Ce correctif ne touche pas à :
+• l'accueil Cuisses ;
+• les exercices 1 et 2 ;
+• les 5 fiches détaillées ;
+• la catégorie Hanches & fessiers ni aux autres univers.
