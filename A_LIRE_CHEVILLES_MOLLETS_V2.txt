@@ -1,0 +1,17 @@
+CHEVILLES & MOLLETS – V2 FONCTIONNELLE
+
+Cette V2 CORRIGE le ZIP V1 qui ne contenait que les images :
+- accès à la catégorie depuis le menu Étirements ;
+- écran d’accueil Chevilles & mollets ;
+- deux bandeaux cliquables ;
+- deux fiches avec retour vers la liste ;
+- bouton vidéo (message indiquant que la vidéo n’est pas encore ajoutée).
+
+Les cinq images validées sont reprises sans étirement des personnages ni des textes.
+
+INSTALLATION :
+1. Décompresser le ZIP.
+2. Depuis GitHub, envoyer TOUS les fichiers à la racine du dépôt.
+3. Remplacer index.html quand GitHub le propose.
+4. Ne supprimer aucun des anciens fichiers : notamment ceux de Cuisses et Hanches & fessiers.
+5. Tester l’ouverture de la catégorie, de chaque fiche et les retours.
