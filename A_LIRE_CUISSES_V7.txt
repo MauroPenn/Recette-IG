@@ -1,0 +1,22 @@
+CUISSES – AJOUT EXERCICES 9 ET 10 – V7
+
+Contenu du ZIP :
+- etirements-cuisses-bandeau-9-v1.webp
+- etirements-cuisses-bandeau-10-v1.webp
+- etirements-cuisses-fiche-9-v1.webp
+- etirements-cuisses-fiche-10-v1.webp
+- etirements-cuisses-lot1-v7.js
+- index.html
+
+Ajouts :
+- Exercice 9 : Adducteurs en fente latérale
+- Exercice 10 : Adducteurs debout, jambes écartées
+
+La catégorie Cuisses comprend désormais 10 exercices.
+Les exercices 1 à 8 et leurs correctifs précédemment validés sont conservés.
+
+Installation :
+1) Décompresser le ZIP.
+2) Envoyer tous les fichiers à la racine du dépôt GitHub.
+3) Remplacer les fichiers existants du même nom.
+4) Ne supprimer aucun autre fichier.
