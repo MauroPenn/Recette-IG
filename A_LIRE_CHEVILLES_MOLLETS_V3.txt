@@ -1,0 +1,24 @@
+CHEVILLES & MOLLETS — EXERCICES 3, 4 ET 5 — V3 FONCTIONNELLE
+
+Ajoutés dans cette version :
+  3. Mollet sur une marche
+  4. Mobilité de cheville, genou au mur
+  5. Cercles de cheville assis
+
+Contenu :
+- 3 nouveaux bandeaux et 3 fiches déjà validés (images au format naturel, sans déformation)
+- etirements-chevilles-mollets-v3.js : liste des 5 exercices, navigation fonctionnelle
+- etirements-chevilles-mollets-v2.css : styles de la V2 validée (inchangés)
+- index.html : charge la V3 sans toucher aux catégories précédentes
+
+INSTALLATION SUR GITHUB
+1. Décompresser le ZIP.
+2. Envoyer TOUS les fichiers du ZIP à la RACINE du dépôt GitHub.
+3. Remplacer index.html ainsi que le CSS du même nom s'ils existent.
+4. Ne supprimer aucun fichier existant : les images de Chevilles & mollets 1 et 2
+   doivent rester présentes dans le dépôt, ainsi que Cuisses et Hanches & fessiers.
+5. Tester l'accès Chevilles & mollets, les 5 bandeaux, chaque fiche,
+   les boutons Retour et Vidéo.
+
+Important : le bouton Vidéo ouvre toujours la notice « bientôt disponible »,
+les démonstrations ne sont pas encore installées.
