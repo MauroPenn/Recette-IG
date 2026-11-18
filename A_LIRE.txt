@@ -1,22 +1,12 @@
-CHEVILLES & MOLLETS — LOT 1 — ACCUEIL + EXERCICES 1 ET 2
+SÉANCES D’ÉTIREMENTS – ÉCRAN D’ACCUEIL
 
-Contenu :
-- 1 bandeau d'accueil de catégorie
-- 2 bandeaux d'exercices
-- 2 fiches d'exercices
+Cette version affiche l’écran validé et permet d’ouvrir les trois rubriques.
+Les outils pour composer, enregistrer et lancer des séances seront créés lors des prochaines étapes.
 
-Exercice 1 : Mollet debout contre un mur
-Exercice 2 : Soléaire, genou fléchi
+Pour l’installer :
+1. Décompresse le ZIP.
+2. Ajoute les quatre fichiers dans le dépôt GitHub, au même endroit que les fichiers déjà présents.
+3. Remplace « index.html » par celui de ce ZIP.
+4. Ne supprime rien d’autre.
 
-Validation :
-- bandeau d'accueil validé
-- bandeau et fiche de l'exercice 1 validés
-- bandeau de l'exercice 2 validé
-- fiche de l'exercice 2 corrigée puis validée
-
-Fichiers inclus :
-- chevilles-mollets-bandeau-2-soleaire-genou-flechi-v1.png — 2172x724
-- chevilles-mollets-accueil-v1.png — 1983x793
-- chevilles-mollets-bandeau-1-mollet-debout-contre-un-mur-v1.png — 2172x724
-- chevilles-mollets-fiche-1-mollet-debout-contre-un-mur-v1.png — 1024x1536
-- chevilles-mollets-fiche-2-soleaire-genou-flechi-v2.png — 1024x1536
+La catégorie Exercices d’étirements n’est pas modifiée.
