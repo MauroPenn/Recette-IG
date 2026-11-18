@@ -1,18 +1,17 @@
-MON COACH – AJOUT SUR LA PAGE « MES UNIVERS » (V3)
+MON COACH – AJOUT SUR LA PAGE « MES UNIVERS » (V4)
 
-Ce correctif est destiné à ajouter la carte « Mon Coach » (À VENIR)
-à la page d'accueil générale, avant la carte « Paramètres » lorsqu'elle y figure.
-Il conserve les autres univers, les exercices et les séances existants.
+Ce correctif remplace la version précédente pour intégrer la carte « Mon Coach »
+avec le même gabarit que les autres cartes de la page d'accueil générale.
+La carte est placée avant « Paramètres » quand cette carte existe.
 
 Pour l'installer :
 1. Ouvre le ZIP et décompresse-le.
-2. Ajoute ses fichiers dans GitHub à la racine de ton dépôt.
+2. Ajoute ses fichiers dans GitHub à la racine du dépôt.
 3. Si GitHub le demande, remplace index.html.
 4. Ne supprime aucun autre fichier.
-5. Recharge l'application pour consulter « Mes univers ».
+5. Recharge l'application.
 
-Note : Ce ZIP crée une carte d'accueil, pas encore le générateur de programmes.
-
-Si la carte est toujours absente, nous aurons besoin du fichier « accueil-v1.js »
-et de « app.js » de la version de l'application en ligne pour corriger
-l'intégration directement dans le bon écran, sans essais à répétition.
+Cette version corrige :
+- la hauteur de la carte sur PC,
+- l'alignement dans la grille,
+- l'affichage sur téléphone.

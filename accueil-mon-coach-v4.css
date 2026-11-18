@@ -1,0 +1,10 @@
+/* Mon Coach – intégration pleine taille et même gabarit que les autres cartes */
+.mon-coach-note-v4 {
+  position:fixed;z-index:2147483000;bottom:calc(20px + env(safe-area-inset-bottom));left:50%;
+  transform:translateX(-50%);max-width:min(90vw,430px);width:max-content;
+  padding:13px 17px;border-radius:13px;background:#332044;color:white;
+  box-shadow:0 6px 18px #0006;text-align:center;font:600 15px/1.4 system-ui,sans-serif;
+}
+.mon-coach-univers-v4 img {
+  display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;
+}
