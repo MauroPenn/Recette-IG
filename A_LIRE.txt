@@ -1,13 +1,11 @@
-SÉANCES D’ÉTIREMENTS – CORRECTIF TÉLÉPHONE V6
+ACCUEIL GÉNÉRAL — VISUEL AVEC ONGLET MON COACH
 
-Le premier bandeau est légèrement redescendu pour afficher intégralement sa bordure dorée.
-Les deux autres bandeaux sont répartis plus bas pour réduire le vide final.
-Aucune image, écriture, fonction ou bouton n'est modifié.
-Sur tablette et PC, l'affichage reste celui déjà validé.
+Contenu du ZIP :
+- accueil-general-mon-coach-v1.png
 
-Installation dans GitHub :
-1. Décompresser le ZIP.
-2. Ajouter tous les fichiers à la racine de GitHub.
-3. Remplacer index.html et les fichiers portant le même nom.
-4. Ne supprimer aucun fichier existant.
-5. Après mise à jour, rouvrir ou rafraîchir l'application sur téléphone.
+Description :
+- visuel validé de la page d’accueil générale
+- inclut les univers existants
+- inclut le nouvel onglet « Mon coach »
+- inclut aussi l’onglet « Paramètres »
+- format cohérent avec les autres cartes de la page d’accueil
