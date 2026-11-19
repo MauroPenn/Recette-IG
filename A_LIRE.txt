@@ -1,25 +1,14 @@
-SÉANCES D’ÉTIREMENTS — CORRECTIF V9 : 4 BANDEAUX VALIDÉS
+SÉANCES D’ÉTIREMENTS — CORRECTIF V10
 
-Cette version remplace uniquement les quatre bandeaux de séances proposés.
-- Mobilité douce (6 exercices)
-- Bas du corps (6 exercices)
-- Corps complet (8 exercices)
-- Détente et récupération (5 exercices)
+Ce ZIP corrige l’affichage des 4 bandeaux. La capture montrait toujours les anciennes images V8 : ce correctif actualise donc à la fois le nouvel écran V10 et les quatre anciens noms d’image V8, pour réduire le risque de voir encore l’ancien rendu.
 
-La hauteur des bandeaux reste celle de la V8, déjà validée.
-Les quatre images gardent leur cadre doré entier, leurs personnages féminins
-plus petits et leur paysage au coucher du soleil. Aucune image n'est étirée.
+Installation dans GitHub :
+1. Décompresser le ZIP.
+2. Ajouter TOUS les fichiers à la racine du dépôt (au même endroit que index.html).
+3. Bien confirmer le remplacement de index.html et des quatre images V8 existantes.
+4. Ne supprimer aucun autre fichier.
+5. Sur PC, recharger la page entièrement (Ctrl + Maj + R). Sur le téléphone, fermer puis rouvrir l’application ; si nécessaire, l’ouvrir dans le navigateur et actualiser la page.
 
-Les boutons et pages précédents sont conservés. Le créateur de séances,
-les sons et l'historique détaillés restent à développer ; ne sont pas
-ajoutés par ce correctif.
+Ne pas effacer les données ni le stockage de l’application : les séances locales pourraient en dépendre.
 
-INSTALLATION DANS GITHUB
-1. Décompresse le ZIP.
-2. Envoie les 7 fichiers à la racine de ton dépôt GitHub.
-3. Remplace index.html par celui du ZIP.
-4. Ne supprime aucun autre fichier.
-5. Recharge l'application sur téléphone.
-
-Fichiers : index.html, etirements-seances-menu-v9.css,
-etirements-seances-menu-v9.js, et quatre images -modele-1 à -modele-4-v9.webp.
+Le créateur de séances reste à développer ; il s’agit du correctif visuel des quatre modèles.
