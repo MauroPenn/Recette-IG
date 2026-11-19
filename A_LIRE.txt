@@ -1,26 +1,18 @@
-SÉANCES D'ÉTIREMENTS — CORRECTIF FORMAT BANDEAUX V8
+SÉANCES D’ÉTIREMENTS — BANDEAUX CORRIGÉS V9
 
-Les quatre bandeaux sont au même format que ceux des séances Musculation.
-- Images : 836 × 278 pixels (environ 3:1)
-- Bordure dorée entièrement visible
-- Personnages féminins, sans étirement des proportions
-- Les 4 modèles restent disponibles
-- Navigation, sons, création et historique : fonctionnement de la V7 conservé
-- Aucun changement à l'accueil général Mon Coach / Paramètres
+Cette version conserve la hauteur validée (836 x 278) et la navigation V8.
 
-Pour installer :
+Corrections :
+- cadre doré continu sur les quatre côtés ;
+- personnages féminins plus petits et replacés à droite ;
+- titres et textes identiques aux modèles validés ;
+- aucun changement des autres univers, des fiches d’étirements ou de la page d’accueil générale.
+
+INSTALLATION
 1. Décompresse le ZIP.
-2. Ajoute les 7 fichiers ci-dessous à la racine du dépôt GitHub.
-3. Remplace index.html lorsqu'il te le demande.
+2. Téléverse les huit fichiers dans GitHub, à la racine du dépôt.
+3. Remplace index.html si GitHub le propose.
 4. Ne supprime aucun autre fichier.
+5. Recharge la page de l’application sur ton téléphone.
 
-Fichiers :
-- index.html
-- etirements-seances-menu-v8.css
-- etirements-seances-menu-v8.js
-- etirements-seance-modele-1-v8.webp
-- etirements-seance-modele-2-v8.webp
-- etirements-seance-modele-3-v8.webp
-- etirements-seance-modele-4-v8.webp
-
-Le ZIP modifie l'écran et ses bandeaux, sans encore créer le lecteur ou les séances enregistrables.
+Ce correctif est uniquement visuel : création des séances et historique restent à développer.
