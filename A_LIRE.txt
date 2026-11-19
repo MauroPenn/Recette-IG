@@ -1,14 +1,34 @@
-SÉANCES D’ÉTIREMENTS — CORRECTIF V10
+CRÉATEUR DE SÉANCES D'ÉTIREMENTS — V11
 
-Ce ZIP corrige l’affichage des 4 bandeaux. La capture montrait toujours les anciennes images V8 : ce correctif actualise donc à la fois le nouvel écran V10 et les quatre anciens noms d’image V8, pour réduire le risque de voir encore l’ancien rendu.
+Ce ZIP est conçu pour être installé dans ton application GitHub.
+Il complète la version V10 des séances d'étirements déjà validée.
 
-Installation dans GitHub :
-1. Décompresser le ZIP.
-2. Ajouter TOUS les fichiers à la racine du dépôt (au même endroit que index.html).
-3. Bien confirmer le remplacement de index.html et des quatre images V8 existantes.
-4. Ne supprimer aucun autre fichier.
-5. Sur PC, recharger la page entièrement (Ctrl + Maj + R). Sur le téléphone, fermer puis rouvrir l’application ; si nécessaire, l’ouvrir dans le navigateur et actualiser la page.
+CE QUI FONCTIONNE
+- Donner un nom à une séance.
+- Choisir entre Chronométrée et Libre.
+- Régler durée des étirements, pauses et nombre de tours.
+- Ouvrir une page distincte pour choisir les exercices.
+- Rechercher et filtrer par catégorie.
+- Ajouter, retirer et réordonner les exercices.
+- Enregistrer, retrouver, modifier et supprimer des séances.
+- Personnaliser les 4 séances proposées.
+- Démarrer une séance, avancer et enregistrer la fin dans l'historique.
 
-Ne pas effacer les données ni le stockage de l’application : les séances locales pourraient en dépendre.
+À SAVOIR
+- La liste des exercices utilise les noms validés disponibles dans les fichiers du projet ; 26 exercices sont inclus comme base certaine, et les autres sont recherchés automatiquement dans les fichiers existants de l'application. Vérifie dans l'application que toutes les catégories sont bien complètes.
+- Les nouvelles séances sont enregistrées sur l'appareil. La synchronisation automatique de ces nouvelles données entre appareils n'est pas encore intégrée.
+- Le chronomètre dépend de l'activité du navigateur ; il n'offre pas encore les garanties d'une application Android native en arrière-plan.
 
-Le créateur de séances reste à développer ; il s’agit du correctif visuel des quatre modèles.
+INSTALLATION
+1. Décompresse le ZIP.
+2. Envoie les fichiers à la racine de ton dépôt GitHub, comme d'habitude.
+3. Remplace index.html quand GitHub le demande.
+4. Ne supprime aucun autre fichier.
+5. Recharge l'application, puis teste « Étirements > Séances > Créer une séance personnalisée ».
+
+FICHIERS À COPIER
+- index.html
+- etirements-createur-v11.css
+- etirements-createur-v11.js
+
+Tu ne dois pas copier ce document A_LIRE.txt si tu ne le souhaites pas.

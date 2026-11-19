@@ -1,0 +1,113 @@
+/* Créateur de séances Étirements V11 — scoped, sans impact Musculation et autres univers. */
+body.ez1-active #main:has(.ets11-screen){
+ margin:0!important;padding:0!important;width:100%!important;max-width:none!important;
+ background:#003b32!important;
+}
+.ets11-screen,.ets11-screen *{box-sizing:border-box;}
+.ets11-screen{
+ max-width:1040px;min-height:70dvh;margin:8px auto 22px;
+ background:radial-gradient(ellipse at 70% 12%,#09584a 0%,#003f35 55%,#002d29 100%);
+ border-radius:25px;padding:22px clamp(14px,3.5vw,36px) 30px;
+ color:#fff;font-family:inherit;
+}
+.ets11-screen button,.ets11-screen input{font:inherit;}
+.ets11-screen button{cursor:pointer;-webkit-tap-highlight-color:rgba(241,189,60,.18);}
+.ets11-screen button:focus-visible,.ets11-screen input:focus-visible{outline:3px solid #ffe69a;outline-offset:2px;}
+.ets11-back{background:transparent;border:2px solid #d7c590;color:#fff;border-radius:29px;padding:10px 20px;font-size:clamp(16px,3vw,22px)!important;margin-bottom:22px;}
+.ets11-hero{display:flex;align-items:center;gap:18px;margin-bottom:22px;padding-bottom:18px;border-bottom:1px solid #c69c42;}
+.ets11-hero-icon{display:grid;place-items:center;flex:none;width:79px;height:79px;border:2px solid #ffd571;border-radius:22px;background:linear-gradient(135deg,#f8d56f,#c69119);color:#fff;font-size:60px;line-height:1;}
+.ets11-hero-icon svg{width:51px;height:51px;stroke:#fff;stroke-width:2.4;fill:none;stroke-linejoin:round;stroke-linecap:round;}
+.ets11-kicker{color:#f9c655;font-weight:800;letter-spacing:.08em;font-size:clamp(13px,2.6vw,17px);}
+.ets11-hero h1{font-size:clamp(26px,5.4vw,42px);margin:3px 0 6px;line-height:1.08;color:#fff;font-weight:850;}
+.ets11-hero p{font-size:clamp(15px,3vw,20px);line-height:1.36;margin:0;color:#ecf6f0;}
+.ets11-card{padding:21px 20px 23px;border:1.5px solid #99b9ab;border-radius:26px;background:linear-gradient(132deg,#064a3e,#00382f);margin:0 0 18px;box-shadow:inset 0 0 24px #0002;}
+.ets11-card-title{font-size:clamp(20px,4.2vw,28px);line-height:1.2;margin:0 0 18px;font-weight:800;color:#fff;}
+.ets11-name,.ets11-search{display:block;width:100%;background:#123c36;border:1.5px solid #a8c7bd;color:#fff;border-radius:17px;padding:15px 17px;font-size:clamp(17px,3.4vw,22px)!important;min-height:55px;}
+.ets11-name::placeholder,.ets11-search::placeholder{color:#b2c6bf;}
+.ets11-mode-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.ets11-mode{min-height:100px;border:1.5px solid #afc6bb;border-radius:22px;color:#f1f8f4;background:linear-gradient(135deg,#064b3c,#003a32);padding:18px 8px;font-weight:750;font-size:clamp(16px,3.1vw,23px)!important;text-align:center;line-height:1.4;}
+.ets11-mode.ets11-selected{border:3px solid #f9d36b;color:#ffe6a1;background:linear-gradient(135deg,#76631c,#3f421e);box-shadow:0 0 17px #f6c66531;}
+.ets11-help{font-size:clamp(14px,2.8vw,18px);color:#d7e9e1;line-height:1.43;margin:17px 1px 0;}
+.ets11-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;}
+.ets11-numberfield{display:flex;flex-direction:column;gap:13px;min-height:120px;border:1px solid #83b0a0;border-radius:21px;padding:16px;background:#003930;}
+.ets11-numberfield>span:first-child{font-size:clamp(14px,2.8vw,18px);font-weight:750;line-height:1.23;min-height:39px;}
+.ets11-numwrap{display:flex;align-items:center;gap:7px;background:#27534a;border:1px solid #b3c9be;border-radius:16px;padding:5px 13px;}
+.ets11-numwrap input{width:100%;min-width:0;max-width:none;border:0;background:none;color:#fff;text-align:center;font-size:clamp(20px,4vw,28px)!important;font-weight:800;padding:5px 0;outline:none!important;}
+.ets11-unit{font-size:clamp(13px,2.7vw,17px);color:#f1f8f4;white-space:nowrap;}
+.ets11-ex-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:-2px 0 12px;}
+.ets11-count{color:#ffd16c;font-size:17px;}
+.ets11-gold-small{border:1.5px solid #f6d57b;border-radius:17px;background:linear-gradient(180deg,#f5d478,#cc991e);color:#fff;font-weight:800;padding:12px 18px;font-size:clamp(14px,2.9vw,19px)!important;white-space:nowrap;}
+.ets11-exercise-empty{text-align:center;border:1.5px dashed #86b3a3;border-radius:22px;padding:20px 15px;color:#f9fdfa;}
+.ets11-empty-plus{font-weight:600;color:#f3c557;font-size:44px;line-height:1.1;margin:4px 0 10px;}
+.ets11-exercise-empty strong{display:block;font-size:clamp(18px,3.8vw,25px);}
+.ets11-exercise-empty p{margin:9px auto 2px;color:#c9e0d6;line-height:1.4;max-width:420px;}
+.ets11-selected-row{display:flex;align-items:center;gap:10px;padding:13px 0;border-bottom:1px solid #548778;}
+.ets11-selected-row:last-child{border:0;}
+.ets11-order-num{background:#e0b54b;color:#07392f;display:grid;place-items:center;border-radius:50%;width:27px;height:27px;flex:none;font-weight:800;}
+.ets11-selected-text{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px;line-height:1.24;}
+.ets11-selected-text strong{font-size:clamp(14px,2.9vw,17px);}
+.ets11-selected-text small{color:#b8d1c7;font-size:12px;}
+.ets11-row-actions{display:flex;gap:4px;flex:none;}
+.ets11-iconbtn{width:29px;height:32px;border-radius:9px;border:1px solid #8daf9e;background:#075849;color:#ffe2a4;font-size:21px!important;font-weight:700;}
+.ets11-iconbtn.ets11-remove{color:#ffb7ad;}
+.ets11-estimate{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1.5px solid #9fc5b7;border-radius:23px;background:#093b34;padding:17px 20px;margin:5px 0 20px;font-size:clamp(15px,3.4vw,19px);}
+.ets11-estimate strong{color:#f3ca67;font-size:clamp(15px,3.4vw,19px);text-align:right;}
+.ets11-primary{display:block;width:100%;border:2px solid #ffe59c;border-radius:30px;padding:16px 14px;color:#fff;font-size:clamp(18px,3.6vw,24px)!important;font-weight:800;text-align:center;background:linear-gradient(180deg,#f8cb56,#db9e0b);box-shadow:0 4px 13px #0003;}
+.ets11-textbutton{display:block;margin:19px auto 3px;border:0;background:transparent;color:#d4e5df;text-decoration:underline;padding:7px 13px;font-size:clamp(14px,3vw,18px)!important;}
+.ets11-message{background:#7f3434;border:1px solid #ffd3c1;color:white;border-radius:12px;padding:12px 17px;line-height:1.4;margin-top:14px;}
+.ets11-message.ets11-good{background:#315b3a;}
+.ets11-filters{margin:14px 0 17px;}
+.ets11-search-label{display:block;font-weight:800;font-size:clamp(16px,3.5vw,21px);margin:0 0 8px;}
+.ets11-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:17px;}
+.ets11-chip{border:1.5px solid #a0c4b4;border-radius:26px;background:#06463a;color:#fff;padding:10px 15px;font-weight:750;font-size:clamp(13px,2.8vw,17px)!important;}
+.ets11-chip-active{background:linear-gradient(180deg,#fbe093,#d8a637)!important;border-color:#ffe8a9!important;color:#123a30!important;}
+.ets11-choice-summary{display:flex;justify-content:space-between;gap:10px;font-size:14px;color:#c4ddd0;margin:15px 2px 12px;}
+.ets11-choice-summary strong{color:#ffe29b;}
+.ets11-choices{display:flex;flex-direction:column;gap:11px;margin-bottom:20px;}
+.ets11-choice-row{display:flex;align-items:center;gap:13px;border:1.5px solid #97bbac;border-radius:21px;padding:11px;background:linear-gradient(130deg,#03493c,#002f2a);min-height:107px;}
+.ets11-thumb{position:relative;width:116px;height:82px;flex:none;background:#07574b;border-radius:12px;overflow:hidden;}
+.ets11-thumb img{width:100%;height:100%;object-fit:cover;object-position:65% center;display:block;border:0!important;margin:0!important;}
+.ets11-choice-text{flex:1;min-width:0;display:flex;flex-direction:column;gap:5px;}
+.ets11-choice-text strong{font-size:clamp(15px,3vw,19px);line-height:1.22;color:#fff;}
+.ets11-choice-text small{color:#c7dbd2;font-size:clamp(12px,2.5vw,15px);}
+.ets11-plus{flex:none;width:43px;height:43px;border-radius:50%;background:#003d34;border:2.5px solid #edba4b;color:#f8c658;font-size:30px!important;font-weight:800;line-height:1;}
+.ets11-plus-selected{background:#bd9025!important;color:#fff!important;}
+.ets11-nomatches{text-align:center;color:#cbe3d6;margin:30px 2px;}
+.ets11-done{position:sticky;bottom:8px;z-index:2;box-shadow:0 4px 16px #002a24be;}
+.ets11-saved-list{margin:15px 0;display:flex;flex-direction:column;gap:11px;}
+.ets11-saved-item{border:1px solid #82ac9d;border-radius:17px;padding:13px;background:#063f36;display:flex;align-items:center;gap:9px;flex-wrap:wrap;}
+.ets11-saved-details{flex:1;min-width:150px;display:flex;flex-direction:column;gap:3px;}
+.ets11-saved-details strong{font-size:17px;color:#fff;}
+.ets11-saved-details small{color:#c8dfd5;font-size:13px;}
+.ets11-saved-actions{display:flex;gap:6px;flex-wrap:wrap;}
+.ets11-saved-start,.ets11-saved-edit,.ets11-saved-delete{border:1px solid #b4cabf;border-radius:12px;padding:8px 11px;color:#fff;background:#0a5a4b;font-size:13px!important;font-weight:700;}
+.ets11-saved-start{background:#e3b238;color:#123d31;border-color:#f7d679;}
+.ets11-saved-delete{color:#ffbcb3;}
+.ets11-player-photo{display:block;width:100%;max-height:280px;aspect-ratio:3/1;object-fit:contain;background:#00372f;margin:14px 0;border-radius:15px;}
+.ets11-player-count{color:#b9d7ca;margin:0 0 12px;}
+.ets11-timer{font-size:clamp(33px,7vw,60px);font-weight:850;text-align:center;color:#ffd478;margin:17px 0;}
+.ets11-next{width:100%;margin-top:15px;}
+.ets11-history-row{display:flex;flex-direction:column;gap:4px;padding:13px 0;border-bottom:1px solid #39796a;}
+.ets11-history-row span{color:#d8e7df;font-size:14px;}
+.ets11-sound-row{display:flex;gap:13px;align-items:center;padding:12px 0 25px;line-height:1.4;}
+.ets11-sound-row input{width:23px;height:23px;accent-color:#eebf50;}
+@media(max-width:600px){
+ .ets11-screen{margin:5px 9px 18px;border-radius:21px;padding:16px 13px 23px;}
+ .ets11-hero{gap:11px;margin:2px 0 19px;}
+ .ets11-hero-icon{width:57px;height:57px;border-radius:15px;font-size:42px;}
+ .ets11-hero-icon svg{width:39px;height:39px;}
+ .ets11-card{padding:17px 14px 19px;border-radius:23px;}
+ .ets11-numberfield{padding:12px 10px;min-height:117px;}
+ .ets11-thumb{width:94px;height:76px;}
+ .ets11-choice-row{gap:9px;padding:9px;}
+ .ets11-plus{width:38px;height:38px;font-size:27px!important;}
+ .ets11-saved-actions{width:100%;}
+ .ets11-saved-actions button{flex:1;}
+}
+@media(max-width:380px){
+ .ets11-thumb{width:74px;height:67px;}
+ .ets11-fields{gap:8px;}
+ .ets11-numwrap{padding:4px 8px;}
+ .ets11-chip{padding:9px 11px;}
+}
+@media(prefers-reduced-motion:reduce){.ets11-screen *{scroll-behavior:auto!important;}}
