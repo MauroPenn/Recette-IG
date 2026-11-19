@@ -1,12 +1,17 @@
-MON COACH – CORRECTIF DE LA PAGE MES UNIVERS (V5)
+MON COACH – CORRECTIF D'AFFICHAGE (V6)
 
-Cette version restaure l'ajout de Mon Coach à partir de la V3 qui fonctionnait,
-et le place avant Paramètres sur la même ligne sur PC.
+Cette version corrige :
+- l'écrasement des cartes Mon Coach et Paramètres,
+- l'alignement des deux cartes sur la même ligne,
+- la bordure / bande bleue visible autour de Paramètres,
+- le maintien de Mon Coach juste à gauche de Paramètres.
 
-Elle reprend la hauteur réelle des cartes déjà présentes, aussi sur téléphone.
-Elle conserve les autres univers et la version des séances d'étirements déjà validée.
+Fichiers à envoyer sur GitHub :
+- index.html
+- accueil-mon-coach-v6.css
+- accueil-mon-coach-v6.js
+- accueil-mon-coach-carte-v6.webp
+- accueil-parametres-carte-v6.webp
 
-Installation : décompresse ce ZIP, envoie les 4 fichiers sur GitHub et remplace index.html.
-Ne supprime aucun autre fichier. Actualise l'application après installation.
-
-Mon Coach reste marqué À VENIR. Aucun programme automatique n'est encore actif.
+Ne supprime aucun autre fichier du dépôt.
+Après remplacement, actualise l'application.

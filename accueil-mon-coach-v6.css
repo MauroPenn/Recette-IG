@@ -1,0 +1,60 @@
+/* Mon Coach + Paramètres : cartes jumelles alignées, sans écrasement. */
+.coach-grid-cell-v6{
+  grid-column:auto!important;
+  grid-row:auto!important;
+  justify-self:stretch!important;
+  align-self:stretch!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  box-sizing:border-box!important;
+  margin:0!important;
+}
+.coach-clone-card-v6{
+  display:block!important;
+  position:relative!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  border:0!important;
+  outline:0!important;
+  padding:0!important;
+  margin:0!important;
+  border-radius:22px!important;
+  overflow:hidden!important;
+  background:#173b35!important;
+  box-shadow:0 7px 18px rgba(0,0,0,.12)!important;
+  cursor:pointer!important;
+  line-height:0!important;
+  appearance:none!important;
+  -webkit-appearance:none!important;
+}
+.coach-clone-card-v6 img{
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center center!important;
+  border:0!important;
+  outline:0!important;
+  margin:0!important;
+  padding:0!important;
+}
+.coach-clone-card-v6::before,
+.coach-clone-card-v6::after{content:none!important;display:none!important;}
+.coach-clone-card-v6:focus-visible{
+  outline:3px solid #9d6bff!important;
+  outline-offset:2px!important;
+}
+.coach-hidden-source-v6{display:none!important;}
+.coach-note-v6{
+  position:fixed;z-index:2147483000;bottom:calc(20px + env(safe-area-inset-bottom));left:50%;
+  transform:translateX(-50%);max-width:min(90vw,430px);width:max-content;padding:13px 17px;
+  border-radius:13px;background:#332044;color:#fff;box-shadow:0 6px 18px #0006;
+  text-align:center;font:600 15px/1.4 system-ui,sans-serif;
+}
+@media (max-width:700px){
+  .coach-grid-cell-v6{grid-column:1/-1!important;flex-basis:100%!important;}
+}
