@@ -1,20 +1,17 @@
-CORRECTIF PARAMÈTRES V9 – HARMONISATION DE LA CARTE
+SÉANCES D’ÉTIREMENTS – MENU INTÉGRÉ V7
 
-Conserve la dernière version V8 validée de la page d'accueil générale.
-Seule la présentation intérieure du bandeau « Paramètres » change :
-- engrenage en haut à gauche ;
-- titre, description et action alignés comme les autres univers ;
-- suppression du trait vertical et de l'ancien habillage ;
-- aucun changement de taille, de position, de navigation ou de Mon Coach.
+Ce correctif remplace l’écran de navigation des séances par la maquette validée :
+- style vert foncé et doré ;
+- quatre modèles illustrés par des femmes ;
+- boutons de navigation : retour, sons, créer, historique et modèles proposés.
 
-INSTALLATION
-1. Décompresser ce ZIP.
-2. Envoyer les 3 fichiers suivants à la racine du dépôt GitHub :
-   - index.html
-   - accueil-parametres-harmonise-v9.css
-   - accueil-parametres-harmonise-v9.webp
-3. Remplacer index.html quand GitHub le propose.
+Il ne remplace pas les exercices validés, ni l’accueil général.
+Les fonctions complètes du créateur et du lecteur de séances ne sont PAS encore programmées :
+les boutons ouvrent les pages préparatoires correspondantes.
+
+Installation :
+1. Décompresser le ZIP.
+2. Mettre les 8 fichiers à la racine du dépôt GitHub.
+3. Remplacer index.html.
 4. Ne supprimer aucun autre fichier.
-5. Recharger l'application, puis vérifier Paramètres sur PC et téléphone.
-
-L'aperçu PNG est seulement inclus pour contrôle, il n'est pas nécessaire pour l'application.
+5. Recharger l’application pour voir le nouvel écran.
