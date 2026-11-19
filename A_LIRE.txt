@@ -1,17 +1,17 @@
-MON COACH – CORRECTIF D'AFFICHAGE (V6)
+MON COACH – CORRECTIF V7 DE L’ACCUEIL GÉNÉRAL
 
-Cette version corrige :
-- l'écrasement des cartes Mon Coach et Paramètres,
-- l'alignement des deux cartes sur la même ligne,
-- la bordure / bande bleue visible autour de Paramètres,
-- le maintien de Mon Coach juste à gauche de Paramètres.
+Cette version revient à la V5 (la carte apparaissait correctement),
+avec seulement les corrections suivantes :
+- hauteur identique aux autres cartes sur PC et téléphone ;
+- nouveau visuel Mon Coach propre, sans bandes parasites ;
+- maintien de l’onglet Paramètres et de son fonctionnement ;
+- suppression du cadre bleu autour de Paramètres.
 
-Fichiers à envoyer sur GitHub :
-- index.html
-- accueil-mon-coach-v6.css
-- accueil-mon-coach-v6.js
-- accueil-mon-coach-carte-v6.webp
-- accueil-parametres-carte-v6.webp
+INSTALLATION
+1. Décompresse ce ZIP.
+2. Envoie ses 4 fichiers à la racine de GitHub.
+3. Accepte le remplacement de index.html.
+4. Ne supprime aucun autre fichier.
+5. Recharge la page d’accueil de l’application.
 
-Ne supprime aucun autre fichier du dépôt.
-Après remplacement, actualise l'application.
+Mon Coach est pour l’instant marqué « À VENIR ».
