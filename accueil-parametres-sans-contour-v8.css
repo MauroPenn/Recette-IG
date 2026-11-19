@@ -1,0 +1,20 @@
+/* V8 : correction chirurgicale du seul contour turquoise intégré à Paramètres.
+   On ne remplace ni la carte ni son clic. La V7 continue de gérer la mise en page. */
+.mon-coach-settings-v7 {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-radius: 22px !important;
+  /* Recadrage symétrique : 3 % du pourtour sont masqués,
+     puis le contenu est agrandi du facteur inverse pour conserver
+     exactement le format visuel et la place dans la grille. */
+  clip-path: inset(3% round 21px) !important;
+  transform: scale(1.063829787) !important;
+  transform-origin: center center !important;
+  overflow: hidden !important;
+}
+/* Éviter tout halo supplémentaire provenant de la bordure focus
+   uniquement pour le rendu normal, tout en gardant le focus accessible. */
+.mon-coach-settings-v7:not(:focus-visible) {
+  outline: none !important;
+}

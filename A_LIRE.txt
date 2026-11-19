@@ -1,17 +1,17 @@
-MON COACH – CORRECTIF V7 DE L’ACCUEIL GÉNÉRAL
+MON COACH / PARAMÈTRES — PETIT CORRECTIF V8
 
-Cette version revient à la V5 (la carte apparaissait correctement),
-avec seulement les corrections suivantes :
-- hauteur identique aux autres cartes sur PC et téléphone ;
-- nouveau visuel Mon Coach propre, sans bandes parasites ;
-- maintien de l’onglet Paramètres et de son fonctionnement ;
-- suppression du cadre bleu autour de Paramètres.
+Cette version ne modifie PAS Mon Coach, ni les positions des cartes.
+Elle masque uniquement le contour bleu/turquoise intégré autour de Paramètres.
 
-INSTALLATION
-1. Décompresse ce ZIP.
-2. Envoie ses 4 fichiers à la racine de GitHub.
-3. Accepte le remplacement de index.html.
-4. Ne supprime aucun autre fichier.
-5. Recharge la page d’accueil de l’application.
+Le ZIP contient :
+- index.html
+- accueil-parametres-sans-contour-v8.css
 
-Mon Coach est pour l’instant marqué « À VENIR ».
+Installation :
+1. Décompresse le ZIP.
+2. Dépose ses 2 fichiers à la racine de GitHub.
+3. Remplace uniquement index.html lorsque GitHub le demande.
+4. Ne supprime aucun autre fichier, notamment ceux de la V7.
+5. Recharge la page de l'application.
+
+Mon Coach, les autres univers et les boutons restent ceux de la version V7.
