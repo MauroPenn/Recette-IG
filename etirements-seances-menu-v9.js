@@ -1,4 +1,4 @@
-/* Séances d'étirements V9. Bandeaux format Musculation ; toutes les fonctions V7 sont préservées. */
+/* Séances d'étirements V9. Quatre bandeaux validés au format Muscu ; navigation V8 conservée. */
 (function(){
  'use strict';
  if(typeof render!=='function'||typeof state==='undefined') return;

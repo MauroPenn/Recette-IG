@@ -1,18 +1,25 @@
-SÉANCES D’ÉTIREMENTS — BANDEAUX CORRIGÉS V9
+SÉANCES D’ÉTIREMENTS — CORRECTIF V9 : 4 BANDEAUX VALIDÉS
 
-Cette version conserve la hauteur validée (836 x 278) et la navigation V8.
+Cette version remplace uniquement les quatre bandeaux de séances proposés.
+- Mobilité douce (6 exercices)
+- Bas du corps (6 exercices)
+- Corps complet (8 exercices)
+- Détente et récupération (5 exercices)
 
-Corrections :
-- cadre doré continu sur les quatre côtés ;
-- personnages féminins plus petits et replacés à droite ;
-- titres et textes identiques aux modèles validés ;
-- aucun changement des autres univers, des fiches d’étirements ou de la page d’accueil générale.
+La hauteur des bandeaux reste celle de la V8, déjà validée.
+Les quatre images gardent leur cadre doré entier, leurs personnages féminins
+plus petits et leur paysage au coucher du soleil. Aucune image n'est étirée.
 
-INSTALLATION
+Les boutons et pages précédents sont conservés. Le créateur de séances,
+les sons et l'historique détaillés restent à développer ; ne sont pas
+ajoutés par ce correctif.
+
+INSTALLATION DANS GITHUB
 1. Décompresse le ZIP.
-2. Téléverse les huit fichiers dans GitHub, à la racine du dépôt.
-3. Remplace index.html si GitHub le propose.
+2. Envoie les 7 fichiers à la racine de ton dépôt GitHub.
+3. Remplace index.html par celui du ZIP.
 4. Ne supprime aucun autre fichier.
-5. Recharge la page de l’application sur ton téléphone.
+5. Recharge l'application sur téléphone.
 
-Ce correctif est uniquement visuel : création des séances et historique restent à développer.
+Fichiers : index.html, etirements-seances-menu-v9.css,
+etirements-seances-menu-v9.js, et quatre images -modele-1 à -modele-4-v9.webp.

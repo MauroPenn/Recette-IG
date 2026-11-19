@@ -1,5 +1,5 @@
-/* V9 : cartes des séances identiques au format des cartes Musculation (environ 3:1).
-   Pas de recadrage, pas d'étirement des textes ou personnages, bordures complètes. */
+/* V9 : les quatre bandeaux validés ont déjà leur cadre doré intégré.
+   Format 3:1, identique à la hauteur V8 validée ; sans clipping/étirement. */
 body.ez1-active #main:has(.ets7-menu){margin:0!important;padding:0!important;width:100%!important;max-width:none!important;background:#003b32!important;}
 .ets7-menu, .ets7-menu *{box-sizing:border-box;}
 .ets7-menu{font-family:inherit;color:#f9fdfa;background:radial-gradient(ellipse at 70% 18%,#095447 0%,#013c34 45%,#00352e 100%);max-width:1040px;margin:10px auto 22px;padding:22px clamp(14px,3.5vw,35px) 24px;border-radius:27px;min-height:70dvh;}
@@ -27,8 +27,8 @@ body.ez1-active #main:has(.ets7-menu){margin:0!important;padding:0!important;wid
 .ets7-history{display:block;width:100%;background:linear-gradient(135deg,#06483e,#034b40);border:2px solid #a9c7bc;color:#fff;font-weight:800;font-size:clamp(16px,3.4vw,21px)!important;border-radius:21px;margin-top:15px;padding:14px 12px;}
 .ets7-subtitle{font-weight:800;font-size:clamp(22px,4vw,29px);line-height:1.2;color:#fff;margin:17px 0 14px;}
 .ets7-presets{display:grid;grid-template-columns:1fr;gap:13px;}
-.ets7-preset{display:block;width:100%;line-height:0;text-align:left;padding:0;border:0;background:transparent;border-radius:22px;overflow:hidden;}
-.ets7-preset img{display:block;width:100%;height:auto;aspect-ratio:836/278;object-fit:contain;border-radius:21px;border:0;}
+.ets7-preset{display:block!important;width:100%!important;min-width:0!important;line-height:0!important;text-align:left!important;padding:0!important;margin:0!important;border:0!important;background:transparent!important;border-radius:0!important;overflow:visible!important;}
+.ets7-preset img{display:block!important;width:100%!important;max-width:100%!important;height:auto!important;aspect-ratio:3/1!important;object-fit:contain!important;object-position:center!important;border-radius:0!important;border:0!important;padding:0!important;margin:0!important;transform:none!important;filter:none!important;}
 .ets7-panel{border:2px solid #efbd4d;border-radius:22px;background:linear-gradient(145deg,#075044,#003c34);padding:20px;margin:22px 0 14px;}
 .ets7-panel h3{font-size:clamp(21px,5vw,30px);margin:0 0 12px;line-height:1.15;}
 .ets7-panel p{font-size:clamp(15px,3vw,18px);line-height:1.5;margin:0 0 18px;color:#e9f4ef;}
@@ -41,11 +41,7 @@ body.ez1-active #main:has(.ets7-menu){margin:0!important;padding:0!important;wid
  .ets7-head-icon{width:66px;height:66px;border-radius:16px;}
  .ets7-head-icon svg{width:39px;height:39px;}
  .ets7-saved{padding:15px 14px;}
- .ets7-preset{border-radius:18px;}
- .ets7-preset img{border-radius:18px;}
+ .ets7-preset{border-radius:0!important;overflow:visible!important;}
+ .ets7-preset img{border-radius:0!important;}
 }
 @media (prefers-reduced-motion:reduce){.ets7-menu *{scroll-behavior:auto!important;}}
-
-/* V9 : preserve the gold frame fully inside every image. */
-.ets7-preset,.ets7-preset img{background:transparent!important;}
-.ets7-preset img{aspect-ratio:836/278;object-fit:contain!important;}
