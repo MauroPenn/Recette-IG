@@ -1,17 +1,26 @@
-SÉANCES D’ÉTIREMENTS – MENU INTÉGRÉ V7
+SÉANCES D'ÉTIREMENTS — CORRECTIF FORMAT BANDEAUX V8
 
-Ce correctif remplace l’écran de navigation des séances par la maquette validée :
-- style vert foncé et doré ;
-- quatre modèles illustrés par des femmes ;
-- boutons de navigation : retour, sons, créer, historique et modèles proposés.
+Les quatre bandeaux sont au même format que ceux des séances Musculation.
+- Images : 836 × 278 pixels (environ 3:1)
+- Bordure dorée entièrement visible
+- Personnages féminins, sans étirement des proportions
+- Les 4 modèles restent disponibles
+- Navigation, sons, création et historique : fonctionnement de la V7 conservé
+- Aucun changement à l'accueil général Mon Coach / Paramètres
 
-Il ne remplace pas les exercices validés, ni l’accueil général.
-Les fonctions complètes du créateur et du lecteur de séances ne sont PAS encore programmées :
-les boutons ouvrent les pages préparatoires correspondantes.
+Pour installer :
+1. Décompresse le ZIP.
+2. Ajoute les 7 fichiers ci-dessous à la racine du dépôt GitHub.
+3. Remplace index.html lorsqu'il te le demande.
+4. Ne supprime aucun autre fichier.
 
-Installation :
-1. Décompresser le ZIP.
-2. Mettre les 8 fichiers à la racine du dépôt GitHub.
-3. Remplacer index.html.
-4. Ne supprimer aucun autre fichier.
-5. Recharger l’application pour voir le nouvel écran.
+Fichiers :
+- index.html
+- etirements-seances-menu-v8.css
+- etirements-seances-menu-v8.js
+- etirements-seance-modele-1-v8.webp
+- etirements-seance-modele-2-v8.webp
+- etirements-seance-modele-3-v8.webp
+- etirements-seance-modele-4-v8.webp
+
+Le ZIP modifie l'écran et ses bandeaux, sans encore créer le lecteur ou les séances enregistrables.
