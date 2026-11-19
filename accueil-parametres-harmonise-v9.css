@@ -1,0 +1,31 @@
+/* V9 : harmonisation visuelle de Paramètres, sans modification de navigation ni de gabarit. */
+.mon-coach-settings-v7 {
+  position: relative !important;
+  transform: none !important;      /* remplace l'agrandissement de la V8 */
+  clip-path: none !important;      /* plus de recadrage ni cadre bleu visible */
+  border: 0 !important;
+  outline: 0 !important;
+  overflow: hidden !important;
+  border-radius: 22px !important;
+  isolation: isolate !important;
+  box-shadow: 0 7px 18px rgba(0,0,0,.10) !important;
+}
+/* Le visuel validé apparaît au-dessus du contenu graphique ancien,
+   sans intercepter le clic : la carte Paramètres continue de fonctionner. */
+.mon-coach-settings-v7::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 999 !important;
+  border: 0 !important;
+  border-radius: inherit !important;
+  background: url('./accueil-parametres-harmonise-v9.webp?v=9') center center / cover no-repeat !important;
+  opacity: 1 !important;
+  pointer-events: none !important;
+  transform: none !important;
+}
+.mon-coach-settings-v7:focus-visible {
+  outline: 3px solid #f0c377 !important;
+  outline-offset: 2px !important;
+}

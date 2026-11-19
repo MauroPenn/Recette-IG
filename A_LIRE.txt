@@ -1,17 +1,20 @@
-MON COACH / PARAMÈTRES — PETIT CORRECTIF V8
+CORRECTIF PARAMÈTRES V9 – HARMONISATION DE LA CARTE
 
-Cette version ne modifie PAS Mon Coach, ni les positions des cartes.
-Elle masque uniquement le contour bleu/turquoise intégré autour de Paramètres.
+Conserve la dernière version V8 validée de la page d'accueil générale.
+Seule la présentation intérieure du bandeau « Paramètres » change :
+- engrenage en haut à gauche ;
+- titre, description et action alignés comme les autres univers ;
+- suppression du trait vertical et de l'ancien habillage ;
+- aucun changement de taille, de position, de navigation ou de Mon Coach.
 
-Le ZIP contient :
-- index.html
-- accueil-parametres-sans-contour-v8.css
+INSTALLATION
+1. Décompresser ce ZIP.
+2. Envoyer les 3 fichiers suivants à la racine du dépôt GitHub :
+   - index.html
+   - accueil-parametres-harmonise-v9.css
+   - accueil-parametres-harmonise-v9.webp
+3. Remplacer index.html quand GitHub le propose.
+4. Ne supprimer aucun autre fichier.
+5. Recharger l'application, puis vérifier Paramètres sur PC et téléphone.
 
-Installation :
-1. Décompresse le ZIP.
-2. Dépose ses 2 fichiers à la racine de GitHub.
-3. Remplace uniquement index.html lorsque GitHub le demande.
-4. Ne supprime aucun autre fichier, notamment ceux de la V7.
-5. Recharge la page de l'application.
-
-Mon Coach, les autres univers et les boutons restent ceux de la version V7.
+L'aperçu PNG est seulement inclus pour contrôle, il n'est pas nécessaire pour l'application.
