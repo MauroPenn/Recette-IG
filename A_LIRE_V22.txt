@@ -1,0 +1,50 @@
+ÉTIREMENTS — CORRECTIF V22
+==========================
+
+Objectif du correctif
+---------------------
+Ce correctif V22 garde le son validé en V21 et corrige surtout la partie
+animations dans le lecteur des séances d'étirements.
+
+CORRECTIONS APPORTÉES
+---------------------
+1. Pause entre exercices
+   - la vraie vidéo du coucher de soleil V20 corrigée est utilisée ;
+   - lancement vidéo renforcé (autoplay + relance sécurisée) ;
+   - le paysage complet est conservé.
+
+2. Pause entre les tours
+   - la vidéo de la théière japonaise reste en boucle ;
+   - l'animation est rendue plus visible dans l'application grâce à un renfort
+     visuel léger (fumée plus lisible + flamme plus perceptible) ;
+   - la boucle continue aussi pour les pauses longues.
+
+3. Son
+   - aucun changement : on conserve le bol tibétain validé en V21.
+
+FICHIERS À AJOUTER / REMPLACER À LA RACINE DU DÉPÔT GITHUB
+-----------------------------------------------------------
+- index.html
+- etirements-createur-v22.css
+- etirements-createur-v22.js
+- etirements-pause-soleil-v22.mp4
+- etirements-pause-the-japonais-v22.mp4
+
+IMPORTANT
+---------
+Les anciens fichiers V21 peuvent rester dans le dépôt, ce n'est pas gênant.
+L'index V22 appellera automatiquement les nouvelles versions.
+
+TEST CONSEILLÉ
+--------------
+Créer une séance courte avec par exemple :
+- 2 exercices
+- 10 s par exercice
+- 10 s entre exercices
+- 2 tours
+- 45 à 60 s entre les tours
+
+Vérifier ensuite :
+- l'animation visible du coucher de soleil entre les exercices ;
+- la fumée et la flamme plus visibles sur la pause théière ;
+- le bol tibétain à 4 s, 2 s et double gong à 0.
