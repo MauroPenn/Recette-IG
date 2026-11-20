@@ -1,0 +1,282 @@
+/* Créateur de séances Étirements V12 — scoped, sans impact Musculation et autres univers. */
+body.ez1-active #main:has(.ets11-screen){
+ margin:0!important;padding:0!important;width:100%!important;max-width:none!important;
+ background:#003b32!important;
+}
+.ets11-screen,.ets11-screen *{box-sizing:border-box;}
+.ets11-screen{
+ max-width:1040px;min-height:70dvh;margin:8px auto 22px;
+ background:radial-gradient(ellipse at 70% 12%,#09584a 0%,#003f35 55%,#002d29 100%);
+ border-radius:25px;padding:22px clamp(14px,3.5vw,36px) 30px;
+ color:#fff;font-family:inherit;
+}
+.ets11-screen button,.ets11-screen input{font:inherit;}
+.ets11-screen button{cursor:pointer;-webkit-tap-highlight-color:rgba(241,189,60,.18);}
+.ets11-screen button:focus-visible,.ets11-screen input:focus-visible{outline:3px solid #ffe69a;outline-offset:2px;}
+.ets11-back{background:transparent;border:2px solid #d7c590;color:#fff;border-radius:29px;padding:10px 20px;font-size:clamp(16px,3vw,22px)!important;margin-bottom:22px;}
+.ets11-hero{display:flex;align-items:center;gap:18px;margin-bottom:22px;padding-bottom:18px;border-bottom:1px solid #c69c42;}
+.ets11-hero-icon{display:grid;place-items:center;flex:none;width:79px;height:79px;border:2px solid #ffd571;border-radius:22px;background:linear-gradient(135deg,#f8d56f,#c69119);color:#fff;font-size:60px;line-height:1;}
+.ets11-hero-icon svg{width:51px;height:51px;stroke:#fff;stroke-width:2.4;fill:none;stroke-linejoin:round;stroke-linecap:round;}
+.ets11-kicker{color:#f9c655;font-weight:800;letter-spacing:.08em;font-size:clamp(13px,2.6vw,17px);}
+.ets11-hero h1{font-size:clamp(26px,5.4vw,42px);margin:3px 0 6px;line-height:1.08;color:#fff;font-weight:850;}
+.ets11-hero p{font-size:clamp(15px,3vw,20px);line-height:1.36;margin:0;color:#ecf6f0;}
+.ets11-card{padding:21px 20px 23px;border:1.5px solid #99b9ab;border-radius:26px;background:linear-gradient(132deg,#064a3e,#00382f);margin:0 0 18px;box-shadow:inset 0 0 24px #0002;}
+.ets11-card-title{font-size:clamp(20px,4.2vw,28px);line-height:1.2;margin:0 0 18px;font-weight:800;color:#fff;}
+.ets11-name,.ets11-search{display:block;width:100%;background:#123c36;border:1.5px solid #a8c7bd;color:#fff;border-radius:17px;padding:15px 17px;font-size:clamp(17px,3.4vw,22px)!important;min-height:55px;}
+.ets11-name::placeholder,.ets11-search::placeholder{color:#b2c6bf;}
+.ets11-mode-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.ets11-mode{min-height:100px;border:1.5px solid #afc6bb;border-radius:22px;color:#f1f8f4;background:linear-gradient(135deg,#064b3c,#003a32);padding:18px 8px;font-weight:750;font-size:clamp(16px,3.1vw,23px)!important;text-align:center;line-height:1.4;}
+.ets11-mode.ets11-selected{border:3px solid #f9d36b;color:#ffe6a1;background:linear-gradient(135deg,#76631c,#3f421e);box-shadow:0 0 17px #f6c66531;}
+.ets11-help{font-size:clamp(14px,2.8vw,18px);color:#d7e9e1;line-height:1.43;margin:17px 1px 0;}
+.ets11-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;}
+.ets11-numberfield{display:flex;flex-direction:column;gap:13px;min-height:120px;border:1px solid #83b0a0;border-radius:21px;padding:16px;background:#003930;}
+.ets11-numberfield>span:first-child{font-size:clamp(14px,2.8vw,18px);font-weight:750;line-height:1.23;min-height:39px;}
+.ets11-numwrap{display:flex;align-items:center;gap:7px;background:#27534a;border:1px solid #b3c9be;border-radius:16px;padding:5px 13px;}
+.ets11-numwrap input{width:100%;min-width:0;max-width:none;border:0;background:none;color:#fff;text-align:center;font-size:clamp(20px,4vw,28px)!important;font-weight:800;padding:5px 0;outline:none!important;}
+.ets11-unit{font-size:clamp(13px,2.7vw,17px);color:#f1f8f4;white-space:nowrap;}
+.ets11-ex-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:-2px 0 12px;}
+.ets11-count{color:#ffd16c;font-size:17px;}
+.ets11-gold-small{border:1.5px solid #f6d57b;border-radius:17px;background:linear-gradient(180deg,#f5d478,#cc991e);color:#fff;font-weight:800;padding:12px 18px;font-size:clamp(14px,2.9vw,19px)!important;white-space:nowrap;}
+.ets11-exercise-empty{text-align:center;border:1.5px dashed #86b3a3;border-radius:22px;padding:20px 15px;color:#f9fdfa;}
+.ets11-empty-plus{font-weight:600;color:#f3c557;font-size:44px;line-height:1.1;margin:4px 0 10px;}
+.ets11-exercise-empty strong{display:block;font-size:clamp(18px,3.8vw,25px);}
+.ets11-exercise-empty p{margin:9px auto 2px;color:#c9e0d6;line-height:1.4;max-width:420px;}
+.ets11-selected-row{display:flex;align-items:center;gap:10px;padding:13px 0;border-bottom:1px solid #548778;}
+.ets11-selected-row:last-child{border:0;}
+.ets11-order-num{background:#e0b54b;color:#07392f;display:grid;place-items:center;border-radius:50%;width:27px;height:27px;flex:none;font-weight:800;}
+.ets11-selected-text{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px;line-height:1.24;}
+.ets11-selected-text strong{font-size:clamp(14px,2.9vw,17px);}
+.ets11-selected-text small{color:#b8d1c7;font-size:12px;}
+.ets11-row-actions{display:flex;gap:4px;flex:none;}
+.ets11-iconbtn{width:29px;height:32px;border-radius:9px;border:1px solid #8daf9e;background:#075849;color:#ffe2a4;font-size:21px!important;font-weight:700;}
+.ets11-iconbtn.ets11-remove{color:#ffb7ad;}
+.ets11-estimate{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1.5px solid #9fc5b7;border-radius:23px;background:#093b34;padding:17px 20px;margin:5px 0 20px;font-size:clamp(15px,3.4vw,19px);}
+.ets11-estimate strong{color:#f3ca67;font-size:clamp(15px,3.4vw,19px);text-align:right;}
+.ets11-primary{display:block;width:100%;border:2px solid #ffe59c;border-radius:30px;padding:16px 14px;color:#fff;font-size:clamp(18px,3.6vw,24px)!important;font-weight:800;text-align:center;background:linear-gradient(180deg,#f8cb56,#db9e0b);box-shadow:0 4px 13px #0003;}
+.ets11-textbutton{display:block;margin:19px auto 3px;border:0;background:transparent;color:#d4e5df;text-decoration:underline;padding:7px 13px;font-size:clamp(14px,3vw,18px)!important;}
+.ets11-message{background:#7f3434;border:1px solid #ffd3c1;color:white;border-radius:12px;padding:12px 17px;line-height:1.4;margin-top:14px;}
+.ets11-message.ets11-good{background:#315b3a;}
+.ets11-filters{margin:14px 0 17px;}
+.ets11-search-label{display:block;font-weight:800;font-size:clamp(16px,3.5vw,21px);margin:0 0 8px;}
+.ets11-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:17px;}
+.ets11-chip{border:1.5px solid #a0c4b4;border-radius:26px;background:#06463a;color:#fff;padding:10px 15px;font-weight:750;font-size:clamp(13px,2.8vw,17px)!important;}
+.ets11-chip-active{background:linear-gradient(180deg,#fbe093,#d8a637)!important;border-color:#ffe8a9!important;color:#123a30!important;}
+.ets11-choice-summary{display:flex;justify-content:space-between;gap:10px;font-size:14px;color:#c4ddd0;margin:15px 2px 12px;}
+.ets11-choice-summary strong{color:#ffe29b;}
+.ets11-choices{display:flex;flex-direction:column;gap:11px;margin-bottom:20px;}
+.ets11-choice-row{display:flex;align-items:center;gap:13px;border:1.5px solid #97bbac;border-radius:21px;padding:11px;background:linear-gradient(130deg,#03493c,#002f2a);min-height:107px;}
+.ets11-thumb{position:relative;width:116px;height:82px;flex:none;background:#07574b;border-radius:12px;overflow:hidden;}
+.ets11-thumb img{width:100%;height:100%;object-fit:cover;object-position:65% center;display:block;border:0!important;margin:0!important;}
+.ets11-choice-text{flex:1;min-width:0;display:flex;flex-direction:column;gap:5px;}
+.ets11-choice-text strong{font-size:clamp(15px,3vw,19px);line-height:1.22;color:#fff;}
+.ets11-choice-text small{color:#c7dbd2;font-size:clamp(12px,2.5vw,15px);}
+.ets11-plus{flex:none;width:43px;height:43px;border-radius:50%;background:#003d34;border:2.5px solid #edba4b;color:#f8c658;font-size:30px!important;font-weight:800;line-height:1;}
+.ets11-plus-selected{background:#bd9025!important;color:#fff!important;}
+.ets11-nomatches{text-align:center;color:#cbe3d6;margin:30px 2px;}
+.ets11-done{position:sticky;bottom:8px;z-index:2;box-shadow:0 4px 16px #002a24be;}
+.ets11-saved-list{margin:15px 0;display:flex;flex-direction:column;gap:11px;}
+.ets11-saved-item{border:1px solid #82ac9d;border-radius:17px;padding:13px;background:#063f36;display:flex;align-items:center;gap:9px;flex-wrap:wrap;}
+.ets11-saved-details{flex:1;min-width:150px;display:flex;flex-direction:column;gap:3px;}
+.ets11-saved-details strong{font-size:17px;color:#fff;}
+.ets11-saved-details small{color:#c8dfd5;font-size:13px;}
+.ets11-saved-actions{display:flex;gap:6px;flex-wrap:wrap;}
+.ets11-saved-start,.ets11-saved-edit,.ets11-saved-delete{border:1px solid #b4cabf;border-radius:12px;padding:8px 11px;color:#fff;background:#0a5a4b;font-size:13px!important;font-weight:700;}
+.ets11-saved-start{background:#e3b238;color:#123d31;border-color:#f7d679;}
+.ets11-saved-delete{color:#ffbcb3;}
+.ets11-player-photo{display:block;width:100%;max-height:280px;aspect-ratio:3/1;object-fit:contain;background:#00372f;margin:14px 0;border-radius:15px;}
+.ets11-player-count{color:#b9d7ca;margin:0 0 12px;}
+.ets11-timer{font-size:clamp(33px,7vw,60px);font-weight:850;text-align:center;color:#ffd478;margin:17px 0;}
+.ets11-next{width:100%;margin-top:15px;}
+.ets11-history-row{display:flex;flex-direction:column;gap:4px;padding:13px 0;border-bottom:1px solid #39796a;}
+.ets11-history-row span{color:#d8e7df;font-size:14px;}
+.ets11-sound-row{display:flex;gap:13px;align-items:center;padding:12px 0 25px;line-height:1.4;}
+.ets11-sound-row input{width:23px;height:23px;accent-color:#eebf50;}
+@media(max-width:600px){
+ .ets11-screen{margin:5px 9px 18px;border-radius:21px;padding:16px 13px 23px;}
+ .ets11-hero{gap:11px;margin:2px 0 19px;}
+ .ets11-hero-icon{width:57px;height:57px;border-radius:15px;font-size:42px;}
+ .ets11-hero-icon svg{width:39px;height:39px;}
+ .ets11-card{padding:17px 14px 19px;border-radius:23px;}
+ .ets11-numberfield{padding:12px 10px;min-height:117px;}
+ .ets11-thumb{width:94px;height:76px;}
+ .ets11-choice-row{gap:9px;padding:9px;}
+ .ets11-plus{width:38px;height:38px;font-size:27px!important;}
+ .ets11-saved-actions{width:100%;}
+ .ets11-saved-actions button{flex:1;}
+}
+@media(max-width:380px){
+ .ets11-thumb{width:74px;height:67px;}
+ .ets11-fields{gap:8px;}
+ .ets11-numwrap{padding:4px 8px;}
+ .ets11-chip{padding:9px 11px;}
+}
+@media(prefers-reduced-motion:reduce){.ets11-screen *{scroll-behavior:auto!important;}}
+
+/* V12 — photos cadrées à droite, sans textes du bandeau, bordures régulières */
+.ets11-choice-row{display:grid!important;grid-template-columns: minmax(102px,145px) minmax(0,1fr) 46px;align-items:center;gap:15px;border:1.5px solid #8eb5a7;border-radius:19px;min-height:113px;padding:10px 12px;overflow:hidden;box-shadow:inset 0 1px 0 #ffffff13;}
+.ets11-thumb{position:relative!important;width:100%!important;height:87px!important;overflow:hidden!important;border-radius:13px!important;border:1px solid #7a9d90!important;background:#055344;}
+.ets11-thumb img{width:100%!important;height:100%!important;display:block!important;object-fit:cover!important;object-position:right center!important;}
+.ets11-choice-text strong{font-size:clamp(15px,2.9vw,19px)!important;line-height:1.25!important;overflow-wrap:break-word;}
+.ets11-plus{width:42px!important;height:42px!important;justify-self:end!important;align-self:center!important;}
+@media(max-width:600px){
+ .ets11-choice-row{grid-template-columns:minmax(82px,100px) minmax(0,1fr) 40px;gap:10px;min-height:98px;padding:9px;}
+ .ets11-thumb{height:78px!important;}
+ .ets11-plus{width:38px!important;height:38px!important;}
+}
+@media(max-width:375px){.ets11-choice-row{grid-template-columns:77px minmax(0,1fr) 36px;gap:8px;}.ets11-thumb{height:70px!important;}.ets11-plus{width:35px!important;height:35px!important;}}
+
+
+/* V13 : chaque exercice est présenté par SON bandeau original en entier.
+   Le bouton + doré masque la vieille flèche du bandeau ; aucune déformation. */
+.ets11-choices.ets13-original-banners{
+  display:flex!important;flex-direction:column!important;align-items:stretch!important;
+  gap:15px!important;max-width:960px;margin-inline:auto;padding-bottom:12px;
+}
+.ets13-banner-card{
+  position:relative;display:block;isolation:isolate;width:100%;max-width:100%;
+  border-radius:22px;overflow:hidden;background:#00372e;
+  box-shadow:0 5px 18px rgba(0,0,0,.14);
+}
+.ets13-banner-image{width:100%;position:relative;min-width:0;background:#003b32;line-height:0;}
+.ets13-original-banner{
+  width:100%!important;height:auto!important;max-width:100%!important;
+  display:block!important;position:relative!important;object-fit:contain!important;
+  object-position:center!important;border:0!important;margin:0!important;padding:0!important;
+  transform:none!important;aspect-ratio:auto!important;
+}
+.ets13-add-button{
+  position:absolute!important;z-index:2;right:2.8%;top:50%;transform:translateY(-50%);
+  display:grid!important;place-items:center!important;width:clamp(43px,6vw,64px)!important;
+  height:clamp(43px,6vw,64px)!important;min-width:0!important;
+  border:3px solid #ffe9a2!important;border-radius:50%!important;
+  background:linear-gradient(150deg,#ffe080,#daa321)!important;
+  box-shadow:0 3px 14px #003329b0,0 0 0 2px #064538;
+  font-size:clamp(31px,5vw,45px)!important;line-height:1!important;font-weight:700!important;
+  color:#063e34!important;cursor:pointer!important;
+  -webkit-appearance:none;appearance:none;padding:0!important;margin:0!important;
+  transition:filter .12s ease,transform .12s ease;
+}
+.ets13-add-button:active{transform:translateY(-50%) scale(.93);}
+.ets13-add-button:focus-visible{outline:3px solid white!important;outline-offset:2px!important;}
+.ets13-add-selected{
+  background:linear-gradient(145deg,#fff4c3,#f8d46d)!important;
+  color:#005346!important;box-shadow:0 0 0 3px #ffffffb0,0 4px 14px #003528a0!important;
+}
+.ets13-picked{box-shadow:0 0 0 2px #ffe090,0 5px 18px #0004;}
+.ets13-image-fallback{
+  width:100%;aspect-ratio:3.6/1;min-height:100px;
+  border:3px solid #f2cf6a;border-radius:19px;
+  background:linear-gradient(110deg,#00392f 4%,#005245 62%,#436f55 100%);
+  padding:clamp(12px,2.4vw,28px) 19% clamp(10px,2vw,22px) 5%;
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:7px;
+  line-height:1.17;
+}
+.ets13-fallback-kicker{font-size:clamp(9px,1.8vw,15px);font-weight:800;color:#f6d36a;letter-spacing:.04em;}
+.ets13-fallback-title{font-size:clamp(16px,4.5vw,38px);color:white;font-weight:800;line-height:1.05;}
+.ets13-fallback-rule{display:block;background:#ebbf4b;border-radius:6px;width:17%;height:4px;margin-top:5px;}
+@media(max-width:600px){
+ .ets11-choices.ets13-original-banners{gap:12px!important;}
+ .ets13-banner-card{border-radius:17px;}
+ .ets13-add-button{right:3.3%;width:clamp(39px,11vw,48px)!important;height:clamp(39px,11vw,48px)!important;
+  border-width:2px!important;font-size:clamp(27px,8vw,34px)!important;}
+ .ets13-image-fallback{border-radius:15px;padding-left:6%;padding-right:18%;}
+}
+
+/* No overlay on top of any exercise card when scrolling through the catalogue. */
+.ets11-screen:has(.ets13-original-banners) .ets11-done{
+ position:static!important;bottom:auto!important;z-index:auto!important;
+ margin:20px auto 6px!important;
+}
+.ets13-add-button{right:.8%!important;}
+@media(max-width:600px){.ets13-add-button{right:.8%!important;}}
+/* V14 Lecteur de séances d'Étirements — adapté du lecteur Musculation,
+   sans modifier les écrans du créateur, les exercices ou les autres univers. */
+.ets11-screen.ets14-player{background:radial-gradient(ellipse at 75% 4%,#087767 0%,#004b40 46%,#003a33 86%,#002f2a 100%);}
+.ets14-player .ets11-hero{margin-bottom:17px;}
+.ets14-session-strip{color:#093a30;background:linear-gradient(100deg,#ffdc70,#f4b91c);border:1.5px solid #ffe7a0;
+  border-radius:999px;margin:0 0 14px;padding:10px 16px;text-align:center;font-size:clamp(15px,2.8vw,21px);}
+.ets14-session-strip strong{display:block;overflow-wrap:anywhere;}
+.ets14-hud{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:5px 0 22px;}
+.ets14-hud-stat{background:linear-gradient(130deg,#055447,#003a34);border:1.5px solid #94bcb0;
+ border-radius:20px;padding:11px 7px;text-align:center;min-width:0;}
+.ets14-hud-label{font-size:clamp(11px,2.6vw,16px);font-weight:780;color:#f4d47c;}
+.ets14-hud-stat strong{display:block;color:#fff;font-size:clamp(18px,4.4vw,29px);margin-top:3px;white-space:nowrap;}
+.ets14-content{max-width:930px;margin:auto;}
+.ets14-state-title{text-align:center;font-weight:850;font-style:italic;font-size:clamp(25px,5vw,42px);
+ line-height:1.16;color:#fff;margin:10px 0 7px;overflow-wrap:break-word;}
+.ets14-subtitle{text-align:center;color:#e7f2ec;font-size:clamp(15px,3vw,21px);line-height:1.35;margin:0 0 17px;}
+.ets14-original-banner,.ets14-next-banner{width:100%;overflow:hidden;border-radius:22px;background:linear-gradient(110deg,#004239,#126650);margin:9px auto 13px;}
+.ets14-original-banner img,.ets14-next-banner img{display:block!important;width:100%!important;height:auto!important;
+ aspect-ratio:auto!important;object-fit:contain!important;max-width:100%!important;border:0!important;margin:0!important;padding:0!important;}
+.ets14-original-banner strong,.ets14-next-banner strong{display:block;padding:24px;color:white;}
+.ets14-scene{width:100%;aspect-ratio:830/320;position:relative;overflow:hidden;border-radius:22px;
+ border:0;margin:9px auto 15px;background:#073f38;isolation:isolate;}
+.ets14-scene img{width:100%!important;height:100%!important;display:block!important;object-fit:cover!important;object-position:center!important;
+ margin:0!important;padding:0!important;transform:none!important;border:0!important;}
+.ets14-sun{position:absolute;left:73.9%;top:46%;width:2.9%;aspect-ratio:1;border-radius:50%;pointer-events:none;
+ background:radial-gradient(circle at 36% 32%,#fffefa 0%,#fffdf2 38%,#ffe489 69%,#f6b83b 90%);
+ box-shadow:0 0 13px 7px rgba(255,188,27,.75),0 0 40px 19px rgba(255,166,27,.40);
+ transform:translate(-50%,-50%);will-change:transform,opacity;}
+.ets14-timer-row{display:flex;justify-content:center;align-items:center;gap:clamp(9px,3vw,24px);margin:6px 0 22px;}
+.ets14-ring{--ets14-angle:0deg;flex:none;width:clamp(154px,36vw,244px);height:clamp(154px,36vw,244px);
+ border-radius:50%;padding:clamp(10px,2.2vw,15px);display:grid;place-items:center;
+ background:conic-gradient(#ffd560 0 var(--ets14-angle),#2a9485 var(--ets14-angle) 360deg);
+ box-shadow:0 3px 12px #001c1559;}
+.ets14-ring-inner{width:100%;height:100%;border-radius:50%;background:#003e36;display:flex;flex-direction:column;
+ justify-content:center;align-items:center;gap:3px;text-align:center;}
+.ets14-ring-label{color:#fff;font-size:clamp(13px,2.6vw,18px);font-weight:750;}
+.ets14-ring-inner strong{font-size:clamp(29px,5vw,47px);color:#fff;font-weight:900;font-variant-numeric:tabular-nums;line-height:1.05;}
+.ets14-small-data{width:clamp(104px,24vw,185px);min-height:100px;border:1.4px solid #9ac9b9;border-radius:20px;
+ background:#00463c;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:10px;}
+.ets14-small-data strong{color:#ffd66d;font-size:clamp(15px,2.8vw,22px);line-height:1.18;overflow-wrap:anywhere;}
+.ets14-small-data small{color:#ecf3ee;font-size:clamp(12px,2.4vw,17px);line-height:1.3;margin-top:4px;}
+.ets14-next-label{font-size:clamp(18px,3.2vw,22px);font-weight:850;color:#ffda76;font-style:italic;margin:14px 0 8px;}
+.ets14-next-banner{margin:0 0 15px;}
+.ets14-next-round{border:1.4px solid #a6c9b9;border-radius:18px;background:linear-gradient(100deg,#00473c,#195e4b);padding:18px 22px;
+ margin:3px 0 16px;display:flex;flex-direction:column;gap:5px;text-align:center;}
+.ets14-next-round strong{font-size:clamp(22px,4vw,30px);color:#fff;}
+.ets14-next-round span{font-size:clamp(14px,2.7vw,18px);color:#e8f5ee;}
+.ets14-progress{margin:10px 0 21px;}
+.ets14-progress-top{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:8px;color:#fff;font-size:clamp(14px,2.8vw,18px);font-weight:780;}
+.ets14-progress-top strong{color:#fbd35a;}
+.ets14-progress-bar{width:100%;height:15px;border:1.6px solid #93c6b6;border-radius:100px;background:#016154;overflow:hidden;}
+.ets14-progress-fill{height:100%;border-radius:100px;background:linear-gradient(90deg,#ffdf81,#f1ac12);min-width:2px;}
+.ets14-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:stretch;margin-bottom:12px;}
+.ets14-button{min-height:59px;border-radius:18px;padding:12px 9px;font-size:clamp(16px,3vw,21px)!important;
+ font-weight:850;cursor:pointer;}
+.ets14-button.ets14-pause{color:#083a31;border:2px solid #fff0b2;background:linear-gradient(180deg,#ffdf71,#f2b319);}
+.ets14-button.ets14-next{color:#fff;border:2px solid #bfd9ce;background:#00483d;}
+.ets14-outline{width:100%;min-height:53px;border:1.8px solid #f0c75b;border-radius:17px;
+ background:#76632488;color:#fff7d8;font-weight:820;font-size:clamp(16px,3vw,19px)!important;margin-bottom:8px;}
+.ets14-exit{border:0;background:transparent;text-decoration:underline;color:#d4e9e0;display:block;
+ padding:13px;margin:0 auto;font-size:clamp(14px,2.7vw,17px)!important;}
+.ets14-finish{max-width:800px;text-align:center;border:1.5px solid #cfbd6b;border-radius:25px;padding:28px 22px;margin:12px auto 22px;
+ background:linear-gradient(135deg,#07493e,#00382f);}
+.ets14-finish-medal{font-size:65px;color:#ffda75;line-height:1;margin-bottom:12px;}
+.ets14-finish h2{font-size:clamp(25px,4.3vw,38px);color:#fff;margin:0 0 7px;}
+.ets14-finish p{color:#e1f2e9;line-height:1.42;font-size:clamp(15px,2.8vw,19px);}
+.ets14-finish-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:25px 0;}
+.ets14-finish-stat{padding:14px 7px;border:1.5px solid #95c0ab;border-radius:15px;background:#014539;}
+.ets14-finish-stat strong{display:block;font-size:clamp(16px,3.5vw,27px);font-variant-numeric:tabular-nums;color:#fdd770;}
+.ets14-finish-stat small{color:#fff;font-size:clamp(12px,2.5vw,16px);}
+.ets14-finish-note{margin-bottom:0;}
+.ets14-save-button{max-width:800px;margin:0 auto 15px;}
+.ets14-player>.ets14-outline{display:block;max-width:800px;margin:0 auto 10px;}
+@media(max-width:600px){
+ .ets14-player .ets11-hero{margin-bottom:12px;}
+ .ets14-hud{gap:6px;margin-bottom:14px;}
+ .ets14-hud-stat{padding:10px 4px;border-radius:13px;}
+ .ets14-state-title{margin-top:11px;}
+ .ets14-scene{border-radius:16px;}
+ .ets14-original-banner,.ets14-next-banner{border-radius:14px;}
+ .ets14-ring{width:clamp(128px,36vw,180px);height:clamp(128px,36vw,180px);padding:9px;}
+ .ets14-small-data{width:clamp(82px,23vw,132px);min-height:87px;border-radius:13px;padding:7px 3px;}
+ .ets14-small-data strong{font-size:clamp(13px,2.9vw,17px);}
+ .ets14-small-data small{font-size:clamp(10px,2.5vw,14px);}
+ .ets14-timer-row{gap:8px;}
+ .ets14-controls{gap:8px;}
+ .ets14-button{min-height:52px;border-radius:16px;}
+ .ets14-finish{padding:25px 12px;}
+}
+@media(max-width:350px){.ets14-small-data{width:78px;}.ets14-ring{width:126px;height:126px;}}
+@media(prefers-reduced-motion:reduce){.ets14-sun{will-change:auto;}}

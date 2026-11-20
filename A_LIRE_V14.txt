@@ -1,0 +1,24 @@
+CORRECTIF V14 — SÉANCES D'ÉTIREMENTS : LECTEUR ZEN
+
+Cette version repart de la V13 validée (créateur de séances et sélection des bandeaux).
+
+FICHIERS À AJOUTER DANS GITHUB (à la racine du dépôt) :
+- index.html : remplacer le fichier portant ce nom
+- etirements-createur-v14.js : nouveau fichier
+- etirements-createur-v14.css : nouveau fichier
+- etirements-pause-soleil-fond-v14.webp : nouvelle image de pause
+- etirements-pause-the-anime-v14.webp : animation japonaise de pause entre les tours
+
+Ce fichier A_LIRE_V14.txt est facultatif et ne doit pas nécessairement être ajouté.
+
+NE PAS SUPPRIMER les autres fichiers ! Les anciennes versions V13 peuvent rester dans le dépôt : la nouvelle page index.html appelle les versions V14.
+
+À TESTER DANS L'APPLICATION :
+1) Créer une petite séance chronométrée avec 2 ou 3 exercices.
+2) Vérifier : exercice actif, pause avec soleil lent, prochain exercice, préparation de 2 secondes, pause avec théière animée entre les tours.
+3) À la fin, vérifier le choix de sauvegarder OU de quitter sans enregistrement.
+4) Tester le mode libre et le réglage des sons zen.
+
+L'historique et les séances déjà enregistrées ne sont pas effacés.
+
+IMPORTANT : les animations sont affichées uniquement dans leur fenêtre de paysage. Le chrono et le reste des boutons sont de vrais éléments de l'application. Le test final sur le dépôt GitHub et le téléphone reste nécessaire.
