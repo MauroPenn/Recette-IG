@@ -1,0 +1,15 @@
+V24 – LECTURE VIDÉO (CORRECTIF ANDROID / CACHE)
+
+Constat : les vidéos MP4 sont animées, mais l’application intercepte les ressources vidéo avec son service worker (cache hors ligne). Le chargement par morceaux peut être perturbé.
+
+Correction ciblée : le lecteur V24 charge les deux vidéos depuis leur adresse publique GitHub, hors du cache de l’application. Si le réseau externe ne fonctionne pas, il essaie les fichiers V23 déjà présents dans le dépôt, puis une image fixe propre. Aucun effet visuel mal calé n’est ajouté.
+
+Décompresser ce ZIP et injecter à la racine de GitHub :
+- index.html (remplace l’existant)
+- etirements-createur-v24.css
+- etirements-createur-v24.js
+Ne pas supprimer les fichiers MP4 V23 : ils servent de secours.
+
+IMPORTANT : ce correctif nécessite une connexion Internet pour lire les vidéos de façon fiable ; hors connexion, le cache local peut provoquer une image fixe. Il n’affecte pas la synchronisation ni les séances enregistrées.
+
+Après publication, fermer l’application puis la rouvrir, ou rafraîchir deux fois la page. Tester une pause entre exercices et une pause entre tours.
