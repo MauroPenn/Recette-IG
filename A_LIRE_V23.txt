@@ -1,0 +1,26 @@
+ÉTIREMENTS – CORRECTIF V23 (OPTION A)
+=====================================
+
+Corrections :
+1. Suppression des surimpressions de flamme et de vapeur décalées sur la pause théière.
+2. Affichage des deux vidéos MP4 sans déformation et dans leurs proportions natives.
+3. Lecture vidéo en boucle, relance après reprise de pause et retour à l’application.
+4. Image fixe de secours uniquement si une vidéo ne peut pas être chargée.
+5. Conservation du lecteur, du chronomètre et des sons validés en V21/V22.
+
+À AJOUTER À LA RACINE DU DÉPÔT GITHUB
+- index.html (remplacer l'ancien fichier)
+- etirements-createur-v23.css
+- etirements-createur-v23.js
+- etirements-pause-soleil-v23.mp4
+- etirements-pause-the-japonais-v23.mp4
+
+Les anciens fichiers peuvent rester dans GitHub : index.html référence la V23.
+Ne pas téléverser le ZIP lui-même. Décompresser et téléverser les fichiers listés.
+
+TEST
+Créer une séance avec 2 exercices, pause entre exercices 10 s,
+2 tours, pause entre tours 30 s. Vérifier que le soleil descend
+et que la théière montre sa vapeur sans effets lumineux superposés.
+Si une vidéo reste fixe, tester en actualisant la page et vérifier
+que les vidéos MP4 sont bien présentes à la racine du dépôt.
