@@ -1,0 +1,64 @@
+ÉTIREMENTS — CORRECTIF FONCTIONNEL V21
+====================================
+
+Cette mise à jour part de la V14 déjà validée et conserve :
+- la création des séances ;
+- la sélection des exercices avec les bandeaux originaux ;
+- l'enchaînement des exercices, les pauses, les tours et le mode libre ;
+- l'enregistrement des séances et l'historique existant.
+
+NOUVEAUTÉS
+----------
+1. Pause entre exercices : vidéo du coucher de soleil V20 (15 secondes, 30 images/s).
+   Elle garde tout le paysage, se lit sans boucle et conserve sa dernière image
+   si la pause dure plus de 15 secondes. Pour une pause de 10 secondes, elle
+   s'arrête après 10 secondes, sans accélération artificielle.
+
+2. Pause entre les tours : vidéo japonaise (9 secondes, 30 images/s).
+   Elle se répète automatiquement pendant toute la durée choisie, même 60 s
+   ou 90 s, et se suspend si tu appuies sur Pause.
+
+3. Sons du bol tibétain : deux frappes simples à 4 et 2 secondes restantes,
+   puis le double gong à zéro. La résonance n'est pas coupée brutalement.
+   Fonctionne pendant les phases chronométrées (exercices et récupérations).
+   Pas de décompte sonore pendant la courte préparation de 2 secondes.
+   Réglages sonores > Activer/Désactiver pour couper les gongs.
+
+INSTALLATION GITHUB
+-------------------
+1. Décompresse le ZIP sur ton ordinateur.
+2. Ajoute les SEPT fichiers de l'application à la RACINE de ton dépôt GitHub :
+   - index.html                  (remplacer l'existant)
+   - etirements-createur-v21.js
+   - etirements-createur-v21.css
+   - etirements-pause-soleil-v21.mp4
+   - etirements-pause-the-japonais-v21.mp4
+   - etirements-bol-tibetain-simple-v21.mp3
+   - etirements-bol-tibetain-double-v21.mp3
+3. Ne supprime aucun autre fichier de ton dépôt.
+4. Attends la publication GitHub Pages, puis actualise la page sur PC et sur
+   téléphone. Si l'ancienne version reste affichée, ferme puis rouvre l'appli.
+   Les noms V21 des ressources évitent normalement le problème de cache.
+
+TEST CONSEILLÉ
+--------------
+Étirements > Séances > Mes séances > Démarrer (ou crée une séance).
+Pour un essai rapide : 2 exercices, 10 secondes par exercice, 10 secondes
+entre exercices, 2 tours et 60 secondes entre les tours.
+Vérifie :
+- le coucher de soleil, puis les deux frappes et le double gong à la fin ;
+- l'animation japonaise en boucle pendant une minute ;
+- Pause / Reprendre (le film et le décompte s'arrêtent puis repartent) ;
+- la confirmation d'enregistrement à la fin.
+
+REMARQUES
+---------
+Les nouveaux sons peuvent nécessiter le premier clic « Démarrer » pour être
+activés par le navigateur. Les vidéos sont muettes ; elles n'ajoutent aucun son
+au bol tibétain. Tes séances locales ne sont pas effacées par ce correctif.
+
+Le bol tibétain provient du MP3 fourni par l'utilisateur. Avant une éventuelle
+commercialisation de l'application, vérifier les droits de redistribution.
+
+Ce ZIP a été testé dans un lecteur d'essai ; la vérification finale sur ton
+application GitHub Pages, ton téléphone et ta tablette reste nécessaire.
