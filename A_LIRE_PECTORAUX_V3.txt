@@ -1,0 +1,17 @@
+CORRECTIF PECTORAUX V3 — PILOTE
+
+À ajouter à la racine du dépôt GitHub :
+- index.html (remplacer le fichier existant)
+- pectoraux-affichage-v3.css
+- muscu-pectoraux-bandeaux-v3.css
+
+Le fichier A_LIRE_PECTORAUX_V3.txt est facultatif.
+
+Tests :
+1. Musculation > Exercices > Pectoraux : vérifier les contours des dix bandeaux et les fiches.
+2. Musculation > Créer une séance > Choisir > Pectoraux : vérifier les grands bandeaux, le bouton + et le retrait ✓.
+3. Contrôler ensuite les autres catégories, qui ne doivent pas changer.
+
+NOTE : les bordures et anciennes flèches ont été dessinées dans certaines images WebP.
+La V3 les masque/recadre par CSS ; elle ne retouche pas les fichiers image.
+Pour éliminer définitivement ces motifs à l'intérieur des images, il faudra modifier les images sources.

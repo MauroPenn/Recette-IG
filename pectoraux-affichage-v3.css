@@ -1,0 +1,31 @@
+/* Pectoraux V3 : correction à la source des doubles cadres visibles.
+   La photo et les fiches de contenu ne sont pas modifiées.
+   Le bord additionnel du conteneur est supprimé, et les liserés
+   extérieurs (présents dans certains fichiers image) sont recadrés
+   sans changer le ratio 560/190 du conteneur. */
+.muscu-pectoraux-card,
+.muscu-pectoraux-fiche-visuel {
+  border:0!important;
+  background:#080c10!important;
+  overflow:hidden!important;
+  box-shadow:0 8px 21px rgba(0,0,0,.20)!important;
+}
+.muscu-pectoraux-photo {
+  position:absolute!important;
+  inset:0!important;
+  overflow:hidden!important;
+  border:0!important;
+  border-radius:inherit;
+}
+.muscu-pectoraux-card .muscu-pectoraux-photo img,
+.muscu-pectoraux-fiche-visuel .muscu-pectoraux-photo img {
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:fill!important;
+  transform:scale(1.024,1.055)!important;
+  transform-origin:center!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
