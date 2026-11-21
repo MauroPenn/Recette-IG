@@ -1,0 +1,72 @@
+/* Musculation/Pectoraux — sélection V4 : carte entière, contours normalisés,
+   bouton unique centré sur l'ancienne flèche. Sélection et données inchangées. */
+.mcs-screen.mcs-picker{max-width:1040px}
+.mcs-picker .mcs-content{max-width:960px;margin-inline:auto}
+.mcs-picker #mcsCatalog{gap:15px}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="pectoraux:"]{
+  display:block!important;position:relative!important;isolation:isolate!important;
+  width:100%!important;height:auto!important;min-height:0!important;
+  aspect-ratio:560 / 190!important;
+  padding:0!important;margin:0!important;
+  overflow:hidden!important;
+  border:0!important;border-radius:22px!important;
+  background:#101012!important;box-shadow:none!important;
+  line-height:0!important;
+  -webkit-tap-highlight-color:transparent;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="pectoraux:"]>img.mcs-thumb{
+  display:block!important;position:absolute!important;inset:0!important;
+  width:100%!important;height:100%!important;
+  max-width:none!important;min-width:0!important;
+  aspect-ratio:auto!important;object-fit:fill!important;
+  object-position:center center!important;
+  transform:scale(1.13)!important;transform-origin:center center!important;
+  border:0!important;border-radius:0!important;
+  padding:0!important;margin:0!important;box-shadow:none!important;
+}
+/* Le titre de l'exercice fait partie du bandeau photographique. */
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="pectoraux:"]>.mcs-catalog-name{
+  position:absolute!important;width:1px!important;height:1px!important;
+  margin:-1px!important;padding:0!important;overflow:hidden!important;
+  clip-path:inset(50%)!important;white-space:nowrap!important;
+}
+/* V4 : grand disque opaque, centré sur l'emplacement de l'ancienne flèche.
+   Un fond noir empêche le vieux cercle orange de transparaître même au bord. */
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="pectoraux:"]>.mcs-select-symbol{
+  position:absolute!important;
+  top:50%!important;right:0.6%!important;transform:translateY(-50%)!important;
+  width:12.0%!important;height:auto!important;aspect-ratio:1!important;
+  min-width:0!important;max-width:none!important;
+  padding:0!important;margin:0!important;z-index:5!important;
+  display:grid!important;place-items:center!important;
+  border:7px solid #11151a!important;
+  border-radius:50%!important;
+  background:linear-gradient(150deg,#ffe080,#daa321)!important;
+  background-clip:padding-box!important;
+  box-shadow:inset 0 0 0 2.5px #ffedab!important;
+  color:#18150b!important;
+  font-size:clamp(28px,4.9vw,46px)!important;
+  line-height:1!important;font-weight:800!important;
+}
+/* Supprimer l'ancien cache V3 afin d'éviter l'effet d'anneaux multiples. */
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="pectoraux:"]::after{
+  display:none!important;content:none!important;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="pectoraux:"].picked{
+  border:0!important;box-shadow:none!important;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="pectoraux:"].picked>.mcs-select-symbol{
+  color:#11271d!important;
+  background:linear-gradient(145deg,#fff3ba,#ffcc56)!important;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="pectoraux:"]:focus-visible{
+  outline:3px solid #fff!important;outline-offset:3px!important;
+}
+@media(max-width:600px){
+  .mcs-picker #mcsCatalog{gap:12px}
+  .mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="pectoraux:"]{border-radius:17px!important}
+  .mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="pectoraux:"]>.mcs-select-symbol{
+    right:0.6%!important;border-width:clamp(4px,1vw,6px)!important;
+    width:12%!important;font-size:clamp(21px,7vw,35px)!important;
+  }
+}

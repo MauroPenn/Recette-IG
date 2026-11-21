@@ -1,0 +1,28 @@
+/* Pectoraux — V4 : rectification des contours multiples à la source d'affichage.
+   Le cadre CSS supplémentaire disparaît ; seul le bandeau source est montré.
+   Les traits déjà dessinés près du bord de certains WebP sont coupés par zoom uniforme. */
+.muscu-pectoraux-card,
+.muscu-pectoraux-fiche-visuel {
+  border:0!important;
+  outline:0 solid transparent;
+  background:#080c10!important;
+  overflow:hidden!important;
+  isolation:isolate!important;
+  box-shadow:0 8px 21px rgba(0,0,0,.2)!important;
+}
+.muscu-pectoraux-card .muscu-pectoraux-photo,
+.muscu-pectoraux-fiche-visuel .muscu-pectoraux-photo{
+  position:absolute!important;inset:0!important;overflow:hidden!important;
+  border:0!important;border-radius:inherit!important;
+}
+.muscu-pectoraux-card .muscu-pectoraux-photo img,
+.muscu-pectoraux-fiche-visuel .muscu-pectoraux-photo img {
+  display:block!important;
+  width:100%!important;height:100%!important;
+  object-fit:fill!important;
+  object-position:center!important;
+  transform:scale(1.13)!important;
+  transform-origin:center center!important;
+  border:0!important;border-radius:0!important;
+  box-shadow:none!important;
+}

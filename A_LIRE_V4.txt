@@ -1,0 +1,14 @@
+PECTORAUX — CORRECTIF V4
+
+À injecter dans MauroPenn/Recette-IG (racine) :
+- index.html
+- pectoraux-affichage-v4.css
+- muscu-pectoraux-bandeaux-v4.css
+
+Contrôles :
+1. Musculation > Exercices > Pectoraux : surveiller les cadres, notamment Pompes inclinées.
+2. Musculation > Création de séance > Pectoraux : vérifier le bouton + sur les 10 bandeaux.
+3. Tester Ajouter puis Retirer, et les autres catégories (inchangées).
+
+Cette V4 n'édite pas les images WEBP ; elle réduit les contours internes par un zoom CSS homogène et couvre l'ancienne flèche avec un plus grand bouton.
+Si un résidu reste visible sur une image particulière, la retouche directe de l'image sera nécessaire.
