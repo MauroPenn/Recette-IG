@@ -1,0 +1,25 @@
+MUSCULATION — CRÉATION DE SÉANCES : 6 CATÉGORIES V6
+
+VERSION PILOTE POUR VALIDATION SUR TABLETTE / TÉLÉPHONE
+
+1. Décompresser l'archive.
+2. Sur GitHub MauroPenn/Recette-IG, à la racine du dépôt,
+   ajouter index.html et muscu-autres-categories-bandeaux-v6.css.
+3. Remplacer index.html lorsque GitHub le propose.
+4. Cliquer sur Commit changes.
+5. Rafraîchir l'application si nécessaire.
+
+TEST : Musculation > Créer une séance > Choisir des exercices.
+Vérifier les catégories Dos, Épaules, Biceps, Triceps, Jambes, Abdominaux.
+Contrôler un bouton + sur chacune et la validation de sélection.
+
+CHANGEMENTS :
+- Les images originales des exercices sont réutilisées telles quelles.
+- Les grands bandeaux remplacent les petites vignettes de la liste de sélection.
+- Le bouton + doré est centré sur l'ancienne flèche incluse dans les bandeaux.
+- L'affichage Pectoraux V5 est conservé.
+- Aucun changement des données d'exercices, fiches, séances, chronomètres.
+
+ATTENTION : contrairement aux Pectoraux V5, les flèches originales restent
+imprimées dans les images de ces six catégories. Le bouton + les recouvre.
+Le rendu précis doit être validé visuellement avant de considérer la V6 comme définitive.
