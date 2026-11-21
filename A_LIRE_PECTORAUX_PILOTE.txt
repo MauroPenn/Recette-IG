@@ -1,0 +1,11 @@
+PILOTE PECTORAUX — CRÉATION DE SÉANCE MUSCULATION
+
+1. Décompresser le ZIP.
+2. Dans GitHub MauroPenn/Recette-IG, ajouter à la racine index.html et muscu-pectoraux-bandeaux-v1.css.
+3. Remplacer index.html quand GitHub le demande puis Commit changes.
+4. Les autres fichiers / parties de l’application ne sont pas modifiés.
+5. Tester Musculation > Créer une séance > Choisir des exercices > Pectoraux.
+6. Les bandeaux utilisent les images Pectoraux existantes (560 x 190) et le bouton + d’origine.
+7. Vérifier l’affichage entier, le bouton Ajouter/Retirer, les filtres et la validation.
+
+Important : il s’agit d’un pilote Pectoraux ; les six autres catégories restent pour l’instant avec leur présentation antérieure.
