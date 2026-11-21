@@ -1,0 +1,22 @@
+PECTORAUX V5 — NOUVEAUX BANDEAUX PROPRES (VALIDÉS VISUELLEMENT)
+
+INSTALLATION GITHUB
+1. Décompresser ce ZIP.
+2. Ouvrir https://github.com/MauroPenn/Recette-IG puis Add file > Upload files.
+3. Envoyer les fichiers listés dans ce ZIP SAUF le fichier A_LIRE_V5.txt et l'aperçu JPG.
+4. Remplacer index.html et valider avec Commit changes.
+5. Fermer puis rouvrir l'application sur la tablette ou le téléphone.
+
+CONTENU
+- 10 bandeaux WebP PROPRES (560 x 190), sans flèche ancienne.
+- 1 script : pectoraux-bandeaux-net-v5.js. Il relie les 10 exercices à leurs nouveaux fichiers sans toucher aux fiches ni aux données.
+- 1 feuille CSS : pectoraux-net-v5.css. Elle supprime les anciens zooms et cadres supplémentaires; bouton + affiché dans le créateur seulement.
+- index.html : appelle les deux nouveaux fichiers; n'appelle plus les styles problématiques V4.
+- aperçu-10-bandeaux.jpg : planche de contrôle, NE PAS envoyer dans GitHub.
+
+TESTS CONSEILLÉS
+A. Musculation > Exercices > Pectoraux : vérifier 10 bandeaux, un seul liseré, titres corrects, navigation fiche.
+B. Musculation > Créer une séance > Choisir exercices > Pectoraux : vérifier les grands bandeaux, bouton + doré bien centré, ajout/retrait, validation.
+C. Les 6 autres groupes restent inchangés.
+
+Les anciens fichiers CSS V1-V4 peuvent rester dans GitHub sans être chargés par cette nouvelle version.
