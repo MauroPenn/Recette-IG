@@ -1,0 +1,154 @@
+/* PILOTE PECTORAUX V2 — correctif visuel.
+   Objectifs : un seul contour visible autour du bandeau et masquage complet de l’ancien bouton.
+   Le bandeau d’origine est conservé entier, sans écrasement ni recadrage. */
+.mcs-screen.mcs-picker { max-width:1040px; }
+.mcs-picker .mcs-content { max-width:960px; margin-inline:auto; }
+.mcs-picker #mcsCatalog { gap:15px; }
+
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="pectoraux:"] {
+  display:block!important;
+  position:relative!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:560 / 190;
+  padding:0!important;
+  margin:0!important;
+  overflow:visible!important;
+  isolation:isolate;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  line-height:0!important;
+  box-shadow:none!important;
+  -webkit-tap-highlight-color:transparent;
+}
+
+/* On affiche le bandeau d’origine tel quel : un seul contour visible, celui du visuel. */
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="pectoraux:"] > img.mcs-thumb {
+  display:block!important;
+  position:relative!important;
+  width:100%!important;
+  height:auto!important;
+  max-width:100%!important;
+  min-width:0!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  aspect-ratio:560 / 190;
+  border:0!important;
+  border-radius:22px!important;
+  margin:0!important;
+  padding:0!important;
+  transform:none!important;
+  box-shadow:none!important;
+  background:transparent!important;
+}
+
+/* Le titre et le groupe sont déjà imprimés sur les bandeaux approuvés. */
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="pectoraux:"] > .mcs-catalog-name {
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip-path:inset(50%)!important;
+  white-space:nowrap!important;
+}
+
+/* Cache de masquage pour l’ancien bouton du visuel d’origine. */
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="pectoraux:"]::after {
+  content:"";
+  position:absolute;
+  right:1.25%;
+  top:50%;
+  transform:translateY(-50%);
+  width:clamp(70px,9.2vw,92px);
+  height:clamp(70px,9.2vw,92px);
+  border-radius:50%;
+  z-index:2;
+  pointer-events:none;
+  background:radial-gradient(circle at 50% 50%,
+    rgba(17,22,24,.99) 0 54%,
+    rgba(17,22,24,.96) 64%,
+    rgba(17,22,24,.88) 76%,
+    rgba(17,22,24,.32) 88%,
+    rgba(17,22,24,0) 100%);
+}
+
+/* Nouveau bouton d’ajout conservé. */
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="pectoraux:"] > .mcs-select-symbol {
+  position:absolute!important;
+  right:2.8%!important;
+  top:50%!important;
+  z-index:3;
+  transform:translateY(-50%)!important;
+  width:clamp(43px,6vw,64px)!important;
+  height:clamp(43px,6vw,64px)!important;
+  display:grid!important;
+  place-items:center!important;
+  padding:0!important;
+  margin:0!important;
+  border:3px solid #ffe9a2!important;
+  border-radius:50%!important;
+  background:linear-gradient(150deg,#ffe080,#daa321)!important;
+  color:#1b170e!important;
+  box-shadow:0 3px 14px rgba(0,0,0,.68), 0 0 0 2px #1d2423;
+  font-size:clamp(30px,5vw,45px)!important;
+  font-weight:750!important;
+  line-height:1!important;
+}
+
+/* Pas de deuxième contour ajouté en sélection : seul le bouton change d’état. */
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="pectoraux:"].picked {
+  box-shadow:none!important;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="pectoraux:"].picked > .mcs-select-symbol {
+  color:#10271b!important;
+  background:linear-gradient(145deg,#fff5be,#ffd46d)!important;
+  border-color:white!important;
+}
+
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="pectoraux:"]:focus-visible {
+  outline:3px solid #fff!important;
+  outline-offset:3px!important;
+}
+
+/* Fallback lisible si une image venait à manquer. */
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="pectoraux:"] > .mcs-empty-image {
+  display:grid!important;
+  place-items:center!important;
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  border-radius:22px!important;
+  background:linear-gradient(100deg,#121a1c,#3d291a)!important;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="pectoraux:"]:has(.mcs-empty-image) > .mcs-catalog-name {
+  position:absolute!important;
+  top:50%!important;
+  left:5%!important;
+  transform:translateY(-50%)!important;
+  width:75%!important;
+  height:auto!important;
+  margin:0!important;
+  overflow:visible!important;
+  clip-path:none!important;
+  white-space:normal!important;
+}
+
+@media(max-width:600px){
+  .mcs-picker #mcsCatalog{gap:12px;}
+  .mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="pectoraux:"]::after {
+    right:1.1%;
+    width:clamp(60px,15vw,76px);
+    height:clamp(60px,15vw,76px);
+  }
+  .mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="pectoraux:"] > .mcs-select-symbol{
+    right:3.3%!important;
+    width:clamp(38px,11vw,48px)!important;
+    height:clamp(38px,11vw,48px)!important;
+    font-size:31px!important;
+  }
+}

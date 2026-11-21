@@ -1,0 +1,16 @@
+PECTORAUX — PILOTE BANDEAUX V2 (correctif)
+
+1. Décompresser le ZIP.
+2. Dans GitHub MauroPenn/Recette-IG, ajouter à la racine :
+   - index.html
+   - muscu-pectoraux-bandeaux-v2.css
+3. Remplacer index.html quand GitHub le demande puis Commit changes.
+4. Ne pas supprimer les autres fichiers : ce correctif se contente d’appeler la nouvelle feuille CSS V2.
+5. Tester : Musculation > Créer une séance > Choisir des exercices > Pectoraux.
+
+Correctifs V2 :
+- suppression du double contour ajouté autour des bandeaux ;
+- masquage complet de l’ancien bouton du visuel d’origine ;
+- conservation du nouveau bouton + à droite.
+
+Important : seul le pilote Pectoraux est concerné. Les autres catégories restent inchangées pour le moment.
