@@ -1,25 +1,17 @@
-CRÉATEUR DE SÉANCES – SÉLECTION DES EXERCICES V13
+ÉPAULES V3 — Correction des coins du contour orange
 
-Ce correctif remplace uniquement la présentation de la sélection des exercices.
+Ce correctif cible uniquement la liste « Musculation > Exercices > Épaules ».
+Les images Épaules V2 contiennent déjà le contour orange complet. 
+Un arrondi du conteneur CSS masquait certains angles.
+La V3 supprime ce découpage et conserve les boutons dorés de navigation.
 
-NOUVEAU :
-- Bandeaux originaux complets (image, nom et cadre doré), sans étirement ni recadrage
-- Bouton + doré pour ajouter un exercice ; ✓ pour le retirer
-- Choix par catégorie et recherche conservés
-- Retour vers la séance avec les exercices choisis
-- Création, réglages et enregistrement des séances inchangés
+Installation : envoyer seulement index.html et epaules-angles-v3.css
+à la racine du dépôt GitHub Recette-IG, puis valider « Commit changes ».
+Tous les autres fichiers Épaules V2 restent en place.
+Ne pas réinjecter les anciens ZIP.
 
-INSTALLATION SUR GITHUB :
-1. Décompresse le ZIP.
-2. Ajoute les 3 fichiers index.html, etirements-createur-v13.css et etirements-createur-v13.js à la racine du dépôt GitHub.
-3. Remplace index.html lorsque GitHub le demande.
-4. Ne supprime pas les autres fichiers existants.
-5. Actualise l'application pour tester.
-
-IMPORTANT : les photos des exercices ne sont pas dupliquées dans ce ZIP.
-Le créateur réutilise les bandeaux originaux de la bibliothèque déjà présents dans ton application.
-Si l'un des anciens bandeaux n'est pas trouvé, un bandeau texte sobre apparaît à sa place au lieu de montrer une mauvaise image.
-
-TEST CONSEILLÉ : Étirements > Séances > Créer une séance > Choisir.
-Ouvre la catégorie « Cuisses », puis essaie d'ajouter et retirer un exercice.
-Contrôle aussi Pectoraux, Dos & tronc, Épaules & bras et Nuque & cervicales sur ton appareil.
+Vérifications après installation :
+- Les quatre coins des dix bandeaux Épaules
+- Ouverture des fiches par les boutons dorés ›
+- Bouton + dans « Création de séance » : inchangé
+- Pectoraux V6, Dos V3 : inchangés

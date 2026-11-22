@@ -1,0 +1,28 @@
+/* EPAULES V3 : corrige uniquement la grille « Exercices > Épaules ».
+   Les contours orange sont déjà imprimés dans les images WebP.
+   V2 coupait leurs coins à cause des arrondis/overflow du conteneur. 
+   Ce correctif ne touche NI au créateur de séances NI aux fiches. */
+
+.muscu-epaules-v1 .muscu-epaules-list > .muscu-epaules-card {
+  border: 0 !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
+  box-shadow: 0 7px 19px #0005 !important;
+  background: transparent !important;
+  aspect-ratio: 560 / 190 !important;
+}
+.muscu-epaules-v1 .muscu-epaules-list > .muscu-epaules-card > .muscu-epaules-photo {
+  border: 0 !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
+}
+.muscu-epaules-v1 .muscu-epaules-list > .muscu-epaules-card > .muscu-epaules-photo > img {
+  border: 0 !important;
+  border-radius: 0 !important;
+  object-fit: fill !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  transform: none !important;
+}
+/* Le bouton doré › V2 et la zone cliquable sont conservés tels quels. */
