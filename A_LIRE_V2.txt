@@ -1,0 +1,12 @@
+ACCUEIL DES 7 GROUPES MUSCULAIRES — CORRECTIF V2
+Ce correctif concerne exclusivement les sept cartes de Musculation > Exercices.
+Il recouvre la petite ancienne flèche orange incrustée avec une pastille noire suffisamment large,
+puis dessine la flèche dorée au centre. Il conserve les cadres orange, les photos et la navigation.
+Ne modifie pas les catégories Pectoraux V6 et Dos V3.
+
+Installation :
+1. Décompresser ce ZIP.
+2. Dans GitHub > Recette-IG > Add file > Upload files, envoyer index.html et muscu-groupes-accueil-orange-v2.css.
+3. Commit changes, puis fermer et rouvrir l'application.
+4. Vérifier les sept boutons sur tablette/téléphone.
+Le fichier A_LIRE_V2.txt ne doit pas être envoyé.
