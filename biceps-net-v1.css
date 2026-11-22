@@ -1,0 +1,150 @@
+/* BICEPS V1 — harmonisation visuelle.
+   Objectif : rapprocher Biceps du standard validé (contours orange + boutons dorés).
+   Cette version travaille surtout par surcouche visuelle, sans toucher aux autres catégories. */
+
+/* ----- Exercices > Biceps ----- */
+.muscu-biceps-card,
+.muscu-biceps-fiche-visuel,
+.muscu-biceps-photo {
+  position: relative !important;
+}
+.muscu-biceps-card {
+  overflow: hidden !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 18px !important;
+  background: #08111b !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,.28), inset 0 0 0 2px #ff8a12 !important;
+}
+.muscu-biceps-photo {
+  overflow: hidden !important;
+  border-radius: 18px !important;
+}
+.muscu-biceps-photo img {
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  object-fit: fill !important;
+  max-width:none !important;
+  transform:none !important;
+}
+/* Masque discret sur l'ancien bouton/flèche intégré au visuel */
+.muscu-biceps-card::before {
+  content:"" !important;
+  position:absolute !important;
+  right: 8px !important;
+  top:50% !important;
+  transform:translateY(-50%) !important;
+  width:72px !important;
+  height:72px !important;
+  border-radius:50% !important;
+  background: radial-gradient(circle at center, rgba(8,17,27,1) 0 44px, rgba(8,17,27,.96) 44px 100%) !important;
+  z-index: 2 !important;
+  pointer-events:none !important;
+}
+.muscu-biceps-card::after {
+  content:"›" !important;
+  position:absolute !important;
+  right: 19px !important;
+  top:50% !important;
+  transform:translateY(-56%) !important;
+  width:48px !important;
+  height:48px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  border-radius:50% !important;
+  background: linear-gradient(150deg,#ffe58d,#dba525) !important;
+  border: 3px solid #fff0b5 !important;
+  box-shadow: 0 4px 14px rgba(0,0,0,.42) !important;
+  color:#18140e !important;
+  font-size:40px !important;
+  font-weight:700 !important;
+  line-height:1 !important;
+  z-index:3 !important;
+  pointer-events:none !important;
+}
+
+/* ----- Création de séance > Biceps ----- */
+.mcs-screen.mcs-picker { max-width:1040px; }
+.mcs-picker .mcs-content { max-width:960px; margin-inline:auto; }
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="biceps:"] {
+  display:block !important;
+  position:relative !important;
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  aspect-ratio:560/190 !important;
+  padding:0 !important;
+  margin:0 !important;
+  overflow:hidden !important;
+  isolation:isolate !important;
+  border:0 !important;
+  border-radius:18px !important;
+  background:#08111b !important;
+  box-shadow:0 5px 18px rgba(0,0,0,.28), inset 0 0 0 2px #ff8a12 !important;
+  line-height:0 !important;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="biceps:"] > img.mcs-thumb {
+  display:block !important;
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  max-width:none !important;
+  object-fit:fill !important;
+  object-position:center !important;
+  border:0 !important;
+  border-radius:0 !important;
+  margin:0 !important;
+  padding:0 !important;
+  box-shadow:none !important;
+  background:transparent !important;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="biceps:"] > .mcs-catalog-name {
+  position:absolute !important;
+  width:1px !important;
+  height:1px !important;
+  padding:0 !important;
+  margin:-1px !important;
+  overflow:hidden !important;
+  clip-path:inset(50%) !important;
+  white-space:nowrap !important;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="biceps:"] > .mcs-select-symbol {
+  position:absolute !important;
+  right:3.1% !important;
+  top:50% !important;
+  z-index:3 !important;
+  transform:translateY(-50%) !important;
+  width:clamp(43px,6vw,64px) !important;
+  height:clamp(43px,6vw,64px) !important;
+  display:grid !important;
+  place-items:center !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:3px solid #fff0b5 !important;
+  border-radius:50% !important;
+  background:linear-gradient(150deg,#ffe080,#daa321) !important;
+  color:#171410 !important;
+  box-shadow:0 3px 14px rgba(0,0,0,.68) !important;
+  font-size:clamp(30px,5vw,44px) !important;
+  font-weight:800 !important;
+  line-height:1 !important;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="biceps:"].picked > .mcs-select-symbol {
+  color:#10271b !important;
+  background:linear-gradient(145deg,#fff5be,#ffd46d) !important;
+  border-color:white !important;
+}
+@media(max-width:600px){
+  .muscu-biceps-card::before{width:64px !important;height:64px !important;right:6px !important;}
+  .muscu-biceps-card::after{right:15px !important;width:44px !important;height:44px !important;font-size:35px !important;}
+  .mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="biceps:"]{border-radius:17px !important;}
+  .mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="biceps:"] > .mcs-select-symbol {
+    right:3.4% !important;
+    width:clamp(38px,11vw,48px) !important;
+    height:clamp(38px,11vw,48px) !important;
+    font-size:31px !important;
+  }
+}

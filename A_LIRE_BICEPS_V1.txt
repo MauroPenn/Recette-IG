@@ -1,0 +1,17 @@
+BICEPS V1 — HARMONISATION VISUELLE
+
+Contenu du ZIP :
+- index.html
+- biceps-net-v1.css
+- biceps-bandeaux-net-v1.js
+
+Objectif : rapprocher la catégorie Biceps du standard validé (contours orange + boutons dorés) dans :
+1) Musculation > Exercices > Biceps
+2) Musculation > Créer une séance > Biceps
+
+Installation :
+- Envoyer index.html, biceps-net-v1.css et biceps-bandeaux-net-v1.js à la racine du dépôt GitHub.
+- Commit changes.
+- Recharger l'application.
+
+Ce pack ne modifie pas Pectoraux, Dos, Épaules ni l'accueil Musculation.
