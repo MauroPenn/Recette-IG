@@ -1,0 +1,16 @@
+ACCUEIL MUSCULATION — HARMONISATION DES 7 GROUPES
+
+Cette version change UNIQUEMENT la présentation des sept cartes de groupes sur Musculation > Exercices.
+- Contour orange et angles arrondis
+- Navigation dorée avec chevron (le + reste réservé à l’ajout d’exercices)
+- Les 7 images de groupe existantes sont conservées ; léger agrandissement de l’affichage pour masquer leurs filets blancs d’origine.
+- Ne touche pas aux exercices, à la sélection des séances, aux images Pectoraux V6, Dos V3 ou aux données.
+
+INSTALLATION
+1. Décompresser le ZIP.
+2. Ajouter index.html et muscu-groupes-accueil-orange-v1.css à la racine du dépôt GitHub.
+3. Valider avec Commit changes.
+4. Fermer et rouvrir l’application si elle utilise l’ancien affichage en cache.
+5. Contrôler les 7 cartes sur tablette et téléphone et tester la navigation de chacune.
+
+IMPORTANT : ce correctif d’affichage n’est pas une retouche définitive des images WebP originales. Si un reste de liseré ou de flèche apparaît sur un appareil, il faudra corriger directement l’image du groupe concerné.
