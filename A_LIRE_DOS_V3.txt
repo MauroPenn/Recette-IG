@@ -1,0 +1,24 @@
+DOS V3 — CONTOURS ORANGE — INSTALLATION GITHUB
+
+1. Décompresser le ZIP.
+2. Dans le dépôt GitHub MauroPenn/Recette-IG, ouvrir Add file > Upload files.
+3. Ajouter index.html, dos-net-v3.css, dos-bandeaux-net-v3.js et les 10 images dos-*-orange-v3.webp.
+4. Ne PAS envoyer APERCU_DOS_V3.jpg ni A_LIRE_DOS_V3.txt.
+5. Confirmer le remplacement de index.html et cliquer Commit changes.
+6. Fermer et rouvrir l'application, puis contrôler l'affichage sur la tablette.
+
+V3 corrige :
+- les 10 bandeaux Dos (y compris Tirage coudes ouverts et Extension lombaire au sol) ;
+- le contour, désormais orange et unique (sans liseré blanc superposé) ;
+- les anciennes flèches, absentes des nouveaux fichiers ;
+- le bouton + dans le créateur de séances ;
+- les dimensions 560 x 190, conformes à la référence Pectoraux.
+
+Important : index.html est basé sur la version actuellement lue dans GitHub
+avec Pectoraux V6 et Étirements V24 conservés. Les anciens fichiers Dos V1 et V2
+peuvent rester sur GitHub, mais ne sont plus chargés par ce nouvel index.html.
+
+TESTS
+A. Exercices > Dos : 10 bandeaux, un seul contour orange, angles sans blanc.
+B. Créer une séance > Dos : mêmes bandeaux, bouton + bien centré sur les 10.
+C. Pectoraux > Exercices / Séances : V6 inchangée.

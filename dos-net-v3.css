@@ -1,0 +1,76 @@
+/* DOS V3 — images propres 560 x 190 avec un contour orange unique intégré.
+   Aucun cadre supplémentaire autour des images, aucune flèche dans les images. */
+.muscu-dos-card, .muscu-dos-fiche-visuel {
+  position:relative!important;
+  aspect-ratio:560/190!important;
+  padding:0!important;
+  border:0!important;
+  overflow:hidden!important;
+  background:#080c10!important;
+  border-radius:18px!important;
+  box-shadow:0 8px 21px #0004!important;
+}
+.muscu-dos-photo { position:absolute!important;inset:0!important;overflow:hidden!important; }
+.muscu-dos-photo img {
+  display:block!important;width:100%!important;height:100%!important;
+  max-width:none!important;object-fit:fill!important;transform:none!important;
+  border:0!important;border-radius:0!important;box-shadow:none!important;
+  padding:0!important;margin:0!important;
+}
+/* Les cartes de sélection occupent la largeur des bandeaux Étirements.
+   Le bouton + est le seul bouton, situé dans l'espace libre à droite du visuel. */
+.mcs-screen.mcs-picker {max-width:1040px;}
+.mcs-picker .mcs-content {max-width:960px;margin-inline:auto;}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="dos:"] {
+  display:block!important;position:relative!important;
+  width:100%!important;height:auto!important;min-height:0!important;
+  aspect-ratio:560/190!important;padding:0!important;margin:0!important;
+  box-sizing:border-box!important;border:0!important;border-radius:18px!important;
+  overflow:hidden!important;isolation:isolate!important;
+  background:#080c10!important;box-shadow:0 5px 18px #0004!important;
+  line-height:0!important;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="dos:"] > img.mcs-thumb {
+  display:block!important;position:absolute!important;inset:0!important;
+  width:100%!important;height:100%!important;max-width:none!important;
+  object-fit:fill!important;object-position:center!important;
+  aspect-ratio:auto!important;transform:none!important;
+  border:0!important;border-radius:0!important;box-shadow:none!important;
+  padding:0!important;margin:0!important;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="dos:"] > .mcs-catalog-name {
+  position:absolute!important;width:1px!important;height:1px!important;
+  padding:0!important;margin:-1px!important;overflow:hidden!important;
+  clip-path:inset(50%)!important;white-space:nowrap!important;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="dos:"] > .mcs-select-symbol {
+  position:absolute!important;z-index:3!important;
+  right:3%!important;top:50%!important;transform:translateY(-50%)!important;
+  display:grid!important;place-items:center!important;
+  width:clamp(43px,6vw,64px)!important;height:clamp(43px,6vw,64px)!important;
+  padding:0!important;margin:0!important;
+  background:linear-gradient(150deg,#ffe080,#daa321)!important;
+  border:3px solid #fff0b5!important;border-radius:50%!important;
+  box-shadow:0 3px 14px #000a!important;color:#171410!important;
+  font-size:clamp(29px,5vw,43px)!important;font-weight:800!important;line-height:1!important;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="dos:"]::before,
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="dos:"]::after {
+  content:none!important;display:none!important;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="dos:"].picked {
+  box-shadow:0 0 0 2px #ffdc70,0 5px 18px #0004!important;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="dos:"].picked > .mcs-select-symbol {
+  background:linear-gradient(150deg,#fff7ca,#ffd16a)!important;color:#10271b!important;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="dos:"]:focus-visible {
+  outline:3px solid white!important;outline-offset:3px!important;
+}
+@media(max-width:600px) {
+  .mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="dos:"] {border-radius:17px!important;}
+  .mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="dos:"] > .mcs-select-symbol {
+    right:3.3%!important;width:clamp(38px,11vw,48px)!important;
+    height:clamp(38px,11vw,48px)!important;font-size:31px!important;
+  }
+}
