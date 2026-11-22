@@ -1,17 +1,23 @@
-ÉPAULES V3 — Correction des coins du contour orange
+BICEPS V2 — CORRECTIF REALISE SUR LES 10 IMAGES AFFICHÉES
 
-Ce correctif cible uniquement la liste « Musculation > Exercices > Épaules ».
-Les images Épaules V2 contiennent déjà le contour orange complet. 
-Un arrondi du conteneur CSS masquait certains angles.
-La V3 supprime ce découpage et conserve les boutons dorés de navigation.
+À envoyer dans GitHub :
+- index.html (remplace celui du dépôt)
+- biceps-net-v2.css
+- biceps-bandeaux-net-v2.js
 
-Installation : envoyer seulement index.html et epaules-angles-v3.css
-à la racine du dépôt GitHub Recette-IG, puis valider « Commit changes ».
-Tous les autres fichiers Épaules V2 restent en place.
-Ne pas réinjecter les anciens ZIP.
+Ne pas envoyer A_LIRE.txt.
+Les 10 images .webp d'origine sont conservées dans GitHub.
+Le nouveau script nettoie leur contour blanc et l'ancienne flèche à l'affichage
+sans toucher aux exercices, fiches, séances ou enregistrements existants.
+Le contour orange est alors redessiné une seule fois dans le visuel.
+Il utilise les classes Biceps actuelles (muscu-biceps-modern-...).
 
-Vérifications après installation :
-- Les quatre coins des dix bandeaux Épaules
-- Ouverture des fiches par les boutons dorés ›
-- Bouton + dans « Création de séance » : inchangé
-- Pectoraux V6, Dos V3 : inchangés
+Test :
+1. Exercices > Biceps : 10 bandeaux, 2 colonnes sur grand écran,
+   contour orange régulier, flèche dorée au centre à droite.
+2. Création de séance > Biceps : grand bandeau orange, + doré, sans ancienne flèche.
+3. Vérifier une fiche et les catégories Pectoraux, Dos, Épaules.
+
+Note : ce traitement visuel dans le navigateur dépend du chargement des images
+et n'est pas une retouche définitive des WebP d'origine. En cas de non-chargement,
+l'image originale reste visible. Le traitement est limité aux images Biceps.
