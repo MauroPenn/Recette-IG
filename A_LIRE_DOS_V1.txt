@@ -1,0 +1,33 @@
+DOS V1 — BANDEAUX PROPRES (CORRECTIF À LA BASE)
+
+INSTALLATION GITHUB
+1. Décompresser ce ZIP.
+2. Ouvrir le dépôt GitHub MauroPenn/Recette-IG puis Add file > Upload files.
+3. Envoyer tous les fichiers du ZIP SAUF ce fichier A_LIRE_DOS_V1.txt et l'aperçu PNG.
+4. Remplacer index.html et valider avec Commit changes.
+5. Fermer puis rouvrir l'application sur la tablette ou le téléphone.
+
+CONTENU
+- 8 nouveaux bandeaux PNG propres pour la catégorie Dos.
+- 1 script : dos-bandeaux-net-v1.js. Il redirige les exercices Dos concernés vers les nouveaux bandeaux sans toucher aux fiches.
+- 1 feuille CSS : dos-net-v1.css. Elle supprime les surcouches problématiques et utilise le bouton + propre dans le créateur.
+- 1 index.html mis à jour à partir de la base validée Pectoraux V5.
+- 1 aperçu PNG de contrôle.
+
+IMPORTANT
+- Ce pack rétablit la partie Dos en partant de la base stable avec Pectoraux V5.
+- Les autres catégories (Épaules, Biceps, Triceps, Jambes, Abdominaux) ne sont pas reprises ici.
+- Les 8 bandeaux Dos ci-dessous sont inclus :
+  Rowing unilatéral avec haltère
+  Rowing buste penché avec haltères
+  Pull-over avec haltère
+  Oiseau buste penché
+  Superman au sol
+  Bird-Dog Row
+  Rowing kettlebell
+  Soulevé de terre roumain
+
+TESTS CONSEILLÉS
+A. Musculation > Exercices > Dos : vérifier les bandeaux, le contour unique et la navigation des fiches.
+B. Musculation > Créer une séance > Choisir exercices > Dos : vérifier les grands bandeaux et le bouton + doré bien centré.
+C. Vérifier que les Pectoraux restent bons.
