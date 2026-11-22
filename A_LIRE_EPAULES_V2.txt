@@ -1,0 +1,13 @@
+ÉPAULES V2 — ZIP COMPLET POUR GITHUB
+Inclut 10 images (560x190), 1 script de mapping par identifiant exact, 1 feuille CSS, index.html.
+Deux boutons indépendants : flèche dorée dans la liste Exercices, + doré dans Création de séance.
+La navigation et les fonctions d’ajout restent inchangées.
+Pectoraux V6, Dos V3 et accueil 7 groupes V2 restent intacts.
+
+INSTALLATION : décompresser, envoyer à la racine GitHub : index.html, epaules-orange-v2.css,
+epaules-bandeaux-orange-v2.js et les dix .webp; puis Commit changes.
+Ne pas envoyer APERCU_EPAULES_V2.jpg ni ce fichier texte.
+
+ATTENTION AU CONTENU VISUEL : les deux visuels « Élévations latérales unilatérales » et « Y-raise au sol »
+sont des illustrations approximatives dérivées d'exercices proches ; vérifier l'illustration technique
+avant de considérer cette catégorie comme définitivement validée.
