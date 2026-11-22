@@ -1,0 +1,22 @@
+TRICEPS V4 — CORRECTIF PROPRE
+
+Contenu :
+- index.html
+- triceps-bandeaux-net-v4.js
+- A_LIRE_TRICEPS_V4.txt
+
+Objectif :
+- garder le contour orange
+- garder les boutons dorés
+- supprimer les lignes blanches restantes
+- éviter toute surimpression ou double texte
+
+Installation :
+1. Décompresser le ZIP.
+2. Envoyer index.html et triceps-bandeaux-net-v4.js à la racine du dépôt GitHub.
+3. Commit changes.
+4. Recharger l'application.
+
+Important :
+- conserver triceps-net-v1.css déjà en place
+- ne pas réinjecter V2 ou V3 après cette version
