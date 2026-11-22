@@ -1,0 +1,15 @@
+TRICEPS V1 - Harmonisation des dix exercices
+
+Installation GitHub :
+- Décompresser ce ZIP
+- Envoyer index.html, triceps-net-v1.css et triceps-bandeaux-net-v1.js à la racine du dépôt MauroPenn/Recette-IG
+- Ne pas envoyer A_LIRE_TRICEPS_V1.txt
+- Valider par Commit changes puis recharger l’application
+
+Ce correctif utilise les 10 images Triceps existantes, sans changer leurs fiches et descriptions.
+Il élimine à l’affichage le cadre blanc et l’ancienne flèche incrustée, puis dessine un seul cadre orange.
+Exercices : bouton flèche doré pour ouvrir la fiche.
+Création de séance : bouton + doré pour ajouter l'exercice.
+Les catégories Pectoraux V6, Dos V3, Épaules V3 et Biceps V2 restent inchangées.
+
+À tester sur tablette : les 10 images de la grille, l’ouverture des fiches, les 10 boutons + du créateur, puis les autres catégories validées.

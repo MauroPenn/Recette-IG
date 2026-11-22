@@ -1,0 +1,95 @@
+/* TRICEPS V1 - grille et boutons selon le standard DOS V3 / EPAULES V3.
+   Les bordures blanches et les anciennes fleches sont retirees de l'image
+   affichee par le script triceps-bandeaux-net-v2.js (canvas). */
+.muscu-triceps-v1{max-width:1180px!important}
+.muscu-triceps-list{
+  display:grid!important;grid-template-columns:repeat(2,minmax(0,560px))!important;
+  justify-content:center!important;gap:14px!important;width:100%!important;
+}
+.muscu-triceps-list > .muscu-triceps-card,
+.muscu-triceps-fiche-visuel{
+  box-sizing:border-box!important;position:relative!important;aspect-ratio:560/190!important;
+  width:100%!important;max-width:560px!important;height:auto!important;
+  padding:0!important;margin:0!important;overflow:visible!important;
+  border:0!important;outline:0!important;border-radius:0!important;
+  background:transparent!important;box-shadow:0 8px 20px #0004!important;
+}
+.muscu-triceps-photo{
+  display:block!important;position:absolute!important;inset:0!important;
+  border:0!important;border-radius:0!important;overflow:visible!important;
+}
+.muscu-triceps-photo img{
+  display:block!important;width:100%!important;height:100%!important;
+  max-width:none!important;object-fit:fill!important;object-position:center!important;
+  transform:none!important;border:0!important;border-radius:0!important;
+  box-shadow:none!important;padding:0!important;margin:0!important;
+}
+/* Bouton dore ouvrir la fiche. L'image nettoyee n'a plus de fleche en dessous. */
+.muscu-triceps-list > .muscu-triceps-card::before{content:none!important;display:none!important}
+.muscu-triceps-list > .muscu-triceps-card::after{
+  content:'›'!important;display:flex!important;position:absolute!important;z-index:5!important;
+  align-items:center!important;justify-content:center!important;
+  right:5%!important;top:50%!important;transform:translateY(-50%)!important;
+  width:clamp(42px,6vw,64px)!important;height:clamp(42px,6vw,64px)!important;
+  border:3px solid #fff0b5!important;border-radius:50%!important;
+  box-sizing:border-box!important;background:linear-gradient(150deg,#ffe080,#daa321)!important;
+  color:#171410!important;box-shadow:0 3px 14px #000a!important;
+  font-family:Arial,sans-serif!important;font-size:clamp(29px,5vw,45px)!important;
+  font-weight:800!important;line-height:1!important;pointer-events:none!important;
+}
+.muscu-triceps-list > .muscu-triceps-card:focus-visible{
+  outline:3px solid #ffd36a!important;outline-offset:3px!important;
+}
+/* Fiche détaillée: visuel propre, aucun bouton artificiel. */
+.muscu-triceps-fiche-visuel{max-width:none!important;margin-bottom:16px!important;}
+/* Creation de seance: grandes images avec uniquement le + dore */
+.mcs-screen.mcs-picker{max-width:1040px}
+.mcs-picker .mcs-content{max-width:960px;margin-inline:auto}
+.mcs-picker #mcsCatalog{gap:15px}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="triceps:"]{
+  display:block!important;position:relative!important;width:100%!important;
+  height:auto!important;min-height:0!important;aspect-ratio:560/190!important;
+  padding:0!important;margin:0!important;overflow:visible!important;isolation:isolate!important;
+  box-sizing:border-box!important;border:0!important;outline:0!important;border-radius:0!important;
+  background:transparent!important;box-shadow:0 5px 18px #0004!important;line-height:0!important;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="triceps:"] > img.mcs-thumb{
+  display:block!important;position:absolute!important;inset:0!important;
+  width:100%!important;height:100%!important;max-width:none!important;
+  object-fit:fill!important;object-position:center!important;aspect-ratio:auto!important;
+  transform:none!important;border:0!important;outline:0!important;border-radius:0!important;
+  box-shadow:none!important;margin:0!important;padding:0!important;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="triceps:"] > .mcs-catalog-name{
+  position:absolute!important;width:1px!important;height:1px!important;padding:0!important;
+  margin:-1px!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap!important;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="triceps:"] > .mcs-select-symbol{
+  position:absolute!important;z-index:5!important;right:5%!important;top:50%!important;
+  transform:translateY(-50%)!important;display:grid!important;place-items:center!important;
+  width:clamp(43px,6vw,64px)!important;height:clamp(43px,6vw,64px)!important;
+  padding:0!important;margin:0!important;border:3px solid #fff0b5!important;border-radius:50%!important;
+  box-sizing:border-box!important;background:linear-gradient(150deg,#ffe080,#daa321)!important;
+  color:#171410!important;box-shadow:0 3px 14px #000a!important;
+  font-size:clamp(29px,5vw,43px)!important;font-weight:800!important;line-height:1!important;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="triceps:"]::before,
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="triceps:"]::after{
+  content:none!important;display:none!important;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="triceps:"].picked{
+  box-shadow:0 5px 18px #0004!important;
+}
+.mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="triceps:"].picked > .mcs-select-symbol{
+  background:linear-gradient(150deg,#fff7ca,#ffd16a)!important;color:#10271b!important;
+}
+@media(max-width:750px){
+  .muscu-triceps-list{grid-template-columns:minmax(0,560px)!important;gap:10px!important;}
+}
+@media(max-width:600px){
+  .muscu-triceps-list > .muscu-triceps-card::after,
+  .mcs-picker #mcsCatalog .mcs-catalog-row[data-mcs-toggle^="triceps:"] > .mcs-select-symbol{
+    right:5%!important;width:clamp(38px,11vw,48px)!important;
+    height:clamp(38px,11vw,48px)!important;font-size:32px!important;
+  }
+}
