@@ -1,0 +1,12 @@
+TRICEPS V3 — CORRECTION DES SURIMPRESSIONS
+
+La V2 recopiait des rangées de pixels et dupliquait des morceaux de texte.
+La V3 repart de chaque image Triceps d'origine : elle retire uniquement les pixels
+connectés aux lignes blanches, puis dessine un seul contour orange.
+Les boutons dorés CSS ne sont pas modifiés.
+
+Ajouter seulement index.html et triceps-bandeaux-net-v3.js dans la racine GitHub.
+Ne pas supprimer triceps-net-v1.css (les boutons en dépendent).
+Ne pas réinjecter les ZIP V1 ou V2 ensuite.
+
+Contrôler les 10 bandeaux Triceps dans Exercices et dans Création de séance.
