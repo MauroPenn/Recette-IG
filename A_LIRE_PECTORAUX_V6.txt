@@ -1,0 +1,20 @@
+PECTORAUX V6 — CONTOURS ORANGE (VERSION FINALE PROPOSÉE)
+
+Modification exclusive : passage des 10 contours blancs des bandeaux Pectoraux V5 à un contour orange uniforme.
+Les images, titres, poses et proportions (560 × 190) sont conservés.
+Le bouton + de la création de séances reste fonctionnel et sans ancienne flèche.
+
+INSTALLATION
+1. Décompresser le ZIP.
+2. Dans GitHub MauroPenn/Recette-IG, Add file > Upload files.
+3. Envoyer index.html, pectoraux-net-v6.css, pectoraux-bandeaux-net-v6.js et les 10 images WebP V6.
+4. Ne pas envoyer APERCU_PECTORAUX_V6.jpg ni ce fichier d'instructions.
+5. Commit changes, fermer puis rouvrir l'application.
+
+TESTS
+- Exercices > Pectoraux : 10 contours orange uniques, 10 images non déformées.
+- Création de séance > Pectoraux : mêmes images, bouton + bien centré et fonctionnel.
+- Les autres catégories restent inchangées.
+
+IMPORTANT : ce pack utilise index.html avec la catégorie Dos V1 actuellement visible dans le dépôt GitHub. Si tu as déjà injecté Dos V2 ou d’autres modifications ultérieures, il ne faut pas écraser leur index.html sans fusion préalable.
+Si des évolutions postérieures de l'application existent déjà dans l'index actuel, il faudra les fusionner pour ne pas les perdre.
