@@ -1,0 +1,27 @@
+TRICEPS V5 — RECONSTRUCTION DES 10 IMAGES D'ORIGINE
+
+Contrairement aux V2/V3/V4, ce pack ne retouche pas les images durant leur affichage.
+Il utilise les 10 fichiers WebP d'origine déjà dans le dépôt GitHub.
+
+INSTALLATION
+1. Décompresser le ZIP.
+2. Dans GitHub > Recette-IG > Add file > Upload files, envoyer :
+   - index.html
+   - triceps-bandeaux-source-v5.js
+   - triceps-rebuild-v5.py
+   - le dossier .github avec son sous-dossier workflows et son fichier triceps-v5-build.yml
+3. Confirmer avec Commit changes.
+4. Ouvrir l'onglet Actions du dépôt. Le traitement "Refaire les bandeaux Triceps"
+   doit démarrer automatiquement ; le rond vert indique sa réussite.
+5. Vérifier la présence des fichiers "triceps-...-orange-v5.webp" à la racine du dépôt.
+6. Fermer et rouvrir l'application sur la tablette et tester Exercices et Création de séance.
+
+IMPORTANT
+- Ce ZIP n'inclut pas directement les WebP corrigés. Les nouveaux WebP sont
+  produits automatiquement depuis les dix images du dépôt par GitHub Actions.
+- Si GitHub Actions est désactivé ou ne peut pas écrire dans le dépôt,
+  aucune nouvelle image ne sera créée. Activer Actions ou vérifier ses autorisations.
+- Tant que les nouvelles images n'existent pas, l'application conserve les anciennes
+  images d'origine (et leurs anciens contours), sans affichage cassé.
+- triceps-net-v1.css reste en place : ses boutons dorés sont conservés.
+- Les fiches, noms, séries, séances et autres catégories ne sont pas modifiés.
