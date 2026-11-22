@@ -1,0 +1,14 @@
+TRICEPS V2 — SUPPRESSION DU DOUBLE CONTOUR BLANC
+
+Installer sur GitHub :
+1. Décompresser le ZIP.
+2. Envoyer uniquement index.html et triceps-bandeaux-net-v2.js à la racine du dépôt Recette-IG.
+3. Commit changes.
+4. Recharger l'application (fermer/réouvrir si nécessaire).
+
+Le fichier triceps-net-v1.css du correctif précédent doit rester en place.
+La V2 remplace le script V1 par un nettoyage plus ciblé des deux lignes blanches.
+Les boutons dorés et les dix fiches existantes ne changent pas.
+
+À contrôler dans Exercices > Triceps ET Création de séance > Triceps :
+un seul contour orange, pas de liseré blanc, bouton doré correctement positionné.
